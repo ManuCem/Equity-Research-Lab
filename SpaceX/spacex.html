@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SpaceX Accounting Basics</title>
+<meta name="description" content="A basic, beginner-friendly accounting analysis of SpaceX (SPCX) from its SEC filings: revenue, costs, profit, cash and debt.">
+<style>
+:root{color-scheme:light dark;--page:#fbfaf7;--surface:#ffffff;--ink:#0b0b0b;--ink-2:#52514e;--muted:#6b6a65;--grid:#e1e0d9;
+  --axis:#c3c2b7;--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--accent:#2a78d6;--warn:#9c4a00;--warn-bg:#fff4e5}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink-2:#c3c2b7;
+  --muted:#9a988f;--grid:#2c2c2a;--axis:#4a4a46;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--accent:#3987e5;
+  --warn:#ffb86b;--warn-bg:#2a1f12}}
+:root[data-theme=dark]{--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink-2:#c3c2b7;--muted:#9a988f;--grid:#2c2c2a;--axis:#4a4a46;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--accent:#3987e5;--warn:#ffb86b;--warn-bg:#2a1f12}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-right)) 40px max(16px,env(safe-area-inset-left))}
+h1{font-size:1.5rem;line-height:1.25;margin:.4rem 0}
+h2{font-size:1.15rem;line-height:1.3;margin:2.6rem 0 .5rem;padding-top:.8rem;border-top:1px solid var(--grid)}
+h3{font-size:1rem;margin:1.2rem 0 .3rem}
+p{margin:.4rem 0 .8rem}
+.sub{color:var(--ink-2)}
+a{color:var(--accent)}
+a.back{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.disclaimer{background:var(--warn-bg);color:var(--warn);border:1px solid currentColor;border-radius:8px;padding:10px 14px;margin:12px 0;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.tile{background:var(--surface);border:1px solid var(--grid);border-radius:10px;padding:10px 12px}
+.tile b{display:block;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.tile span{color:var(--muted);font-size:.85rem}
+.read{background:var(--surface);border-left:4px solid var(--accent);border-radius:6px;padding:10px 14px;margin:12px 0}
+.q{font-weight:600;color:var(--ink-2);margin:.2rem 0 .4rem}
+.mgmt{background:var(--surface);border:1px dashed var(--axis);border-radius:8px;padding:8px 12px;margin:12px 0;font-size:.93rem}
+.mgmt b.tag{display:inline-block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-right:6px}
+.chart{width:100%;height:400px;background:var(--surface);border:1px solid var(--grid);border-radius:10px}
+.chart.tall{height:460px}
+.note{color:var(--muted);font-size:.85rem}
+.seg{display:inline-flex;border:1px solid var(--axis);border-radius:8px;overflow:hidden;margin:4px 0 8px}
+.seg button{min-height:44px;min-width:88px;padding:0 14px;border:0;background:var(--surface);color:var(--ink-2);font:inherit;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--accent);color:#fff;font-weight:600}
+details{margin:.8rem 0}
+summary{min-height:44px;display:flex;align-items:center;cursor:pointer;color:var(--ink-2);font-weight:600}
+.scroll{overflow-x:auto;border:1px solid var(--grid);border-radius:10px;margin:.4rem 0}
+table{border-collapse:collapse;width:100%;background:var(--surface);font-variant-numeric:tabular-nums;font-size:.9rem}
+th,td{padding:7px 9px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+th{color:var(--ink-2);font-weight:600}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--surface);white-space:normal;min-width:150px}
+tr.total td{font-weight:700}
+td.na{color:var(--muted)}
+.ratio-plain{display:block;font-weight:400;color:var(--muted);font-size:.82rem;max-width:300px}
+.challenge{border:2px solid var(--s2);border-radius:12px;padding:4px 16px 12px;margin-top:2.4rem}
+.challenge h2{border-top:0;margin-top:1rem}
+.badge{display:inline-block;background:var(--s2);color:#fff;border-radius:6px;padding:2px 8px;font-size:.8rem;font-weight:700;letter-spacing:.03em}
+ol.steps li,ol.qs li,ul.plain li{margin:.45rem 0}
+dl.gloss{display:grid;grid-template-columns:200px 1fr;gap:6px 16px;margin:.5rem 0}
+dl.gloss dt{font-weight:600}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+.hint-touch{display:none}
+.swipe{display:none;margin:.2rem 0}
+@media (pointer:coarse){.hint-mouse{display:none}.hint-touch{display:inline}}
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--grid);color:var(--muted);font-size:.85rem}
+@media (max-width:640px){.swipe{display:block}h1{font-size:1.28rem}.chart{height:470px}.chart.tall{height:560px}th,td{padding:7px 6px}
+  dl.gloss{grid-template-columns:1fr}dl.gloss dd{margin-bottom:.5rem}.seg{display:flex}.seg button{flex:1}}
+</style>
+<!-- Apache ECharts, stored locally in lib/ so the page works offline and on GitHub Pages without a CDN -->
+<script src="lib/echarts.js"></script>
+</head><body><main>
+<a class="back" href="../">&larr; Equity Research</a>
+<h1>SpaceX (SPCX): a first look at the accounts</h1>
+<p class="sub">A basic accounting analysis built only from SpaceX's SEC documents: the S-1/A prospectus (years 2023-2025
+and Q1 2026) and the Q2 and Q3 2026 earnings releases. US dollars; data up to 30 September 2026.</p>
+<div class="disclaimer">Personal learning project, not investment advice. This page shows facts, ratios and questions
+only: no buy/sell view, no price target, no valuation.</div>
+
+<div class="read"><b>The short version.</b> SpaceX runs three businesses: rockets (Space), Starlink internet
+(Connectivity) and artificial intelligence (AI, renamed Super Intelligence or SI in Q3 2026). Revenue is growing very
+fast: $27.1bn in the first nine months of 2026, already more than all of 2025 ($18.7bn).
+Q3 2026 was the only quarter with a profit among the 6 in these files. But the company spends far more on new equipment than its
+operations bring in, and that gap was paid for by its June 2026 stock market listing (IPO) and by borrowing.</div>
+<div class="tiles"><div class="tile"><b>$27.1bn</b><span>Revenue, Jan-Sep 2026 (all of 2025: $18.7bn)</span></div><div class="tile"><b>+161%</b><span>Revenue growth, Q3 2026 vs Q3 2025</span></div><div class="tile"><b>$4.4bn</b><span>Net income, Q3 2026 (the only profitable quarter of the 6 in these files)</span></div><div class="tile"><b>-$35.0bn</b><span>Free cash flow, Jan-Sep 2026 (operating cash flow minus capex)</span></div><div class="tile"><b>$51.0bn</b><span>Net cash, 30 Sep 2026 (cash and securities minus debt)</span></div></div>
+<p class="note">How to read this page: each section asks a question, answers it in a few sentences, then shows a chart.
+Open "Details" for the numbers. Accounting terms are explained the first time they appear and in the
+<a href="#glossary">glossary</a>. Negative numbers in tables are in brackets, as in the filings.
+<span class="hint-mouse">Hover a chart to see values.</span><span class="hint-touch">Tap a chart to see values.</span></p>
+
+<h2 id="size">1. How big is the business, and where does the revenue come from?</h2>
+<div class="read"><b>Revenue</b> (money earned from customers for what was delivered in the period) grew from
+$10.4bn in 2023 to $18.7bn in 2025. 2026 is a step change: $14.6bn in Q3
+alone, 161% more than in Q3 2025. SpaceX reports three <b>segments</b> (business units reported
+separately). In 2025 Connectivity (Starlink) was the biggest, at 61% of revenue.
+By Q3 2026 AI / SI had become the largest, at 52%, driven mainly by cloud services
+agreements (renting computing power to other companies), Grok, and Cursor, an AI coding company bought in August 2026
+($608m of revenue since then).</div>
+<div class="seg" role="group" aria-label="Revenue chart period"><button data-chart="revenue" data-mode="q" aria-pressed="true">Quarters</button><button data-chart="revenue" data-mode="y" aria-pressed="false">Years</button></div>
+<div class="chart" id="revenue" role="img" aria-label="Revenue by segment, stacked bars, quarters or years"></div>
+<p class="note">* Q4 2025 is not reported on its own in these files (see <a href="#questions">open questions</a>).
+The label above each bar is total revenue.</p>
+<details><summary>Details: revenue by segment ($ millions)</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>$ millions</th><th>2023</th><th>2024</th><th>2025</th><th>Q1 25</th><th>Q2 25</th><th>Q3 25</th><th>Q1 26</th><th>Q2 26</th><th>Q3 26</th><th>9M 25</th><th>9M 26</th></tr><tr><td>Space</td><td>3,557</td><td>3,796</td><td>4,086</td><td>865</td><td>746</td><td>1,666</td><td>619</td><td>962</td><td>1,767</td><td>3,277</td><td>3,348</td></tr><tr><td>Connectivity</td><td>3,869</td><td>7,599</td><td>11,387</td><td>2,475</td><td>2,588</td><td>3,097</td><td>3,257</td><td>4,291</td><td>5,248</td><td>8,159</td><td>12,796</td></tr><tr><td>AI / SI</td><td>2,961</td><td>2,620</td><td>3,201</td><td>727</td><td>737</td><td>813</td><td>818</td><td>2,561</td><td>7,560</td><td>2,278</td><td>10,939</td></tr><tr class=total><td>Total revenue</td><td>10,387</td><td>14,015</td><td>18,674</td><td>4,067</td><td>4,071</td><td>5,576</td><td>4,694</td><td>7,814</td><td>14,575</td><td>13,714</td><td>27,083</td></tr><tr><td>Growth vs a year earlier</td><td class=na></td><td>34.9%</td><td>33.2%</td><td class=na></td><td class=na></td><td class=na></td><td>15.4%</td><td>91.9%</td><td>161.4%</td><td class=na></td><td>97.5%</td></tr></table></div>
+<p class="note">Sources: S-1/A segment notes (pages F-57, F-58, F-94, F-95); Q2 and Q3 releases, page 3.</p></details>
+
+<h2 id="money-goes">2. Where does the money go?</h2>
+<div class="read">Each bar shows the main costs for every $100 of revenue. <b>Cost of revenue</b> (the direct cost of
+delivering what was sold: hardware, launches, data-centre running costs) fell from 59%
+of revenue in 2023 to 38% in Q3 2026. <b>Research and development (R&amp;D)</b>
+(spending on new products such as Starship and AI models) is the cost that grew most: from
+20% of revenue in 2023 to 46% in 2025. <b>SG&amp;A</b> (selling,
+general and administrative costs: sales, marketing, offices, management) is smaller, about
+12%. <b>Interest expense</b> (what the company pays its lenders) was
+10% of revenue in 2025. When a bar is taller than the 100% line, these costs were bigger
+than revenue. That is true for every period shown except Q3 2026, when they fell to
+85% because revenue grew much faster than costs.</div>
+<div class="chart tall" id="costs" role="img" aria-label="Costs as a percentage of revenue, stacked bars"></div>
+<p class="note">2023 includes a $3.8bn <b>impairment</b> (a write-down because an asset lost
+value): the Twitter brand after its rename to X. "9M" = January-September.</p>
+<details><summary>Details: costs as % of revenue</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>% of revenue</th><th>2023</th><th>2024</th><th>2025</th><th>9M 25</th><th>9M 26</th><th>Q3 26</th></tr><tr><td>Cost of revenue</td><td>58.8%</td><td>57.1%</td><td>50.6%</td><td>50.7%</td><td>41.9%</td><td>37.6%</td></tr><tr><td>Research &amp; development</td><td>20.3%</td><td>24.7%</td><td>46.3%</td><td>42.3%</td><td>43.0%</td><td>31.5%</td></tr><tr><td>Selling, general &amp; admin.</td><td>16.0%</td><td>12.9%</td><td>14.2%</td><td>12.2%</td><td>12.4%</td><td>11.7%</td></tr><tr><td>Restructuring &amp; impairment</td><td>38.6%</td><td>2.0%</td><td>2.8%</td><td>3.7%</td><td>-0.0%</td><td>0.0%</td></tr><tr><td>Interest expense</td><td>16.3%</td><td>11.3%</td><td>10.4%</td><td>10.0%</td><td>7.3%</td><td>4.6%</td></tr><tr><td>Revenue ($ millions)</td><td>10,387</td><td>14,015</td><td>18,674</td><td>13,714</td><td>27,083</td><td>14,575</td></tr></table></div>
+<p class="note">Sources: income statements (S-1/A page F-5; Q3 release page 9).</p></details>
+
+<h2 id="profit">3. Is it profitable, and is that improving?</h2>
+<div class="read">Three <b>margins</b> (profit as a share of revenue) tell the story. <b>Gross margin</b> (revenue minus
+cost of revenue, as % of revenue) rose from 41% in 2023 to 62% in Q3 2026.
+<b>Operating margin</b> (what is left after ALL operating costs, including R&amp;D and SG&amp;A) was negative in
+4 of the 6 quarters shown and reached 19% in
+Q3 2026, the highest in these files. <b>Net income</b>
+(the bottom line, after interest, other gains and losses, and tax) was $4.4bn in Q3 2026, larger than
+operating income ($2.8bn) because of $1.0bn of other income, $873m of interest income on the
+cash pile, and a $390m tax benefit. January-September 2026 as a whole still shows a net loss of
+$413m.</div>
+<div class="seg" role="group" aria-label="Margin chart period"><button data-chart="margins" data-mode="q" aria-pressed="true">Quarters</button><button data-chart="margins" data-mode="y" aria-pressed="false">Years</button></div>
+<div class="chart" id="margins" role="img" aria-label="Gross, operating and net margin, lines"></div>
+<p class="note">Q1 2026's very low net margin includes a $1.9bn "other expense", mostly
+a $1.5bn loss from repaying debt early (S-1/A cash flow statement, page F-67).</p>
+<div class="mgmt"><b class="tag">Management says (Q3 call, not a filing)</b>Q3's gross margin included one-off benefits (roughly 3 percentage points in Connectivity, mainly tariff refunds); management expects Q4 2026 gross margin to look more like Q2's (55%).</div>
+<details><summary>Details: profit and margins ($ millions)</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>$ millions</th><th>2023</th><th>2024</th><th>2025</th><th>Q1 25</th><th>Q2 25</th><th>Q3 25</th><th>Q1 26</th><th>Q2 26</th><th>Q3 26</th><th>9M 25</th><th>9M 26</th></tr><tr><td>Gross profit</td><td>4,277</td><td>6,019</td><td>9,223</td><td>2,105</td><td>1,789</td><td>2,871</td><td>2,306</td><td>4,319</td><td>9,097</td><td>6,765</td><td>15,722</td></tr><tr><td>Operating income</td><td>(3,505)</td><td>466</td><td>(2,589)</td><td>27</td><td>(970)</td><td>(273)</td><td>(1,943)</td><td>(143)</td><td>2,791</td><td>(1,216)</td><td>705</td></tr><tr><td>Net income</td><td>(4,628)</td><td>791</td><td>(4,937)</td><td>(528)</td><td>(1,008)</td><td>(1,054)</td><td>(4,276)</td><td>(541)</td><td>4,404</td><td>(2,590)</td><td>(413)</td></tr><tr><td>Gross margin</td><td>41.2%</td><td>42.9%</td><td>49.4%</td><td>51.8%</td><td>43.9%</td><td>51.5%</td><td>49.1%</td><td>55.3%</td><td>62.4%</td><td>49.3%</td><td>58.1%</td></tr><tr><td>Operating margin</td><td>-33.7%</td><td>3.3%</td><td>-13.9%</td><td>0.7%</td><td>-23.8%</td><td>-4.9%</td><td>-41.4%</td><td>-1.8%</td><td>19.1%</td><td>-8.9%</td><td>2.6%</td></tr><tr><td>Net margin</td><td>-44.6%</td><td>5.6%</td><td>-26.4%</td><td>-13.0%</td><td>-24.8%</td><td>-18.9%</td><td>-91.1%</td><td>-6.9%</td><td>30.2%</td><td>-18.9%</td><td>-1.5%</td></tr></table></div></details>
+
+<h2 id="profit-vs-cash">4. Profit vs cash: is the company generating or using cash?</h2>
+<div class="read">Profit and cash are not the same thing. <b>Operating cash flow</b> (cash collected from customers
+minus cash paid to run the business) was $13.1bn in January-September 2026, although that period shows a
+net loss of $413m. Why? Big costs such as <b>depreciation</b> (spreading the cost of rockets,
+satellites and computers over their useful life) and <b>share-based compensation</b> (paying staff in shares) reduce
+profit but use no cash; and customers paid $4.9bn in advance (<b>deferred
+revenue</b>: cash received for work not done yet). Then the company spent $48.1bn on <b>capital
+expenditures (capex)</b>: data centres, satellites, launch sites. That is 3.7 times its operating cash
+flow. <b>Free cash flow</b> (operating cash flow minus capex) was -$35.0bn. So SpaceX is using cash, not
+generating it, and has been since 2024.</div>
+<div class="chart" id="cash" role="img" aria-label="Operating cash flow, capex and free cash flow"></div>
+<p class="note">Up = cash coming in from operations; down = cash spent on capex; diamond = free cash flow. Only periods
+with a full cash flow statement are shown (Q2 and Q3 on their own are not reported).</p>
+<h3>Where did the cash come from in January-September 2026?</h3>
+<div class="scroll"><table><tr><th>Jan-Sep 2026</th><th>$ millions</th></tr><tr><td>Cash from operations</td><td>13,097</td></tr><tr><td>IPO (net of fees)</td><td>85,675</td></tr><tr><td>New borrowing</td><td>51,834</td></tr><tr><td>Shares sold before the IPO</td><td>8,319</td></tr><tr><td>Capex (new assets)</td><td>(48,069)</td></tr><tr><td>Debt repaid</td><td>(39,845)</td></tr><tr><td>Marketable securities bought, net</td><td>(37,599)</td></tr><tr><td>Share buybacks</td><td>(4,426)</td></tr><tr><td>All other lines (remainder)</td><td>(724)</td></tr><tr class=total><td>= Change in cash</td><td>28,262</td></tr></table></div>
+<p class="note">Source: Q3 release cash flow statement, page 12. Cash includes restricted cash.</p>
+<div class="mgmt"><b class="tag">Management says (Q3 call, not a filing)</b>Q4 2026 capex is expected at $35-40bn, on top of the $48.1bn already spent in January-September.</div>
+<details><summary>Details: cash flow by period ($ millions)</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>$ millions</th><th>2023</th><th>2024</th><th>2025</th><th>9M 25</th><th>9M 26</th></tr><tr><td>Operating cash flow</td><td>4,520</td><td>5,776</td><td>6,785</td><td>4,120</td><td>13,097</td></tr><tr><td>Capex</td><td>(4,415)</td><td>(11,163)</td><td>(20,737)</td><td>(13,846)</td><td>(48,069)</td></tr><tr class=total><td>Free cash flow</td><td>105</td><td>(5,387)</td><td>(13,952)</td><td>(9,726)</td><td>(34,972)</td></tr><tr><td>Net income (for comparison)</td><td>(4,628)</td><td>791</td><td>(4,937)</td><td>(2,590)</td><td>(413)</td></tr></table></div></details>
+
+<h2 id="debt-and-cash">5. How much does it owe, and how much cash does it hold?</h2>
+<div class="read">On 30 September 2026 SpaceX held $89.9bn of cash and <b>marketable securities</b>
+(short-term investments that can be sold quickly) against $38.8bn of <b>debt and finance leases</b>
+(borrowed money, plus long leases that work like loans). That leaves <b>net cash</b> of $51.0bn. At the
+end of 2025, before the IPO, the two were about even (net cash $1.9bn). In June 2026 the IPO raised about
+$85.7bn and the company also sold $25bn of bonds.
+Debt still rose by only $9.1bn between March and June, because older loans were repaid: debt
+repayments were $39.8bn in January-September 2026.</div>
+<div class="chart" id="debt" role="img" aria-label="Cash and securities versus debt at each balance sheet date"></div>
+<p class="note">Interest expense was $2.0bn in January-September 2026, partly offset by
+$1.4bn of interest income earned on the cash.</p>
+<details><summary>Details: cash, debt and equity ($ millions)</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>Date</th><th>Cash + securities</th><th>Debt</th><th>Net cash</th><th>Equity</th></tr><tr><td>31 Dec 2024</td><td>12,185</td><td>13,793</td><td>(1,608)</td><td>4,863</td></tr><tr><td>31 Dec 2025</td><td>24,747</td><td>22,896</td><td>1,851</td><td>2,573</td></tr><tr><td>31 Mar 2026</td><td>23,675</td><td>30,265</td><td>(6,590)</td><td>34,533</td></tr><tr><td>30 Jun 2026</td><td>100,009</td><td>39,364</td><td>60,645</td><td>127,224</td></tr><tr><td>30 Sep 2026</td><td>89,855</td><td>38,844</td><td>51,011</td><td>176,768</td></tr></table></div>
+<p class="note"><b>Shareholders' equity</b> (assets minus liabilities, what belongs to shareholders) jumps after 2025:
+before the IPO, $38.8bn of <b>redeemable convertible preferred stock</b>
+(early investors' shares that could be bought back) sat outside equity; it converted into common shares by June
+2026, and the IPO added more.</p></details>
+
+<h2 id="ratios">6. Six ratios in plain English</h2>
+<div class="read">Ratios turn the statements into a few comparable numbers. Margins (first three) show how much of each
+dollar of revenue is kept. Capex / operating cash flow shows how much investment exceeds what the operations bring in.
+The current ratio and debt-to-equity are balance-sheet ratios: they compare what the company owns and owes at a date.
+Both improved sharply after the IPO.</div>
+<p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>Ratio</th><th>2023</th><th>2024</th><th>2025</th><th>9M 25</th><th>9M 26</th><th>Q3 26</th></tr><tr><td><b>Gross margin</b><span class="ratio-plain">Of every $1 of revenue, how much is left after the direct cost of delivering the product.</span></td><td>41.2%</td><td>42.9%</td><td>49.4%</td><td>49.3%</td><td>58.1%</td><td>62.4%</td></tr><tr><td><b>Operating margin</b><span class="ratio-plain">Of every $1 of revenue, how much is left after ALL operating costs, including R&amp;D and SG&amp;A.</span></td><td>-33.7%</td><td>3.3%</td><td>-13.9%</td><td>-8.9%</td><td>2.6%</td><td>19.1%</td></tr><tr><td><b>Net margin</b><span class="ratio-plain">Of every $1 of revenue, how much ends up as the bottom line after interest, other items and tax.</span></td><td>-44.6%</td><td>5.6%</td><td>-26.4%</td><td>-18.9%</td><td>-1.5%</td><td>30.2%</td></tr><tr><td><b>Capex / operating cash flow</b><span class="ratio-plain">Dollars invested in new long-lived assets for each $1 the operations bring in. Above 1x, the company needs cash from elsewhere (savings, shares or loans).</span></td><td>0.98x</td><td>1.93x</td><td>3.06x</td><td>3.36x</td><td>3.67x</td><td class=na></td></tr><tr><td><b>Current ratio</b><span class="ratio-plain">Short-term assets (cash, receivables, inventory) for each $1 of bills due within a year. Above 1x, the short-term bills are covered.</span></td><td class=na></td><td>1.37x</td><td>1.45x</td><td class=na></td><td>3.08x</td><td>3.08x</td></tr><tr><td><b>Debt-to-equity</b><span class="ratio-plain">Borrowed money for each $1 of shareholders&#x27; equity. Higher = more reliance on lenders.</span></td><td class=na></td><td>2.84x</td><td>8.90x</td><td class=na></td><td>0.22x</td><td>0.22x</td></tr></table></div>
+<p class="note">Balance-sheet ratios use the balance sheet at the end of each period; they are empty where that balance
+sheet is not in these files (end-2023 and 30 September 2025). Debt-to-equity looks very high at the end of 2025
+(8.90x) because the preferred stock sat outside equity then. The workbook
+(Ratios tab) has the same ratios for every quarter, as Excel formulas.</p>
+
+<h2 id="outlook">What management says comes next</h2>
+<p class="note">From the Q3 2026 earnings call (transcript, paraphrased). These are management's statements, not
+filed or audited figures. Where the call quotes past results, they match the filings.</p>
+<ul class="plain">
+<li><b>Q1 2027 revenue:</b> expected at $33-37bn, more than double Q3 2026's $14.6bn.</li>
+<li><b>Q4 2026 capex:</b> expected at $35-40bn, driven by data centres in Memphis and Southaven.</li>
+<li><b>Backlog</b> (signed contracts not yet delivered): $63bn at 30 September 2026,
+with about $42bn expected to become revenue within a year (the Q2 release
+reported $47.5bn at 30 June).</li>
+<li><b>Computing capacity:</b> 1.7 GW at 30 September 2026 (filing); management
+targets 2.5-3 GW by the end of 2026.</li>
+<li><b>Gross margin:</b> Q4 expected closer to Q2's level, because Q3 had one-off benefits.</li>
+</ul>
+
+<section class="challenge" id="challenge">
+<span class="badge">CHALLENGE - optional, skip it if you like</span>
+<h2>From adjusted EBITDA to net income, step by step (Q3 2026)</h2>
+<div class="read"><b>EBITDA</b> means earnings before interest, taxes, depreciation and amortization. <b>Adjusted
+EBITDA</b> also leaves out other items management chooses (here share-based compensation, acquisition costs and
+restructuring). It is a <b>non-GAAP</b> measure: GAAP are the official US accounting rules, and this number is not
+defined by them, so each company builds its own. Management likes it because it strips out non-cash and one-off items;
+critics point out that those costs are real. The waterfall starts from Q3 2026 adjusted EBITDA of
+$8.8bn and takes each excluded item back in, until it reaches the
+$4.4bn of net income in the income statement.</div>
+<div class="chart tall" id="bridge" role="img" aria-label="Waterfall from adjusted EBITDA to net income, Q3 2026"></div>
+<p class="note">Grey = subtotals; orange = takes money away; blue = adds money. Source: Q3 release, reconciliation
+table (page 10) and income statement (page 9).</p>
+<ol class="steps">
+<li><b>Depreciation &amp; amortization (-$3.6bn):</b> the yearly share of
+the cost of GPUs, satellites and rockets. No cash leaves this quarter (the cash left when they were bought, as capex),
+but the assets wear out, so it is a real cost.</li>
+<li><b>Share-based compensation (-$1.1bn):</b> staff paid in shares. No cash, but
+existing shareholders own a smaller slice.</li>
+<li><b>Share-based compensation from acquisitions (-$1.2bn):</b> shares granted to keep Cursor's staff.
+The release says $23.4bn of such awards will be expensed over the next
+few years, so this item will come back.</li>
+<li><b>Acquisition-related costs (-$8m) and restructuring
+(-$3m):</b> lawyers' and advisers' fees for the Cursor deal, and costs of
+reorganising the business.</li>
+<li><b>= Operating income ($2.8bn):</b> matches the income statement exactly. This is where GAAP profit from the
+core business stands.</li>
+<li><b>Interest expense (-$675m) and interest income (+$873m):</b> paid on
+debt, earned on the cash and securities raised in the IPO.</li>
+<li><b>Other income (+$1.0bn):</b> gains outside the core business ($561m of it from a related party).
+What it is, and whether it repeats, is explained in the 10-Q, not in these files.</li>
+<li><b>Income tax (+$390m):</b> a tax <i>benefit</i> this quarter, so tax added to profit instead of
+reducing it. = <b>Net income $4.4bn</b>.</li>
+</ol>
+<details><summary>Details: the same bridge for three periods ($ millions)</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>$ millions</th><th>Q3 2026</th><th>Jan-Sep 2026</th><th>Year 2025</th></tr><tr class=total><td>Adjusted EBITDA</td><td>8,809</td><td>13,474</td><td>6,584</td></tr><tr><td>Depreciation &amp; amortization</td><td>(3,644)</td><td>(8,934)</td><td>(6,701)</td></tr><tr><td>Share-based compensation</td><td>(1,146)</td><td>(2,616)</td><td>(1,947)</td></tr><tr><td>Share-based comp. from acquisitions</td><td>(1,217)</td><td>(1,217)</td><td>0</td></tr><tr><td>Acquisition-related costs</td><td>(8)</td><td>(8)</td><td>0</td></tr><tr><td>Restructuring</td><td>(3)</td><td>6</td><td>(487)</td></tr><tr><td>Impairment</td><td>-0</td><td>-0</td><td>(38)</td></tr><tr class=total><td>= Operating income</td><td>2,791</td><td>705</td><td>(2,589)</td></tr><tr><td>Interest expense</td><td>(675)</td><td>(1,968)</td><td>(1,945)</td></tr><tr><td>Interest income</td><td>873</td><td>1,426</td><td>492</td></tr><tr><td>Other income (expense)</td><td>1,025</td><td>(937)</td><td>(177)</td></tr><tr class=total><td>= Income before tax</td><td>4,014</td><td>(774)</td><td>(4,219)</td></tr><tr><td>Income tax (benefit = +)</td><td>390</td><td>361</td><td>(718)</td></tr><tr class=total><td>= Net income</td><td>4,404</td><td>(413)</td><td>(4,937)</td></tr></table></div>
+<p class="note">The definition gained two add-backs in Q3 2026 (acquisition share-based compensation and acquisition
+costs); in 2025 those lines did not exist, so they are 0.</p></details>
+
+<h2 id="questions">Open questions a beginner could investigate</h2>
+<ol class="qs">
+<li><b>What did Q4 2025 look like?</b> It is not reported on its own here. Work it out: full year 2025 minus
+January-September 2025 (both are in the workbook). Was Q4 2025 profitable?</li>
+<li><b>Why was net income bigger than operating income in Q3 2026?</b> Find what the $1.0bn of "other
+income" and the $390m tax benefit were (the Q3 10-Q notes). Are they likely to repeat?</li>
+<li><b>How much of the Q3 gross margin jump will last?</b> Gross margin went from 55.3% in Q2 to
+62.4% in Q3; management says part was one-off. Which segment drove it?</li>
+<li><b>How will the cash gap be funded?</b> Capex was $48.1bn in January-September and management
+expects $35-40bn more in Q4 alone, against $13.1bn of operating cash flow. How long does
+$89.9bn of cash and securities last at that pace, and what new debt could be needed?</li>
+<li><b>Where did the $25bn bond money go?</b> Debt rose only
+$9.1bn from March to June 2026. Which loans were repaid, and why was there a
+$1.5bn loss on repaying debt early in Q1?</li>
+<li><b>What is the $48.4bn of goodwill?</b> <b>Goodwill</b> (the part of a purchase price
+above the fair value of what was bought) rose from $11.6bn in June, mostly from Cursor
+($42.5bn purchase price). What would an impairment mean, as with the
+Twitter brand in 2023?</li>
+<li><b>How big is share-based compensation becoming?</b> $3.8bn
+in January-September 2026. Compare it with operating income and with adjusted EBITDA.</li>
+<li><b>Why is deferred revenue growing?</b> It reached
+$17.5bn at 30 September
+2026 (current + non-current). Who is paying in advance, and what does that mean for future revenue and cash?</li>
+</ol>
+</section>
+
+<h2 id="glossary">Glossary</h2>
+<dl class="gloss"><dt>Revenue</dt><dd>Money earned from customers for what the company delivered in the period (not necessarily cash received yet).</dd><dt>Segment</dt><dd>A business unit the company reports on separately: here Space (rockets), Connectivity (Starlink) and AI / SI.</dd><dt>Cost of revenue</dt><dd>The direct cost of delivering what was sold, such as hardware, launch costs and data-centre running costs.</dd><dt>Gross profit / margin</dt><dd>Revenue minus cost of revenue; as a % of revenue it is the gross margin.</dd><dt>R&amp;D</dt><dd>Research and development: spending on new products such as Starship and new AI models.</dd><dt>SG&amp;A</dt><dd>Selling, general and administrative costs: sales, marketing, offices, management and support staff.</dd><dt>Operating income</dt><dd>Revenue minus all operating costs: what the core business earned before interest and tax.</dd><dt>Net income</dt><dd>The bottom line: profit (or loss) after every cost, interest, other gains and losses, and tax.</dd><dt>Depreciation &amp; amortization</dt><dd>Spreading the cost of long-lived assets (rockets, satellites, computers) over the years they are used; a cost that uses no cash that year.</dd><dt>Share-based compensation</dt><dd>Paying employees in shares or options; it is a real cost to shareholders but not a cash payment.</dd><dt>Operating cash flow</dt><dd>Cash actually collected from customers minus cash paid to run the business in the period.</dd><dt>Capex</dt><dd>Capital expenditures: cash spent on long-lived assets such as data centres, satellites and launch pads.</dd><dt>Free cash flow</dt><dd>Operating cash flow minus capex: the cash left over (or missing) after investing.</dd><dt>Deferred revenue</dt><dd>Cash received from customers for work not done yet; it becomes revenue later.</dd><dt>Marketable securities</dt><dd>Short-term investments (like Treasury bills) that can be sold quickly for cash.</dd><dt>Debt and finance leases</dt><dd>Borrowed money plus long leases that work like loans (the company effectively owns the asset).</dd><dt>Shareholders&#x27; equity</dt><dd>What would be left for shareholders if all liabilities were paid: assets minus liabilities (and minus preferred stock shown outside equity).</dd><dt>Redeemable convertible preferred stock</dt><dd>Shares sold to early investors that could be bought back or converted; shown between liabilities and equity until the IPO converted them.</dd><dt>Goodwill</dt><dd>The part of an acquisition price above the fair value of what was bought; it is written down (impaired) if the deal disappoints.</dd><dt>Impairment</dt><dd>A write-down when an asset is worth less than its book value (for example the Twitter brand in 2023).</dd><dt>Adjusted EBITDA (non-GAAP)</dt><dd>Earnings before interest, tax, depreciation and amortization, also excluding items management picks; not defined by GAAP, the official US accounting rules.</dd><dt>Backlog</dt><dd>Signed contracts not yet delivered and not yet counted as revenue.</dd><dt>YTD / 9M</dt><dd>Year-to-date; 9M = the first nine months (January-September).</dd></dl>
+
+<h2 id="notes">Data notes, checks and sources</h2>
+<p>Every number on this page comes from one data file (<code>data/spacex_data.csv</code>) with its document and page.
+The workbook <code>data/spacex_accounting.xlsx</code> recomputes the ratios as Excel formulas and runs
+228 arithmetic checks: segments add up to totals, the balance sheet balances, the cash flow reconciles,
+quarters add up to year-to-date. Result: 226 pass (7 only within
+$2m of rounding) and 2 fail.</p>
+<details><summary>Checks by group, and the failures</summary><p class="note swipe">Swipe the table sideways to see every column.</p><div class="scroll"><table><tr><th>Check group</th><th>Pass</th><th>Pass (rounding)</th><th>Fail</th></tr><tr><td>Segments add up to the total</td><td>59</td><td>0</td><td>0</td></tr><tr><td>Income statement adds up</td><td>52</td><td>0</td><td>0</td></tr><tr><td>Adjusted EBITDA reconciliation adds up</td><td>13</td><td>0</td><td>0</td></tr><tr><td>Balance sheet balances</td><td>35</td><td>0</td><td>0</td></tr><tr><td>Cash flow reconciles</td><td>19</td><td>0</td><td>2</td></tr><tr><td>Quarters add up to year-to-date</td><td>37</td><td>7</td><td>0</td></tr><tr><td>Balance sheet links to the income statement</td><td>4</td><td>0</td><td>0</td></tr></table></div>
+<ul class="plain"><li><b>Operating + investing + financing (+ FX) = change in cash</b>, Jan-Jun 2025: off by -75 ($m). The Q2 release shows only &#x27;selected&#x27; cash flow lines and leaves out the exchange-rate effect, so the three sections cannot add up to the change in cash.</li><li><b>Operating + investing + financing (+ FX) = change in cash</b>, Jan-Jun 2026: off by +42 ($m). The Q2 release shows only &#x27;selected&#x27; cash flow lines and leaves out the exchange-rate effect, so the three sections cannot add up to the change in cash.</li></ul>
+<p class="note">Within rounding (filings round each line to $1m): Total capex (segment table) (Jan-Sep 2025, -1), Connectivity revenue (Jan-Jun 2025, +1), AI / SI revenue (Jan-Jun 2025, -1), Space segment adjusted EBITDA (Jan-Sep 2025, +2), Connectivity segment adjusted EBITDA (Jan-Jun 2025, +1), AI / SI segment adjusted EBITDA (Jan-Jun 2025, -1), AI / SI segment adjusted EBITDA (Jan-Sep 2025, -2).</p></details>
+<details><summary>Figures not in these files</summary><ul class="plain"><li>Q4 2025 on its own is not reported in these files. The full year 2025 and Jan-Sep 2025 are, so you can work it out yourself (full year minus nine months); the charts leave the gap visible instead.</li><li>There is no balance sheet for 31 Dec 2023 or 30 Sep 2025 in these files, so balance-sheet ratios for 2023 and Jan-Sep 2025 are left empty.</li><li>The Q2 and Q3 releases give cash flows only year-to-date (Jan-Jun, Jan-Sep), so operating cash flow and free cash flow for Q2 and Q3 on their own are left empty (Q1 is in the S-1/A).</li><li>The Q2 2026 release gives only &#x27;selected&#x27; cash flow lines: no capex line and no exchange-rate line. That is why one cash flow check fails for Jan-Jun (see the Checks sheet).</li><li>The S-1/A PDF does not show its amendment number or the date it was filed with the SEC; its cover says only &#x27;Subject to completion, dated June 3, 2026&#x27;.</li><li>What makes up Q3 2026 &#x27;other income&#x27; ($1,025m, of which $561m from a related party) and the $390m tax benefit is explained in the 10-Q, which is not among these files.</li><li>The Q2 2026 release PDF says it &#x27;corrects a typographical error that appeared in the version furnished to the SEC&#x27; (the Q2 2025 compute figure), so it is not byte-for-byte the SEC copy.</li></ul></details>
+<details><summary>Differences between documents</summary><ul class="plain"><li>Shares at 31 Dec 2025 (millions): the S-1/A annual balance sheet shows 1,954 Class A outstanding, 644 Class B, 482 Class C; its Q1 comparative column shows 1,952 / 643 / 484; the Q2 and Q3 releases show 1,952 / 644 / 482. The dollar amounts are identical. Share counts are not used in this analysis.</li><li>Transcript vs filings: every overlapping figure checked (revenue, net income, adjusted EBITDA, segment revenue, subscribers, ARPU, Cursor revenue, Q3 capex, deferred revenue of $17.5bn) matches the filings. The transcript disagrees with itself on GPU deployment pace (about 200,000 vs 20,000 GB300s a month); that is not a filing number.</li><li>The adjusted EBITDA definition changed in Q3 2026: two new add-backs (share-based compensation related to acquisitions, and acquisition-related costs). Earlier periods had no such items, so the figures stay comparable, but the definition is management&#x27;s choice.</li></ul></details>
+<details><summary>Sources</summary><ul class="plain">
+<li><b>Form S-1/A</b> (preliminary prospectus, "subject to completion, dated June 3, 2026"): audited statements for
+2023-2025 (pages F-4 to F-9), unaudited Q1 2026 and Q1 2025 (F-63 to F-68), segment notes (F-57, F-58, F-94, F-95),
+adjusted EBITDA reconciliations (pages 119-121).</li>
+<li><b>Q2 2026 earnings release</b> (quarter ended 30 June 2026): highlights (page 3), statements (pages 8-10).</li>
+<li><b>Q3 2026 earnings release</b> (quarter ended 30 September 2026): highlights (page 3), statements (pages 9-12).</li>
+<li><b>Q3 2026 earnings call transcript</b> (20 October 2026, third-party copy): management commentary only, paraphrased;
+not republished.</li></ul></details>
+
+<footer>Built by <code>SpaceX/scripts/build_outputs.py</code> from <code>data/spacex_data.csv</code>.
+<b>Personal learning project, not investment advice.</b> No buy/sell view, price target or valuation.</footer>
+<script>
+const DATA = {"segments": ["Space", "Connectivity", "AI / SI"], "rev": {"q": {"labels": ["Q1 25", "Q2 25", "Q3 25", "Q4 25*", "Q1 26", "Q2 26", "Q3 26"], "values": [[0.86, 0.75, 1.67, null, 0.62, 0.96, 1.77], [2.48, 2.59, 3.1, null, 3.26, 4.29, 5.25], [0.73, 0.74, 0.81, null, 0.82, 2.56, 7.56]], "total": [4.07, 4.07, 5.58, null, 4.69, 7.81, 14.57]}, "y": {"labels": ["2023", "2024", "2025"], "values": [[3.56, 3.8, 4.09], [3.87, 7.6, 11.39], [2.96, 2.62, 3.2]], "total": [10.39, 14.02, 18.67]}}, "costs": {"labels": ["2023", "2024", "2025", "9M 25", "9M 26", "Q3 26"], "names": ["Cost of revenue", "Research & development", "Selling, general & admin.", "Restructuring & impairment", "Interest expense"], "values": [[58.8, 57.1, 50.6, 50.7, 41.9, 37.6], [20.3, 24.7, 46.3, 42.3, 43.0, 31.5], [16.0, 12.9, 14.2, 12.2, 12.4, 11.7], [38.6, 2.0, 2.8, 3.7, -0.0, 0.0], [16.3, 11.3, 10.4, 10.0, 7.3, 4.6]], "total": [150.0, 108.0, 124.3, 118.9, 104.6, 85.4]}, "margins": {"q": {"labels": ["Q1 25", "Q2 25", "Q3 25", "Q4 25*", "Q1 26", "Q2 26", "Q3 26"], "names": ["Gross margin", "Operating margin", "Net margin"], "values": [[51.8, 43.9, 51.5, null, 49.1, 55.3, 62.4], [0.7, -23.8, -4.9, null, -41.4, -1.8, 19.1], [-13.0, -24.8, -18.9, null, -91.1, -6.9, 30.2]]}, "y": {"labels": ["2023", "2024", "2025"], "names": ["Gross margin", "Operating margin", "Net margin"], "values": [[41.2, 42.9, 49.4], [-33.7, 3.3, -13.9], [-44.6, 5.6, -26.4]]}}, "cash": {"labels": ["2023", "2024", "2025", "9M 25", "9M 26"], "cfo": [4.52, 5.78, 6.79, 4.12, 13.1], "capex": [-4.42, -11.16, -20.74, -13.85, -48.07], "fcf": [0.1, -5.39, -13.95, -9.73, -34.97]}, "debt": {"labels": ["Dec 24", "Dec 25", "Mar 26", "Jun 26", "Sep 26"], "cash": [12.19, 24.75, 23.68, 100.01, 89.86], "debt": [13.79, 22.9, 30.27, 39.36, 38.84], "net": [-1.61, 1.85, -6.59, 60.65, 51.01]}, "bridge": {"labels": ["Adjusted EBITDA", "Depreciation & amortization", "Share-based compensation", "Share-based comp. from acquisitions", "Acquisition-related costs", "Restructuring", "= Operating income", "Interest expense", "Interest income", "Other income (expense)", "= Income before tax", "Income tax (benefit = +)", "= Net income"], "kind": ["total", "step", "step", "step", "step", "step", "total", "step", "step", "step", "total", "step", "total"], "delta": [8809.0, -3644.0, -1146.0, -1217.0, -8.0, -3.0, 2791.0, -675.0, 873.0, 1025.0, 4014.0, 390.0, 4404.0], "total": [8809.0, 5165.0, 4019.0, 2802.0, 2794.0, 2791.0, 2791.0, 2116.0, 2989.0, 4014.0, 4014.0, 4404.0, 4404.0], "base": [0, 5165.0, 4019.0, 2802.0, 2794.0, 2791.0, 0, 2116.0, 2116.0, 2989.0, 0, 4014.0, 0], "size": [8809.0, 3644.0, 1146.0, 1217.0, 8.0, 3.0, 2791.0, 675.0, 873.0, 1025.0, 4014.0, 390.0, 4404.0]}};                                          // everything Python computed, as JSON
+const narrowMQ = window.matchMedia("(max-width: 640px)");       // true on a phone-width screen
+const isTouch = window.matchMedia("(pointer: coarse)").matches; // a finger instead of a mouse
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();  // read a colour token
+const INSTANCES = {};                                           // chart div id -> ECharts instance
+const MODES = {revenue: "q", margins: "q"};                     // toggles: q = quarters, y = years
+const B = v => v == null ? "n/a" : (v < 0 ? "-$" : "$") + Math.abs(v).toFixed(1) + "bn";  // 18.67 -> "$18.7bn"
+const P = v => v == null ? "n/a" : v.toFixed(1) + "%";          // 49.4 -> "49.4%"
+const M = v => (v < 0 ? "-$" : "$") + Math.abs(v).toLocaleString("en-US") + "m";  // 8809 -> "$8,809m"
+
+function base(narrow, n) {                                      // options shared by every chart; n = legend entries
+  return {
+    animation: false, backgroundColor: "transparent", textStyle: {color: css("--ink-2")},
+    legend: narrow ? {bottom: 6, left: 10, orient: "vertical", itemGap: 6, textStyle: {color: css("--ink-2")}}  // below the plot
+                   : {top: 6, left: "center", textStyle: {color: css("--ink-2")}},   // above the plot, never on top of it
+    tooltip: {trigger: "axis", triggerOn: isTouch ? "click" : "mousemove|click", confine: true,
+              axisPointer: {type: "shadow"}, valueFormatter: v => v},
+  };
+}
+const grid = (narrow, n) => narrow ? {left: 52, right: 14, top: 22, bottom: 34 + 22 * n} : {left: 64, right: 24, top: 48, bottom: 34};
+const ax = extra => Object.assign({axisLine: {lineStyle: {color: css("--axis")}}, splitLine: {lineStyle: {color: css("--grid")}},
+                                   axisLabel: {color: css("--muted"), hideOverlap: true}}, extra);
+const color = i => css("--s" + (i + 1));                        // categorical slot i (0-based), fixed order
+const gap = () => ({borderColor: css("--surface"), borderWidth: 1}); // 2px surface gap between stacked fills
+
+function revenue(narrow) {                                      // revenue by segment, stacked bars
+  const d = DATA.rev[MODES.revenue], n = DATA.segments.length, o = base(narrow, n);
+  o.grid = grid(narrow, n);
+  o.xAxis = ax({type: "category", data: d.labels, axisTick: {show: false}, axisLabel: {color: css("--muted"), interval: 0, fontSize: narrow ? 10 : 12}});
+  o.yAxis = ax({type: "value", axisLabel: {color: css("--muted"), formatter: v => "$" + v + "bn"}});
+  o.series = DATA.segments.map((s, i) => ({name: s, type: "bar", stack: "rev", barMaxWidth: 56,
+    data: d.values[i], itemStyle: Object.assign({color: color(i)}, gap())}));
+  o.series[n - 1].label = {show: true, position: "top", color: css("--ink-2"), fontSize: narrow ? 10 : 12,   // total above each bar
+    formatter: p => d.total[p.dataIndex] == null ? "" : B(d.total[p.dataIndex])};
+  o.tooltip.formatter = ps => { const i = ps[0].dataIndex;
+    if (d.total[i] == null) return d.labels[i] + ": not reported on its own in these files";
+    return "<b>" + d.labels[i] + "</b><br>" + ps.slice().reverse().map(p => p.marker + p.seriesName + ": " + B(p.value)).join("<br>") +
+           "<br><b>Total: " + B(d.total[i]) + "</b>"; };
+  return o;
+}
+
+function costs(narrow) {                                        // each cost as % of revenue, stacked
+  const d = DATA.costs, n = d.names.length, o = base(narrow, n);
+  o.grid = grid(narrow, n);
+  o.xAxis = ax({type: "category", data: d.labels, axisTick: {show: false}, axisLabel: {color: css("--muted"), interval: 0}});
+  o.yAxis = ax({type: "value", axisLabel: {color: css("--muted"), formatter: "{value}%"}});
+  o.series = d.names.map((s, i) => ({name: s, type: "bar", stack: "c", barMaxWidth: 56, data: d.values[i],
+    itemStyle: Object.assign({color: color(i)}, gap())}));
+  o.series[0].markLine = {silent: true, symbol: "none", lineStyle: {color: css("--ink"), type: "dashed", width: 1.5},
+    label: {formatter: "revenue = 100%", color: css("--ink"), position: "insideStartTop", backgroundColor: css("--surface"),
+            padding: [1, 4], borderRadius: 3}, data: [{yAxis: 100}]};
+  o.series[n - 1].label = {show: true, position: "top", color: css("--ink-2"), fontSize: narrow ? 10 : 12,
+    formatter: p => Math.round(d.total[p.dataIndex]) + "%"};
+  o.tooltip.formatter = ps => "<b>" + d.labels[ps[0].dataIndex] + "</b> (% of revenue)<br>" +
+    ps.slice().reverse().map(p => p.marker + p.seriesName + ": " + P(p.value)).join("<br>") + "<br><b>All: " + P(d.total[ps[0].dataIndex]) + "</b>";
+  return o;
+}
+
+function margins(narrow) {                                      // gross, operating and net margin, lines
+  const d = DATA.margins[MODES.margins], n = d.names.length, o = base(narrow, n);
+  o.grid = grid(narrow, n);
+  o.tooltip.axisPointer = {type: "line"};
+  o.xAxis = ax({type: "category", data: d.labels, boundaryGap: false, axisTick: {show: false},
+               axisLabel: {color: css("--muted"), interval: 0, fontSize: narrow ? 10 : 12}});
+  o.yAxis = ax({type: "value", axisLabel: {color: css("--muted"), formatter: "{value}%"}});
+  o.series = d.names.map((s, i) => ({name: s, type: "line", data: d.values[i], symbol: "circle", symbolSize: 8,
+    connectNulls: false, lineStyle: {width: 2, color: color(i)}, itemStyle: {color: color(i), borderColor: css("--surface"), borderWidth: 2}}));
+  o.series[0].markLine = {silent: true, symbol: "none", lineStyle: {color: css("--axis"), width: 1}, label: {show: false}, data: [{yAxis: 0}]};
+  o.tooltip.formatter = ps => "<b>" + d.labels[ps[0].dataIndex] + "</b><br>" +
+    (ps[0].value == null ? "not reported on its own in these files" : ps.map(p => p.marker + p.seriesName + ": " + P(p.value)).join("<br>"));
+  return o;
+}
+
+function cash(narrow) {                                         // operating cash in (up), capex out (down), free cash flow
+  const d = DATA.cash, o = base(narrow, 3);
+  o.grid = grid(narrow, 3);
+  o.xAxis = ax({type: "category", data: d.labels, axisTick: {show: false}, axisLabel: {color: css("--muted"), interval: 0}});
+  o.yAxis = ax({type: "value", axisLabel: {color: css("--muted"), formatter: v => (v < 0 ? "-$" : "$") + Math.abs(v) + "bn"}});
+  o.series = [
+    {name: "Operating cash flow (in)", type: "bar", stack: "f", barMaxWidth: 56, data: d.cfo, itemStyle: Object.assign({color: color(0), borderRadius: [4, 4, 0, 0]}, gap())},
+    {name: "Capex (out)", type: "bar", stack: "f", barMaxWidth: 56, data: d.capex, itemStyle: Object.assign({color: color(1), borderRadius: [0, 0, 4, 4]}, gap())},
+    {name: "Free cash flow (in - out)", type: "scatter", symbol: "diamond", symbolSize: 14,
+     data: d.fcf.map((v, i) => ({value: v, label: {position: i === d.fcf.length - 1 ? "left" : "right"}})),  // last label inside the plot
+     itemStyle: {color: css("--ink"), borderColor: css("--surface"), borderWidth: 2},
+     label: {show: true, position: "right", color: css("--ink"), fontSize: narrow ? 10 : 12, formatter: p => B(p.value),
+             backgroundColor: css("--surface"), padding: [1, 3], borderRadius: 3}},   // readable on top of a bar
+  ];
+  o.tooltip.formatter = ps => "<b>" + d.labels[ps[0].dataIndex] + "</b><br>" + ps.map(p => p.marker + p.seriesName + ": " + B(p.value)).join("<br>");
+  return o;
+}
+
+function debt(narrow) {                                         // cash & securities vs debt at each balance sheet date
+  const d = DATA.debt, o = base(narrow, 3);
+  o.grid = grid(narrow, 3);
+  o.xAxis = ax({type: "category", data: d.labels, axisTick: {show: false}, axisLabel: {color: css("--muted"), interval: 0}});
+  o.yAxis = ax({type: "value", axisLabel: {color: css("--muted"), formatter: v => (v < 0 ? "-$" : "$") + Math.abs(v) + "bn"}});
+  o.series = [
+    {name: "Cash + marketable securities", type: "bar", barMaxWidth: 40, barGap: "10%", data: d.cash, itemStyle: {color: color(0), borderRadius: [4, 4, 0, 0]}},
+    {name: "Debt (incl. finance leases)", type: "bar", barMaxWidth: 40, data: d.debt, itemStyle: {color: color(1), borderRadius: [4, 4, 0, 0]}},
+    {name: "Net cash (cash - debt)", type: "scatter", symbol: "diamond", symbolSize: 14, data: d.net,
+     itemStyle: {color: css("--ink"), borderColor: css("--surface"), borderWidth: 2},
+     label: {show: !narrow, position: "right", color: css("--ink"), formatter: p => B(p.value),
+             backgroundColor: css("--surface"), padding: [1, 3], borderRadius: 3}},   // readable on top of a bar
+  ];
+  o.tooltip.formatter = ps => "<b>" + d.labels[ps[0].dataIndex] + "</b><br>" + ps.map(p => p.marker + p.seriesName + ": " + B(p.value)).join("<br>");
+  return o;
+}
+
+function bridge(narrow) {                                       // waterfall: adjusted EBITDA -> net income (horizontal)
+  const d = DATA.bridge, o = base(narrow, 0);
+  o.legend = {show: false};                                     // colours are explained in the text and the tooltip
+  o.grid = {left: narrow ? 4 : 16, right: narrow ? 62 : 90, top: 10, bottom: narrow ? 10 : 30, containLabel: true};
+  o.yAxis = ax({type: "category", data: d.labels, inverse: true, axisTick: {show: false},
+               axisLabel: {color: css("--ink-2"), fontSize: narrow ? 10 : 12, width: narrow ? 100 : 230, overflow: "break"}});
+  o.xAxis = ax({type: "value", axisLabel: {show: !narrow, color: css("--muted"), formatter: v => "$" + (v / 1000) + "bn"}});
+  const kindColor = (k, v) => k === "total" ? css("--ink-2") : v < 0 ? color(1) : color(0);
+  o.series = [
+    {type: "bar", stack: "w", silent: true, data: d.base, itemStyle: {color: "transparent"}, tooltip: {show: false}},
+    {type: "bar", stack: "w", barMaxWidth: 26, data: d.size.map((v, i) => ({value: v,
+       itemStyle: {color: kindColor(d.kind[i], d.delta[i]), borderRadius: 3}})),
+     label: {show: true, position: "right", color: css("--ink"), fontSize: narrow ? 10 : 12,
+             formatter: p => (d.kind[p.dataIndex] === "total" ? "" : (d.delta[p.dataIndex] >= 0 ? "+" : "")) + M(d.delta[p.dataIndex])}},
+  ];
+  o.tooltip = {trigger: "item", triggerOn: isTouch ? "click" : "mousemove|click", confine: true,
+    formatter: p => { const i = p.dataIndex; return "<b>" + d.labels[i] + "</b><br>" + (d.kind[i] === "total" ? "Subtotal: " + M(d.delta[i]) :
+      (d.delta[i] >= 0 ? "Adds " : "Takes away ") + M(Math.abs(d.delta[i])) + "<br>Running total: " + M(d.total[i])); }};
+  return o;
+}
+
+const BUILDERS = {revenue, costs, margins, cash, debt, bridge};  // chart div id -> function that builds its options
+function draw(id) {                                             // (re)build one chart
+  const div = document.getElementById(id);
+  if (!INSTANCES[id]) INSTANCES[id] = echarts.init(div);
+  INSTANCES[id].setOption(BUILDERS[id](narrowMQ.matches), true);
+  INSTANCES[id].resize();
+}
+function drawAll() { Object.keys(BUILDERS).forEach(draw); }     // on load, rotation and theme change
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {   // Quarters / Years toggles
+  MODES[b.dataset.chart] = b.dataset.mode;
+  b.parentNode.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  draw(b.dataset.chart);
+}));
+narrowMQ.addEventListener("change", drawAll);                   // rebuild when a phone is rotated
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);  // rebuild in the new colours
+window.addEventListener("resize", () => Object.values(INSTANCES).forEach(c => c.resize()));
+drawAll();
+</script>
+</main></body></html>

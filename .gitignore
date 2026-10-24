@@ -1,0 +1,8 @@
+# Earnings-call transcripts are third-party copies (not SEC documents): keep them local, never publish.
+# The pattern covers every company folder that follows the <Company>/filings/ convention.
+*/filings/*transcript*
+
+# Python and Excel leftovers
+__pycache__/
+*.pyc
+~$*.xlsx
