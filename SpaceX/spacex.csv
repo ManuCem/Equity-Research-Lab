@@ -1,0 +1,1303 @@
+item,period,value,unit,basis,method,source,files
+bs.accounts_payable,Dec-25,11792,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accounts_payable,Jun-26,8243,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.accounts_payable,Sep-26,13259,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accounts_receivable,Dec-25,1579,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accounts_receivable,Jun-26,3596,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.accounts_receivable,Sep-26,4772,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accrued_other_current,Dec-25,2569,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accrued_other_current,Jun-26,2377,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.accrued_other_current,Sep-26,5997,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accumulated_deficit,Dec-25,-37035,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.accumulated_deficit,Jun-26,-41852,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.accumulated_deficit,Sep-26,-37448,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.aoci,Dec-25,1898,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.aoci,Jun-26,1719,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.aoci,Sep-26,1664,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.apic,Dec-25,37706,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.apic,Jun-26,167344,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.apic,Sep-26,212539,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.cash,Dec-24,11385,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.cash,Dec-25,24747,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.cash,Jun-26,93522,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.cash,Mar-26,15852,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.cash,Sep-26,51294,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.common_stock_par,Dec-25,4,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.common_stock_par,Jun-26,13,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.common_stock_par,Sep-26,13,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.debt_current,Dec-24,372,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.debt_current,Dec-25,928,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.debt_current,Jun-26,2525,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.debt_current,Mar-26,1538,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.debt_current,Sep-26,2698,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.debt_lt,Dec-24,13421,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.debt_lt,Dec-25,21968,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.debt_lt,Jun-26,36839,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.debt_lt,Sep-26,36146,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.deferred_revenue_current,Dec-25,6111,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.deferred_revenue_current,Jun-26,7977,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.deferred_revenue_current,Sep-26,10784,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.deferred_revenue_lt,Dec-25,6005,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.deferred_revenue_lt,Jun-26,6309,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.deferred_revenue_lt,Sep-26,6736,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.deferred_tax_assets,Dec-25,141,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.deferred_tax_assets,Jun-26,354,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.deferred_tax_assets,Sep-26,388,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.digital_assets,Dec-25,1637,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.digital_assets,Jun-26,1098,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.digital_assets,Sep-26,1573,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.finance_lease_rou,Dec-25,1260,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.finance_lease_rou,Jun-26,1118,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.finance_lease_rou,Sep-26,1040,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.goodwill,Dec-25,11809,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.goodwill,Jun-26,11645,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.goodwill,Sep-26,48423,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.intangibles,Dec-25,1548,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.intangibles,Jun-26,1318,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.intangibles,Sep-26,6354,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.inventory,Dec-25,2416,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.inventory,Jun-26,2718,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.inventory,Sep-26,2891,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.marketable_securities,Dec-24,800,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.marketable_securities,Dec-25,0,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.marketable_securities,Jun-26,6487,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.marketable_securities,Mar-26,7823,USD millions,GAAP,reported,S-1 p.111,Space Exploration Technologies - S-1.pdf
+bs.marketable_securities,Sep-26,38561,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.other_assets,Dec-25,2130,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.other_assets,Jun-26,3454,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.other_assets,Sep-26,5809,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.other_liabilities,Dec-25,1381,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.other_liabilities,Jun-26,1276,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.other_liabilities,Sep-26,1657,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.ppe,Dec-25,42602,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.ppe,Jun-26,65736,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.ppe,Mar-26,53879,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.ppe,Sep-26,89483,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.prepaid_other,Dec-25,2210,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.prepaid_other,Jun-26,1724,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.prepaid_other,Sep-26,3457,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.redeemable_preferred,Dec-24,20941,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.redeemable_preferred,Dec-25,38752,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.redeemable_preferred,Jun-26,0,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.redeemable_preferred,Mar-26,7049,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.redeemable_preferred,Sep-26,0,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_assets,Dec-24,57062,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.total_assets,Dec-25,92079,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_assets,Jun-26,192770,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.total_assets,Mar-26,102094,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.total_assets,Sep-26,254045,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_current_assets,Dec-24,16108,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.total_current_assets,Dec-25,30952,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_current_assets,Jun-26,108047,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.total_current_assets,Mar-26,29732,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.total_current_assets,Sep-26,100975,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_current_liabilities,Dec-24,11791,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.total_current_liabilities,Dec-25,21400,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_current_liabilities,Jun-26,21122,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.total_current_liabilities,Mar-26,24436,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.total_current_liabilities,Sep-26,32738,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_equity,Dec-24,4863,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.total_equity,Dec-25,2573,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_equity,Jun-26,127224,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.total_equity,Mar-26,34533,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.total_equity,Sep-26,176768,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_liab_pref_equity,Dec-25,92079,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_liab_pref_equity,Jun-26,192770,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.total_liab_pref_equity,Sep-26,254045,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_liabilities,Dec-24,31258,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+bs.total_liabilities,Dec-25,50754,USD millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+bs.total_liabilities,Jun-26,65546,USD millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+bs.total_liabilities,Mar-26,60512,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+bs.total_liabilities,Sep-26,77277,USD millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cap.bond_issue,Jun-26,25000,USD millions,GAAP,reported,Q2-26 release p.7,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cap.bond_wavg_coupon_pct,Jun-26,5.855,percent,GAAP,reported,Q2-26 release p.7,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cap.cursor_gaap_consideration,Sep-26,42500,USD millions,GAAP,reported,Q3-26 release p.7,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cap.cursor_post_combination_awards,Sep-26,23400,USD millions,GAAP,reported,Q3-26 release p.7,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cap.cursor_revenue_since_close,Sep-26,608,USD millions,GAAP,reported,Q3-26 release p.7,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cap.ipo_net_proceeds,Jun-26,85700,USD millions,GAAP,reported,Q2-26 release p.7,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cap.ipo_shares_m,Jun-26,638.888888,millions,GAAP,reported,Q2-26 release p.7,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.acquisitions_cash,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.acquisitions_cash,9M-26,514,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capex,9M-25,-13846,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capex,9M-26,-48069,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capex,FY25,-20737,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.capex,Q1-25,-4140,USD millions,GAAP,derived: = -segment capex total (ties to CF purchases of PP&E in FY25 and 9M-26),S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.capex,Q1-26,-10107,USD millions,GAAP,derived: = -segment capex total (ties to CF purchases of PP&E in FY25 and 9M-26),Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.capex,Q2-25,-2825,USD millions,GAAP,derived: = -segment capex total (ties to CF purchases of PP&E in FY25 and 9M-26),Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.capex,Q2-26,-18369,USD millions,GAAP,derived: = -segment capex total (ties to CF purchases of PP&E in FY25 and 9M-26),Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capex,Q3-25,-6880,USD millions,GAAP,derived: = -segment capex total (ties to CF purchases of PP&E in FY25 and 9M-26),Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capex,Q3-26,-19593,USD millions,GAAP,derived: = -segment capex total (ties to CF purchases of PP&E in FY25 and 9M-26),Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capex,Q4-25,-6891,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capitalized_interest,9M-25,-96,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capitalized_interest,9M-26,-20,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.capitalized_interest,FY25,-169,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.capitalized_interest,Q4-25,-73,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_begin,9M-25,11501,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_begin,9M-26,25124,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_begin,FY25,11501,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.cash_begin,H1-25,11501,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cash_begin,H1-26,25124,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cash_begin,Q3-25,0,USD millions,GAAP,derived: 9M-25 - H1-25,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_begin,Q3-26,0,USD millions,GAAP,derived: 9M-26 - H1-26,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_begin,Q4-25,0,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_end,9M-25,12133,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_end,9M-26,53386,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_end,FY25,25124,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.cash_end,H1-25,15094,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cash_end,H1-26,94352,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cash_end,Q3-25,-2961,USD millions,GAAP,derived: 9M-25 - H1-25,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_end,Q3-26,-40966,USD millions,GAAP,derived: 9M-26 - H1-26,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_end,Q4-25,12991,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cash_interest_paid,FY25,1476,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.cash_taxes_paid,FY25,154,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.cff,9M-25,9440,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cff,9M-26,99819,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cff,FY25,26350,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cff,H1-25,9199,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cff,H1-26,100291,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cff,Q1-25,354,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cff,Q1-26,7125,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cff,Q2-25,8845,USD millions,GAAP,derived: H1-25 - Q1-25,Q2-26 release p.10 | S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cff,Q2-26,93166,USD millions,GAAP,derived: H1-26 - Q1-26,Q2-26 release p.10 | S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cff,Q3-25,241,USD millions,GAAP,derived: 9M-25 - H1-25,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cff,Q3-26,-472,USD millions,GAAP,derived: 9M-26 - H1-26,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cff,Q4-25,16910,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfi,9M-25,-12997,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfi,9M-26,-84611,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfi,FY25,-19575,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cfi,H1-25,-6032,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfi,H1-26,-34487,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfi,Q1-25,-4170,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cfi,Q1-26,-16724,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cfi,Q2-25,-1862,USD millions,GAAP,derived: H1-25 - Q1-25,Q2-26 release p.10 | S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfi,Q2-26,-17763,USD millions,GAAP,derived: H1-26 - Q1-26,Q2-26 release p.10 | S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfi,Q3-25,-6965,USD millions,GAAP,derived: 9M-25 - H1-25,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfi,Q3-26,-50124,USD millions,GAAP,derived: 9M-26 - H1-26,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfi,Q4-25,-6578,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfo,9M-25,4120,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfo,9M-26,13097,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfo,FY25,6785,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cfo,H1-25,351,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfo,H1-26,3466,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfo,Q1-25,727,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cfo,Q1-26,1047,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+cf.cfo,Q2-25,-376,USD millions,GAAP,derived: H1-25 - Q1-25,Q2-26 release p.10 | S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfo,Q2-26,2419,USD millions,GAAP,derived: H1-26 - Q1-26,Q2-26 release p.10 | S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.cfo,Q3-25,3769,USD millions,GAAP,derived: 9M-25 - H1-25,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfo,Q3-26,9631,USD millions,GAAP,derived: 9M-26 - H1-26,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.cfo,Q4-25,2665,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_deferred_revenue,9M-25,404,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_deferred_revenue,9M-26,4922,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_deferred_revenue,FY25,1929,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_deferred_revenue,Q4-25,1525,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_inventory,9M-25,-378,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_inventory,9M-26,-1381,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_inventory,FY25,-413,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_inventory,Q4-25,-35,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_operating_lease,FY25,-56,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_other_liabilities,9M-25,1122,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_other_liabilities,9M-26,1991,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_other_liabilities,FY25,1136,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_other_liabilities,Q4-25,14,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_payables,9M-25,668,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_payables,9M-26,-970,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_payables,FY25,709,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_payables,Q4-25,41,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_prepaid_other,9M-25,-427,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_prepaid_other,9M-26,-1305,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_prepaid_other,FY25,-673,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_prepaid_other,Q4-25,-246,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_receivables,9M-25,-934,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_receivables,9M-26,-2882,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.chg_receivables,FY25,-543,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.chg_receivables,Q4-25,391,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.da,9M-25,4784,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.da,9M-26,8934,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.da,FY25,6701,USD millions,GAAP,reported,S-1 p.232,Space Exploration Technologies - S-1.pdf
+cf.da,Q4-25,1917,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.232 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_discount_amortization,FY25,93,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.debt_issuance_costs,9M-25,-66,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_issuance_costs,9M-26,-124,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_issuance_costs,FY25,-66,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.debt_issuance_costs,Q4-25,0,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_proceeds,9M-25,10947,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_proceeds,9M-26,51834,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_proceeds,FY25,16055,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.debt_proceeds,Q4-25,5108,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_repayments,9M-25,-6014,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_repayments,9M-26,-39845,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.debt_repayments,FY25,-6858,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.debt_repayments,Q4-25,-844,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.deferred_tax,9M-25,623,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.deferred_tax,9M-26,-455,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.deferred_tax,FY25,626,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.deferred_tax,Q4-25,3,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.digital_assets_unrealized,9M-25,-389,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.digital_assets_unrealized,9M-26,64,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.digital_assets_unrealized,FY25,112,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.digital_assets_unrealized,Q4-25,501,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.employee_equity_plans,9M-25,206,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.employee_equity_plans,9M-26,368,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.employee_equity_plans,FY25,328,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.employee_equity_plans,Q4-25,122,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.extinguishment_premium,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.extinguishment_premium,9M-26,-1153,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.finance_lease_principal,9M-25,-213,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.finance_lease_principal,9M-26,-270,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.finance_lease_principal,FY25,-295,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.finance_lease_principal,Q4-25,-82,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.fx,9M-25,69,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.fx,9M-26,-43,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.fx,FY25,63,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.fx,Q4-25,-6,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.impairment_disposals,FY25,88,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.intangible_payments,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.intangible_payments,9M-26,-866,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.investments_affiliates,FY25,-86,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.ipo_proceeds,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.ipo_proceeds,9M-26,85675,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.loss_on_extinguishment,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.loss_on_extinguishment,9M-26,1545,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.maturities_securities,9M-25,548,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.maturities_securities,9M-26,9158,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.maturities_securities,FY25,548,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.maturities_securities,Q4-25,0,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_change_cash,9M-25,632,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_change_cash,9M-26,28262,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_change_cash,FY25,13623,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.net_change_cash,H1-25,3593,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.net_change_cash,H1-26,69228,USD millions,GAAP,reported,Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+cf.net_change_cash,Q3-25,-2961,USD millions,GAAP,derived: 9M-25 - H1-25,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_change_cash,Q3-26,-40966,USD millions,GAAP,derived: 9M-26 - H1-26,Q3-26 release p.12 | Q2-26 release p.10,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_change_cash,Q4-25,12991,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_income,9M-25,-2590,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_income,9M-26,-413,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.net_income,FY25,-4937,USD millions,GAAP,reported,S-1 p.232,Space Exploration Technologies - S-1.pdf
+cf.net_income,Q4-25,-2347,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.232 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.other_investing,9M-25,-175,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.other_investing,9M-26,57,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.other_investing,FY25,-95,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.other_investing,Q4-25,80,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.other_noncash,9M-25,193,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.other_noncash,9M-26,-254,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.other_noncash,FY25,66,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.other_noncash,Q4-25,-127,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.product_rebates,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.product_rebates,9M-26,1372,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.product_rebates,FY25,118,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.product_rebates,Q4-25,118,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.purchase_securities,9M-25,-601,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.purchase_securities,9M-26,-46834,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.purchase_securities,FY25,-611,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.purchase_securities,Q4-25,-10,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.repurchases,9M-25,-525,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.repurchases,9M-26,-4426,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.repurchases,FY25,-1125,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.repurchases,Q4-25,-600,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.sales_securities,9M-25,1173,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.sales_securities,9M-26,77,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.sales_securities,FY25,1457,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.sales_securities,Q4-25,284,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.sbc,9M-25,1044,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.sbc,9M-26,3833,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.sbc,FY25,1947,USD millions,GAAP,reported,S-1 p.232,Space Exploration Technologies - S-1.pdf
+cf.sbc,Q4-25,903,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.232 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.stock_issuance,9M-25,5299,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.stock_issuance,9M-26,8319,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.stock_issuance,FY25,18807,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.stock_issuance,Q4-25,13508,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.tax_net_share_settlement,9M-25,-194,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.tax_net_share_settlement,9M-26,-559,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.tax_net_share_settlement,FY25,-496,USD millions,GAAP,reported,S-1 p.233,Space Exploration Technologies - S-1.pdf
+cf.tax_net_share_settlement,Q4-25,-302,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.233 | Q3-26 release p.12,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.unconsolidated_affiliates_gain,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+cf.unconsolidated_affiliates_gain,9M-26,-532,USD millions,GAAP,reported,Q3-26 release p.12,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+debt.bridge_loan,Mar-26,20000,USD millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+debt.finance_lease_liability,Dec-25,1237,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.net_total_ex_leases,Dec-25,21659,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.net_total_ex_leases,Mar-26,29111,USD millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+debt.other_financings,Dec-25,4562,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.other_financings,Mar-26,9105,USD millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+debt.principal_total_ex_leases,Dec-25,22049,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.principal_total_ex_leases,Mar-26,29132,USD millions,GAAP,reported,S-1 p.112,Space Exploration Technologies - S-1.pdf
+debt.total_incl_leases_net,Dec-25,22896,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.x_b1_term_loan,Dec-25,6504,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.x_b3_term_loan,Dec-25,5966,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.x_notes,Dec-25,27,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.x_notes,Mar-26,27,USD millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+debt.xai_12_5_notes,Dec-25,3000,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.xai_fixed_term_loan,Dec-25,995,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+debt.xai_floating_term_loan,Dec-25,995,USD millions,GAAP,reported,S-1 p.248,Space Exploration Technologies - S-1.pdf
+is.cost_of_revenue,9M-25,6949,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.cost_of_revenue,9M-26,11361,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.cost_of_revenue,FY25,9451,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+is.cost_of_revenue,H1-25,4244,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.cost_of_revenue,H1-26,5883,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q1-25,1962,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q1-26,2388,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q2-25,2282,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q2-26,3495,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q3-25,2705,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q3-26,5478,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.cost_of_revenue,Q4-25,2502,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.230 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_basic,9M-25,-0.89,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_basic,9M-26,-0.15,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_basic,FY25,-1.69,USD per share,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.eps_basic,H1-25,-0.53,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_basic,H1-26,-1.12,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_basic,Q1-25,-0.18,USD per share,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.eps_basic,Q1-26,-1.27,USD per share,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.eps_basic,Q2-25,-0.34,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_basic,Q2-26,-0.09,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_basic,Q3-25,-0.36,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_basic,Q3-26,0.37,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_diluted,9M-25,-0.89,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_diluted,9M-26,-0.15,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_diluted,FY25,-1.69,USD per share,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.eps_diluted,H1-25,-0.53,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_diluted,H1-26,-1.12,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_diluted,Q1-25,-0.18,USD per share,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.eps_diluted,Q1-26,-1.27,USD per share,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.eps_diluted,Q2-25,-0.34,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_diluted,Q2-26,-0.09,USD per share,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.eps_diluted,Q3-25,-0.36,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.eps_diluted,Q3-26,0.35,USD per share,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.impairment,9M-25,29,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.impairment,9M-26,0,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.impairment,FY25,38,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+is.impairment,H1-25,29,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.impairment,H1-26,0,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.impairment,Q1-25,24,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.impairment,Q1-26,0,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.impairment,Q2-25,5,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.impairment,Q2-26,0,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.impairment,Q3-25,0,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.impairment,Q3-26,0,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.impairment,Q4-25,9,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.230 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_expense,9M-25,-1372,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_expense,9M-26,-1968,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_expense,FY25,-1945,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+is.interest_expense,H1-25,-858,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_expense,H1-26,-1293,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_expense,Q1-25,-447,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_expense,Q1-26,-664,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_expense,Q2-25,-411,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_expense,Q2-26,-629,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_expense,Q3-25,-514,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_expense,Q3-26,-675,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_expense,Q4-25,-573,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.230 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_income,9M-25,370,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_income,9M-26,1426,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_income,FY25,492,USD millions,GAAP,reported,S-1 p.231,Space Exploration Technologies - S-1.pdf
+is.interest_income,H1-25,215,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_income,H1-26,553,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_income,Q1-25,117,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_income,Q1-26,213,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_income,Q2-25,98,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_income,Q2-26,340,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.interest_income,Q3-25,155,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_income,Q3-26,873,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.interest_income,Q4-25,122,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.231 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income,9M-25,-2590,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income,9M-26,-413,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income,FY25,-4937,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.net_income,H1-25,-1536,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income,H1-26,-4817,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income,Q1-25,-528,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.net_income,Q1-26,-4276,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.net_income,Q2-25,-1008,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income,Q2-26,-541,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income,Q3-25,-1054,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income,Q3-26,4404,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income,Q4-25,-2347,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.36 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income_to_common,9M-25,-2590,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income_to_common,9M-26,-1084,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income_to_common,FY25,-4937,USD millions,GAAP,reported,S-1 p.231,Space Exploration Technologies - S-1.pdf
+is.net_income_to_common,H1-25,-1536,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income_to_common,H1-26,-5488,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income_to_common,Q1-25,-528,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income_to_common,Q1-26,-4947,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income_to_common,Q2-25,-1008,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income_to_common,Q2-26,-541,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.net_income_to_common,Q3-25,-1054,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income_to_common,Q3-26,4404,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.net_income_to_common,Q4-25,-2347,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.231 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.op_income,9M-25,-1216,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.op_income,9M-26,705,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.op_income,FY25,-2589,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.op_income,H1-25,-943,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.op_income,H1-26,-2086,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.op_income,Q1-25,27,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.op_income,Q1-26,-1943,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.op_income,Q2-25,-970,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.op_income,Q2-26,-143,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.op_income,Q3-25,-273,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.op_income,Q3-26,2791,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.op_income,Q4-25,-1373,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.36 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.other_income,9M-25,342,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.other_income,9M-26,-937,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.other_income,FY25,-177,USD millions,GAAP,reported,S-1 p.231,Space Exploration Technologies - S-1.pdf
+is.other_income,H1-25,202,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.other_income,H1-26,-1962,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.other_income,Q1-25,-211,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.other_income,Q1-26,-1876,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.other_income,Q2-25,413,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.other_income,Q2-26,-86,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.other_income,Q3-25,140,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.other_income,Q3-26,1025,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.other_income,Q4-25,-519,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.231 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.pretax_income,9M-25,-1876,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.pretax_income,9M-26,-774,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.pretax_income,FY25,-4219,USD millions,GAAP,reported,S-1 p.231,Space Exploration Technologies - S-1.pdf
+is.pretax_income,H1-25,-1384,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.pretax_income,H1-26,-4788,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.pretax_income,Q1-25,-514,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.pretax_income,Q1-26,-4270,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.pretax_income,Q2-25,-870,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.pretax_income,Q2-26,-518,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.pretax_income,Q3-25,-492,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.pretax_income,Q3-26,4014,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.pretax_income,Q4-25,-2343,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.231 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.restructuring,9M-25,472,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.restructuring,9M-26,-6,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.restructuring,FY25,487,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+is.restructuring,H1-25,194,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.restructuring,H1-26,-9,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.restructuring,Q1-25,4,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.restructuring,Q1-26,-11,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.restructuring,Q2-25,190,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.restructuring,Q2-26,2,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.restructuring,Q3-25,278,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.restructuring,Q3-26,3,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.restructuring,Q4-25,15,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.230 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.revenue,9M-25,13714,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.revenue,9M-26,27083,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.revenue,FY25,18674,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.revenue,H1-25,8138,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.revenue,H1-26,12508,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.revenue,Q1-25,4067,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.revenue,Q1-26,4694,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.revenue,Q2-25,4071,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.revenue,Q2-26,7814,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.revenue,Q3-25,5576,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.revenue,Q3-26,14575,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.revenue,Q4-25,4960,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.36 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.rnd,9M-25,5806,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.rnd,9M-26,11658,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.rnd,FY25,8643,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+is.rnd,H1-25,3515,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.rnd,H1-26,7062,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.rnd,Q1-25,1557,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.rnd,Q1-26,3514,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.rnd,Q2-25,1958,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.rnd,Q2-26,3548,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.rnd,Q3-25,2291,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.rnd,Q3-26,4596,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.rnd,Q4-25,2837,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.230 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.sga,9M-25,1674,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.sga,9M-26,3365,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.sga,FY25,2644,USD millions,GAAP,reported,S-1 p.230,Space Exploration Technologies - S-1.pdf
+is.sga,H1-25,1099,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.sga,H1-26,1658,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.sga,Q1-25,493,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.sga,Q1-26,746,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.sga,Q2-25,606,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.sga,Q2-26,912,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.sga,Q3-25,575,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.sga,Q3-26,1707,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.sga,Q4-25,970,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.230 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.tax,9M-25,714,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.tax,9M-26,-361,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.tax,FY25,718,USD millions,GAAP,reported,S-1 p.231,Space Exploration Technologies - S-1.pdf
+is.tax,H1-25,152,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.tax,H1-26,29,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.tax,Q1-25,14,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.tax,Q1-26,6,USD millions,GAAP,derived: H1-26 - Q2-26,Q2-26 release p.8 | Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.tax,Q2-25,138,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.tax,Q2-26,23,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.tax,Q3-25,562,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.tax,Q3-26,-390,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.tax,Q4-25,4,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.231 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.total_costs,9M-25,14930,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.total_costs,9M-26,26378,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.total_costs,FY25,21263,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.total_costs,H1-25,9081,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.total_costs,H1-26,14594,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.total_costs,Q1-25,4040,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.total_costs,Q1-26,6637,USD millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.total_costs,Q2-25,5041,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.total_costs,Q2-26,7957,USD millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.total_costs,Q3-25,5849,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.total_costs,Q3-26,11784,USD millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.total_costs,Q4-25,6333,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.36 | Q3-26 release p.9,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,9M-25,2915,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,9M-26,7274,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,FY25,2926,millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.wavg_shares_basic_m,H1-25,2902,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,H1-26,4879,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,Q1-25,2875,millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.wavg_shares_basic_m,Q1-26,3884,millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.wavg_shares_basic_m,Q2-25,2929,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,Q2-26,5864,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,Q3-25,2941,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_basic_m,Q3-26,11942,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,9M-25,2915,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,9M-26,7274,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,FY25,2926,millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.wavg_shares_diluted_m,H1-25,2902,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,H1-26,4879,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,Q1-25,2875,millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.wavg_shares_diluted_m,Q1-26,3884,millions,GAAP,reported,S-1 p.36,Space Exploration Technologies - S-1.pdf
+is.wavg_shares_diluted_m,Q2-25,2929,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,Q2-26,5864,millions,GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,Q3-25,2941,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+is.wavg_shares_diluted_m,Q3-26,12475,millions,GAAP,reported,Q3-26 release p.9,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.backlog,Dec-25,28377,USD millions,operating KPI,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+kpi.backlog,Jun-26,47500,USD millions,operating KPI,reported,Q2-26 release p.1,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_launches,9M-25,36,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_launches,9M-26,29,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_launches,FY25,43,count,operating KPI,reported,S-1 p.85,Space Exploration Technologies - S-1.pdf
+kpi.customer_launches,H1-25,21,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_launches,H1-26,17,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_launches,Q1-25,12,count,operating KPI,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_launches,Q1-26,7,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_launches,Q2-25,9,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_launches,Q2-26,10,count,operating KPI,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_launches,Q3-25,15,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_launches,Q3-26,12,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_launches,Q4-25,7,count,operating KPI,derived: FY25 - 9M-25,S-1 p.85 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_launches_falcon,Q1-25,12,count,operating KPI,reported,S-1 p.85,Space Exploration Technologies - S-1.pdf
+kpi.customer_launches_falcon,Q1-26,7,count,operating KPI,reported,S-1 p.85,Space Exploration Technologies - S-1.pdf
+kpi.customer_payload_t,9M-25,274,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_payload_t,9M-26,251,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_payload_t,FY25,312,metric tons,operating KPI,reported,S-1 p.84,Space Exploration Technologies - S-1.pdf
+kpi.customer_payload_t,H1-25,163,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_payload_t,H1-26,132,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q1-25,75,metric tons,operating KPI,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q1-26,45,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q2-25,88,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q2-26,87,metric tons,operating KPI,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q3-25,111,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q3-26,119,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.customer_payload_t,Q4-25,38,metric tons,operating KPI,derived: FY25 - 9M-25,S-1 p.84 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.deferred_revenue_total,Dec-25,12116,USD millions,operating KPI,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+kpi.internal_launches,9M-25,92,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_launches,9M-26,84,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_launches,FY25,127,count,operating KPI,derived: total launches - customer launches,S-1 p.37 | S-1 p.85,Space Exploration Technologies - S-1.pdf
+kpi.internal_launches,H1-25,63,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_launches,H1-26,61,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_launches,Q1-25,26,count,operating KPI,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_launches,Q1-26,33,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_launches,Q2-25,37,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_launches,Q2-26,28,count,operating KPI,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_launches,Q3-25,29,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_launches,Q3-26,23,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_launches,Q4-25,35,count,operating KPI,derived: total launches - customer launches,S-1 p.37 | Q3-26 release p.4 | S-1 p.85 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_payload_t,9M-25,1353,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_payload_t,9M-26,1266,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_payload_t,FY25,1901,metric tons,operating KPI,reported,S-1 p.84,Space Exploration Technologies - S-1.pdf
+kpi.internal_payload_t,H1-25,938,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_payload_t,H1-26,908,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q1-25,375,metric tons,operating KPI,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q1-26,511,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q2-25,563,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q2-26,397,metric tons,operating KPI,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q3-25,415,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q3-26,358,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.internal_payload_t,Q4-25,548,metric tons,operating KPI,derived: FY25 - 9M-25,S-1 p.84 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,9M-25,1627,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,9M-26,1517,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,FY25,2213,metric tons,operating KPI,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.mass_to_orbit_t,H1-25,1102,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,H1-26,1041,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,Q1-25,450,metric tons,operating KPI,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.mass_to_orbit_t,Q1-26,556,metric tons,operating KPI,reported,Q2-26 release p.4; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,Q2-25,652,metric tons,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,Q2-26,485,metric tons,operating KPI,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,Q3-25,525,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,Q3-26,476,metric tons,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.mass_to_orbit_t,Q4-25,586,metric tons,operating KPI,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.nameplate_compute_gw,FY25,0.8,GW,operating KPI,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+kpi.nameplate_compute_gw,Q1-25,0.3,GW,operating KPI,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+kpi.nameplate_compute_gw,Q1-26,1.0,GW,operating KPI,reported,Q2-26 release p.6; S-1 p.38,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.nameplate_compute_gw,Q2-25,0.4,GW,operating KPI,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.nameplate_compute_gw,Q2-26,1.4,GW,operating KPI,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.nameplate_compute_gw,Q3-25,0.6,GW,operating KPI,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.nameplate_compute_gw,Q3-26,1.7,GW,operating KPI,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.nameplate_compute_gw,Q4-25,0.8,GW,operating KPI,period-end metric: Q4-25 end = FY25 end (31 Dec 2025),S-1 p.38,Space Exploration Technologies - S-1.pdf
+kpi.satellites_in_orbit_k,Jun-26,10.2,thousands,operating KPI,reported,Q2-26 release p.2,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.satellites_in_orbit_k,Sep-26,11.1,thousands,operating KPI,reported,Q3-26 release p.2,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,9M-25,84,USD per month,operating KPI,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,9M-26,67,USD per month,operating KPI,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,FY25,81,USD per month,operating KPI,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+kpi.starlink_arpu_usd,H1-25,85,USD per month,operating KPI,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,H1-26,66,USD per month,operating KPI,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,Q1-25,86,USD per month,operating KPI,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+kpi.starlink_arpu_usd,Q1-26,66,USD per month,operating KPI,reported,Q2-26 release p.5; S-1 p.38,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,Q2-25,85,USD per month,operating KPI,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,Q2-26,66,USD per month,operating KPI,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,Q3-25,83,USD per month,operating KPI,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_arpu_usd,Q3-26,69,USD per month,operating KPI,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_countries,Jun-26,167,count,operating KPI,reported,Q2-26 release p.2,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_countries,Sep-26,174,count,operating KPI,reported,Q3-26 release p.2,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_subscribers_m,FY25,8.9,millions,operating KPI,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.starlink_subscribers_m,Q1-25,5.0,millions,operating KPI,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.starlink_subscribers_m,Q1-26,10.3,millions,operating KPI,reported,Q2-26 release p.5; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_subscribers_m,Q2-25,6.0,millions,operating KPI,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.starlink_subscribers_m,Q2-26,12.0,millions,operating KPI,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_subscribers_m,Q3-25,7.2,millions,operating KPI,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_subscribers_m,Q3-26,13.6,millions,operating KPI,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.starlink_subscribers_m,Q4-25,8.9,millions,operating KPI,period-end metric: Q4-25 end = FY25 end (31 Dec 2025),S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.top_customer_share_fy25_pct,Dec-25,20.9,percent,operating KPI,reported,S-1 p.244,Space Exploration Technologies - S-1.pdf
+kpi.total_launches,9M-25,128,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.total_launches,9M-26,113,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.total_launches,FY25,170,count,operating KPI,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.total_launches,H1-25,84,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.total_launches,H1-26,78,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.total_launches,Q1-25,38,count,operating KPI,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+kpi.total_launches,Q1-26,40,count,operating KPI,reported,Q2-26 release p.4; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.total_launches,Q2-25,46,count,operating KPI,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+kpi.total_launches,Q2-26,38,count,operating KPI,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.total_launches,Q3-25,44,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.total_launches,Q3-26,35,count,operating KPI,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+kpi.total_launches,Q4-25,42,count,operating KPI,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.acquisition_costs,9M-25,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.acquisition_costs,9M-26,8,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.acquisition_costs,FY25,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.acquisition_costs,H1-25,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.acquisition_costs,H1-26,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.acquisition_costs,Q1-25,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.acquisition_costs,Q1-26,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.acquisition_costs,Q2-25,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.acquisition_costs,Q2-26,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.acquisition_costs,Q3-25,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.acquisition_costs,Q3-26,8,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.acquisition_costs,Q4-25,0,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.adj_ebitda,9M-25,5113,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.adj_ebitda,9M-26,13474,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.adj_ebitda,FY25,6584,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.adj_ebitda,H1-25,2944,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.adj_ebitda,H1-26,4665,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.adj_ebitda,Q1-25,1730,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.adj_ebitda,Q1-26,1127,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.adj_ebitda,Q2-25,1214,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.adj_ebitda,Q2-26,3538,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.adj_ebitda,Q3-25,2169,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.adj_ebitda,Q3-26,8809,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.adj_ebitda,Q4-25,1471,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.da,9M-25,4784,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.da,9M-26,8934,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.da,FY25,6701,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.da,H1-25,2970,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.da,H1-26,5290,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.da,Q1-25,1443,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.da,Q1-26,2442,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.da,Q2-25,1526,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.da,Q2-26,2848,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.da,Q3-25,1814,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.da,Q3-26,3644,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.da,Q4-25,1917,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.impairment,9M-25,29,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.impairment,9M-26,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.impairment,FY25,38,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.impairment,H1-25,29,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.impairment,H1-26,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.impairment,Q1-25,24,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.impairment,Q1-26,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.impairment,Q2-25,5,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.impairment,Q2-26,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.impairment,Q3-25,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.impairment,Q3-26,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.impairment,Q4-25,9,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_expense,9M-25,1372,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_expense,9M-26,1968,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_expense,FY25,1945,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.interest_expense,H1-25,858,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_expense,H1-26,1293,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_expense,Q1-25,447,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.interest_expense,Q1-26,664,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.interest_expense,Q2-25,411,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_expense,Q2-26,629,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_expense,Q3-25,514,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_expense,Q3-26,675,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_expense,Q4-25,573,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_income,9M-25,-370,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_income,9M-26,-1426,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_income,FY25,-492,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.interest_income,H1-25,-215,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_income,H1-26,-553,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_income,Q1-25,-117,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.interest_income,Q1-26,-213,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.interest_income,Q2-25,-98,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_income,Q2-26,-340,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.interest_income,Q3-25,-155,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_income,Q3-26,-873,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.interest_income,Q4-25,-122,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.net_income,9M-25,-2590,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.net_income,9M-26,-413,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.net_income,FY25,-4937,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.net_income,H1-25,-1536,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.net_income,H1-26,-4817,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.net_income,Q1-25,-528,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.net_income,Q1-26,-4276,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.net_income,Q2-25,-1008,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.net_income,Q2-26,-541,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.net_income,Q3-25,-1054,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.net_income,Q3-26,4404,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.net_income,Q4-25,-2347,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.other_expense,9M-25,-342,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.other_expense,9M-26,937,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.other_expense,FY25,177,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.other_expense,H1-25,-202,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.other_expense,H1-26,1962,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.other_expense,Q1-25,211,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.other_expense,Q1-26,1876,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.other_expense,Q2-25,-413,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.other_expense,Q2-26,86,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.other_expense,Q3-25,-140,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.other_expense,Q3-26,-1025,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.other_expense,Q4-25,519,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.restructuring,9M-25,472,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.restructuring,9M-26,-6,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.restructuring,FY25,487,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.restructuring,H1-25,194,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.restructuring,H1-26,-9,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.restructuring,Q1-25,4,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.restructuring,Q1-26,-11,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.restructuring,Q2-25,190,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.restructuring,Q2-26,2,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.restructuring,Q3-25,278,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.restructuring,Q3-26,3,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.restructuring,Q4-25,15,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc,9M-25,1044,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc,9M-26,2616,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc,FY25,1947,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.sbc,H1-25,694,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc,H1-26,1470,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc,Q1-25,232,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.sbc,Q1-26,639,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.sbc,Q2-25,463,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc,Q2-26,831,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc,Q3-25,350,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc,Q3-26,1146,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc,Q4-25,903,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,9M-25,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,9M-26,1217,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,FY25,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.sbc_acquisitions,H1-25,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,H1-26,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,Q1-25,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.sbc_acquisitions,Q1-26,0,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.sbc_acquisitions,Q2-25,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,Q2-26,0,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,Q3-25,0,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,Q3-26,1217,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.sbc_acquisitions,Q4-25,0,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.tax,9M-25,714,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.tax,9M-26,-361,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.tax,FY25,718,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.tax,H1-25,152,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.tax,H1-26,29,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.tax,Q1-25,14,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.tax,Q1-26,6,USD millions,non-GAAP,reported,S-1 p.109,Space Exploration Technologies - S-1.pdf
+rec.tax,Q2-25,138,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.tax,Q2-26,23,USD millions,non-GAAP,reported,Q2-26 release p.8,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+rec.tax,Q3-25,562,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.tax,Q3-26,-390,USD millions,non-GAAP,reported,Q3-26 release p.10,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+rec.tax,Q4-25,4,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.109 | Q3-26 release p.10,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,9M-25,5123,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,9M-26,8183,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,FY25,7168,USD millions,non-GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.conn.adj_ebitda,H1-25,3200,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,H1-26,4684,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,Q1-25,1618,USD millions,non-GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.conn.adj_ebitda,Q1-26,2087,USD millions,non-GAAP,reported,Q2-26 release p.3; S-1 p.38,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,Q2-25,1583,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,Q2-26,2597,USD millions,non-GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,Q3-25,1923,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,Q3-26,3499,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.adj_ebitda,Q4-25,2045,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.38 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.capex,9M-25,2951,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.capex,9M-26,4242,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.capex,FY25,4178,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.conn.capex,H1-25,1944,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.capex,H1-26,2699,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.capex,Q1-25,814,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.conn.capex,Q1-26,1332,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.capex,Q2-25,1130,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.capex,Q2-26,1367,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.capex,Q3-25,1007,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.capex,Q3-26,1543,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.capex,Q4-25,1227,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,9M-25,4271,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,9M-26,6079,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,FY25,5921,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.conn.cost_of_revenue,H1-25,2615,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,H1-26,3711,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q1-25,1214,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.5 | Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q1-26,1651,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q2-25,1401,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q2-26,2060,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q3-25,1657,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q3-26,2368,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.cost_of_revenue,Q4-25,1650,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.da,9M-25,1706,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.da,9M-26,2574,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.da,FY25,2376,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.conn.da,H1-25,1078,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.da,H1-26,1588,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.da,Q1-25,510,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.conn.da,Q1-26,783,USD millions,GAAP,reported,Q2-26 release p.5; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.da,Q2-25,569,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.da,Q2-26,805,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.da,Q3-25,628,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.da,Q3-26,986,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.da,Q4-25,670,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.op_income,9M-25,3147,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.op_income,9M-26,5211,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.op_income,FY25,4423,USD millions,GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.conn.op_income,H1-25,1956,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.op_income,H1-26,2844,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.op_income,Q1-25,1033,USD millions,GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.conn.op_income,Q1-26,1188,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.38,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.op_income,Q2-25,923,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.op_income,Q2-26,1656,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.op_income,Q3-25,1190,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.op_income,Q3-26,2367,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.op_income,Q4-25,1276,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.38 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,9M-25,5198,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,9M-26,7754,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,FY25,7208,USD millions,GAAP,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+seg.conn.rev_consumer,H1-25,3213,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,H1-26,4633,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q1-25,1492,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.5 | Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q1-26,2148,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q2-25,1721,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q2-26,2485,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q3-25,1986,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q3-26,3121,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_consumer,Q4-25,2010,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.243 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,9M-25,2961,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,9M-26,5042,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,FY25,4179,USD millions,GAAP,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+seg.conn.rev_ent_gov,H1-25,1849,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,H1-26,2915,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q1-25,982,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.5 | Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q1-26,1109,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q2-25,867,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q2-26,1806,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q3-25,1111,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q3-26,2127,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rev_ent_gov,Q4-25,1218,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.243 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.revenue,9M-25,8159,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.revenue,9M-26,12796,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.revenue,FY25,11387,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.conn.revenue,H1-25,5062,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.revenue,H1-26,7548,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.revenue,Q1-25,2474,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.3 | Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.revenue,Q1-26,3257,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.revenue,Q2-25,2588,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.revenue,Q2-26,4291,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.revenue,Q3-25,3097,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.revenue,Q3-26,5248,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.revenue,Q4-25,3228,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rnd,9M-25,406,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rnd,9M-26,687,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rnd,FY25,575,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.conn.rnd,H1-25,266,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rnd,H1-26,499,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rnd,Q1-25,123,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.5 | Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rnd,Q1-26,205,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rnd,Q2-25,143,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.rnd,Q2-26,294,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rnd,Q3-25,141,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rnd,Q3-26,188,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.rnd,Q4-25,169,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sbc,9M-25,270,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sbc,9M-26,398,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sbc,FY25,369,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.conn.sbc,H1-25,166,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sbc,H1-26,252,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sbc,Q1-25,75,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.conn.sbc,Q1-26,116,USD millions,GAAP,reported,Q2-26 release p.5; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sbc,Q2-25,91,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sbc,Q2-26,136,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sbc,Q3-25,105,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sbc,Q3-26,146,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sbc,Q4-25,99,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sga,9M-25,335,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sga,9M-26,819,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sga,FY25,468,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.conn.sga,H1-25,225,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sga,H1-26,494,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sga,Q1-25,104,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.5 | Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sga,Q1-26,213,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sga,Q2-25,121,USD millions,GAAP,reported,Q2-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.conn.sga,Q2-26,281,USD millions,GAAP,reported,Q2-26 release p.5; Q3-26 release p.5,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sga,Q3-25,109,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sga,Q3-26,325,USD millions,GAAP,reported,Q3-26 release p.5,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.conn.sga,Q4-25,133,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.5,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.acquisition_costs,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.acquisition_costs,9M-26,8,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.acquisition_costs,Q2-26,0,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.acquisition_costs,Q3-25,0,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.acquisition_costs,Q3-26,8,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,9M-25,-813,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,9M-26,5490,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,FY25,-1237,USD millions,non-GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.si.adj_ebitda,H1-25,-387,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,H1-26,537,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,Q1-25,-112,USD millions,non-GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.si.adj_ebitda,Q1-26,-609,USD millions,non-GAAP,reported,Q2-26 release p.3; S-1 p.38,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,Q2-25,-276,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,Q2-26,1146,USD millions,non-GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,Q3-25,-428,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,Q3-26,4953,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.adj_ebitda,Q4-25,-424,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.38 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.capex,9M-25,8077,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.capex,9M-26,39995,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.capex,FY25,12727,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.si.capex,H1-25,3316,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.capex,H1-26,23551,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.capex,Q1-25,2567,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.si.capex,Q1-26,7723,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.capex,Q2-25,749,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.capex,Q2-26,15828,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.capex,Q3-25,4760,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.capex,Q3-26,16444,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.capex,Q4-25,4650,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,9M-25,1574,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,9M-26,4237,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,FY25,2178,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.si.cost_of_revenue,H1-25,1002,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,H1-26,1562,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q1-25,451,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.6 | Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q1-26,456,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q2-25,551,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q2-26,1106,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q3-25,571,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q3-26,2675,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.cost_of_revenue,Q4-25,604,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.da,9M-25,2506,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.da,9M-26,5851,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.da,FY25,3568,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.si.da,H1-25,1584,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.da,H1-26,3378,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.da,Q1-25,771,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.si.da,Q1-26,1493,USD millions,GAAP,reported,Q2-26 release p.6; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.da,Q2-25,811,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.da,Q2-26,1885,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.da,Q3-25,922,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.da,Q3-26,2473,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.da,Q4-25,1062,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.op_income,9M-25,-4182,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.op_income,9M-26,-3295,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.op_income,FY25,-6355,USD millions,GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.si.op_income,H1-25,-2460,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.op_income,H1-26,-3726,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.op_income,Q1-25,-936,USD millions,GAAP,reported,S-1 p.38,Space Exploration Technologies - S-1.pdf
+seg.si.op_income,Q1-26,-2469,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.38,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.op_income,Q2-25,-1524,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.op_income,Q2-26,-1257,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.op_income,Q3-25,-1722,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.op_income,Q3-26,431,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.op_income,Q4-25,-2173,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.38 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.restructuring,9M-25,472,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.restructuring,9M-26,-6,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.restructuring,FY25,487,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.si.restructuring,H1-25,194,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.restructuring,H1-26,-9,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.restructuring,Q1-25,4,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.si.restructuring,Q1-26,-11,USD millions,GAAP,reported,Q2-26 release p.6; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.restructuring,Q2-25,190,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.restructuring,Q2-26,2,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.restructuring,Q3-25,278,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.restructuring,Q3-26,3,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.restructuring,Q4-25,15,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_advertising,9M-25,1323,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_advertising,9M-26,1248,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_advertising,FY25,1844,USD millions,GAAP,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+seg.si.rev_advertising,H1-25,870,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_advertising,H1-26,710,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q1-25,444,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.6 | Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q1-26,343,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q2-25,426,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q2-26,367,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q3-25,454,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q3-26,538,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_advertising,Q4-25,521,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.243 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,9M-25,955,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,9M-26,9691,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,FY25,1357,USD millions,GAAP,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+seg.si.rev_solutions_infra,H1-25,595,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,H1-26,2669,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q1-25,284,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.6 | Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q1-26,475,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q2-25,311,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q2-26,2194,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q3-25,359,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q3-26,7022,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rev_solutions_infra,Q4-25,402,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.243 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.revenue,9M-25,2278,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.revenue,9M-26,10939,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.revenue,FY25,3201,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.si.revenue,H1-25,1465,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.revenue,H1-26,3379,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.revenue,Q1-25,728,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.3 | Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.revenue,Q1-26,818,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.revenue,Q2-25,737,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.revenue,Q2-26,2561,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.revenue,Q3-25,813,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.revenue,Q3-26,7560,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.revenue,Q4-25,923,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rnd,9M-25,3331,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rnd,9M-26,7740,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rnd,FY25,5064,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.si.rnd,H1-25,2030,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rnd,H1-26,4557,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rnd,Q1-25,908,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.6 | Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rnd,Q1-26,2379,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rnd,Q2-25,1122,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.rnd,Q2-26,2178,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rnd,Q3-25,1301,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rnd,Q3-26,3183,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.rnd,Q4-25,1733,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc,9M-25,391,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc,9M-26,1715,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc,FY25,1063,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.si.sbc,H1-25,295,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sbc,H1-26,894,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sbc,Q1-25,49,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.si.sbc,Q1-26,378,USD millions,GAAP,reported,Q2-26 release p.6; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sbc,Q2-25,247,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sbc,Q2-26,516,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc,Q3-25,94,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc,Q3-26,821,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc,Q4-25,672,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc_acquisitions,9M-25,0,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc_acquisitions,9M-26,1217,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc_acquisitions,Q2-26,0,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc_acquisitions,Q3-25,0,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sbc_acquisitions,Q3-26,1217,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sga,9M-25,1083,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sga,9M-26,2263,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sga,FY25,1827,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.si.sga,H1-25,699,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sga,H1-26,995,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sga,Q1-25,301,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.6 | Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sga,Q1-26,463,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sga,Q2-25,398,USD millions,GAAP,reported,Q2-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.si.sga,Q2-26,532,USD millions,GAAP,reported,Q2-26 release p.6; Q3-26 release p.6,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sga,Q3-25,385,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sga,Q3-26,1268,USD millions,GAAP,reported,Q3-26 release p.6,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.si.sga,Q4-25,744,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.6,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,9M-25,803,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,9M-26,-199,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,FY25,653,USD millions,non-GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.space.adj_ebitda,H1-25,131,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,H1-26,-556,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,Q1-25,224,USD millions,non-GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.space.adj_ebitda,Q1-26,-351,USD millions,non-GAAP,reported,Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,Q2-25,-93,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,Q2-26,-205,USD millions,non-GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,Q3-25,674,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,Q3-26,357,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.adj_ebitda,Q4-25,-150,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.capex,9M-25,2818,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.capex,9M-26,3832,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.capex,FY25,3832,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.space.capex,H1-25,1705,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.capex,H1-26,2226,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.capex,Q1-25,759,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.space.capex,Q1-26,1052,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.capex,Q2-25,946,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.capex,Q2-26,1174,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.capex,Q3-25,1113,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.capex,Q3-26,1606,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.capex,Q4-25,1014,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,9M-25,1104,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,9M-26,1045,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,FY25,1352,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.space.cost_of_revenue,H1-25,627,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,H1-26,610,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q1-25,297,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q1-26,281,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q2-25,330,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q2-26,329,USD millions,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q3-25,477,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q3-26,435,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.cost_of_revenue,Q4-25,248,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.da,9M-25,572,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.da,9M-26,509,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.da,FY25,757,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.space.da,H1-25,308,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.da,H1-26,324,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.da,Q1-25,162,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.space.da,Q1-26,166,USD millions,GAAP,reported,Q2-26 release p.4; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.da,Q2-25,146,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.da,Q2-26,158,USD millions,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.da,Q3-25,264,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.da,Q3-26,185,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.da,Q4-25,185,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.impairment,9M-25,29,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.impairment,9M-26,0,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.impairment,FY25,38,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.space.impairment,H1-25,29,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.impairment,H1-26,0,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.impairment,Q1-25,24,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.space.impairment,Q1-26,0,USD millions,GAAP,reported,Q2-26 release p.4; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.impairment,Q2-25,5,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.impairment,Q2-26,0,USD millions,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.impairment,Q3-25,0,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.impairment,Q3-26,0,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.impairment,Q4-25,9,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.op_income,9M-25,-181,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.op_income,9M-26,-1211,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.op_income,FY25,-657,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.space.op_income,H1-25,-439,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.op_income,H1-26,-1204,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.op_income,Q1-25,-70,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.space.op_income,Q1-26,-662,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.op_income,Q2-25,-369,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.op_income,Q2-26,-542,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.op_income,Q3-25,259,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.op_income,Q3-26,-7,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.op_income,Q4-25,-476,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,9M-25,1221,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,9M-26,1240,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,FY25,1510,count,GAAP,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+seg.space.rev_launch_dev,H1-25,555,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,H1-26,603,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q1-25,299,count,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q1-26,289,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q2-25,256,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q2-26,314,count,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q3-25,666,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q3-26,637,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_dev,Q4-25,289,count,GAAP,derived: FY25 - 9M-25,S-1 p.243 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,9M-25,2056,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,9M-26,2108,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,FY25,2576,count,GAAP,reported,S-1 p.243,Space Exploration Technologies - S-1.pdf
+seg.space.rev_launch_services,H1-25,1056,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,H1-26,978,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q1-25,566,count,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q1-26,330,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q2-25,490,count,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q2-26,648,count,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q3-25,1000,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q3-26,1130,count,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rev_launch_services,Q4-25,520,count,GAAP,derived: FY25 - 9M-25,S-1 p.243 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.revenue,9M-25,3277,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.revenue,9M-26,3348,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.revenue,FY25,4086,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.space.revenue,H1-25,1611,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.revenue,H1-26,1581,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.revenue,Q1-25,865,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.3 | Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.revenue,Q1-26,619,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.revenue,Q2-25,746,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.revenue,Q2-26,962,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.revenue,Q3-25,1666,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.revenue,Q3-26,1767,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.revenue,Q4-25,809,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rnd,9M-25,2069,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rnd,9M-26,3231,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rnd,FY25,3004,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.space.rnd,H1-25,1219,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rnd,H1-26,2006,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rnd,Q1-25,526,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rnd,Q1-26,930,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rnd,Q2-25,693,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.rnd,Q2-26,1076,USD millions,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rnd,Q3-25,849,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rnd,Q3-26,1225,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.rnd,Q4-25,935,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sbc,9M-25,383,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sbc,9M-26,503,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sbc,FY25,515,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.space.sbc,H1-25,233,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sbc,H1-26,324,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sbc,Q1-25,108,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.space.sbc,Q1-26,145,USD millions,GAAP,reported,Q2-26 release p.4; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sbc,Q2-25,125,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sbc,Q2-26,179,USD millions,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sbc,Q3-25,151,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sbc,Q3-26,179,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sbc,Q4-25,132,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sga,9M-25,256,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sga,9M-26,283,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sga,FY25,349,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.space.sga,H1-25,175,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sga,H1-26,169,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sga,Q1-25,88,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.4 | Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sga,Q1-26,70,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sga,Q2-25,87,USD millions,GAAP,reported,Q2-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.space.sga,Q2-26,99,USD millions,GAAP,reported,Q2-26 release p.4; Q3-26 release p.4,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sga,Q3-25,81,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sga,Q3-26,114,USD millions,GAAP,reported,Q3-26 release p.4,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.space.sga,Q4-25,93,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.4,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,9M-25,5113,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,9M-26,13474,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,FY25,6584,USD millions,non-GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.total.adj_ebitda,H1-25,2944,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,H1-26,4665,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,Q1-25,1730,USD millions,non-GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.total.adj_ebitda,Q1-26,1127,USD millions,non-GAAP,reported,Q2-26 release p.3; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,Q2-25,1214,USD millions,non-GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,Q2-26,3538,USD millions,non-GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,Q3-25,2169,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,Q3-26,8809,USD millions,non-GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.adj_ebitda,Q4-25,1471,USD millions,non-GAAP,derived: FY25 - 9M-25,S-1 p.110 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.capex,9M-25,13846,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.capex,9M-26,48069,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.capex,FY25,20737,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.total.capex,H1-25,6965,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.capex,H1-26,28476,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.capex,Q1-25,4140,USD millions,GAAP,reported,S-1 p.37,Space Exploration Technologies - S-1.pdf
+seg.total.capex,Q1-26,10107,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.37,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.capex,Q2-25,2825,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.capex,Q2-26,18369,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.capex,Q3-25,6880,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.capex,Q3-26,19593,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.capex,Q4-25,6891,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.37 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.op_income,9M-25,-1216,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.op_income,9M-26,705,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.op_income,FY25,-2589,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.total.op_income,H1-25,-943,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.op_income,H1-26,-2086,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.op_income,Q1-25,27,USD millions,GAAP,reported,S-1 p.110,Space Exploration Technologies - S-1.pdf
+seg.total.op_income,Q1-26,-1943,USD millions,GAAP,reported,Q2-26 release p.3; S-1 p.110,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.op_income,Q2-25,-970,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.op_income,Q2-26,-143,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.op_income,Q3-25,-273,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.op_income,Q3-26,2791,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.op_income,Q4-25,-1373,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.revenue,9M-25,13714,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.revenue,9M-26,27083,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.revenue,FY25,18674,USD millions,GAAP,reported,S-1 p.269,Space Exploration Technologies - S-1.pdf
+seg.total.revenue,H1-25,8138,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.revenue,H1-26,12508,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.revenue,Q1-25,4067,USD millions,GAAP,derived: H1-25 - Q2-25,Q2-26 release p.3 | Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.revenue,Q1-26,4694,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.revenue,Q2-25,4071,USD millions,GAAP,reported,Q2-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+seg.total.revenue,Q2-26,7814,USD millions,GAAP,reported,Q2-26 release p.3; Q3-26 release p.3,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.revenue,Q3-25,5576,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.revenue,Q3-26,14575,USD millions,GAAP,reported,Q3-26 release p.3,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+seg.total.revenue,Q4-25,4960,USD millions,GAAP,derived: FY25 - 9M-25,S-1 p.269 | Q3-26 release p.3,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.class_a_out_m,Dec-25,1952,millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11,SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.class_a_out_m,Jun-26,7607,millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+sh.class_a_out_m,Mar-26,2882.444444,millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+sh.class_a_out_m,Sep-26,8240,millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.class_b_out_m,Dec-25,644,millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.class_b_out_m,Jun-26,5569,millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+sh.class_b_out_m,Mar-26,2421.27653,millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+sh.class_b_out_m,Sep-26,5339,millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.class_c_out_m,Dec-25,482,millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.class_c_out_m,Jun-26,0,millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+sh.class_c_out_m,Mar-26,494.026445,millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+sh.class_c_out_m,Sep-26,0,millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.preferred_out_m,Dec-25,2046,millions,GAAP,reported,Q2-26 release p.9; Q3-26 release p.11; S-1 p.230,Space Exploration Technologies - S-1.pdf; SpaceX-Reports-Second-Quarter-2026-Results.pdf; SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.preferred_out_m,Jun-26,0,millions,GAAP,reported,Q2-26 release p.9,SpaceX-Reports-Second-Quarter-2026-Results.pdf
+sh.preferred_out_m,Mar-26,134.451267,millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+sh.preferred_out_m,Sep-26,0,millions,GAAP,reported,Q3-26 release p.11,SpaceX-Reports-Third-Quarter-2026-Results.pdf
+sh.pro_forma_class_a_m,Mar-26,6824.581339,millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf
+sh.pro_forma_class_b_m,Mar-26,5695.72943,millions,GAAP,reported,S-1 p.71,Space Exploration Technologies - S-1.pdf

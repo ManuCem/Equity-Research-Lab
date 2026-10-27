@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equity Research Lab</title>
+<style>
+:root { --bg:#0e0e0f; --card:#1a1a1b; --line:#2a2a2c; --ink:#f4f4f2; --muted:#a8a8a4; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width:900px; margin:0 auto; padding:36px 20px 56px; }
+h1 { font-size:34px; margin:0 0 8px; letter-spacing:-.02em; }
+.lead { color:var(--muted); max-width:520px; margin:0 0 28px; }
+.grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
+.card { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; color:inherit; text-decoration:none; transition:transform .15s, border-color .15s; }
+.card:hover, .card:focus-visible { transform:translateY(-3px); border-color:var(--accent); outline:none; }
+.shot { position:relative; height:200px; overflow:hidden; background:#fff; border-bottom:4px solid var(--accent); }
+.shot img { width:100%; display:block; object-fit:cover; object-position:top left; }
+.body { padding:20px 20px 22px; display:flex; flex-direction:column; flex:1; }
+.body h2 { font-size:21px; margin:0 0 8px; }
+.body p { margin:0 0 18px; color:var(--muted); }
+.go { margin-top:auto; font-weight:700; }
+.card:hover .go { color:var(--accent); }
+.spacex { --accent:#3b82f6; }
+.anthropic { --accent:#d97757; }
+footer { margin-top:32px; color:var(--muted); font-size:13px; }
+@media (max-width:680px) { .grid { grid-template-columns:1fr; } h1 { font-size:28px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Equity Research Lab</h1>
+  <p class="lead">Company financials rebuilt from SEC filings: statements, ratios, operating metrics and page-cited sources. Pick a company below.</p>
+
+  <div class="grid">
+    <a class="card spacex" href="SpaceX/spacex.html">
+      <div class="shot">
+        <img src="assets/spacex.png" alt="Screenshot of the SpaceX financial data page" loading="lazy">
+      </div>
+      <div class="body">
+        <h2>SpaceX (SPCX)</h2>
+        <p>Revenue by segment, income statement, cash flow, ratios and Starlink and launch metrics, from the S-1 and the Q2 and Q3 2026 results releases.</p>
+        <span class="go">Open the page →</span>
+      </div>
+    </a>
+
+    <a class="card anthropic" href="Anthropic/anthropic.html">
+      <div class="shot">
+        <img src="assets/anthropic.png" alt="Screenshot of the Anthropic financial data page" loading="lazy">
+      </div>
+      <div class="body">
+        <h2>Anthropic</h2>
+        <p>Quarterly revenue, compute costs, balance sheet, cash flow, customer concentration and compute commitments, all from the Form S-1 filed 26 October 2026.</p>
+        <span class="go">Open the page →</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>More companies will be added here as they are built.</footer>
+</main>
+</body>
+</html>
+

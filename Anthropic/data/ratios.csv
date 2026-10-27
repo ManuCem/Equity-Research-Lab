@@ -1,0 +1,38 @@
+Growth,FY2023,FY2024,FY2025,6M2025,6M2026,LTM Jun-26,Formula
+Revenue growth y/y,N/A,8.414634,10.878238,N/A,13.003439,N/A,Revenue / prior-period revenue - 1 (6M2026 vs 6M2025)
+Consumption revenue growth y/y,N/A,6.384615,12.180556,N/A,12.289929,N/A,Consumption revenue / prior period - 1
+Subscription revenue growth y/y,N/A,48.0,7.05102,N/A,16.9,N/A,Subscription revenue / prior period - 1
+Consumption share of revenue,0.95122,0.746114,0.827917,0.845228,0.802161,0.805612,Consumption revenue / revenue
+Profitability,FY2023,FY2024,FY2025,6M2025,6M2026,LTM Jun-26,Formula
+Gross margin (Note 8),0.365854,-0.948187,0.395202,0.123818,0.853862,0.790237,(Revenue - cost of revenue) / revenue; excludes training compute
+Operating margin (GAAP),-13.439024,-7.720207,-1.757906,-1.83577,-0.042552,-0.335803,Operating income / revenue
+Net margin (GAAP),-37.341463,-21.525907,-9.152672,-11.151333,-4.958124,-5.5685,Net income / revenue
+Adjusted operating margin (non-GAAP),-12.731707,-7.222798,-1.05867,-1.589854,0.099349,-0.070378,Adjusted Operating Income / revenue
+Adjusted EBITDA margin (own calculation),-12.658537,-7.168394,-1.049945,-1.577816,0.105305,-0.064136,(Adjusted Operating Income + D&A) / revenue
+Cash flow,FY2023,FY2024,FY2025,6M2025,6M2026,LTM Jun-26,Formula
+Free cash flow (USD m),-1629.0,-5707.0,-2768.0,-1531.0,3447.0,2210.0,Operating cash flow - capex
+FCF margin,-39.731707,-14.784974,-0.603708,-1.316423,0.211654,0.112137,FCF / revenue
+Cash burn (USD m; 0 = cash generative),1629.0,5707.0,2768.0,1531.0,0.0,0.0,"max(0, -FCF)"
+Cash and short-term investments at period end (USD m),N/A,3141.0,20277.0,N/A,131651.0,131651.0,Balance sheet at period end
+Runway in years (N/A = no burn or no balance sheet),N/A,0.550377,7.325506,N/A,N/A,N/A,Cash and STI / annualised burn
+Cost structure (% of revenue),FY2023,FY2024,FY2025,6M2025,6M2026,LTM Jun-26,Formula
+Compute and infrastructure / revenue,10.560976,6.533679,1.597819,2.006879,0.549245,0.707175,"All compute (serving, training, research)"
+R&D / revenue,10.292683,5.893782,1.382334,1.590714,0.598121,0.721991,R&D (Note 8) / revenue
+Stock-based compensation / revenue,0.707317,0.497409,0.254089,0.245916,0.134164,0.15547,SBC / revenue
+"Sales, marketing and partnerships / revenue",0.04878,0.111399,0.123882,0.103181,0.194523,0.183479,SM&P / revenue
+Capital,FY2023,FY2024,FY2025,6M2025,6M2026,LTM Jun-26,Formula
+Capex / revenue,0.04878,0.03886,0.028571,0.015477,0.029596,0.030191,Capex / revenue
+(Capex + finance-lease equipment) / revenue,0.04878,0.03886,0.028571,0.015477,0.05692,0.05277,(Capex + finance-lease additions) / revenue
+Purchase commitments / revenue (x),N/A,N/A,11.899455,N/A,N/A,13.476761,Dec-25 commitments / FY2025 revenue; Jun-26 / LTM revenue
+Signed leases not yet commenced / revenue (x),N/A,N/A,10.948746,N/A,N/A,16.308098,Undiscounted signed leases / revenue
+Concentration,FY2023,FY2024,FY2025,6M2025,6M2026,Latest,Formula
+Largest single customer,0.43,<10%,0.12,0.18,0.11,N/A,Largest of Customers A-D; <10% if none reaches 10%
+Top five customers (Latest = 9M-2026),,,,,,0.25,S-1 Risk Factors
+Sold through cloud marketplaces,0.11,0.32,0.47,0.44,0.48,N/A,S-1 Note 1
+Revenue from customers with >=$100k TTM revenue,0.9,0.57,0.76,N/A,N/A,N/A,S-1 MD&A
+United States share of revenue,0.829268,0.681347,0.733261,0.705073,0.722277,0.725847,US revenue / revenue
+Quarterly,Q1-2025,Q2-2025,Q3-2025,Q4-2025,Q1-2026,Q2-2026,Formula
+Revenue growth q/q,N/A,1.093085,0.756036,0.476122,1.319118,1.442401,Revenue / prior-quarter revenue - 1
+Compute and infrastructure / revenue,2.510638,1.766201,1.481187,1.443627,0.715916,0.481004,Compute and infrastructure / revenue
+Operating margin (GAAP),-2.486702,-1.524778,-2.235166,-1.390196,-0.352357,0.084293,Operating income / revenue
+Adjusted operating margin (non-GAAP),-2.207447,-1.29479,-0.929088,-0.843627,-0.130416,0.193423,Adjusted Operating Income / revenue

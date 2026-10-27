@@ -1,30 +1,51 @@
-# Micro-Lab
+# [Equity Research Lab](index.html)
 
-## Companies
+Company financials rebuilt directly from SEC filings: statements, ratios, operating metrics and page-cited sources. The [landing page](index.html) links to every company.
 
-Basic accounting analyses of individual companies, built from their SEC filings. These are personal learning projects, not investment advice.
+---
 
-| Company | Ticker | Covers | Read it |
-|---|---|---|---|
-| [SpaceX](SpaceX/) | SPCX | Years 2023-2025, quarters to Q3 2026 | [spacex.html](SpaceX/spacex.html) |
+## [SpaceX (SPCX)](SpaceX/spacex.html)
 
-### Folder convention (copy it for the next company)
+Q1 2025 to Q3 2026, from the S-1 (filed 20 May 2026) and the Q2 and Q3 2026 results releases.
 
-Each company gets one self-contained folder:
+[![SpaceX key numbers](assets/spacex-key.png)](SpaceX/spacex.html)
 
-```
-<Company>/
-├── README.md              what it is, main takeaways, how to reproduce, disclaimer
-├── <company>.html         the web page (generated, charts from lib/)
-├── filings/               source documents, renamed consistently, + SOURCES.md
-│                          (call transcripts stay local: */filings/*transcript* is in .gitignore)
-├── data/
-│   ├── <company>_data.csv          ONE data file: every number with its document and page
-│   └── <company>_accounting.xlsx   statements, ratios as formulas, checks, sources (generated)
-├── scripts/
-│   ├── build_outputs.py   CSV -> workbook + web page + README key-numbers block
-│   └── verify_sources.py  is every CSV number printed on the page it cites?
-└── lib/                   chart library saved locally (no CDN)
-```
+| Key number | Value |
+|---|---|
+| Revenue, Q3 2026 | **$14.6B** (+161% YoY) |
+| Adjusted EBITDA, Q3 2026 (non-GAAP) | **$8.8B** (60.4% margin) |
+| Net income, Q3 2026 | **$4.4B** (30.2% margin) |
+| Capex, first nine months of 2026 | **$48.1B** (1.8x revenue) |
+| Starlink consumer subscribers | **13.6M** at 30 Sep 2026 |
+| Nameplate compute | **1.7 GW** at 30 Sep 2026 |
 
-Rules: numbers come only from the files in `filings/`. A transcript is used only for clearly labelled management commentary. Missing figures are left empty and listed as open questions, never estimated. Generated files are rebuilt by the scripts and never edited by hand.
+SI became the largest of the three segments (Space, Connectivity, SI) in Q3 2026, and capex exceeded revenue in every 2026 quarter.
+
+**[Open webpage →](SpaceX/spacex.html)**
+
+---
+
+## [Anthropic](Anthropic/anthropic.html)
+
+FY2023 to FY2025, first half of 2025 and 2026, and quarterly figures to Q2 2026, from the Form S-1 filed 26 October 2026.
+
+[![Anthropic key numbers](assets/anthropic-key.png)](Anthropic/anthropic.html)
+
+| Key number | Value |
+|---|---|
+| Revenue, last twelve months to Jun 2026 | **$19,708m** |
+| Revenue growth, first half 2026 vs first half 2025 | **1,300%** |
+| Quarterly revenue | **$376m** in Q1 2025 to **$11,555m** in Q2 2026 |
+| Compute and infrastructure cost as % of revenue | **251%** in Q1 2025 down to **48%** in Q2 2026 |
+| Cash and short-term investments, Jun 2026 | **$131,651m** |
+| Purchase commitments, Jun 2026 | **$265,600m** |
+
+The S-1 gives no IPO price range.
+
+**[Open webpage →](Anthropic/anthropic.html)**
+
+---
+
+## License
+
+See [LICENSE](LICENSE).

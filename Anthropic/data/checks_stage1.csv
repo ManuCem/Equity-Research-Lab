@@ -1,0 +1,305 @@
+check,period,lhs,rhs,diff,pass
+IS: opex lines = total opex,FY2023,592.0,592.0,0.0,True
+IS: revenue - opex = operating loss,FY2023,-551.0,-551.0,0.0,True
+IS: other income lines = total other,FY2023,-978.0,-978.0,0.0,True
+IS: operating loss + other = pre-tax loss,FY2023,-1529.0,-1529.0,0.0,True
+IS: pre-tax - tax = net loss,FY2023,-1531.0,-1531.0,0.0,True
+IS: EPS = net loss / weighted shares,FY2023,-1.42,-1.42,-0.0,True
+Note 8: functional opex = total opex,FY2023,592.0,592.0,0.0,True
+Note 2: US + International = revenue,FY2023,41.0,41.0,0.0,True
+Note 2: consumption + subscription = revenue,FY2023,41.0,41.0,0.0,True
+CF: CFO lines = CFO,FY2023,-1627.0,-1627.0,0.0,True
+CF: CFI lines = CFI,FY2023,-2.0,-2.0,0.0,True
+CF: CFF lines = CFF,FY2023,2320.0,2320.0,0.0,True
+CF: CFO + CFI + CFF + FX = net change,FY2023,691.0,691.0,0.0,True
+CF: beginning + net change = ending cash,FY2023,1620.0,1620.0,0.0,True
+CF vs IS: net loss,FY2023,-1531.0,-1531.0,0.0,True
+CF vs IS: FV change on notes,FY2023,-1045.0,-1045.0,0.0,True
+Non-GAAP: AOI bridge foots,FY2023,-522.0,-522.0,0.0,True
+Non-GAAP: operating loss in bridge = IS,FY2023,-551.0,-551.0,0.0,True
+Non-GAAP: Adj. net income bridge foots,FY2023,-457.0,-457.0,0.0,True
+SBC: AOI bridge minus cash flow statement (repurchase premium booked as SBC),FY2023,0.0,0,0.0,True
+IS: opex lines = total opex,FY2024,3366.0,3366.0,0.0,True
+IS: revenue - opex = operating loss,FY2024,-2980.0,-2980.0,0.0,True
+IS: other income lines = total other,FY2024,-5328.0,-5328.0,0.0,True
+IS: operating loss + other = pre-tax loss,FY2024,-8308.0,-8308.0,0.0,True
+IS: pre-tax - tax = net loss,FY2024,-8309.0,-8309.0,0.0,True
+IS: EPS = net loss / weighted shares,FY2024,-5.43,-5.43,-0.0,True
+Note 8: functional opex = total opex,FY2024,3366.0,3366.0,0.0,True
+Note 2: US + International = revenue,FY2024,386.0,386.0,0.0,True
+Note 2: consumption + subscription = revenue,FY2024,386.0,386.0,0.0,True
+CF: CFO lines = CFO,FY2024,-5692.0,-5692.0,0.0,True
+CF: CFI lines = CFI,FY2024,-22.0,-22.0,0.0,True
+CF: CFF lines = CFF,FY2024,7248.0,7248.0,0.0,True
+CF: CFO + CFI + CFF + FX = net change,FY2024,1534.0,1534.0,0.0,True
+CF: beginning + net change = ending cash,FY2024,3154.0,3154.0,0.0,True
+CF vs IS: net loss,FY2024,-8309.0,-8309.0,0.0,True
+CF vs IS: FV change on notes,FY2024,-5434.0,-5434.0,0.0,True
+Non-GAAP: AOI bridge foots,FY2024,-2788.0,-2788.0,0.0,True
+Non-GAAP: operating loss in bridge = IS,FY2024,-2980.0,-2980.0,0.0,True
+Non-GAAP: Adj. net income bridge foots,FY2024,-2683.0,-2683.0,0.0,True
+SBC: AOI bridge minus cash flow statement (repurchase premium booked as SBC),FY2024,0.0,0,0.0,True
+IS: opex lines = total opex,FY2025,12645.0,12645.0,0.0,True
+IS: revenue - opex = operating loss,FY2025,-8060.0,-8060.0,0.0,True
+IS: other income lines = total other,FY2025,-33885.0,-33885.0,0.0,True
+IS: operating loss + other = pre-tax loss,FY2025,-41945.0,-41945.0,0.0,True
+IS: pre-tax - tax = net loss,FY2025,-41965.0,-41965.0,0.0,True
+IS: EPS = net loss / weighted shares,FY2025,-23.04,-23.04,-0.0,True
+Note 8: functional opex = total opex,FY2025,12645.0,12645.0,0.0,True
+Note 2: US + International = revenue,FY2025,4585.0,4585.0,0.0,True
+Note 2: consumption + subscription = revenue,FY2025,4585.0,4585.0,0.0,True
+CF: CFO lines = CFO,FY2025,-2637.0,-2637.0,0.0,True
+CF: CFI lines = CFI,FY2025,-3077.0,-3077.0,0.0,True
+CF: CFF lines = CFF,FY2025,19960.0,19960.0,0.0,True
+CF: CFO + CFI + CFF + FX = net change,FY2025,14247.0,14247.0,0.0,True
+CF: beginning + net change = ending cash,FY2025,17401.0,17401.0,0.0,True
+CF vs IS: net loss,FY2025,-41965.0,-41965.0,0.0,True
+CF vs IS: FV change on notes,FY2025,-34308.0,-34308.0,0.0,True
+Non-GAAP: AOI bridge foots,FY2025,-4854.0,-4854.0,0.0,True
+Non-GAAP: operating loss in bridge = IS,FY2025,-8060.0,-8060.0,0.0,True
+Non-GAAP: Adj. net income bridge foots,FY2025,-4448.0,-4448.0,0.0,True
+SBC: AOI bridge minus cash flow statement (repurchase premium booked as SBC),FY2025,7.0,7,0.0,True
+IS: opex lines = total opex,6M2025,3298.0,3298.0,0.0,True
+IS: revenue - opex = operating loss,6M2025,-2135.0,-2135.0,0.0,True
+IS: other income lines = total other,6M2025,-10827.0,-10827.0,0.0,True
+IS: operating loss + other = pre-tax loss,6M2025,-12962.0,-12962.0,0.0,True
+IS: pre-tax - tax = net loss,6M2025,-12969.0,-12969.0,0.0,True
+IS: EPS = net loss / weighted shares,6M2025,-7.25,-7.25,-0.0,True
+Note 8: functional opex = total opex,6M2025,3298.0,3298.0,0.0,True
+Note 2: US + International = revenue,6M2025,1163.0,1163.0,0.0,True
+Note 2: consumption + subscription = revenue,6M2025,1163.0,1163.0,0.0,True
+CF: CFO lines = CFO,6M2025,-1513.0,-1513.0,0.0,True
+CF: CFI lines = CFI,6M2025,-49.0,-49.0,0.0,True
+CF: CFF lines = CFF,6M2025,4749.0,4749.0,0.0,True
+CF: CFO + CFI + CFF + FX = net change,6M2025,3188.0,3188.0,0.0,True
+CF: beginning + net change = ending cash,6M2025,6342.0,6342.0,0.0,True
+CF vs IS: net loss,6M2025,-12969.0,-12969.0,0.0,True
+CF vs IS: FV change on notes,6M2025,-10942.0,-10942.0,0.0,True
+Non-GAAP: AOI bridge foots,6M2025,-1849.0,-1849.0,0.0,True
+Non-GAAP: operating loss in bridge = IS,6M2025,-2135.0,-2135.0,0.0,True
+Non-GAAP: Adj. net income bridge foots,6M2025,-1741.0,-1741.0,0.0,True
+SBC: AOI bridge minus cash flow statement (repurchase premium booked as SBC),6M2025,7.0,7,0.0,True
+IS: opex lines = total opex,6M2026,16979.0,16979.0,0.0,True
+IS: revenue - opex = operating loss,6M2026,-693.0,-693.0,0.0,True
+IS: other income lines = total other,6M2026,-80034.0,-80034.0,0.0,True
+IS: operating loss + other = pre-tax loss,6M2026,-80727.0,-80727.0,0.0,True
+IS: pre-tax - tax = net loss,6M2026,-80748.0,-80748.0,0.0,True
+IS: EPS = net loss / weighted shares,6M2026,-39.88,-39.88,0.0,True
+Note 8: functional opex = total opex,6M2026,16979.0,16979.0,0.0,True
+Note 2: US + International = revenue,6M2026,16286.0,16286.0,0.0,True
+Note 2: consumption + subscription = revenue,6M2026,16286.0,16286.0,0.0,True
+CF: CFO lines = CFO,6M2026,3929.0,3929.0,0.0,True
+CF: CFI lines = CFI,6M2026,-17181.0,-17181.0,0.0,True
+CF: CFF lines = CFF,6M2026,110774.0,110774.0,0.0,True
+CF: CFO + CFI + CFF + FX = net change,6M2026,97517.0,97517.0,0.0,True
+CF: beginning + net change = ending cash,6M2026,114918.0,114918.0,0.0,True
+CF vs IS: net loss,6M2026,-80748.0,-80748.0,0.0,True
+CF vs IS: FV change on notes,6M2026,-72388.0,-72388.0,0.0,True
+Non-GAAP: AOI bridge foots,6M2026,1618.0,1618.0,0.0,True
+Non-GAAP: operating loss in bridge = IS,6M2026,-693.0,-693.0,0.0,True
+Non-GAAP: Adj. net income bridge foots,6M2026,2671.0,2671.0,0.0,True
+SBC: AOI bridge minus cash flow statement (repurchase premium booked as SBC),6M2026,0.0,0,0.0,True
+BS: current assets foot,Dec-2024,5312.0,5312.0,0.0,True
+BS: total assets foot,Dec-2024,7752.0,7752.0,0.0,True
+BS: current liabilities foot,Dec-2024,374.0,374.0,0.0,True
+BS: total liabilities foot,Dec-2024,14679.0,14679.0,0.0,True
+BS: stockholders' deficit foots,Dec-2024,-9801.0,-9801.0,0.0,True
+BS: assets = liabilities + preferred + deficit,Dec-2024,7752.0,7752.0,0.0,True
+BS: total L+P+E line = total assets,Dec-2024,7752.0,7752.0,0.0,True
+Note 8: AP/accrued detail foots,Dec-2024,333.0,333.0,0.0,True
+Note 6: PP&E gross - depreciation = net,Dec-2024,19.0,19.0,0.0,True
+BS: current assets foot,Dec-2025,23746.0,23746.0,0.0,True
+BS: total assets foot,Dec-2025,24661.0,24661.0,0.0,True
+BS: current liabilities foot,Dec-2025,2817.0,2817.0,0.0,True
+BS: total liabilities foot,Dec-2025,45397.0,45397.0,0.0,True
+BS: stockholders' deficit foots,Dec-2025,-50505.0,-50505.0,0.0,True
+BS: assets = liabilities + preferred + deficit,Dec-2025,24661.0,24661.0,0.0,True
+BS: total L+P+E line = total assets,Dec-2025,24661.0,24661.0,0.0,True
+Note 8: AP/accrued detail foots,Dec-2025,2511.0,2511.0,0.0,True
+Note 6: PP&E gross - depreciation = net,Dec-2025,146.0,146.0,0.0,True
+BS: current assets foot,Jun-2026,137980.0,137980.0,0.0,True
+BS: total assets foot,Jun-2026,147358.0,147358.0,0.0,True
+BS: current liabilities foot,Jun-2026,7220.0,7220.0,0.0,True
+BS: total liabilities foot,Jun-2026,117467.0,117467.0,0.0,True
+BS: stockholders' deficit foots,Jun-2026,-127619.0,-127619.0,0.0,True
+BS: assets = liabilities + preferred + deficit,Jun-2026,147358.0,147358.0,0.0,True
+BS: total L+P+E line = total assets,Jun-2026,147358.0,147358.0,0.0,True
+Note 8: AP/accrued detail foots,Jun-2026,5422.0,5422.0,0.0,True
+Note 6: PP&E gross - depreciation = net,Jun-2026,1187.0,1187.0,0.0,True
+BS cash + restricted cash = CF ending cash,Dec-2024,3154.0,3154.0,0.0,True
+BS cash + restricted cash = CF ending cash,Dec-2025,17401.0,17401.0,0.0,True
+BS cash + restricted cash = CF ending cash,Jun-2026,114918.0,114918.0,0.0,True
+Note 4: Level 3 convertible notes = BS,Dec-2024,14116.0,14116.0,0.0,True
+"BS: deficit change = net loss + OCI (approx., Dec-25 to Jun-26)",Jun-2026,-80748.0,-80748.0,0.0,True
+Quarterly sum = half-year: Revenue,6M2025,1163.0,1163.0,0.0,True
+Quarterly sum = half-year: Revenue,6M2026,16286.0,16286.0,0.0,True
+Quarterly sum = FY2025: Revenue,FY2025,4585.0,4585.0,0.0,True
+Quarterly sum = half-year: Compute and infrastructure,6M2025,2334.0,2334.0,0.0,True
+Quarterly sum = half-year: Compute and infrastructure,6M2026,8945.0,8945.0,0.0,True
+Quarterly sum = FY2025: Compute and infrastructure,FY2025,7326.0,7326.0,0.0,True
+Quarterly sum = half-year: Personnel,6M2025,538.0,538.0,0.0,True
+Quarterly sum = half-year: Personnel,6M2026,3152.0,3152.0,0.0,True
+Quarterly sum = FY2025: Personnel,FY2025,1839.0,1839.0,0.0,True
+"Quarterly sum = half-year: Sales, marketing, and partnerships",6M2025,120.0,120.0,0.0,True
+"Quarterly sum = half-year: Sales, marketing, and partnerships",6M2026,3168.0,3168.0,0.0,True
+"Quarterly sum = FY2025: Sales, marketing, and partnerships",FY2025,568.0,568.0,0.0,True
+Quarterly sum = half-year: Other operating and administrative,6M2025,306.0,306.0,0.0,True
+Quarterly sum = half-year: Other operating and administrative,6M2026,1714.0,1714.0,0.0,True
+Quarterly sum = FY2025: Other operating and administrative,FY2025,1412.0,1412.0,0.0,True
+Quarterly sum = half-year: Total operating expenses,6M2025,3298.0,3298.0,0.0,True
+Quarterly sum = half-year: Total operating expenses,6M2026,16979.0,16979.0,0.0,True
+Quarterly sum = FY2025: Total operating expenses,FY2025,12645.0,12645.0,0.0,True
+Quarterly sum = half-year: Interest income,6M2025,115.0,115.0,0.0,True
+Quarterly sum = half-year: Interest income,6M2026,1111.0,1111.0,0.0,True
+Quarterly sum = FY2025: Interest income,FY2025,431.0,431.0,0.0,True
+Quarterly sum = half-year: Net loss,6M2025,-12969.0,-12969.0,0.0,True
+Quarterly sum = half-year: Net loss,6M2026,-80748.0,-80748.0,0.0,True
+Quarterly sum = FY2025: Net loss,FY2025,-41965.0,-41965.0,0.0,True
+Quarterly: opex lines = total,Q1-2025,1311.0,1311.0,0.0,True
+Quarterly: AOI bridge foots,Q1-2025,-830.0,-830.0,0.0,True
+Quarterly: opex lines = total,Q2-2025,1987.0,1987.0,0.0,True
+Quarterly: AOI bridge foots,Q2-2025,-1019.0,-1019.0,0.0,True
+Quarterly: opex lines = total,Q3-2025,4471.0,4471.0,0.0,True
+Quarterly: AOI bridge foots,Q3-2025,-1284.0,-1284.0,0.0,True
+Quarterly: opex lines = total,Q4-2025,4876.0,4876.0,0.0,True
+Quarterly: AOI bridge foots,Q4-2025,-1721.0,-1721.0,0.0,True
+Quarterly: opex lines = total,Q1-2026,6398.0,6398.0,0.0,True
+Quarterly: AOI bridge foots,Q1-2026,-617.0,-617.0,0.0,True
+Quarterly: opex lines = total,Q2-2026,10581.0,10581.0,0.0,True
+Quarterly: AOI bridge foots,Q2-2026,2235.0,2235.0,0.0,True
+Quarterly AOI sum = half-year AOI,6M2025,-1849.0,-1849.0,0.0,True
+Quarterly AOI sum = half-year AOI,6M2026,1618.0,1618.0,0.0,True
+Summary p.22 = F-7: Revenue,FY2023,41.0,41.0,0.0,True
+Summary p.22 = F-7: Revenue,FY2024,386.0,386.0,0.0,True
+Summary p.22 = F-7: Revenue,FY2025,4585.0,4585.0,0.0,True
+Summary p.22 = F-7: Revenue,6M2025,1163.0,1163.0,0.0,True
+Summary p.22 = F-7: Revenue,6M2026,16286.0,16286.0,0.0,True
+Summary p.22 = F-7: Total operating expenses,FY2023,592.0,592.0,0.0,True
+Summary p.22 = F-7: Total operating expenses,FY2024,3366.0,3366.0,0.0,True
+Summary p.22 = F-7: Total operating expenses,FY2025,12645.0,12645.0,0.0,True
+Summary p.22 = F-7: Total operating expenses,6M2025,3298.0,3298.0,0.0,True
+Summary p.22 = F-7: Total operating expenses,6M2026,16979.0,16979.0,0.0,True
+Summary p.22 = F-7: Operating loss,FY2023,-551.0,-551.0,0.0,True
+Summary p.22 = F-7: Operating loss,FY2024,-2980.0,-2980.0,0.0,True
+Summary p.22 = F-7: Operating loss,FY2025,-8060.0,-8060.0,0.0,True
+Summary p.22 = F-7: Operating loss,6M2025,-2135.0,-2135.0,0.0,True
+Summary p.22 = F-7: Operating loss,6M2026,-693.0,-693.0,0.0,True
+Summary p.22 = F-7: Net loss,FY2023,-1531.0,-1531.0,0.0,True
+Summary p.22 = F-7: Net loss,FY2024,-8309.0,-8309.0,0.0,True
+Summary p.22 = F-7: Net loss,FY2025,-41965.0,-41965.0,0.0,True
+Summary p.22 = F-7: Net loss,6M2025,-12969.0,-12969.0,0.0,True
+Summary p.22 = F-7: Net loss,6M2026,-80748.0,-80748.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by (used in) operating activities,FY2023,-1627.0,-1627.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by (used in) operating activities,FY2024,-5692.0,-5692.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by (used in) operating activities,FY2025,-2637.0,-2637.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by (used in) operating activities,6M2025,-1513.0,-1513.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by (used in) operating activities,6M2026,3929.0,3929.0,0.0,True
+MD&A p.168 = F-12: Net cash used in investing activities,FY2023,-2.0,-2.0,0.0,True
+MD&A p.168 = F-12: Net cash used in investing activities,FY2024,-22.0,-22.0,0.0,True
+MD&A p.168 = F-12: Net cash used in investing activities,FY2025,-3077.0,-3077.0,0.0,True
+MD&A p.168 = F-12: Net cash used in investing activities,6M2025,-49.0,-49.0,0.0,True
+MD&A p.168 = F-12: Net cash used in investing activities,6M2026,-17181.0,-17181.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by financing activities,FY2023,2320.0,2320.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by financing activities,FY2024,7248.0,7248.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by financing activities,FY2025,19960.0,19960.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by financing activities,6M2025,4749.0,4749.0,0.0,True
+MD&A p.168 = F-12: Net cash provided by financing activities,6M2026,110774.0,110774.0,0.0,True
+Summary p.24 cash + STI = BS,Jun-2026,131651.0,131651.0,0.0,True
+Fact value in quote: Customers with >=$100k TTM revenue (approx.),Dec-2023,20,in quote,,True
+Fact value in quote: Customers with >=$100k TTM revenue (approx.),Dec-2024,200,in quote,,True
+Fact value in quote: Customers with >=$100k TTM revenue (approx.),Dec-2025,1500,in quote,,True
+Fact value in quote: Customers with >=$100k TTM revenue (more than),Sep-2025,950,in quote,,True
+Fact value in quote: Customers with >=$100k TTM revenue (more than),Sep-2026,11900,in quote,,True
+Fact value in quote: Customers with >=$1m TTM revenue (more than),Sep-2026,1900,in quote,,True
+Fact value in quote: Customers with >=$10m TTM revenue (approx.),Sep-2026,250,in quote,,True
+Fact value in quote: Revenue from customers with >=$100k TTM revenue (approx.),FY2023,37,in quote,,True
+Fact value in quote: Revenue from customers with >=$100k TTM revenue (approx.),FY2024,220,in quote,,True
+Fact value in quote: Revenue from customers with >=$100k TTM revenue (approx.),FY2025,3500,in quote,,True
+Fact value in quote: Share of revenue from customers with >=$100k TTM revenue,FY2023,90,in quote,,True
+Fact value in quote: Share of revenue from customers with >=$100k TTM revenue,FY2024,57,in quote,,True
+Fact value in quote: Share of revenue from customers with >=$100k TTM revenue,FY2025,76,in quote,,True
+Fact value in quote: Customers with <$100k TTM revenue (approx.),TTM Sep-2026,40,in quote,,True
+Fact value in quote: Net Revenue Retention (approx.),Sep-2026,900,in quote,,True
+Fact value in quote: Employees (approx.),Sep-2026,5300,in quote,,True
+Fact value in quote: TTM revenue per employee,Sep-2025,1.4,in quote,,True
+Fact value in quote: TTM revenue per employee (over),Sep-2026,6.6,in quote,,True
+"Fact value in quote: TTM revenue growth, Sep-2025 to Sep-2026 (approx.)",Sep-2026,1200,in quote,,True
+"Fact value in quote: Revenue growth y/y, three months to Jun-2026",Q2-2026,1368,in quote,,True
+"Fact value in quote: Compute and infrastructure expense growth y/y, three months to Jun-2026",Q2-2026,300,in quote,,True
+Fact value in quote: Share of >=$100k customers using Platform and a first-party app,Q3-2026,50,in quote,,True
+Fact value in quote: Revenue from model versions released in prior six months,Q3-2026,80,in quote,,True
+Fact value in quote: Customer spend decline over holiday code freeze (two weeks to 2 Jan 2026),Jan-2026,-20,in quote,,True
+"Fact value in quote: Top five customers, share of revenue (approx.)",9M-2026,25,in quote,,True
+Fact value in quote: Revenue outside top five customers (approx.),Q1-2026,64,in quote,,True
+Fact value in quote: Revenue outside top five customers (approx.),Q3-2026,79,in quote,,True
+Fact value in quote: Government agency contracts (approx.),all periods,1,in quote,,True
+"Fact value in quote: Sales, marketing, and partnerships expense",6M2026,19,in quote,,True
+Fact value in quote: Remaining performance obligations,Jun-2026,10800,in quote,,True
+Fact value in quote: RPO expected to be recognized in next 12 months (approx.),Jun-2026,75,in quote,,True
+Fact value in quote: Revenue recognized from opening deferred revenue,6M2026,196,in quote,,True
+Fact value in quote: Fixed or minimum guaranteed purchase commitments,Jun-2026,265600,in quote,,True
+"Fact value in quote: Leases signed, not yet commenced (undiscounted)",Dec-2025,50200,in quote,,True
+"Fact value in quote: Leases signed, not yet commenced (undiscounted)",Jun-2026,321400,in quote,,True
+Fact value in quote: New/amended compute agreements after Dec-2025 (minimum payments),Jan-Jun 2026,417000,in quote,,True
+Fact value in quote: New/amended compute agreements after Jun-2026 (minimum payments),Jul-Oct 2026,245000,in quote,,True
+Fact value in quote: Short-term compute agreements after Jun-2026 (minimum payments),Jul-Oct 2026,21000,in quote,,True
+Fact value in quote: Microsoft: minimum spend Nov-2026 to May-2033,agreement,44900,in quote,,True
+Fact value in quote: Google: minimum spend Apr-2026 to Jul-2033,agreement,114500,in quote,,True
+Fact value in quote: Amazon: minimum spend May-2026 to Apr-2036,agreement,110000,in quote,,True
+"Fact value in quote: SpaceXAI: spend up to, terms into 2029",agreement,120500,in quote,,True
+Fact value in quote: SpaceXAI: monthly run-rate once fully delivered (approx.),from Dec-2026,3100,in quote,,True
+Fact value in quote: AMD: expected expenditure if initial capacity procured (over),agreement,20000,in quote,,True
+"Fact value in quote: Nscale: spend up to, terms into 2033",agreement,44600,in quote,,True
+"Fact value in quote: Lambda: spend, terms into 2034 (approx.)",agreement,41300,in quote,,True
+Fact value in quote: Broadcom master equipment leases: rent excl. interest (approx.),agreement,161200,in quote,,True
+"Fact value in quote: Guaranty and cost reimbursement, maximum potential payments",Jun-2026,800,in quote,,True
+Fact value in quote: Additional cash that may need to be restricted,Jun-2026,10000,in quote,,True
+Fact value in quote: Amazon rollover notes principal outstanding (Amazon 2023 NPA),Dec-2025,2600,in quote,,True
+Fact value in quote: Amazon notes principal outstanding (Amazon 2024 NPA),Dec-2025,4000,in quote,,True
+Fact value in quote: Undrawn NPA capacity: Google 2026 NPA,Jun-2026,20000,in quote,,True
+Fact value in quote: Undrawn NPA capacity: Amazon 2026 NPA,Jun-2026,15000,in quote,,True
+Fact value in quote: Undrawn NPA capacity: Broadcom Infrastructure Partner 2026 NPA (9% PIK),Jun-2026,42000,in quote,,True
+Fact value in quote: Undrawn NPA capacity: total,Jun-2026,77000,in quote,,True
+Fact value in quote: Revolving credit facility commitments (Credit Facility),Jun-2026,3250,in quote,,True
+Fact value in quote: Revolving credit facility drawn,Jun-2026,0,in quote,,True
+Fact value in quote: Standby letters of credit outstanding,Jun-2026,78,in quote,,True
+"Fact value in quote: A&R Credit Facility commitments (Sep-2026, matures Sep-2031)",Sep-2026,15000,in quote,,True
+Fact value in quote: A&R Credit Facility minimum liquidity covenant,from Dec-2026,5000,in quote,,True
+Fact value in quote: AMD commitment to buy Class N common stock (up to),from 2027,5000,in quote,,True
+Fact value in quote: Credit facility available,Jun-2026,3200,in quote,,True
+Fact value in quote: Accumulated deficit from FV changes of convertible notes and derivatives since 2023,Jun-2026,113200,in quote,,True
+Fact value in quote: Finance lease liabilities,Jun-2026,443,in quote,,True
+"Fact value in quote: Operating lease liabilities, present value",Jun-2026,1079,in quote,,True
+Fact value in quote: Bartz settlement liability (current),Jun-2026,1200,in quote,,True
+Fact value in quote: Class A common stock issued and outstanding,Dec-2024,1779060,in quote,,True
+Fact value in quote: Class A common stock issued and outstanding,Dec-2025,1901267,in quote,,True
+Fact value in quote: Class A common stock issued and outstanding,Jun-2026,2157398,in quote,,True
+Fact value in quote: Class N common stock issued and outstanding,Jun-2026,30643,in quote,,True
+Fact value in quote: Redeemable convertible preferred stock outstanding (preferred shares),Dec-2024,220219,in quote,,True
+Fact value in quote: Redeemable convertible preferred stock outstanding (preferred shares),Dec-2025,544322,in quote,,True
+Fact value in quote: Redeemable convertible preferred stock outstanding (preferred shares),Jun-2026,853394,in quote,,True
+Fact value in quote: Preferred stock aggregate liquidation preference,Dec-2024,2874,in quote,,True
+Fact value in quote: Preferred stock aggregate liquidation preference,Dec-2025,24646,in quote,,True
+Fact value in quote: Preferred stock aggregate liquidation preference,Jun-2026,136286,in quote,,True
+Fact value in quote: Performance-vesting RSUs outstanding (vest at IPO),Jun-2026,1049.6,in quote,,True
+Fact value in quote: RSU unrecognized compensation if performance condition met,Jun-2026,23700,in quote,,True
+Fact value in quote: RSU cumulative SBC catch-up if performance condition met,Jun-2026,2900,in quote,,True
+"Fact value in quote: RSUs granted after Jun-2026 (approx.), grant-date fair value",Jul-Oct 2026,5800,in quote,,True
+Fact value in quote: Donation matching charge recognized in Q3-2026,Q3-2026,2000,in quote,,True
+Fact value in quote: Initial Public Benefit Issuance (Class N to wholly owned subsidiary),Oct-2026,846840960,in quote,,True
+"Fact value in quote: Initial Public Benefit Issuance as share of fully diluted shares (Jun-2026, incl. Amazon notes)",Jun-2026,5,in quote,,True
+Fact value in quote: Series G-1/G-2 preferred price (Q1/Q2-2026),Jan-Jun 2026,259.1364,in quote,,True
+Fact value in quote: Series H-1/H-2 preferred price (May-Jun 2026),May-Jun 2026,589.0095,in quote,,True
+"Fact value in quote: Series H gross proceeds, Q2-2026",Q2-2026,65200,in quote,,True
+"Fact value in quote: Tender offer price, Class A common (closed Apr-2026)",Feb-Apr 2026,25.9136,in quote,,True
+Fact value in quote: Amazon ownership cap on note conversion,Jun-2026,12,in quote,,True
+Fact value in quote: Google ownership cap under Google 2026 NPA,Jun-2026,14.99,in quote,,True
+Fact value in quote: Google option to buy Class N in concurrent private placement (up to),IPO,10000,in quote,,True
+Fact value in quote: Class F voting power (Founder LLC),post-IPO,50.1,in quote,,True
+Fact value in quote: 2026 Equity Incentive Plan initial reserve,Oct-2026,2950,in quote,,True
+Fact value in quote: Cash and cash equivalents + short-term investments,Jun-2026,131651,in quote,,True
+Fact value in quote: Working capital,Jun-2026,130760,in quote,,True
+Fact value in quote: Donation matching program expense,FY2025,541,in quote,,True
+Fact value in quote: Bartz settlement paid in FY2025,FY2025,300,in quote,,True
+Fact value in quote: Long-lived assets in the United States,Jun-2026,95,in quote,,True
+Fact value in quote: Operating segments,all,1,in quote,,True

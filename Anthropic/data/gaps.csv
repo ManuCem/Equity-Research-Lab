@@ -1,0 +1,20 @@
+item,where expected in S-1,status,consequence for the model
+IPO price range per share,"Cover page (PDF p.2); The Offering (S-1 p.18-21)",N/A - not found (left blank in this draft),No implied valuation at the range; value the company without a market price
+Shares offered and shares outstanding after the offering by class,"The Offering (S-1 p.18-21, PDF p.21-23)",N/A - not found (left blank),Post-IPO share count must be rebuilt from Note 10/12 and labelled as an estimate
+Net proceeds to the company,"Use of Proceeds (S-1 p.124, PDF p.101)",N/A - not found (left blank),Cash after IPO excludes offering proceeds
+Pro forma and pro forma as adjusted balance sheet and EPS,"Summary (S-1 p.23-24, PDF p.25-26); Capitalization (S-1 p.126-127, PDF p.102-103)",N/A - not found (left blank),Use actual 30 Jun 2026 balance sheet
+Contractual obligations table (totals and by year),"MD&A (S-1 p.169, PDF p.135)",N/A - not found (left blank),Use Note 13 (Dec-2025 schedule; $265.6bn total at Jun-2026) and named agreements; timing by year after 2025 is not available
+Run-Rate Revenue,"Prospectus Summary / Business (PDF p.153), MD&A",N/A - not found (amount blank; to be stated as of 31 Oct 2026),Revenue forecast anchored on reported quarterly revenue instead
+Revenue for Q3-2026 and nine months to Sep-2026,"MD&A Overview (S-1 p.133, PDF p.108)",N/A - not found (amount blank; no Q3 financial statements),Latest reported quarter is Q2-2026
+Liquidity and committed compute spend as of 30 Sep 2026,"MD&A (S-1 p.137, PDF p.111)",N/A - not found (amounts blank),Use 30 Jun 2026 balance sheet and Note 13/17 commitments
+Share of revenue from customers with >=$100k TTM revenue for TTM Sep-2026,"MD&A (S-1 p.141, PDF p.114)",N/A - not found (blank),Concentration series stops at FY2025 (76%)
+Net Revenue Retention before Sep-2026,MD&A / Business,N/A - not found (only ~900% as of 30 Sep 2026 is disclosed),No NRR trend
+Adjusted EBITDA,Non-GAAP measures (S-1 p.24 and 155-160),Not reported by the company (it reports Adjusted Operating Income and Adjusted Net Income),EBITDA computed in Stage 2 as operating loss + D&A and labelled as analyst calculation
+Gross profit / cost of revenue on the face of the income statement,Statements of operations (S-1 p.F-7),Not presented (expenses shown by nature since FY2025),Gross margin derived from Note 8 functional table (S-1 p.F-39)
+Revenue by product or channel (API vs Claude Code vs apps),Note 2 / MD&A,N/A - not found (only geography and consumption vs subscription),Forecast drivers limited to consumption and subscription streams
+Identity of Customers A-D,Note 1 concentration table (S-1 p.F-15),Not disclosed,Concentration shown as unnamed customers
+Economic ownership of Amazon and Google,Principal Stockholders (S-1 p.288-289),N/A - not found (non-voting holders not tabulated; only conversion caps of 12% and 14.99%),Ownership described by caps only
+Convertible note principal outstanding at 31 Dec 2024,Note 9 (S-1 p.F-39 to F-44),N/A - not found (fair value 14116 disclosed),No principal series before Dec-2025
+Compute spend by provider,MD&A / Note 13,N/A - not found,Commitments shown by named agreement only
+Headcount before Sep-2026,MD&A / Business,N/A - not found (only ~5300 at Sep-2026 and ~170% growth from Sep-2025),Revenue per employee as disclosed only
+Principal stockholders percentages,"Principal and Selling Stockholders (S-1 p.288-289, PDF p.224)",N/A - not found (most percentages blank),Founder share counts used as disclosed

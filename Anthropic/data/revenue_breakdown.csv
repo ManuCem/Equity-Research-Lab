@@ -1,0 +1,10 @@
+line_item,FY2023,FY2024,FY2025,6M2025,6M2026,unit,source
+Revenue - United States,34,263,3362,820,11763,USD m,S-1 p.F-26 (PDF p.276)
+Revenue - International,7,123,1223,343,4523,USD m,S-1 p.F-26 (PDF p.276)
+Revenue - Consumption-based,39,288,3796,983,13064,USD m,S-1 p.F-26 (PDF p.276)
+Revenue - Subscription-based,2,98,789,180,3222,USD m,S-1 p.F-26 (PDF p.276)
+Revenue share - Customer A (>=10% only),,,12,,,% of revenue (blank = below 10%),S-1 p.F-15 (PDF p.269)
+Revenue share - Customer B (>=10% only),,,12,18,,% of revenue (blank = below 10%),S-1 p.F-15 (PDF p.269)
+Revenue share - Customer C (>=10% only),43,,,,11,% of revenue (blank = below 10%),S-1 p.F-15 (PDF p.269)
+Revenue share - Customer D (>=10% only),11,,,,,% of revenue (blank = below 10%),S-1 p.F-15 (PDF p.269)
+Revenue share - sold through CSP marketplaces,11,32,47,44,48,% of revenue,S-1 p.F-16 (PDF p.269); S-1 p.F-16 (PDF p.269)

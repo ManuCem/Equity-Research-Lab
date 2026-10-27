@@ -1,0 +1,6 @@
+# Only the deliverables are pushed; everything else stays local.
+/*
+!/.gitignore
+!/spacex.html
+!/spacex.xlsx
+!/spacex.csv

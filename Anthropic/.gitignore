@@ -1,0 +1,16 @@
+# Pushed: anthropic.html, anthropic.xlsx, anthropic.csv and data/*.csv.
+# Everything else stays local (it can be rebuilt with scripts/run_all.py).
+
+# The S-1 PDF is 138 MB, above GitHub's 100 MB file limit
+filings/
+
+# Working files: extracted S-1 text and the build scripts
+text/
+scripts/
+
+# Build artefacts
+data/model_map.json
+data/model_values.json
+__pycache__/
+*.pyc
+~$*
