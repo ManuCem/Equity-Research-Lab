@@ -1,6 +1,6 @@
 # [Equity Research Lab](https://manucem.github.io/Equity-Research-Lab/)
 
-Company financials rebuilt directly from SEC filings: statements, ratios, operating metrics and page-cited sources. The [landing page](https://manucem.github.io/Equity-Research-Lab/) links to every company.
+Company financials rebuilt directly from SEC filings: statements, ratios, operating metrics and page-cited sources.
 
 ---
 
@@ -8,7 +8,7 @@ Company financials rebuilt directly from SEC filings: statements, ratios, operat
 
 Q1 2025 to Q3 2026, from the S-1 (filed 20 May 2026) and the Q2 and Q3 2026 results releases.
 
-[![SpaceX key numbers](assets/spacex-key.png)](https://manucem.github.io/Equity-Research-Lab/SpaceX/)
+![SpaceX key numbers](assets/spacex-key.png)
 
 | Key number | Value |
 |---|---|
@@ -21,15 +21,13 @@ Q1 2025 to Q3 2026, from the S-1 (filed 20 May 2026) and the Q2 and Q3 2026 resu
 
 SI became the largest of the three segments (Space, Connectivity, SI) in Q3 2026, and capex exceeded revenue in every 2026 quarter.
 
-**[Open webpage →](https://manucem.github.io/Equity-Research-Lab/SpaceX/)**
-
 ---
 
 ## [Anthropic](https://manucem.github.io/Equity-Research-Lab/Anthropic/)
 
 FY2023 to FY2025, first half of 2025 and 2026, and quarterly figures to Q2 2026, from the Form S-1 filed 26 October 2026.
 
-[![Anthropic key numbers](assets/anthropic-key.png)](https://manucem.github.io/Equity-Research-Lab/Anthropic/)
+![Anthropic key numbers](assets/anthropic-key.png)
 
 | Key number | Value |
 |---|---|
@@ -41,8 +39,6 @@ FY2023 to FY2025, first half of 2025 and 2026, and quarterly figures to Q2 2026,
 | Purchase commitments, Jun 2026 | **$265,600m** |
 
 The S-1 gives no IPO price range.
-
-**[Open webpage →](https://manucem.github.io/Equity-Research-Lab/Anthropic/)**
 
 ---
 
