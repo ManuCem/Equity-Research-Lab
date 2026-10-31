@@ -50,7 +50,7 @@
   .feature .txt { padding: 36px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
   .badge { align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
            color: var(--band); background: #cfe6ee; padding: 4px 10px; border-radius: 4px; }
-  .feature h2 { font-size: 34px; line-height: 1.1; margin: 0; }
+  .feature h2 { font-size: 38px; line-height: 1.06; margin: 0; }
   .feature p { margin: 0; color: var(--ink-2); }
 
   /* Hover animation shared by the featured company and every card:
@@ -86,7 +86,7 @@
                    transform-origin: top center; transition: transform .3s; }
   .card:hover .img img { transform: scale(1.03); }
   .card .topic { margin: 16px 0 4px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--c); }
-  .card h4 { font-size: 23px; line-height: 1.2; margin: 0 0 6px; transition: color .25s; }
+  .card h4 { font-size: 27px; line-height: 1.15; margin: 0 0 8px; transition: color .25s; }
   .card:hover h4 { color: var(--c); }
   .card p { margin: 0; color: var(--ink-2); font-size: 15px; }
   a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
@@ -100,7 +100,8 @@
     .feature { grid-template-columns: 1fr; margin-top: -64px; }
     .feature .img { min-height: 0; aspect-ratio: 16 / 9; }
     .feature .txt { padding: 24px 20px; }
-    .feature h2 { font-size: 28px; }
+    .feature h2 { font-size: 30px; }
+    .card h4 { font-size: 24px; }
     .section { margin-top: 48px; }
     .grid { grid-template-columns: 1fr; }   /* one card per row: half a phone screen is too narrow */
   }
