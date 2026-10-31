@@ -1,0 +1,520 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alphabet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>/* ---------------------------------------------------------------------------
+   Shared style for every company page (inlined into <Company>/index.html at build time).
+
+   The original data report, in the colours of the lab: the company name, the filing line,
+   then one section per topic separated by a hairline, each a heading, one factual line and
+   the chart or table. No colour band, no cards, no boxes, no commentary. Each company page
+   overrides --accent after this file; that accent is the only colour on the page.
+--------------------------------------------------------------------------- */
+
+:root{
+  color-scheme: dark;                      /* black page: tell the browser so scrollbars and form bits match */
+  --accent:#6cc2d8;                        /* every page overrides this one token after this stylesheet */
+  --page:#0b0c0e;                          /* the page black */
+  --surface:#0b0c0e;                       /* same black, kept as a name for the pinned table column */
+  --ink:#e8e9ec; --ink2:#a0a4ac; --muted:#777b84;
+  --grid:#23252a;                          /* hairlines between table rows and between sections */
+  --axis:#3a3d44;                          /* chart axes, a step brighter than the hairlines */
+  --hl:rgba(255,255,255,.055);             /* the row and column highlight on a table */
+  /* series colours for charts, chosen to read on black */
+  --c1:#6b9ef0; --c2:#45b894; --c3:#dba05a; --c4:#ab8ae0; --c5:#e0788f;
+  --dark:#9a9a9a; --light:#5c5c5c;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);
+  font:15px/1.55 "DM Sans",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+h1,h2,.kpi .v{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+a{color:inherit}
+.in{max-width:980px;margin:0 auto;
+  padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
+
+/* ---- header: a thin accent rule, the back link, the company, the filing line ---- */
+/* the accent shows as a 4px line across the top of the page and nowhere else up here */
+.band{border-top:4px solid var(--accent);padding:6px 0 4px}
+.back{display:inline-flex;align-items:center;min-height:44px;color:var(--ink2);
+  text-decoration:none;font-size:13px}
+.back:hover,.back:focus-visible{color:var(--accent)}
+h1{margin:6px 0 0;color:#fff;font-size:26px;line-height:1.15}
+.meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
+
+/* ---- one flat section per topic, separated by a hairline ---- */
+.panel{border-top:1px solid var(--grid);padding-top:14px;margin-top:28px}
+h2{margin:0 0 6px;font-size:19px;line-height:1.2;color:#fff;border:0;padding:0}
+/* the one factual line under the heading: the same job the old <h3> headline did */
+.dek{margin:0 0 12px;font-size:13.5px;font-weight:700;color:var(--ink)}
+h3{font-size:13px;margin:16px 0 6px;font-weight:700}
+.note{font-size:12.5px;color:var(--ink2);margin:4px 0 0}
+.hint{font-size:12px;color:var(--muted);margin:10px 0 0}
+
+/* ---- references: quiet and small, never a section of their own ---- */
+.refs{max-width:980px;margin:34px auto 0;border-top:1px solid var(--grid);
+  padding:14px max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
+.refs .lbl{display:block;margin:0 0 2px;font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.refs ul{list-style:none;margin:0;padding:0}
+.refs li{font-size:12.5px;color:var(--muted)}
+/* block, not flex: a reference line may hold several spans and must stay one sentence */
+.refs a{display:block;min-height:40px;padding:10px 0;color:var(--ink2);text-decoration:none}
+.refs a:hover,.refs a:focus-visible{color:var(--accent);text-decoration:underline}
+
+/* ---- layout helpers ---- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.two>div{min-width:0}
+
+/* ---- legends (tap or click an entry to hide that series) ---- */
+.leg{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px}
+.leg button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;
+  font:12.5px/1 "DM Sans",system-ui,Helvetica,Arial,sans-serif;color:var(--ink);
+  background:transparent;border:1px solid var(--grid);border-radius:999px;cursor:pointer}
+.leg button:hover,.leg button:focus-visible{border-color:var(--accent);outline:none}
+.leg button[aria-pressed="false"]{color:var(--muted);text-decoration:line-through}
+.leg button[aria-pressed="false"] i{opacity:.3}
+.leg i{width:10px;height:3px;border-radius:2px;display:inline-block}
+.leg i.sq{height:10px}
+
+/* ---- tooltip: the page colours, never a white box on a black page ---- */
+.tip{position:fixed;z-index:10;display:none;pointer-events:none;
+  background:#14161b;border:1px solid var(--axis);border-radius:8px;
+  box-shadow:0 8px 26px rgba(0,0,0,.6);padding:8px 11px;
+  font:12.5px/1.5 "DM Sans",system-ui,Helvetica,Arial,sans-serif;color:var(--ink);min-width:170px}
+.tip .th{font-weight:700;margin-bottom:2px}
+.tip div i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+.tip b{float:right;margin-left:14px;font-variant-numeric:tabular-nums}
+.tip .sum{border-top:1px solid var(--axis);margin-top:3px;padding-top:3px;font-weight:700}
+.tip .mu{color:var(--muted);font-weight:400}
+
+/* ---- charts: SVG drawn by the build script; colours come from the tokens above ---- */
+svg{width:100%;height:auto;display:block}
+/* A chart is drawn once at a fixed viewBox, so its labels grow with the box it is stretched into.
+   Inside .two a chart lands near 460px and its 11.5-unit text reads at about 16px. A chart that
+   fills the whole column would be stretched to ~940px and the same text would come out at 30px,
+   which is why the full-width charts are capped at the width their neighbours are drawn at. */
+.panel>svg[data-chart]{max-width:520px}
+/* the halo behind a chart label is the page black, so a label crossing a bar stays readable */
+svg text{font-family:"DM Sans",system-ui,Helvetica,Arial,sans-serif;paint-order:stroke;
+  stroke:var(--page);stroke-width:3px;stroke-linejoin:round}
+.lbl{font-size:11.5px;fill:var(--ink)}
+.ax{font-size:11px;fill:var(--muted)}
+.ax2{font-size:11px;fill:var(--ink2)}
+svg[data-chart]{cursor:crosshair;touch-action:pan-y;outline:none}   /* pan-y: a finger still scrolls the page */
+svg[data-chart]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+svg.hov .mk{opacity:.35}
+svg.hov .mk.on{opacity:1}
+.mk{transition:opacity .12s}
+.dot{transition:r .12s}
+.dot.on{r:5.2}
+.cross{display:none;pointer-events:none}
+
+/* ---- tables: hovering a cell highlights its row and its column ---- */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+th{text-align:right;font-weight:600;color:var(--muted);font-size:11.5px;text-transform:uppercase;
+  letter-spacing:.04em;border-bottom:1px solid var(--axis);padding:8px;white-space:nowrap}
+td{text-align:right;padding:7px 8px;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--page);padding-left:0}
+td:first-child{white-space:normal;min-width:150px}
+tr.b td{font-weight:700;color:#fff}
+tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
+tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+.basis{color:var(--muted);font-size:11.5px;font-weight:400}
+
+ul{margin:4px 0;padding-left:18px}
+li{margin-bottom:3px}
+
+footer{margin-top:34px;border-top:1px solid var(--grid);color:var(--muted);font-size:12.5px}
+footer .in{padding-top:16px;padding-bottom:22px}
+/* padding + negative margin: a finger-sized tap target that still looks like inline text */
+footer a{color:var(--ink2);display:inline-block;padding:12px 4px;margin:-12px -4px}
+footer a:hover{color:var(--accent)}
+
+@media (max-width:720px){
+  .kpis{grid-template-columns:1fr 1fr;gap:12px 14px}
+  h2{font-size:21px}
+}
+@media (max-width:640px){
+  .two,.gloss{grid-template-columns:1fr;gap:18px}
+  th,td{padding:7px 6px;font-size:12.5px}
+  th{white-space:normal}
+  td:first-child{min-width:120px}
+}
+
+:root{--accent:#f2c14e}</style>
+</head><body>
+<header class="band"><div class="in">
+<a class="back" href="../index.html">&larr; All companies</a>
+<h1>Alphabet</h1>
+<p class="meta">Alphabet Inc. &middot; NASDAQ: GOOGL, GOOG. Third quarter 2026 results, released
+<span data-static="1">28 October 2026</span>, with the Q3 2025 release and the Q3 2025 Form 10-Q for the comparatives.
+USD millions, GAAP unless marked otherwise. Every figure is tied to a cell of alphabet.xlsx,
+which carries the page citation.</p>
+</div></header>
+<main class="in">
+<section class="panel"><h2>Revenue</h2>
+<p class="dek">Revenue rose <span data-ref="Ratios!K25" data-fmt="pct0">25%</span> year on year to <span data-ref="Historicals!K77" data-fmt="bn1">$127.6B</span>, with Google Cloud up <span data-ref="Ratios!K7" data-fmt="pct0">103%</span> to <span data-ref="Historicals!K114" data-fmt="bn1">$30.7B</span> and Google Services up <span data-ref="Ratios!K26" data-fmt="pct0">11%</span>.</p>
+<div class="two"><div>
+<h3>Cloud doubled; advertising grew at its usual pace</h3>
+<div class="leg"><button type="button" data-chart="rev" data-s="0" aria-pressed="true"><i class="sq" style="background:var(--c1)"></i>Advertising</button><button type="button" data-chart="rev" data-s="1" aria-pressed="true"><i class="sq" style="background:var(--c2)"></i>Subs, platforms, devices</button><button type="button" data-chart="rev" data-s="2" aria-pressed="true"><i class="sq" style="background:var(--c3)"></i>Cloud</button></div>
+<svg viewBox="0 0 320 190" data-chart="rev" tabindex="0" role="img" aria-label="Revenue by line of business, third quarter, USD billions">
+<line x1="8" x2="312" y1="164" y2="164" stroke="var(--axis)" stroke-width="1"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="19.7" y="65.1" width="24.0" height="98.9" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="1" x="121.0" y="52.5" width="24.0" height="111.5" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="2" x="222.3" y="40.8" width="24.0" height="123.2" rx="2" fill="var(--c1)"/>
+</g>
+<g class="s1">
+<rect class="mk" data-i="0" x="45.7" y="148.0" width="24.0" height="16.0" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="1" x="147.0" y="144.7" width="24.0" height="19.3" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="2" x="248.3" y="142.5" width="24.0" height="21.5" rx="2" fill="var(--c2)"/>
+</g>
+<g class="s2">
+<rect class="mk" data-i="0" x="71.7" y="146.9" width="24.0" height="17.1" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="1" x="173.0" y="141.2" width="24.0" height="22.8" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="2" x="274.3" y="117.9" width="24.0" height="46.1" rx="2" fill="var(--c3)"/>
+</g>
+<text x="58.7" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-24</tspan></text>
+<text x="160.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="261.3" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">Revenue, $ billions, September quarters. <span class="hovertap">Hover</span> a group for
+the total and the growth rate behind it.</p>
+</div><div>
+<h3>Every line the release breaks out</h3>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q3-24</span></th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class=""><td>Google Search &amp; other</td><td><span data-ref="Historicals!C118" data-fmt="bn1">$49.4B</span></td><td><span data-ref="Historicals!G118" data-fmt="bn1">$56.6B</span></td><td><span data-ref="Historicals!K118" data-fmt="bn1">$63.4B</span></td></tr><tr class=""><td>YouTube ads</td><td><span data-ref="Historicals!C121" data-fmt="bn1">$8.9B</span></td><td><span data-ref="Historicals!G121" data-fmt="bn1">$10.3B</span></td><td><span data-ref="Historicals!K121" data-fmt="bn1">$11.2B</span></td></tr><tr class=""><td>Google Network</td><td><span data-ref="Historicals!C116" data-fmt="bn1">$7.5B</span></td><td><span data-ref="Historicals!G116" data-fmt="bn1">$7.4B</span></td><td><span data-ref="Historicals!K116" data-fmt="bn1">$7.5B</span></td></tr><tr class="b"><td>Google advertising</td><td><span data-ref="Historicals!C113" data-fmt="bn1">$65.9B</span></td><td><span data-ref="Historicals!G113" data-fmt="bn1">$74.2B</span></td><td><span data-ref="Historicals!K113" data-fmt="bn1">$82.0B</span></td></tr><tr class=""><td>Subscriptions, platforms, devices</td><td><span data-ref="Historicals!C120" data-fmt="bn1">$10.7B</span></td><td><span data-ref="Historicals!G120" data-fmt="bn1">$12.9B</span></td><td><span data-ref="Historicals!K120" data-fmt="bn1">$14.3B</span></td></tr><tr class="b"><td>Google Services total</td><td><span data-ref="Historicals!C119" data-fmt="bn1">$76.5B</span></td><td><span data-ref="Historicals!G119" data-fmt="bn1">$87.1B</span></td><td><span data-ref="Historicals!K119" data-fmt="bn1">$96.3B</span></td></tr><tr class=""><td>Google Cloud</td><td><span data-ref="Historicals!C114" data-fmt="bn1">$11.4B</span></td><td><span data-ref="Historicals!G114" data-fmt="bn1">$15.2B</span></td><td><span data-ref="Historicals!K114" data-fmt="bn1">$30.7B</span></td></tr><tr class=""><td>Other Bets</td><td><span data-ref="Historicals!C117" data-fmt="bn1">$0.4B</span></td><td><span data-ref="Historicals!G117" data-fmt="bn1">$0.3B</span></td><td><span data-ref="Historicals!K117" data-fmt="bn1">$0.4B</span></td></tr><tr class=""><td>Hedging gains (losses)</td><td><span data-ref="Historicals!C115" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!G115" data-fmt="bn1">−$0.2B</span></td><td><span data-ref="Historicals!K115" data-fmt="bn1">$0.2B</span></td></tr><tr class="b"><td>Total revenues</td><td><span data-ref="Historicals!C77" data-fmt="bn1">$88.3B</span></td><td><span data-ref="Historicals!G77" data-fmt="bn1">$102.3B</span></td><td><span data-ref="Historicals!K77" data-fmt="bn1">$127.6B</span></td></tr></tbody></table></div>
+<p class="note">Hedging gains and losses are recognised at group level and sit outside the segments.
+Source: Q3-25 release p.2, Q3-26 release p.2.</p>
+</div></div>
+</section>
+<section class="panel"><h2>Segments</h2>
+<p class="dek">Google Cloud's operating margin reached <span data-ref="Ratios!K13" data-fmt="pct1">36.2%</span>, from <span data-ref="Ratios!G13" data-fmt="pct1">23.7%</span>, while unallocated Alphabet-level costs widened to <span data-ref="Historicals!K124" data-fmt="bn1">−$7.7B</span>.</p>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class="b"><td>Google Services revenue</td><td><span data-ref="Historicals!G128" data-fmt="bn1">$87.1B</span></td><td><span data-ref="Historicals!K128" data-fmt="bn1">$96.3B</span></td></tr><tr class=""><td>Operating income (loss)</td><td><span data-ref="Historicals!G127" data-fmt="bn1">$33.5B</span></td><td><span data-ref="Historicals!K127" data-fmt="bn1">$39.2B</span></td></tr><tr class=""><td>Operating margin</td><td><span data-ref="Ratios!G14" data-fmt="pct1">38.5%</span></td><td><span data-ref="Ratios!K14" data-fmt="pct1">40.7%</span></td></tr><tr class="b"><td>Google Cloud revenue</td><td><span data-ref="Historicals!G123" data-fmt="bn1">$15.2B</span></td><td><span data-ref="Historicals!K123" data-fmt="bn1">$30.7B</span></td></tr><tr class=""><td>Operating income (loss)</td><td><span data-ref="Historicals!G122" data-fmt="bn1">$3.6B</span></td><td><span data-ref="Historicals!K122" data-fmt="bn1">$11.1B</span></td></tr><tr class=""><td>Operating margin</td><td><span data-ref="Ratios!G13" data-fmt="pct1">23.7%</span></td><td><span data-ref="Ratios!K13" data-fmt="pct1">36.2%</span></td></tr><tr class="b"><td>Other Bets revenue</td><td><span data-ref="Historicals!G126" data-fmt="bn1">$0.3B</span></td><td><span data-ref="Historicals!K126" data-fmt="bn1">$0.4B</span></td></tr><tr class=""><td>Operating income (loss)</td><td><span data-ref="Historicals!G125" data-fmt="bn1">−$1.4B</span></td><td><span data-ref="Historicals!K125" data-fmt="bn1">−$2.0B</span></td></tr><tr class="b"><td>Alphabet-level activities</td><td><span data-ref="Historicals!G124" data-fmt="bn1">−$4.5B</span></td><td><span data-ref="Historicals!K124" data-fmt="bn1">−$7.7B</span></td></tr><tr class="b"><td>Total income from operations</td><td><span data-ref="Historicals!G74" data-fmt="bn1">$31.2B</span></td><td><span data-ref="Historicals!K74" data-fmt="bn1">$40.6B</span></td></tr></tbody></table></div>
+<p class="note">Alphabet-level activities are the costs the company does not allocate to a segment;
+the Q3-26 release says they primarily reflect shared AI research and development. The Q3-25 figure
+includes the <span data-ref="Historicals!G87" data-fmt="bn1">$3.5B</span> European Commission fine, accrued in Google
+Services. Source: Q3-25 release p.2, Q3-26 release pp.2, 7.</p>
+</section>
+<section class="panel"><h2>Income statement</h2>
+<p class="dek">Income from operations rose <span data-ref="Ratios!K20" data-fmt="pct0">30%</span> to <span data-ref="Historicals!K74" data-fmt="bn1">$40.6B</span>, an operating margin of <span data-ref="Ratios!K21" data-fmt="pct1">31.8%</span>.</p>
+<div class="two"><div>
+<h3>The operating margin, quarter by quarter</h3>
+<svg viewBox="0 0 320 190" data-chart="mgn" tabindex="0" role="img" aria-label="GAAP operating margin by quarter, percent of revenue">
+<line x1="40" x2="312" y1="164.0" y2="164.0" stroke="var(--axis)" stroke-width="1"/>
+<text x="35" y="167.5" text-anchor="end" class="ax"><tspan data-static="1">0%</tspan></text>
+<line x1="40" x2="312" y1="127.0" y2="127.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="130.5" text-anchor="end" class="ax"><tspan data-static="1">10%</tspan></text>
+<line x1="40" x2="312" y1="90.0" y2="90.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="93.5" text-anchor="end" class="ax"><tspan data-static="1">20%</tspan></text>
+<line x1="40" x2="312" y1="53.0" y2="53.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="56.5" text-anchor="end" class="ax"><tspan data-static="1">30%</tspan></text>
+<line x1="40" x2="312" y1="16.0" y2="16.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="19.5" text-anchor="end" class="ax"><tspan data-static="1">40%</tspan></text>
+<line class="cross" x1="0" x2="0" y1="16" y2="164" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="72.3" y="44.4" width="26.0" height="119.6" rx="2" fill="var(--c1)"/>
+<text x="85.3" y="39.4" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!C21" data-fmt="pct1">32.3%</tspan></text>
+<rect class="mk" data-i="1" x="163.0" y="51.1" width="26.0" height="112.9" rx="2" fill="var(--c1)"/>
+<text x="176.0" y="46.1" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!G21" data-fmt="pct1">30.5%</tspan></text>
+<rect class="mk" data-i="2" x="253.7" y="46.3" width="26.0" height="117.7" rx="2" fill="var(--c1)"/>
+<text x="266.7" y="41.3" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!K21" data-fmt="pct1">31.8%</tspan></text>
+</g>
+<text x="85.3" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-24</tspan></text>
+<text x="176.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="266.7" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">Income from operations divided by revenue. <span class="hovertap">Hover</span> a bar
+for the revenue and the operating profit behind it.</p>
+</div><div>
+<h3>Margins, September quarter by September quarter</h3>
+<div class="tw"><table><thead><tr><th>Ratio</th><th><span data-static="1">Q3-24</span></th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class=""><td>Operating margin</td><td><span data-ref="Ratios!C21" data-fmt="pct1">32.3%</span></td><td><span data-ref="Ratios!G21" data-fmt="pct1">30.5%</span></td><td><span data-ref="Ratios!K21" data-fmt="pct1">31.8%</span></td></tr><tr class=""><td>Gross margin</td><td><span data-ref="Ratios!C15" data-fmt="pct1">58.7%</span></td><td><span data-ref="Ratios!G15" data-fmt="pct1">59.6%</span></td><td><span data-ref="Ratios!K15" data-fmt="pct1">59.7%</span></td></tr><tr class=""><td>Net margin</td><td><span data-ref="Ratios!C19" data-fmt="pct1">29.8%</span></td><td><span data-ref="Ratios!G19" data-fmt="pct1">34.2%</span></td><td><span data-ref="Ratios!K19" data-fmt="pct1">20.7%</span></td></tr><tr class=""><td>R&amp;D / revenue</td><td><span data-ref="Ratios!C24" data-fmt="pct1">14.1%</span></td><td><span data-ref="Ratios!G24" data-fmt="pct1">14.8%</span></td><td><span data-ref="Ratios!K24" data-fmt="pct1">16.2%</span></td></tr><tr class=""><td>Effective tax rate</td><td><span data-ref="Ratios!C10" data-fmt="pct1">17.0%</span></td><td><span data-ref="Ratios!G10" data-fmt="pct1">20.5%</span></td><td><span data-ref="Ratios!K10" data-fmt="pct1">18.2%</span></td></tr></tbody></table></div>
+<p class="note">Own calculations from the reported figures; the formula for each is written beside it
+on the Ratios sheet of the workbook.</p>
+</div></div>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q3-24</span></th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th><th><span data-static="1">9M-25</span></th><th><span data-static="1">9M-26</span></th></tr></thead><tbody><tr class="b"><td>Revenues</td><td><span data-ref="Historicals!C77" data-fmt="bn1">$88.3B</span></td><td><span data-ref="Historicals!G77" data-fmt="bn1">$102.3B</span></td><td><span data-ref="Historicals!K77" data-fmt="bn1">$127.6B</span></td><td><span data-ref="Historicals!M77" data-fmt="bn1">$289.0B</span></td><td><span data-ref="Historicals!N77" data-fmt="bn1">$357.3B</span></td></tr><tr class=""><td>Cost of revenues</td><td><span data-ref="Historicals!C67" data-fmt="bn1">$36.5B</span></td><td><span data-ref="Historicals!G67" data-fmt="bn1">$41.4B</span></td><td><span data-ref="Historicals!K67" data-fmt="bn1">$51.4B</span></td><td><span data-ref="Historicals!M67" data-fmt="bn1">$116.8B</span></td><td><span data-ref="Historicals!N67" data-fmt="bn1">$138.6B</span></td></tr><tr class=""><td>Research and development</td><td><span data-ref="Historicals!C78" data-fmt="bn1">$12.4B</span></td><td><span data-ref="Historicals!G78" data-fmt="bn1">$15.2B</span></td><td><span data-ref="Historicals!K78" data-fmt="bn1">$20.6B</span></td><td><span data-ref="Historicals!M78" data-fmt="bn1">$42.5B</span></td><td><span data-ref="Historicals!N78" data-fmt="bn1">$55.9B</span></td></tr><tr class=""><td>Sales and marketing</td><td><span data-ref="Historicals!C79" data-fmt="bn1">$7.2B</span></td><td><span data-ref="Historicals!G79" data-fmt="bn1">$7.2B</span></td><td><span data-ref="Historicals!K79" data-fmt="bn1">$8.8B</span></td><td><span data-ref="Historicals!M79" data-fmt="bn1">$20.5B</span></td><td><span data-ref="Historicals!N79" data-fmt="bn1">$24.8B</span></td></tr><tr class=""><td>General and administrative</td><td><span data-ref="Historicals!C70" data-fmt="bn1">$3.6B</span></td><td><span data-ref="Historicals!G70" data-fmt="bn1">$7.4B</span></td><td><span data-ref="Historicals!K70" data-fmt="bn1">$6.1B</span></td><td><span data-ref="Historicals!M70" data-fmt="bn1">$16.1B</span></td><td><span data-ref="Historicals!N70" data-fmt="bn1">$16.9B</span></td></tr><tr class=""><td>Total costs and expenses</td><td><span data-ref="Historicals!C83" data-fmt="bn1">$59.7B</span></td><td><span data-ref="Historicals!G83" data-fmt="bn1">$71.1B</span></td><td><span data-ref="Historicals!K83" data-fmt="bn1">$87.0B</span></td><td><span data-ref="Historicals!M83" data-fmt="bn1">$195.9B</span></td><td><span data-ref="Historicals!N83" data-fmt="bn1">$236.2B</span></td></tr><tr class="b"><td>Income from operations</td><td><span data-ref="Historicals!C74" data-fmt="bn1">$28.5B</span></td><td><span data-ref="Historicals!G74" data-fmt="bn1">$31.2B</span></td><td><span data-ref="Historicals!K74" data-fmt="bn1">$40.6B</span></td><td><span data-ref="Historicals!M74" data-fmt="bn1">$93.1B</span></td><td><span data-ref="Historicals!N74" data-fmt="bn1">$121.0B</span></td></tr><tr class=""><td>Other income (expense), net</td><td><span data-ref="Historicals!C73" data-fmt="bn1">$3.2B</span></td><td><span data-ref="Historicals!G73" data-fmt="bn1">$12.8B</span></td><td><span data-ref="Historicals!K73" data-fmt="bn1">−$8.2B</span></td><td><span data-ref="Historicals!M73" data-fmt="bn1">$26.6B</span></td><td><span data-ref="Historicals!N73" data-fmt="bn1">$127.5B</span></td></tr><tr class=""><td>Provision for income taxes</td><td><span data-ref="Historicals!C82" data-fmt="bn1">$5.4B</span></td><td><span data-ref="Historicals!G82" data-fmt="bn1">$9.0B</span></td><td><span data-ref="Historicals!K82" data-fmt="bn1">$5.9B</span></td><td><span data-ref="Historicals!M82" data-fmt="bn1">$22.0B</span></td><td><span data-ref="Historicals!N82" data-fmt="bn1">$47.3B</span></td></tr><tr class="b"><td>Net income</td><td><span data-ref="Historicals!C71" data-fmt="bn1">$26.3B</span></td><td><span data-ref="Historicals!G71" data-fmt="bn1">$35.0B</span></td><td><span data-ref="Historicals!K71" data-fmt="bn1">$26.5B</span></td><td><span data-ref="Historicals!M71" data-fmt="bn1">$97.7B</span></td><td><span data-ref="Historicals!N71" data-fmt="bn1">$201.2B</span></td></tr></tbody></table></div>
+<p class="note">Q3-25 carries the <span data-ref="Historicals!G87" data-fmt="bn1">$3.5B</span> European Commission fine in
+general and administrative expenses, which is why that line falls in Q3-26 while every other cost rises.
+Source: Q3-25 release p.5, Q3-26 release p.5.</p>
+</section>
+<section class="panel"><h2>Other income and earnings</h2>
+<p class="dek">Other income swung from <span data-ref="Historicals!G73" data-fmt="bn1">$12.8B</span> to <span data-ref="Historicals!K73" data-fmt="bn1">−$8.2B</span>, so net income to common stockholders came in at <span data-ref="Historicals!K72" data-fmt="bn1">$26.2B</span> (<span data-ref="Ratios!K18" data-fmt="pct0">−25%</span> year on year) and diluted EPS at <span data-ref="Historicals!K69" data-fmt="usd2">$2.12</span> (<span data-ref="Ratios!K8" data-fmt="pct0">−26%</span>), while operating income rose.</p>
+<div class="two"><div>
+<h3>Where the swing came from</h3>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q3-24</span></th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class=""><td>Interest income</td><td><span data-ref="Historicals!C102" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!G102" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!K102" data-fmt="bn1">$1.8B</span></td></tr><tr class=""><td>Interest expense</td><td><span data-ref="Historicals!C101" data-fmt="bn1">−$0.1B</span></td><td><span data-ref="Historicals!G101" data-fmt="bn1">−$0.1B</span></td><td><span data-ref="Historicals!K101" data-fmt="bn1">−$1.0B</span></td></tr><tr class=""><td>Foreign currency exchange, net</td><td><span data-ref="Historicals!C100" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!G100" data-fmt="bn1">−$0.1B</span></td><td><span data-ref="Historicals!K100" data-fmt="bn1">$0.0B</span></td></tr><tr class=""><td>Gain (loss) on debt securities</td><td><span data-ref="Historicals!C94" data-fmt="bn1">$0.2B</span></td><td><span data-ref="Historicals!G94" data-fmt="bn1">$0.1B</span></td><td><span data-ref="Historicals!K94" data-fmt="bn1">−$0.4B</span></td></tr><tr class="b"><td>Gain (loss) on equity securities</td><td><span data-ref="Historicals!C98" data-fmt="bn1">$1.8B</span></td><td><span data-ref="Historicals!G98" data-fmt="bn1">$10.7B</span></td><td><span data-ref="Historicals!K98" data-fmt="bn1">−$8.7B</span></td></tr><tr class=""><td>Equity method investments</td><td><span data-ref="Historicals!C96" data-fmt="bn1">−$0.1B</span></td><td><span data-ref="Historicals!G96" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!K96" data-fmt="bn1">−$0.1B</span></td></tr><tr class=""><td>Other</td><td><span data-ref="Historicals!C103" data-fmt="bn1">$0.1B</span></td><td><span data-ref="Historicals!G103" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!K103" data-fmt="bn1">$0.1B</span></td></tr><tr class="b"><td>Other income (expense), net</td><td><span data-ref="Historicals!C73" data-fmt="bn1">$3.2B</span></td><td><span data-ref="Historicals!G73" data-fmt="bn1">$12.8B</span></td><td><span data-ref="Historicals!K73" data-fmt="bn1">−$8.2B</span></td></tr></tbody></table></div>
+<p class="note">Source: Q3-25 release p.8, Q3-26 release p.8. The 2026 release folds performance fees
+into "other", so the Q3-25 column is shown as restated.</p>
+</div><div>
+<h3>From operating profit to earnings per share</h3>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q3-24</span></th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class="b"><td>Income from operations</td><td><span data-ref="Historicals!C74" data-fmt="bn1">$28.5B</span></td><td><span data-ref="Historicals!G74" data-fmt="bn1">$31.2B</span></td><td><span data-ref="Historicals!K74" data-fmt="bn1">$40.6B</span></td></tr><tr class=""><td>Other income (expense), net</td><td><span data-ref="Historicals!C73" data-fmt="bn1">$3.2B</span></td><td><span data-ref="Historicals!G73" data-fmt="bn1">$12.8B</span></td><td><span data-ref="Historicals!K73" data-fmt="bn1">−$8.2B</span></td></tr><tr class=""><td>Income before income taxes</td><td><span data-ref="Historicals!C76" data-fmt="bn1">$31.7B</span></td><td><span data-ref="Historicals!G76" data-fmt="bn1">$44.0B</span></td><td><span data-ref="Historicals!K76" data-fmt="bn1">$32.4B</span></td></tr><tr class=""><td>Net income</td><td><span data-ref="Historicals!C71" data-fmt="bn1">$26.3B</span></td><td><span data-ref="Historicals!G71" data-fmt="bn1">$35.0B</span></td><td><span data-ref="Historicals!K71" data-fmt="bn1">$26.5B</span></td></tr><tr class="b"><td>Net income to common stockholders</td><td></td><td><span data-ref="Historicals!G72" data-fmt="bn1">$35.0B</span></td><td><span data-ref="Historicals!K72" data-fmt="bn1">$26.2B</span></td></tr><tr class="b"><td>Diluted EPS</td><td><span data-ref="Historicals!C69" data-fmt="usd2">$2.12</span></td><td><span data-ref="Historicals!G69" data-fmt="usd2">$2.87</span></td><td><span data-ref="Historicals!K69" data-fmt="usd2">$2.12</span></td></tr><tr class=""><td>Diluted shares, millions</td><td><span data-ref="Historicals!C81" data-fmt="num0">12,419</span></td><td><span data-ref="Historicals!G81" data-fmt="num0">12,203</span></td><td><span data-ref="Historicals!K81" data-fmt="num0">12,368</span></td></tr></tbody></table></div>
+<p class="note">The Q3-26 release footnote puts the effect of the equity-securities loss at
+<span data-ref="Historicals!K97" data-fmt="bn1">−$6.7B</span> of net income and
+<span data-ref="Historicals!K95" data-fmt="usd2">−$0.55</span> of diluted EPS.</p>
+</div></div>
+</section>
+<section class="panel"><h2>Capital expenditure and free cash flow</h2>
+<p class="dek">Capital expenditure reached <span data-ref="Ratios!K6" data-fmt="bn1">$51.4B</span>, <span data-ref="Ratios!K4" data-fmt="pct1">40.3%</span> of revenue and <span data-ref="Ratios!K3" data-fmt="pct0">121%</span> of operating cash flow, leaving free cash flow of <span data-ref="Historicals!K43" data-fmt="bn1">−$9.1B</span> for the quarter.</p>
+<div class="two"><div>
+<h3>Capital spending overtook the cash the business makes</h3>
+<div class="leg"><button type="button" data-chart="cash" data-s="0" aria-pressed="true"><i class="sq" style="background:var(--c2)"></i>Operating cash flow</button><button type="button" data-chart="cash" data-s="1" aria-pressed="true"><i class="sq" style="background:var(--c1)"></i>Capital expenditure</button></div>
+<svg viewBox="0 0 320 190" data-chart="cash" tabindex="0" role="img" aria-label="Operating cash flow and capital expenditure by quarter, USD billions">
+<line x1="8" x2="312" y1="164" y2="164" stroke="var(--axis)" stroke-width="1"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="12.2" y="72.0" width="12.8" height="92.0" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="1" x="50.2" y="79.0" width="12.8" height="85.0" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="2" x="88.2" y="98.8" width="12.8" height="65.2" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="3" x="126.2" y="50.2" width="12.8" height="113.8" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="4" x="164.2" y="40.8" width="12.8" height="123.2" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="5" x="202.2" y="56.3" width="12.8" height="107.7" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="6" x="240.2" y="72.1" width="12.8" height="91.9" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="7" x="278.2" y="64.6" width="12.8" height="99.4" rx="2" fill="var(--c2)"/>
+</g>
+<g class="s1">
+<rect class="mk" data-i="0" x="27.0" y="130.4" width="12.8" height="33.6" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="1" x="65.0" y="123.6" width="12.8" height="40.4" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="2" x="103.0" y="111.2" width="12.8" height="52.8" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="3" x="141.0" y="107.7" width="12.8" height="56.3" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="4" x="179.0" y="98.5" width="12.8" height="65.5" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="5" x="217.0" y="80.1" width="12.8" height="83.9" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="6" x="255.0" y="58.4" width="12.8" height="105.6" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="7" x="293.0" y="43.2" width="12.8" height="120.8" rx="2" fill="var(--c1)"/>
+</g>
+<text x="27.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q4-24</tspan></text>
+<text x="65.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-25</tspan></text>
+<text x="103.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-25</tspan></text>
+<text x="141.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="179.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q4-25</tspan></text>
+<text x="217.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-26</tspan></text>
+<text x="255.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-26</tspan></text>
+<text x="293.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">$ billions. Capital expenditure is drawn as a positive outflow.
+<span class="hovertap">Hover</span> a quarter for the free cash flow the two leave behind.</p>
+</div><div>
+<h3>Free cash flow turned negative in Q2-26</h3>
+<svg viewBox="0 0 320 190" data-chart="fcf" tabindex="0" role="img" aria-label="Free cash flow by quarter, USD billions">
+<line x1="40" x2="312" y1="164.0" y2="164.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="167.5" text-anchor="end" class="ax"><tspan data-static="1">−$15B</tspan></text>
+<line x1="40" x2="312" y1="114.7" y2="114.7" stroke="var(--axis)" stroke-width="1"/>
+<text x="35" y="118.2" text-anchor="end" class="ax"><tspan data-static="1">$0B</tspan></text>
+<line x1="40" x2="312" y1="65.3" y2="65.3" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="68.8" text-anchor="end" class="ax"><tspan data-static="1">$15B</tspan></text>
+<line x1="40" x2="312" y1="16.0" y2="16.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="19.5" text-anchor="end" class="ax"><tspan data-static="1">$30B</tspan></text>
+<line class="cross" x1="0" x2="0" y1="16" y2="164" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="47.5" y="33.0" width="19.0" height="81.7" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="1" x="81.5" y="52.3" width="19.0" height="62.3" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="2" x="115.5" y="97.2" width="19.0" height="17.4" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="3" x="149.5" y="34.2" width="19.0" height="80.4" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="4" x="183.5" y="33.9" width="19.0" height="80.7" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="5" x="217.5" y="81.4" width="19.0" height="33.3" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="6" x="251.5" y="114.7" width="19.0" height="19.3" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="7" x="285.5" y="114.7" width="19.0" height="29.8" rx="2" fill="var(--c3)"/>
+</g>
+<text x="91.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-25</tspan></text>
+<text x="159.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="227.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-26</tspan></text>
+<text x="295.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">Free cash flow = operating cash flow less purchases of property and equipment, as the
+releases reconcile it. <span class="hovertap">Hover</span> a bar for the two figures behind it.</p>
+</div></div>
+<div class="tw"><table><thead><tr><th>Ratio</th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q3-26</span></th><th><span data-static="1">9M-25</span></th><th><span data-static="1">9M-26</span></th></tr></thead><tbody><tr class=""><td>Capital expenditure</td><td><span data-ref="Ratios!G6" data-fmt="bn1">$24.0B</span></td><td><span data-ref="Ratios!K6" data-fmt="bn1">$51.4B</span></td><td><span data-ref="Ratios!M6" data-fmt="bn1">$63.6B</span></td><td><span data-ref="Ratios!N6" data-fmt="bn1">$132.0B</span></td></tr><tr class=""><td>Free cash flow</td><td><span data-ref="Ratios!G11" data-fmt="bn1">$24.5B</span></td><td><span data-ref="Ratios!K11" data-fmt="bn1">−$9.1B</span></td><td><span data-ref="Ratios!M11" data-fmt="bn1">$48.7B</span></td><td><span data-ref="Ratios!N11" data-fmt="bn1">−$4.8B</span></td></tr><tr class=""><td>Capex / revenue</td><td><span data-ref="Ratios!G4" data-fmt="pct1">23.4%</span></td><td><span data-ref="Ratios!K4" data-fmt="pct1">40.3%</span></td><td><span data-ref="Ratios!M4" data-fmt="pct1">22.0%</span></td><td><span data-ref="Ratios!N4" data-fmt="pct1">36.9%</span></td></tr><tr class=""><td>Capex / operating cash flow</td><td><span data-ref="Ratios!G3" data-fmt="pct0">49%</span></td><td><span data-ref="Ratios!K3" data-fmt="pct0">121%</span></td><td><span data-ref="Ratios!M3" data-fmt="pct0">57%</span></td><td><span data-ref="Ratios!N3" data-fmt="pct0">104%</span></td></tr><tr class=""><td>Capex / depreciation</td><td><span data-ref="Ratios!G2" data-fmt="x1">4.3x</span></td><td><span data-ref="Ratios!K2" data-fmt="x1">6.1x</span></td><td><span data-ref="Ratios!M2" data-fmt="x1">4.2x</span></td><td><span data-ref="Ratios!N2" data-fmt="x1">6.0x</span></td></tr><tr class=""><td>Capex growth YoY</td><td><span data-ref="Ratios!G5" data-fmt="pct0">83%</span></td><td><span data-ref="Ratios!K5" data-fmt="pct0">114%</span></td><td></td><td><span data-ref="Ratios!N5" data-fmt="pct0">107%</span></td></tr></tbody></table></div>
+<p class="note">Capital expenditure was <span data-ref="Ratios!K6" data-fmt="bn1">$51.4B</span> in
+the quarter against <span data-ref="Ratios!G6" data-fmt="bn1">$24.0B</span> a year earlier.
+Trailing-twelve-month free cash flow fell from <span data-ref="Historicals!O43" data-fmt="bn1">$73.6B</span> to
+<span data-ref="Historicals!P43" data-fmt="bn1">$19.7B</span>. Source: Q3-25 release pp.6, 9; Q3-26 release pp.6, 8.</p>
+</section>
+<section class="panel"><h2>Balance sheet</h2>
+<p class="dek">Total assets passed <span data-ref="Historicals!T32" data-fmt="tn2">$1.00T</span> at <span data-static="1">30 September 2026</span>, from <span data-ref="Historicals!S32" data-fmt="bn0">$595B</span> at the year end, while long-term debt rose from <span data-ref="Historicals!S11" data-fmt="bn1">$46.5B</span> to <span data-ref="Historicals!T11" data-fmt="bn1">$125.1B</span>.</p>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Dec-24</span></th><th><span data-static="1">Sep-25</span></th><th><span data-static="1">Dec-25</span></th><th><span data-static="1">Sep-26</span></th></tr></thead><tbody><tr class=""><td>Cash, equivalents and securities</td><td><span data-ref="Historicals!Q7" data-fmt="bn1">$95.7B</span></td><td><span data-ref="Historicals!R7" data-fmt="bn1">$98.5B</span></td><td><span data-ref="Historicals!S7" data-fmt="bn1">$126.8B</span></td><td><span data-ref="Historicals!T7" data-fmt="bn1">$265.1B</span></td></tr><tr class=""><td>Accounts receivable, net</td><td><span data-ref="Historicals!Q28" data-fmt="bn1">$52.3B</span></td><td><span data-ref="Historicals!R28" data-fmt="bn1">$57.1B</span></td><td><span data-ref="Historicals!S28" data-fmt="bn1">$62.9B</span></td><td><span data-ref="Historicals!T28" data-fmt="bn1">$72.8B</span></td></tr><tr class=""><td>Inventory</td><td></td><td></td><td><span data-ref="Historicals!S17" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!T17" data-fmt="bn1">$13.3B</span></td></tr><tr class=""><td>Non-marketable securities</td><td><span data-ref="Historicals!Q19" data-fmt="bn1">$38.0B</span></td><td><span data-ref="Historicals!R19" data-fmt="bn1">$63.8B</span></td><td><span data-ref="Historicals!S19" data-fmt="bn1">$68.7B</span></td><td><span data-ref="Historicals!T19" data-fmt="bn1">$135.2B</span></td></tr><tr class="b"><td>Property and equipment, net</td><td><span data-ref="Historicals!Q26" data-fmt="bn1">$171.0B</span></td><td><span data-ref="Historicals!R26" data-fmt="bn1">$223.8B</span></td><td><span data-ref="Historicals!S26" data-fmt="bn1">$246.6B</span></td><td><span data-ref="Historicals!T26" data-fmt="bn1">$372.8B</span></td></tr><tr class=""><td>Goodwill</td><td><span data-ref="Historicals!Q15" data-fmt="bn1">$31.9B</span></td><td><span data-ref="Historicals!R15" data-fmt="bn1">$33.3B</span></td><td><span data-ref="Historicals!S15" data-fmt="bn1">$33.4B</span></td><td><span data-ref="Historicals!T15" data-fmt="bn1">$58.1B</span></td></tr><tr class="b"><td>Total assets</td><td><span data-ref="Historicals!Q32" data-fmt="bn1">$450.3B</span></td><td><span data-ref="Historicals!R32" data-fmt="bn1">$536.5B</span></td><td><span data-ref="Historicals!S32" data-fmt="bn1">$595.3B</span></td><td><span data-ref="Historicals!T32" data-fmt="bn1">$1,003.3B</span></td></tr><tr class="b"><td>Long-term debt</td><td><span data-ref="Historicals!Q11" data-fmt="bn1">$10.9B</span></td><td><span data-ref="Historicals!R11" data-fmt="bn1">$21.6B</span></td><td><span data-ref="Historicals!S11" data-fmt="bn1">$46.5B</span></td><td><span data-ref="Historicals!T11" data-fmt="bn1">$125.1B</span></td></tr><tr class=""><td>Deferred income tax liabilities</td><td></td><td></td><td><span data-ref="Historicals!S14" data-fmt="bn1">$0.9B</span></td><td><span data-ref="Historicals!T14" data-fmt="bn1">$27.8B</span></td></tr><tr class=""><td>Total liabilities</td><td><span data-ref="Historicals!Q34" data-fmt="bn1">$125.2B</span></td><td><span data-ref="Historicals!R34" data-fmt="bn1">$149.6B</span></td><td><span data-ref="Historicals!S34" data-fmt="bn1">$180.0B</span></td><td><span data-ref="Historicals!T34" data-fmt="bn1">$325.8B</span></td></tr><tr class=""><td>Convertible preferred stock</td><td><span data-ref="Historicals!Q27" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!R27" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!S27" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!T27" data-fmt="bn1">$18.0B</span></td></tr><tr class="b"><td>Total stockholders' equity</td><td><span data-ref="Historicals!Q33" data-fmt="bn1">$325.1B</span></td><td><span data-ref="Historicals!R33" data-fmt="bn1">$386.9B</span></td><td><span data-ref="Historicals!S33" data-fmt="bn1">$415.3B</span></td><td><span data-ref="Historicals!T33" data-fmt="bn1">$677.5B</span></td></tr><tr class="b"><td>Net cash</td><td><span data-ref="Ratios!Q17" data-fmt="bn1">$84.8B</span></td><td><span data-ref="Ratios!R17" data-fmt="bn1">$76.9B</span></td><td><span data-ref="Ratios!S17" data-fmt="bn1">$80.3B</span></td><td><span data-ref="Ratios!T17" data-fmt="bn1">$140.0B</span></td></tr><tr class=""><td>Long-term debt / equity</td><td><span data-ref="Ratios!Q16" data-fmt="pct0">3%</span></td><td><span data-ref="Ratios!R16" data-fmt="pct0">6%</span></td><td><span data-ref="Ratios!S16" data-fmt="pct0">11%</span></td><td><span data-ref="Ratios!T16" data-fmt="pct0">18%</span></td></tr><tr class=""><td>PP&amp;E / total assets</td><td><span data-ref="Ratios!Q22" data-fmt="pct0">38%</span></td><td><span data-ref="Ratios!R22" data-fmt="pct0">42%</span></td><td><span data-ref="Ratios!S22" data-fmt="pct0">41%</span></td><td><span data-ref="Ratios!T22" data-fmt="pct0">37%</span></td></tr></tbody></table></div>
+<p class="note">Inventory and intangible assets first appear as separate lines in the 2026 balance
+sheet. Net cash is cash, equivalents and marketable securities less long-term debt. Source:
+Q3-25 release p.4, Q3-26 release p.4.</p>
+</section>
+<section class="panel"><h2>How it is funded</h2>
+<p class="dek">Share repurchases went from <span data-ref="Historicals!M51" data-fmt="bn1">−$39.8B</span> in the first nine months of 2025 to <span data-ref="Historicals!N51" data-fmt="bn0">$0B</span> in 2026, while the company raised <span data-ref="Historicals!N45" data-fmt="bn1">$42.9B</span> of common stock, <span data-ref="Historicals!N47" data-fmt="bn1">$19.1B</span> of preferred stock and <span data-ref="Historicals!N46" data-fmt="bn1">$85.2B</span> of debt.</p>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">9M-25</span></th><th><span data-static="1">9M-26</span></th></tr></thead><tbody><tr class="b"><td>Repurchases of stock</td><td><span data-ref="Historicals!M51" data-fmt="bn1">−$39.8B</span></td><td><span data-ref="Historicals!N51" data-fmt="bn1">$0.0B</span></td></tr><tr class=""><td>Dividends paid</td><td><span data-ref="Historicals!M42" data-fmt="bn1">−$7.5B</span></td><td><span data-ref="Historicals!N42" data-fmt="bn1">−$8.2B</span></td></tr><tr class="b"><td>Proceeds from issuing common stock</td><td><span data-ref="Historicals!M45" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!N45" data-fmt="bn1">$42.9B</span></td></tr><tr class=""><td>Proceeds from issuing preferred stock</td><td><span data-ref="Historicals!M47" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!N47" data-fmt="bn1">$19.1B</span></td></tr><tr class=""><td>Proceeds from issuing debt, net</td><td><span data-ref="Historicals!M46" data-fmt="bn1">$38.0B</span></td><td><span data-ref="Historicals!N46" data-fmt="bn1">$85.2B</span></td></tr><tr class=""><td>Repayments of debt</td><td><span data-ref="Historicals!M50" data-fmt="bn1">−$26.1B</span></td><td><span data-ref="Historicals!N50" data-fmt="bn1">−$8.9B</span></td></tr><tr class="b"><td>Net cash from financing activities</td><td><span data-ref="Historicals!M37" data-fmt="bn1">−$44.4B</span></td><td><span data-ref="Historicals!N37" data-fmt="bn1">$115.8B</span></td></tr></tbody></table></div>
+<p class="note">Nine months to 30 September, $ billions. Buybacks stopped entirely in 2026; the
+2026 release restates the 9M-25 buyback figure from <span data-static="1">$40.2B</span> to
+<span data-ref="Historicals!M51" data-fmt="bn1">−$39.8B</span>. Source: Q3-25 release p.6, Q3-26 release p.6.</p>
+<p class="note">In the September quarter alone the company issued
+<span data-ref="Historicals!K57" data-fmt="num0">12</span> million Class A shares for
+<span data-ref="Historicals!K56" data-fmt="bn1">$4.3B</span> and
+<span data-ref="Historicals!K59" data-fmt="num0">24</span> million Class C shares for
+<span data-ref="Historicals!K58" data-fmt="bn1">$8.1B</span> under its at-the-market programme, with
+<span data-ref="Historicals!K60" data-fmt="bn1">$27.6B</span> still available, and raised
+<span data-ref="Historicals!K61" data-fmt="bn1">$28.7B</span> of senior unsecured notes. Source: Q3-26 release p.2.</p>
+</section>
+<section class="panel"><h2>Share price around the release</h2>
+<p class="dek">GOOGL closed <span data-ref="Ratios!K23" data-fmt="pct1">−12.6%</span> lower on the first trading day after the release, at <span data-ref="Market!B5" data-fmt="usd2">$283.82</span> against <span data-ref="Market!B3" data-fmt="usd2">$324.89</span> the day before.</p>
+<div class="two"><div>
+<h3>A year of closing prices, with the release marked</h3>
+<svg viewBox="0 0 320 200" data-chart="px" tabindex="0" role="img" aria-label="GOOGL daily closing price over the past year, USD">
+<line x1="40" x2="310" y1="174.0" y2="174.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="177.5" text-anchor="end" class="ax"><tspan data-static="1">$263</tspan></text>
+<line x1="40" x2="310" y1="134.0" y2="134.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="137.5" text-anchor="end" class="ax"><tspan data-static="1">$300</tspan></text>
+<line x1="40" x2="310" y1="94.0" y2="94.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="97.5" text-anchor="end" class="ax"><tspan data-static="1">$337</tspan></text>
+<line x1="40" x2="310" y1="54.0" y2="54.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="57.5" text-anchor="end" class="ax"><tspan data-static="1">$374</tspan></text>
+<line x1="40" x2="310" y1="14.0" y2="14.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="17.5" text-anchor="end" class="ax"><tspan data-static="1">$411</tspan></text>
+<line x1="308.9" x2="308.9" y1="14" y2="174" stroke="var(--axis)" stroke-width="1" stroke-dasharray="3 3"/>
+<polyline fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" points="40.0,153.9 41.1,151.1 42.2,157.8 43.2,150.5 44.3,150.0 45.4,156.4 46.5,144.2 47.6,142.9 48.6,147.9 49.7,156.7 50.8,159.0 51.9,149.7 53.0,150.5 54.0,141.3 55.1,145.0 56.2,133.9 57.3,113.5 58.4,108.2 59.4,112.0 60.5,111.8 61.6,117.5 62.7,116.5 63.8,112.3 64.8,114.5 65.9,110.6 67.0,118.7 68.1,115.1 69.2,111.7 70.2,120.1 71.3,123.5 72.4,124.7 73.5,126.5 74.6,137.1 75.6,130.9 76.7,125.8 77.8,123.0 78.9,118.1 80.0,118.3 81.0,119.0 82.1,118.9 83.2,118.6 84.3,119.5 85.4,117.2 86.4,115.7 87.5,118.1 88.6,109.8 89.7,106.1 90.8,102.7 91.8,99.1 92.9,94.7 94.0,94.8 95.1,98.1 96.2,101.1 97.2,109.8 98.3,102.9 99.4,100.6 100.5,103.4 101.6,97.6 102.6,96.2 103.7,94.7 104.8,92.2 105.9,92.5 107.0,86.4 108.0,90.7 109.1,97.9 110.2,99.8 111.3,108.9 112.4,107.3 113.4,113.5 114.5,121.7 115.6,123.8 116.7,127.4 117.8,131.4 118.8,130.0 119.9,130.5 121.0,117.4 122.1,121.1 123.2,121.8 124.2,119.6 125.3,125.6 126.4,120.9 127.5,126.5 128.6,129.7 129.6,130.2 130.7,132.6 131.8,135.2 132.9,126.7 134.0,126.0 135.0,124.2 136.1,129.7 137.2,131.1 138.3,127.5 139.4,121.8 140.4,125.2 141.5,125.9 142.6,132.5 143.7,131.3 144.8,143.9 145.8,143.4 146.9,154.2 148.0,161.3 149.1,162.2 150.2,147.0 151.2,136.4 152.3,138.1 153.4,133.6 154.5,127.7 155.6,114.8 156.6,113.6 157.7,114.9 158.8,110.5 159.9,98.0 161.0,93.5 162.0,94.6 163.1,88.5 164.2,93.1 165.3,98.7 166.4,91.1 167.4,91.5 168.5,85.6 169.6,79.2 170.7,79.8 171.8,79.6 172.8,41.9 173.9,41.0 175.0,43.6 176.1,38.0 177.2,27.6 178.2,27.7 179.3,24.7 180.4,37.8 181.5,39.2 182.6,22.7 183.6,24.4 184.7,29.0 185.8,28.8 186.9,38.9 188.0,37.5 189.0,38.9 190.1,43.9 191.2,37.5 192.3,37.6 193.4,36.2 194.4,46.8 195.5,51.1 196.6,66.7 197.7,69.8 198.8,55.6 199.8,59.5 200.9,65.2 202.0,64.1 203.1,72.6 204.2,71.1 205.2,69.1 206.3,58.6 207.4,54.4 208.5,64.6 209.6,60.1 210.6,79.9 211.7,83.7 212.8,84.6 213.9,86.3 215.0,93.2 216.0,75.6 217.1,71.6 218.2,67.4 219.3,68.8 220.4,61.8 221.4,61.1 222.5,66.7 223.6,69.9 224.7,71.8 225.8,76.8 226.8,69.3 227.9,56.9 229.0,74.7 230.1,83.0 231.2,77.4 232.2,82.6 233.3,88.1 234.4,114.4 235.5,112.2 236.6,104.9 237.6,97.1 238.7,93.9 239.8,97.2 240.9,72.9 242.0,54.1 243.0,49.7 244.1,66.1 245.2,71.2 246.3,74.9 247.4,71.4 248.4,86.2 249.5,86.5 250.6,83.5 251.7,84.0 252.8,86.0 253.8,85.8 254.9,85.2 256.0,89.6 257.1,85.1 258.2,81.6 259.2,82.8 260.3,88.2 261.4,89.6 262.5,83.2 263.6,91.0 264.6,95.7 265.7,93.5 266.8,87.7 267.9,92.0 269.0,92.1 270.0,100.4 271.1,98.3 272.2,92.0 273.3,80.2 274.4,85.0 275.4,87.2 276.5,82.4 277.6,80.0 278.7,74.2 279.8,78.3 280.8,92.7 281.9,87.8 283.0,86.1 284.1,87.4 285.2,89.4 286.2,85.9 287.3,92.2 288.4,86.6 289.5,83.4 290.6,82.0 291.6,79.0 292.7,81.4 293.8,77.7 294.9,76.6 296.0,75.5 297.0,82.1 298.1,80.4 299.2,89.7 300.3,85.8 301.4,90.0 302.4,96.0 303.5,107.4 304.6,111.7 305.7,115.4 306.8,111.3 307.8,106.7 308.9,151.0 310.0,155.3"/>
+<circle class="mk" data-i="249" cx="308.9" cy="151.0" r="3" fill="var(--accent)"/>
+<line class="cross" x1="0" x2="0" y1="14" y2="174" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="40" y="192" text-anchor="start" class="ax"><tspan data-static="1">2025-10</tspan></text>
+<text x="310" y="192" text-anchor="end" class="ax"><tspan data-static="1">2026-10</tspan></text>
+</svg>
+<p class="note">GOOGL daily closes, $. The dashed line marks <span data-static="1">29 October 2026</span>, the first trading
+day after the release. <span class="hovertap">Hover</span> the line for any day's close.</p>
+</div><div>
+<h3>The reaction, in figures</h3>
+<div class="tw"><table><thead><tr><th>Market</th><th><span data-static="1">Value</span></th></tr></thead><tbody><tr class="b"><td>Close the day before the release</td><td><span data-ref="Market!B3" data-fmt="usd2">$324.89</span></td></tr><tr class="b"><td>Close the day after</td><td><span data-ref="Market!B5" data-fmt="usd2">$283.82</span></td></tr><tr class="b"><td>One-day change</td><td><span data-ref="Ratios!K23" data-fmt="pct1">−12.6%</span></td></tr><tr class=""><td>Highest close of the past year</td><td><span data-ref="Market!B8" data-fmt="usd2">$402.62</span></td></tr><tr class=""><td>Latest close in this file</td><td><span data-ref="Market!B10" data-fmt="usd2">$279.84</span></td></tr><tr class=""><td>Below the 52-week high</td><td><span data-ref="Ratios!K9" data-fmt="pct1">−30.5%</span></td></tr></tbody></table></div>
+<p class="note"><strong>These are market figures, not filed ones.</strong> They come from the Yahoo
+Finance daily price series fetched by <code>scripts/fetch_prices.py</code>, not from any Alphabet
+filing, and they are kept on their own sheet of the workbook for that reason.</p>
+</div></div>
+</section>
+<section class="panel"><h2>Data gaps</h2>
+<p class="dek">Two quarterly revenue figures on this page are derived rather than reported, and two 2025 figures are shown as the 2026 release restated them.</p>
+<ul><li><span data-static="1">The Form 10-Q for the September 2026 quarter was not yet filed when this page was built, so the 2026 column has no segment expense split, no revenue backlog, no paid-click or cost-per-click metrics and no TAC breakdown; those lines stop at Q3-25.</span></li><li><span data-static="1">The releases print the nine months and two of its three quarters, so Q1-25 and Q1-26 revenue are derived by subtraction. Both rebuild the reported nine-month totals exactly.</span></li><li><span data-static="1">The December quarters are not derivable: no full-year revenue figure appears in any of the three documents, so Q4-24 and Q4-25 are shown only where the free cash flow reconciliation reports them.</span></li><li><span data-static="1">The 2026 release restates two 2025 figures: nine-month buybacks move from $40.2B to $39.8B, and performance fees are folded into "other" within other income. This page uses the restated figures and says so where they appear.</span></li><li><span data-static="1">Capital expenditure guidance beyond the quarter is given only as commentary, not as a filed number, so no forward capex figure appears on this page.</span></li></ul>
+</section>
+</main>
+<aside class="refs"><span class="lbl">References</span><ul><li><span data-static="1">Alphabet Inc., Alphabet Announces Third Quarter 2026 Results, 28 October 2026 — income statement, balance sheet, cash flow, segments, other income, free cash flow reconciliation</span></li><li><span data-static="1">Alphabet Inc., Alphabet Announces Third Quarter 2025 Results, 29 October 2025 — the comparative quarter and the four quarters to Q3-25</span></li><li><span data-static="1">Alphabet Inc., Form 10-Q for the quarter ended 30 September 2025 — segment detail, property and equipment, TAC, monetization metrics, revenue backlog</span></li><li><span data-static="1">Alphabet Inc., Q3 2026 earnings call, prepared remarks — product and business commentary</span></li><li><span data-static="1">Yahoo Finance daily price series for GOOGL — the share price figures, which are market data and appear in no filing</span></li><li><a href="alphabet.xlsx">Workbook: every figure, the ratio formulas, and the page of the filing each figure came from</a></li><li><a href="alphabet.csv">The same figures as a flat file, one row per figure with its citation</a></li></ul></aside>
+<footer><div class="in">Rebuilt from Alphabet's Q3 2026 and Q3 2025 earnings releases and its Q3 2025
+Form 10-Q. Ratios are own calculations from the reported figures; the citation for every figure is on
+the Sources sheet of alphabet.xlsx. Share price figures are market data from a third-party feed, not
+from any filing. Not investment advice.</div></footer>
+<script type="application/json" id="chart-data">{"rev":{"cats":["Q3-24","Q3-25","Q3-26"],"W":320,"H":190,"xs":[58.666666666666664,160.0,261.3333333333333],"series":[{"name":"Advertising","color":"var(--c1)","items":[{"n":65854,"v":"$65.9B","ref":"Historicals!C113","f":"bn1"},{"n":74182,"v":"$74.2B","ref":"Historicals!G113","f":"bn1"},{"n":82012,"v":"$82.0B","ref":"Historicals!K113","f":"bn1"}]},{"name":"Subs, platforms, devices","color":"var(--c2)","items":[{"n":10656,"v":"$10.7B","ref":"Historicals!C120","f":"bn1"},{"n":12870,"v":"$12.9B","ref":"Historicals!G120","f":"bn1"},{"n":14290,"v":"$14.3B","ref":"Historicals!K120","f":"bn1"}]},{"name":"Cloud","color":"var(--c3)","items":[{"n":11353,"v":"$11.4B","ref":"Historicals!C114","f":"bn1"},{"n":15157,"v":"$15.2B","ref":"Historicals!G114","f":"bn1"},{"n":30709,"v":"$30.7B","ref":"Historicals!K114","f":"bn1"}]},{"name":"Total revenue","color":null,"items":[{"n":88268,"v":"$88.3B","ref":"Historicals!C77","f":"bn1"},{"n":102346,"v":"$102.3B","ref":"Historicals!G77","f":"bn1"},{"n":127577,"v":"$127.6B","ref":"Historicals!K77","f":"bn1"}]},{"name":"Growth year on year","color":null,"items":[{"v":"n/a"},{"n":0.1594915484660353,"v":"16%","ref":"Ratios!G25","f":"pct0"},{"n":0.246526488577961,"v":"25%","ref":"Ratios!K25","f":"pct0"}]}]},"mgn":{"cats":["Q3-24","Q3-25","Q3-26"],"W":320,"H":190,"xs":[85.33333333333334,176.0,266.66666666666663],"series":[{"name":"Operating margin","color":"var(--c1)","items":[{"n":0.3231182308424344,"v":"32.3%","ref":"Ratios!C21","f":"pct1"},{"n":0.3051218415961542,"v":"30.5%","ref":"Ratios!G21","f":"pct1"},{"n":0.3180510593602295,"v":"31.8%","ref":"Ratios!K21","f":"pct1"}]},{"name":"Revenue","color":null,"items":[{"n":88268,"v":"$88.3B","ref":"Historicals!C77","f":"bn1"},{"n":102346,"v":"$102.3B","ref":"Historicals!G77","f":"bn1"},{"n":127577,"v":"$127.6B","ref":"Historicals!K77","f":"bn1"}]},{"name":"Income from operations","color":null,"items":[{"n":28521,"v":"$28.5B","ref":"Historicals!C74","f":"bn1"},{"n":31228,"v":"$31.2B","ref":"Historicals!G74","f":"bn1"},{"n":40576,"v":"$40.6B","ref":"Historicals!K74","f":"bn1"}]}]},"cash":{"cats":["Q4-24","Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"W":320,"H":190,"xs":[27.0,65.0,103.0,141.0,179.0,217.0,255.0,293.0],"series":[{"name":"Operating cash flow","color":"var(--c2)","items":[{"n":39113,"v":"$39.1B","ref":"Historicals!D39","f":"bn1"},{"n":36150,"v":"$36.1B","ref":"Historicals!E39","f":"bn1"},{"n":27747,"v":"$27.7B","ref":"Historicals!F39","f":"bn1"},{"n":48414,"v":"$48.4B","ref":"Historicals!G39","f":"bn1"},{"n":52402,"v":"$52.4B","ref":"Historicals!H39","f":"bn1"},{"n":45790,"v":"$45.8B","ref":"Historicals!I39","f":"bn1"},{"n":39069,"v":"$39.1B","ref":"Historicals!J39","f":"bn1"},{"n":42290,"v":"$42.3B","ref":"Historicals!K39","f":"bn1"}]},{"name":"Capital expenditure","color":"var(--c1)","items":[{"n":14276,"v":"$14.3B","ref":"Ratios!D6","f":"bn1"},{"n":17197,"v":"$17.2B","ref":"Ratios!E6","f":"bn1"},{"n":22446,"v":"$22.4B","ref":"Ratios!F6","f":"bn1"},{"n":23953,"v":"$24.0B","ref":"Ratios!G6","f":"bn1"},{"n":27851,"v":"$27.9B","ref":"Ratios!H6","f":"bn1"},{"n":35674,"v":"$35.7B","ref":"Ratios!I6","f":"bn1"},{"n":44924,"v":"$44.9B","ref":"Ratios!J6","f":"bn1"},{"n":51355,"v":"$51.4B","ref":"Ratios!K6","f":"bn1"}]},{"name":"Free cash flow","color":null,"items":[{"n":24837,"v":"$24.8B","ref":"Historicals!D43","f":"bn1"},{"n":18953,"v":"$19.0B","ref":"Historicals!E43","f":"bn1"},{"n":5301,"v":"$5.3B","ref":"Historicals!F43","f":"bn1"},{"n":24461,"v":"$24.5B","ref":"Historicals!G43","f":"bn1"},{"n":24551,"v":"$24.6B","ref":"Historicals!H43","f":"bn1"},{"n":10116,"v":"$10.1B","ref":"Historicals!I43","f":"bn1"},{"n":-5855,"v":"\u2212$5.9B","ref":"Historicals!J43","f":"bn1"},{"n":-9065,"v":"\u2212$9.1B","ref":"Historicals!K43","f":"bn1"}]}]},"fcf":{"cats":["Q4-24","Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"W":320,"H":190,"xs":[57.0,91.0,125.0,159.0,193.0,227.0,261.0,295.0],"series":[{"name":"Free cash flow","color":"var(--c3)","items":[{"n":24837,"v":"$24.8B","ref":"Historicals!D43","f":"bn1"},{"n":18953,"v":"$19.0B","ref":"Historicals!E43","f":"bn1"},{"n":5301,"v":"$5.3B","ref":"Historicals!F43","f":"bn1"},{"n":24461,"v":"$24.5B","ref":"Historicals!G43","f":"bn1"},{"n":24551,"v":"$24.6B","ref":"Historicals!H43","f":"bn1"},{"n":10116,"v":"$10.1B","ref":"Historicals!I43","f":"bn1"},{"n":-5855,"v":"\u2212$5.9B","ref":"Historicals!J43","f":"bn1"},{"n":-9065,"v":"\u2212$9.1B","ref":"Historicals!K43","f":"bn1"}]},{"name":"Operating cash flow","color":"var(--c2)","items":[{"n":39113,"v":"$39.1B","ref":"Historicals!D39","f":"bn1"},{"n":36150,"v":"$36.1B","ref":"Historicals!E39","f":"bn1"},{"n":27747,"v":"$27.7B","ref":"Historicals!F39","f":"bn1"},{"n":48414,"v":"$48.4B","ref":"Historicals!G39","f":"bn1"},{"n":52402,"v":"$52.4B","ref":"Historicals!H39","f":"bn1"},{"n":45790,"v":"$45.8B","ref":"Historicals!I39","f":"bn1"},{"n":39069,"v":"$39.1B","ref":"Historicals!J39","f":"bn1"},{"n":42290,"v":"$42.3B","ref":"Historicals!K39","f":"bn1"}]},{"name":"Capital expenditure","color":"var(--c1)","items":[{"n":14276,"v":"$14.3B","ref":"Ratios!D6","f":"bn1"},{"n":17197,"v":"$17.2B","ref":"Ratios!E6","f":"bn1"},{"n":22446,"v":"$22.4B","ref":"Ratios!F6","f":"bn1"},{"n":23953,"v":"$24.0B","ref":"Ratios!G6","f":"bn1"},{"n":27851,"v":"$27.9B","ref":"Ratios!H6","f":"bn1"},{"n":35674,"v":"$35.7B","ref":"Ratios!I6","f":"bn1"},{"n":44924,"v":"$44.9B","ref":"Ratios!J6","f":"bn1"},{"n":51355,"v":"$51.4B","ref":"Ratios!K6","f":"bn1"}]}]},"px":{"cats":["2025-10-31","2025-11-03","2025-11-04","2025-11-05","2025-11-06","2025-11-07","2025-11-10","2025-11-11","2025-11-12","2025-11-13","2025-11-14","2025-11-17","2025-11-18","2025-11-19","2025-11-20","2025-11-21","2025-11-24","2025-11-25","2025-11-26","2025-11-28","2025-12-01","2025-12-02","2025-12-03","2025-12-04","2025-12-05","2025-12-08","2025-12-09","2025-12-10","2025-12-11","2025-12-12","2025-12-15","2025-12-16","2025-12-17","2025-12-18","2025-12-19","2025-12-22","2025-12-23","2025-12-24","2025-12-26","2025-12-29","2025-12-30","2025-12-31","2026-01-02","2026-01-05","2026-01-06","2026-01-07","2026-01-08","2026-01-09","2026-01-12","2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-08","2026-09-09","2026-09-10","2026-09-11","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-28","2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-05","2026-10-06","2026-10-07","2026-10-08","2026-10-09","2026-10-12","2026-10-13","2026-10-14","2026-10-15","2026-10-16","2026-10-19","2026-10-20","2026-10-21","2026-10-22","2026-10-23","2026-10-26","2026-10-27","2026-10-28","2026-10-29","2026-10-30"],"W":320,"H":200,"xs":[40.0,41.08,42.16,43.24,44.32,45.4,46.480000000000004,47.56,48.64,49.72,50.8,51.88,52.96,54.04,55.12,56.2,57.28,58.36,59.44,60.519999999999996,61.6,62.68,63.760000000000005,64.84,65.92,67.0,68.08,69.16,70.24,71.32,72.4,73.47999999999999,74.56,75.64,76.72,77.8,78.88,79.96000000000001,81.03999999999999,82.12,83.2,84.28,85.36,86.44,87.52000000000001,88.6,89.68,90.75999999999999,91.84,92.92,94.0,95.08,96.16,97.24000000000001,98.32,99.4,100.47999999999999,101.56,102.64,103.72,104.8,105.88,106.96,108.04,109.12,110.2,111.28,112.36,113.44,114.52,115.6,116.68,117.76,118.84,119.92,121.0,122.08,123.16,124.24,125.32,126.4,127.48,128.56,129.64,130.72,131.8,132.88,133.95999999999998,135.04000000000002,136.12,137.2,138.28,139.36,140.44,141.51999999999998,142.6,143.68,144.76,145.84,146.92000000000002,148.0,149.07999999999998,150.16,151.24,152.32,153.4,154.48000000000002,155.56,156.64,157.72,158.8,159.88,160.95999999999998,162.04000000000002,163.12,164.2,165.28,166.36,167.44,168.52,169.6,170.68,171.76,172.84,173.92,175.0,176.08,177.16,178.24,179.32,180.4,181.48,182.56,183.64,184.72,185.8,186.88,187.96,189.04,190.12,191.2,192.28,193.36,194.44,195.52,196.6,197.68,198.76,199.84,200.92,202.0,203.08,204.16,205.24,206.32,207.4,208.48,209.56,210.64,211.72,212.8,213.88,214.96,216.04,217.12,218.2,219.28,220.36,221.44,222.52,223.6,224.68,225.76,226.84,227.92,229.0,230.08,231.16,232.24,233.32,234.4,235.48,236.56,237.64,238.72,239.8,240.88,241.96,243.04,244.12,245.2,246.28,247.36,248.44,249.52,250.6,251.68,252.76,253.84,254.92,256.0,257.08000000000004,258.15999999999997,259.24,260.32,261.4,262.48,263.56,264.64,265.72,266.8,267.88,268.96000000000004,270.03999999999996,271.12,272.2,273.28,274.36,275.44,276.52,277.6,278.68,279.76,280.84000000000003,281.91999999999996,283.0,284.08000000000004,285.15999999999997,286.24,287.32,288.4,289.48,290.56,291.64,292.72,293.8,294.88,295.96000000000004,297.04,298.12,299.2,300.28,301.36,302.44,303.52,304.6,305.68,306.76,307.84,308.92,310.0],"series":[{"name":"Close","color":"var(--accent)","items":[{"v":"$281.19"},{"v":"$283.72"},{"v":"$277.54"},{"v":"$284.31"},{"v":"$284.75"},{"v":"$278.83"},{"v":"$290.10"},{"v":"$291.31"},{"v":"$286.71"},{"v":"$278.57"},{"v":"$276.41"},{"v":"$285.02"},{"v":"$284.28"},{"v":"$292.81"},{"v":"$289.45"},{"v":"$299.66"},{"v":"$318.58"},{"v":"$323.44"},{"v":"$319.95"},{"v":"$320.18"},{"v":"$314.89"},{"v":"$315.81"},{"v":"$319.63"},{"v":"$317.62"},{"v":"$321.27"},{"v":"$313.72"},{"v":"$317.08"},{"v":"$320.21"},{"v":"$312.43"},{"v":"$309.29"},{"v":"$308.22"},{"v":"$306.57"},{"v":"$296.72"},{"v":"$302.46"},{"v":"$307.16"},{"v":"$309.78"},{"v":"$314.35"},{"v":"$314.09"},{"v":"$313.51"},{"v":"$313.56"},{"v":"$313.85"},{"v":"$313.00"},{"v":"$315.15"},{"v":"$316.54"},{"v":"$314.34"},{"v":"$321.98"},{"v":"$325.44"},{"v":"$328.57"},{"v":"$331.86"},{"v":"$335.97"},{"v":"$335.84"},{"v":"$332.78"},{"v":"$330.00"},{"v":"$322.00"},{"v":"$328.38"},{"v":"$330.54"},{"v":"$327.93"},{"v":"$333.26"},{"v":"$334.55"},{"v":"$336.01"},{"v":"$338.25"},{"v":"$338.00"},{"v":"$343.69"},{"v":"$339.71"},{"v":"$333.04"},{"v":"$331.25"},{"v":"$322.86"},{"v":"$324.32"},{"v":"$318.58"},{"v":"$310.96"},{"v":"$309.00"},{"v":"$305.72"},{"v":"$302.02"},{"v":"$303.33"},{"v":"$302.85"},{"v":"$314.98"},{"v":"$311.49"},{"v":"$310.90"},{"v":"$312.90"},{"v":"$307.38"},{"v":"$311.76"},{"v":"$306.52"},{"v":"$303.58"},{"v":"$303.13"},{"v":"$300.88"},{"v":"$298.52"},{"v":"$306.36"},{"v":"$307.04"},{"v":"$308.70"},{"v":"$303.55"},{"v":"$302.28"},{"v":"$305.56"},{"v":"$310.92"},{"v":"$307.69"},{"v":"$307.13"},{"v":"$301.00"},{"v":"$302.06"},{"v":"$290.44"},{"v":"$290.93"},{"v":"$280.92"},{"v":"$274.34"},{"v":"$273.50"},{"v":"$287.56"},{"v":"$297.39"},{"v":"$295.77"},{"v":"$299.99"},{"v":"$305.46"},{"v":"$317.32"},{"v":"$318.49"},{"v":"$317.24"},{"v":"$321.31"},{"v":"$332.91"},{"v":"$337.12"},{"v":"$336.02"},{"v":"$341.68"},{"v":"$337.42"},{"v":"$332.29"},{"v":"$339.32"},{"v":"$338.89"},{"v":"$344.40"},{"v":"$350.34"},{"v":"$349.78"},{"v":"$349.94"},{"v":"$384.80"},{"v":"$385.69"},{"v":"$383.25"},{"v":"$388.43"},{"v":"$398.04"},{"v":"$397.99"},{"v":"$400.80"},{"v":"$388.64"},{"v":"$387.35"},{"v":"$402.62"},{"v":"$401.07"},{"v":"$396.78"},{"v":"$396.94"},{"v":"$387.66"},{"v":"$388.91"},{"v":"$387.66"},{"v":"$382.97"},{"v":"$388.88"},{"v":"$388.83"},{"v":"$390.13"},{"v":"$380.34"},{"v":"$376.37"},{"v":"$361.85"},{"v":"$358.99"},{"v":"$372.19"},{"v":"$368.53"},{"v":"$363.31"},{"v":"$364.26"},{"v":"$356.38"},{"v":"$357.77"},{"v":"$359.68"},{"v":"$369.35"},{"v":"$373.25"},{"v":"$363.79"},{"v":"$368.03"},{"v":"$349.68"},{"v":"$346.13"},{"v":"$345.29"},{"v":"$343.71"},{"v":"$337.39"},{"v":"$353.65"},{"v":"$357.37"},{"v":"$361.21"},{"v":"$359.91"},{"v":"$366.46"},{"v":"$367.03"},{"v":"$361.92"},{"v":"$358.89"},{"v":"$357.18"},{"v":"$352.51"},{"v":"$359.51"},{"v":"$370.92"},{"v":"$354.46"},{"v":"$346.77"},{"v":"$351.99"},{"v":"$347.15"},{"v":"$342.09"},{"v":"$317.69"},{"v":"$319.74"},{"v":"$326.56"},{"v":"$333.71"},{"v":"$336.71"},{"v":"$333.66"},{"v":"$356.13"},{"v":"$373.51"},{"v":"$377.65"},{"v":"$362.43"},{"v":"$357.75"},{"v":"$354.30"},{"v":"$357.52"},{"v":"$343.80"},{"v":"$343.54"},{"v":"$346.36"},{"v":"$345.90"},{"v":"$344.00"},{"v":"$344.20"},{"v":"$344.72"},{"v":"$340.67"},{"v":"$344.82"},{"v":"$348.06"},{"v":"$346.96"},{"v":"$342.00"},{"v":"$340.65"},{"v":"$346.59"},{"v":"$339.35"},{"v":"$335.02"},{"v":"$337.12"},{"v":"$342.48"},{"v":"$338.46"},{"v":"$338.36"},{"v":"$330.65"},{"v":"$332.60"},{"v":"$338.50"},{"v":"$349.39"},{"v":"$344.98"},{"v":"$342.87"},{"v":"$347.33"},{"v":"$349.54"},{"v":"$354.97"},{"v":"$351.16"},{"v":"$337.83"},{"v":"$342.36"},{"v":"$343.92"},{"v":"$342.75"},{"v":"$340.92"},{"v":"$344.08"},{"v":"$338.24"},{"v":"$343.50"},{"v":"$346.47"},{"v":"$347.68"},{"v":"$350.50"},{"v":"$348.29"},{"v":"$351.66"},{"v":"$352.72"},{"v":"$353.78"},{"v":"$347.64"},{"v":"$349.22"},{"v":"$340.59"},{"v":"$344.18"},{"v":"$340.28"},{"v":"$334.76"},{"v":"$324.22"},{"v":"$320.21"},{"v":"$316.80"},{"v":"$320.58"},{"v":"$324.89"},{"v":"$283.82"},{"v":"$279.84"}]}]}}</script>
+<script>/* Shared behaviour for every company page (inlined into <Company>/index.html at build time):
+   one tooltip used by all charts, and row + column highlight on tables. */
+(function () {
+  var tip = document.createElement('div');
+  tip.className = 'tip';
+  tip.setAttribute('role', 'tooltip');
+  document.body.appendChild(tip);
+
+  function place(x, y) {
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = x + 14, top = y - h - 12;
+    if (left + w > window.innerWidth - 8) left = x - w - 14;
+    if (left < 8) left = 8;
+    if (top < 8) top = y + 18;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+
+  // true when the reader uses a finger, not a mouse: charts then open the tooltip on tap
+  var touch = window.matchMedia('(pointer: coarse)').matches;
+
+  window.ReportTip = {
+    touch: touch,
+    show: function (html, x, y) { tip.innerHTML = html; tip.style.display = 'block'; place(x, y); },
+    move: place,
+    hide: function () { tip.style.display = 'none'; },
+    head: function (t) { return '<div class="th">' + t + '</div>'; },
+    row: function (name, value, color, cls) {
+      return '<div' + (cls ? ' class="' + cls + '"' : '') + '>' +
+        (color ? '<i style="background:' + color + '"></i>' : '') + name + '<b>' + value + '</b></div>';
+    }
+  };
+
+  document.querySelectorAll('.tw table').forEach(function (t) {
+    t.addEventListener('mouseover', function (ev) {
+      var td = ev.target.closest('td');
+      t.querySelectorAll('td.xcol').forEach(function (c) { c.classList.remove('xcol'); });
+      if (!td || td.cellIndex === 0 || td.parentElement.classList.contains('sub')) return;
+      t.querySelectorAll('tbody tr:not(.sub)').forEach(function (tr) {
+        if (tr.cells[td.cellIndex]) tr.cells[td.cellIndex].classList.add('xcol');
+      });
+    });
+    t.addEventListener('mouseleave', function () {
+      t.querySelectorAll('td.xcol').forEach(function (c) { c.classList.remove('xcol'); });
+    });
+  });
+
+  window.addEventListener('scroll', function () { tip.style.display = 'none'; }, { passive: true });
+
+  // a tap anywhere outside a chart closes the tooltip, so it never stays stuck on a phone
+  document.addEventListener('pointerdown', function (ev) {
+    if (!ev.target.closest('svg[data-chart]')) tip.style.display = 'none';
+  }, { passive: true });
+
+  // on touch screens the pages say "Tap", not "Hover"
+  if (touch) document.querySelectorAll('.hovertap').forEach(function (el) { el.textContent = 'Tap'; });
+})();
+</script>
+<script>
+(function () {
+  var cfgs = JSON.parse(document.getElementById('chart-data').textContent);  // one config per chart
+  var RT = window.ReportTip;                                                 // the shared tooltip
+  document.querySelectorAll('svg[data-chart]').forEach(function (svg) {
+    var cfg = cfgs[svg.dataset.chart], hidden = {}, cross = svg.querySelector('.cross'), cur = 0;
+    svg.__hidden = hidden;                            // the legend buttons read this back
+    function nearest(e) {                             // which period is the pointer closest to?
+      var r = svg.getBoundingClientRect();
+      var p = (e.clientX - r.left) / r.width * cfg.W; // pointer x, converted into viewBox units
+      var best = 0, d = 1e9;
+      cfg.xs.forEach(function (x, i) { var k = Math.abs(x - p); if (k < d) { d = k; best = i; } });
+      return best;
+    }
+    function anchor(i) {                              // where to put the tooltip when there is no pointer
+      var r = svg.getBoundingClientRect();
+      return [r.left + cfg.xs[i] / cfg.W * r.width, r.top + r.height * 0.35];
+    }
+    function render(i, x, y) {
+      cur = i;
+      svg.classList.add('hov');                       // dims every mark that is not the chosen period
+      svg.querySelectorAll('[data-i]').forEach(function (el) {
+        el.classList.toggle('on', +el.getAttribute('data-i') === i);
+      });
+      if (cross) { cross.setAttribute('x1', cfg.xs[i]); cross.setAttribute('x2', cfg.xs[i]); cross.style.display = 'block'; }
+      var rows = cfg.series.map(function (s, k) {
+        return hidden[k] ? '' : RT.row(s.name, s.items[i].v, s.color);
+      }).join('');
+      RT.show(RT.head(cfg.cats[i]) + rows, x, y);
+    }
+    function show(e) { render(nearest(e), e.clientX, e.clientY); }
+    function hide() {
+      svg.classList.remove('hov'); RT.hide();
+      if (cross) cross.style.display = 'none';
+      svg.querySelectorAll('.on').forEach(function (el) { el.classList.remove('on'); });
+    }
+    svg.addEventListener('pointerdown', show);        // a tap opens the tooltip
+    svg.addEventListener('focus', function () { var a = anchor(cur); render(cur, a[0], a[1]); });
+    svg.addEventListener('blur', hide);
+    if (RT.touch) {                                   // finger: keep it open until the reader taps elsewhere
+      svg.addEventListener('click', show);
+    } else {                                          // mouse: follow the pointer and close on the way out
+      svg.addEventListener('pointermove', show);
+      svg.addEventListener('pointerleave', hide);
+    }
+    svg.addEventListener('keydown', function (e) {    // arrow keys walk the periods
+      var i = cur, n = cfg.cats.length;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') i = Math.min(n - 1, cur + 1);
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') i = Math.max(0, cur - 1);
+      else return;
+      e.preventDefault(); var a = anchor(i); render(i, a[0], a[1]);
+    });
+  });
+  document.querySelectorAll('.leg button').forEach(function (b) {            // tap a legend entry to hide a series
+    b.addEventListener('click', function () {
+      var svg = document.querySelector('svg[data-chart="' + b.dataset.chart + '"]'), s = b.dataset.s;
+      var off = b.getAttribute('aria-pressed') === 'true';                   // pressed = shown, so a click hides it
+      b.setAttribute('aria-pressed', off ? 'false' : 'true');
+      svg.__hidden[s] = off;                          // the tooltip drops the row too
+      var g = svg.querySelector('.s' + s);
+      if (g) g.style.display = off ? 'none' : '';
+    });
+  });
+})();
+</script>
+</body></html>

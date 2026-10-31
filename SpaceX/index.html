@@ -1,166 +1,373 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SpaceX Financial Data</title>
-<style>/* Shared style for every company page (inlined into <Company>/index.html at build time). */
-:root { --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --accent:#2a78d6; --dark:#6b6b6b; --light:#bdbdbd; --hl:#f2f5fa; }
-* { box-sizing:border-box; }
-body { margin:0; background:#fff; color:var(--ink); font:14px/1.45 Helvetica, Arial, sans-serif; }
-main { max-width:860px; margin:0 auto; padding:18px 16px 32px; }
-a { color:var(--accent); }
-.back { display:inline-block; font-size:12px; color:var(--ink2); text-decoration:none; margin-bottom:6px; }
-.back:hover, .back:focus-visible { color:var(--accent); }
-h1 { font-size:21px; margin:0 0 4px; letter-spacing:-.01em; }
-h2 { font-size:15px; margin:26px 0 8px; padding-top:10px; border-top:1px solid var(--grid); }
-h3 { font-size:13px; margin:12px 0 6px; font-weight:600; }
-.meta, .note { font-size:12px; color:var(--ink2); }
-.note { margin:4px 0 0; }
-.hint { font-size:11px; color:var(--muted); margin:12px 0 0; }
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Space Exploration Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>/* ---------------------------------------------------------------------------
+   Shared style for every company page (inlined into <Company>/index.html at build time).
 
-/* key figures */
-.tiles { display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:12px; margin:14px 0 4px; }
-.tile { border-top:3px solid var(--accent); padding-top:6px; }
-.tile .k { font-size:11px; color:var(--ink2); }
-.tile .v { font-size:20px; font-weight:700; line-height:1.3; }
-.tile .s { font-size:11px; color:var(--ink2); }
+   The original data report, in the colours of the lab: the company name, the filing line,
+   then one section per topic separated by a hairline, each a heading, one factual line and
+   the chart or table. No colour band, no cards, no boxes, no commentary. Each company page
+   overrides --accent after this file; that accent is the only colour on the page.
+--------------------------------------------------------------------------- */
 
-/* layout */
-.two { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-.two > div { min-width:0; }
+:root{
+  color-scheme: dark;                      /* black page: tell the browser so scrollbars and form bits match */
+  --accent:#6cc2d8;                        /* every page overrides this one token after this stylesheet */
+  --page:#0b0c0e;                          /* the page black */
+  --surface:#0b0c0e;                       /* same black, kept as a name for the pinned table column */
+  --ink:#e8e9ec; --ink2:#a0a4ac; --muted:#777b84;
+  --grid:#23252a;                          /* hairlines between table rows and between sections */
+  --axis:#3a3d44;                          /* chart axes, a step brighter than the hairlines */
+  --hl:rgba(255,255,255,.055);             /* the row and column highlight on a table */
+  /* series colours for charts, chosen to read on black */
+  --c1:#6b9ef0; --c2:#45b894; --c3:#dba05a; --c4:#ab8ae0; --c5:#e0788f;
+  --dark:#9a9a9a; --light:#5c5c5c;
+}
 
-/* legends (click to hide a series) */
-.leg { display:flex; flex-wrap:wrap; gap:6px; margin:2px 0 6px; }
-.leg button { display:inline-flex; align-items:center; gap:6px; font:11px Helvetica, Arial, sans-serif; color:var(--ink);
-  background:#fff; border:1px solid var(--grid); border-radius:12px; padding:2px 9px; cursor:pointer; }
-.leg button:hover, .leg button:focus-visible { border-color:var(--ink); outline:none; }
-.leg button[aria-pressed="false"] { color:var(--muted); text-decoration:line-through; }
-.leg button[aria-pressed="false"] i { opacity:.3; }
-.leg i { width:10px; height:3px; border-radius:2px; display:inline-block; }
-.leg i.sq { height:10px; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);
+  font:15px/1.55 "DM Sans",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+h1,h2,.kpi .v{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+a{color:inherit}
+.in{max-width:980px;margin:0 auto;
+  padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
 
-/* tooltip */
-.tip { position:fixed; z-index:10; display:none; pointer-events:none; background:#fff; border:1px solid var(--muted); border-radius:6px;
-  padding:6px 9px; font:12px/1.5 Helvetica, Arial, sans-serif; color:var(--ink); min-width:170px; }
-.tip .th { font-weight:700; margin-bottom:2px; }
-.tip div i { display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:6px; }
-.tip b { float:right; margin-left:14px; font-variant-numeric:tabular-nums; }
-.tip .sum { border-top:1px solid var(--grid); margin-top:3px; padding-top:3px; font-weight:700; }
-.tip .mu { color:var(--muted); font-weight:400; }
+/* ---- header: a thin accent rule, the back link, the company, the filing line ---- */
+/* the accent shows as a 4px line across the top of the page and nowhere else up here */
+.band{border-top:4px solid var(--accent);padding:6px 0 4px}
+.back{display:inline-flex;align-items:center;min-height:44px;color:var(--ink2);
+  text-decoration:none;font-size:13px}
+.back:hover,.back:focus-visible{color:var(--accent)}
+h1{margin:6px 0 0;color:#fff;font-size:26px;line-height:1.15}
+.meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
 
-/* charts: SVG and HTML charts share the hover behaviour (fade the others, bold the active label) */
-svg { width:100%; height:auto; display:block; }
-svg text { font-family:Helvetica, Arial, sans-serif; paint-order:stroke; stroke:#fff; stroke-width:3px; stroke-linejoin:round; }
-.lbl { font-size:11px; fill:var(--ink); } .ax { font-size:10.5px; fill:var(--muted); } .ax2 { font-size:10.5px; fill:var(--ink2); }
-svg[data-chart] { cursor:crosshair; touch-action:pan-y; outline:none; }
-svg[data-chart]:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
-svg.hov .mk { opacity:.35; } svg.hov .mk.on { opacity:1; }
-.mk { transition:opacity .12s; }
-.dot { transition:r .12s; } .dot.on { r:5.2; }
-.cross { display:none; pointer-events:none; }
+/* ---- one flat section per topic, separated by a hairline ---- */
+.panel{border-top:1px solid var(--grid);padding-top:14px;margin-top:28px}
+h2{margin:0 0 6px;font-size:19px;line-height:1.2;color:#fff;border:0;padding:0}
+/* the one factual line under the heading: the same job the old <h3> headline did */
+.dek{margin:0 0 12px;font-size:13.5px;font-weight:700;color:var(--ink)}
+h3{font-size:13px;margin:16px 0 6px;font-weight:700}
+.note{font-size:12.5px;color:var(--ink2);margin:4px 0 0}
+.hint{font-size:12px;color:var(--muted);margin:10px 0 0}
 
-/* tables: hover highlights the row and the column */
-.tw { overflow-x:auto; }
-table { width:100%; border-collapse:collapse; font-size:12.5px; font-variant-numeric:tabular-nums; }
-th { text-align:right; font-weight:600; color:var(--ink2); border-bottom:1px solid var(--muted); padding:4px 6px; white-space:nowrap; }
-td { text-align:right; padding:4px 6px; border-bottom:1px solid var(--grid); white-space:nowrap; }
-th:first-child, td:first-child { text-align:left; }
-td:first-child { white-space:normal; min-width:150px; }
-tr.b td { font-weight:700; }
-tr.sub td { font-weight:600; color:var(--ink2); padding-top:9px; border-bottom:none; }
-tbody tr:not(.sub):hover td, td.xcol { background:var(--hl); }
-.basis { color:var(--muted); font-size:11px; font-weight:400; }
+/* ---- references: quiet and small, never a section of their own ---- */
+.refs{max-width:980px;margin:34px auto 0;border-top:1px solid var(--grid);
+  padding:14px max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
+.refs .lbl{display:block;margin:0 0 2px;font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.refs ul{list-style:none;margin:0;padding:0}
+.refs li{font-size:12.5px;color:var(--muted)}
+/* block, not flex: a reference line may hold several spans and must stay one sentence */
+.refs a{display:block;min-height:40px;padding:10px 0;color:var(--ink2);text-decoration:none}
+.refs a:hover,.refs a:focus-visible{color:var(--accent);text-decoration:underline}
 
-ul { margin:4px 0; padding-left:18px; } li { margin-bottom:3px; }
-footer { margin-top:22px; padding-top:10px; border-top:1px solid var(--grid); font-size:11px; color:var(--ink2); }
-@media (max-width:640px) { .two { grid-template-columns:1fr; } h1 { font-size:19px; } .tile .v { font-size:18px; } }
+/* ---- layout helpers ---- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.two>div{min-width:0}
 
-.vbars { display:flex; align-items:flex-end; gap:5px; height:190px; padding-top:18px; border-bottom:1px solid var(--muted); margin-bottom:22px; }
-.col { flex:1; height:100%; display:flex; flex-direction:column; justify-content:flex-end; position:relative; outline:none; }
-.stack { display:flex; flex-direction:column; justify-content:flex-end; position:relative; transition:height .25s; }
-.seg { width:100%; border-top:2px solid #fff; transition:height .25s; }
-.seg:first-of-type { border-radius:3px 3px 0 0; }
-.tot { position:absolute; top:-16px; left:-6px; right:-6px; text-align:center; font-size:10.5px; color:var(--ink); }
-.xl, .mx { font-size:10.5px; color:var(--muted); text-align:center; }
-.xl { position:absolute; bottom:-19px; width:100%; }
-.rcs { margin-bottom:4px; }
-.rc-row { display:grid; grid-template-columns:46px 1fr; align-items:center; margin:2px 0; outline:none; }
-.rc-q { font-size:10.5px; color:var(--muted); } .rc-line { display:flex; align-items:center; height:12px; margin:2px 0; }
-.rc-bar { height:9px; border-radius:0 3px 3px 0; margin-right:5px; min-width:2px; } .rc-v { font-size:10.5px; color:var(--ink2); }
-.mchart { position:relative; display:flex; gap:5px; }
-.zero { position:absolute; left:0; right:0; border-top:1px solid var(--ink2); }
-.mcol { flex:1; position:relative; outline:none; }
-.mbar { position:absolute; left:15%; width:70%; background:var(--accent); border-radius:3px; }
-.mlab { position:absolute; width:100%; text-align:center; font-size:10.5px; color:var(--ink); }
-.mx { position:absolute; width:100%; }
-.col, .rc-row, .mcol { cursor:crosshair; transition:opacity .12s; }
-.hov .col:not(.on), .hov .rc-row:not(.on), .hov .mcol:not(.on) { opacity:.35; }
-.col.on .xl, .mcol.on .mx, .rc-row.on .rc-q { color:var(--ink); font-weight:700; }
-.col:focus-visible, .rc-row:focus-visible, .mcol:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
-.leg button:disabled { cursor:default; color:var(--ink); }
-.leg button:disabled:hover { border-color:var(--grid); }
-</style></head>
-<body><main>
+/* ---- legends (tap or click an entry to hide that series) ---- */
+.leg{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px}
+.leg button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;
+  font:12.5px/1 "DM Sans",system-ui,Helvetica,Arial,sans-serif;color:var(--ink);
+  background:transparent;border:1px solid var(--grid);border-radius:999px;cursor:pointer}
+.leg button:hover,.leg button:focus-visible{border-color:var(--accent);outline:none}
+.leg button[aria-pressed="false"]{color:var(--muted);text-decoration:line-through}
+.leg button[aria-pressed="false"] i{opacity:.3}
+.leg i{width:10px;height:3px;border-radius:2px;display:inline-block}
+.leg i.sq{height:10px}
+
+/* ---- tooltip: the page colours, never a white box on a black page ---- */
+.tip{position:fixed;z-index:10;display:none;pointer-events:none;
+  background:#14161b;border:1px solid var(--axis);border-radius:8px;
+  box-shadow:0 8px 26px rgba(0,0,0,.6);padding:8px 11px;
+  font:12.5px/1.5 "DM Sans",system-ui,Helvetica,Arial,sans-serif;color:var(--ink);min-width:170px}
+.tip .th{font-weight:700;margin-bottom:2px}
+.tip div i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+.tip b{float:right;margin-left:14px;font-variant-numeric:tabular-nums}
+.tip .sum{border-top:1px solid var(--axis);margin-top:3px;padding-top:3px;font-weight:700}
+.tip .mu{color:var(--muted);font-weight:400}
+
+/* ---- charts: SVG drawn by the build script; colours come from the tokens above ---- */
+svg{width:100%;height:auto;display:block}
+/* A chart is drawn once at a fixed viewBox, so its labels grow with the box it is stretched into.
+   Inside .two a chart lands near 460px and its 11.5-unit text reads at about 16px. A chart that
+   fills the whole column would be stretched to ~940px and the same text would come out at 30px,
+   which is why the full-width charts are capped at the width their neighbours are drawn at. */
+.panel>svg[data-chart]{max-width:520px}
+/* the halo behind a chart label is the page black, so a label crossing a bar stays readable */
+svg text{font-family:"DM Sans",system-ui,Helvetica,Arial,sans-serif;paint-order:stroke;
+  stroke:var(--page);stroke-width:3px;stroke-linejoin:round}
+.lbl{font-size:11.5px;fill:var(--ink)}
+.ax{font-size:11px;fill:var(--muted)}
+.ax2{font-size:11px;fill:var(--ink2)}
+svg[data-chart]{cursor:crosshair;touch-action:pan-y;outline:none}   /* pan-y: a finger still scrolls the page */
+svg[data-chart]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+svg.hov .mk{opacity:.35}
+svg.hov .mk.on{opacity:1}
+.mk{transition:opacity .12s}
+.dot{transition:r .12s}
+.dot.on{r:5.2}
+.cross{display:none;pointer-events:none}
+
+/* ---- tables: hovering a cell highlights its row and its column ---- */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+th{text-align:right;font-weight:600;color:var(--muted);font-size:11.5px;text-transform:uppercase;
+  letter-spacing:.04em;border-bottom:1px solid var(--axis);padding:8px;white-space:nowrap}
+td{text-align:right;padding:7px 8px;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--page);padding-left:0}
+td:first-child{white-space:normal;min-width:150px}
+tr.b td{font-weight:700;color:#fff}
+tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
+tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+.basis{color:var(--muted);font-size:11.5px;font-weight:400}
+
+ul{margin:4px 0;padding-left:18px}
+li{margin-bottom:3px}
+
+footer{margin-top:34px;border-top:1px solid var(--grid);color:var(--muted);font-size:12.5px}
+footer .in{padding-top:16px;padding-bottom:22px}
+/* padding + negative margin: a finger-sized tap target that still looks like inline text */
+footer a{color:var(--ink2);display:inline-block;padding:12px 4px;margin:-12px -4px}
+footer a:hover{color:var(--accent)}
+
+@media (max-width:720px){
+  .kpis{grid-template-columns:1fr 1fr;gap:12px 14px}
+  h2{font-size:21px}
+}
+@media (max-width:640px){
+  .two,.gloss{grid-template-columns:1fr;gap:18px}
+  th,td{padding:7px 6px;font-size:12.5px}
+  th{white-space:normal}
+  td:first-child{min-width:120px}
+}
+
+:root{--accent:#82b6f8}</style>
+</head><body>
+<header class="band"><div class="in">
 <a class="back" href="../index.html">&larr; All companies</a>
-<h1>Space Exploration Technologies Corp. (NASDAQ: SPCX): financial data</h1>
-<div class="meta">From the Form S-1 (filed 20 May 2026) and the Q2-26 and Q3-26 results releases. USD; GAAP unless marked non-GAAP.
-Workbook with formulas and page citations: spacex.xlsx.</div>
-
-<div class="tiles"><div class="tile"><div class="k">Revenue, Q3-26</div><div class="v"><span data-ref="Historicals!J5" data-fmt="bn1">$14.6B</span></div><div class="s"><span data-ref="Ratios!K5" data-fmt="pct0">161%</span> year on year</div></div><div class="tile"><div class="k">Adj. EBITDA, Q3-26 (non-GAAP)</div><div class="v"><span data-ref="Historicals!J37" data-fmt="bn1">$8.8B</span></div><div class="s"><span data-ref="Ratios!K11" data-fmt="pct1">60.4%</span> margin</div></div><div class="tile"><div class="k">Net income, Q3-26</div><div class="v"><span data-ref="Historicals!J18" data-fmt="bn1">$4.4B</span></div><div class="s"><span data-ref="Ratios!K14" data-fmt="pct1">30.2%</span> margin</div></div><div class="tile"><div class="k">Capex, 9M-26</div><div class="v"><span data-ref="Historicals!K80" data-fmt="bn1">$48.1B</span></div><div class="s"><span data-ref="Ratios!M26" data-fmt="x1">1.8x</span> revenue</div></div></div>
-
-<p class="hint">Hover or tap a chart for the values behind each quarter (or Tab to a quarter). Click a legend item to hide a segment.</p>
-<div class="two"><div><div class="chart" id="c-seg">
-<h3>SI became the largest segment in Q3-26</h3>
-<div class="leg"><button type="button" data-seg="si" aria-pressed="true"><i class="sq" style="background:#2a78d6"></i>SI</button><button type="button" data-seg="conn" aria-pressed="true"><i class="sq" style="background:#6b6b6b"></i>Connectivity</button><button type="button" data-seg="space" aria-pressed="true"><i class="sq" style="background:#bdbdbd"></i>Space</button></div>
-<div class="vbars"><div class="col" tabindex="0" data-q="Q1-25" aria-label="Q1-25 revenue by segment"><div class="stack" style="height:24.91%"><span class="tot"><span data-ref="Historicals!C5" data-fmt="bn1">$4.1B</span></span><div class="seg" data-seg="si" style="height:17.90%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:60.83%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:21.27%;background:#bdbdbd"></div></div><div class="xl">Q1-25</div></div><div class="col" tabindex="0" data-q="Q2-25" aria-label="Q2-25 revenue by segment"><div class="stack" style="height:24.94%"><span class="tot"><span data-ref="Historicals!D5" data-fmt="bn1">$4.1B</span></span><div class="seg" data-seg="si" style="height:18.10%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:63.57%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:18.32%;background:#bdbdbd"></div></div><div class="xl">Q2-25</div></div><div class="col" tabindex="0" data-q="Q3-25" aria-label="Q3-25 revenue by segment"><div class="stack" style="height:34.16%"><span class="tot"><span data-ref="Historicals!E5" data-fmt="bn1">$5.6B</span></span><div class="seg" data-seg="si" style="height:14.58%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:55.54%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:29.88%;background:#bdbdbd"></div></div><div class="xl">Q3-25</div></div><div class="col" tabindex="0" data-q="Q4-25" aria-label="Q4-25 revenue by segment"><div class="stack" style="height:30.38%"><span class="tot"><span data-ref="Historicals!F5" data-fmt="bn1">$5.0B</span></span><div class="seg" data-seg="si" style="height:18.61%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:65.08%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:16.31%;background:#bdbdbd"></div></div><div class="xl">Q4-25</div></div><div class="col" tabindex="0" data-q="Q1-26" aria-label="Q1-26 revenue by segment"><div class="stack" style="height:28.76%"><span class="tot"><span data-ref="Historicals!H5" data-fmt="bn1">$4.7B</span></span><div class="seg" data-seg="si" style="height:17.43%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:69.39%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:13.19%;background:#bdbdbd"></div></div><div class="xl">Q1-26</div></div><div class="col" tabindex="0" data-q="Q2-26" aria-label="Q2-26 revenue by segment"><div class="stack" style="height:47.87%"><span class="tot"><span data-ref="Historicals!I5" data-fmt="bn1">$7.8B</span></span><div class="seg" data-seg="si" style="height:32.77%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:54.91%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:12.31%;background:#bdbdbd"></div></div><div class="xl">Q2-26</div></div><div class="col" tabindex="0" data-q="Q3-26" aria-label="Q3-26 revenue by segment"><div class="stack" style="height:89.29%"><span class="tot"><span data-ref="Historicals!J5" data-fmt="bn1">$14.6B</span></span><div class="seg" data-seg="si" style="height:51.87%;background:#2a78d6"></div><div class="seg" data-seg="conn" style="height:36.01%;background:#6b6b6b"></div><div class="seg" data-seg="space" style="height:12.12%;background:#bdbdbd"></div></div><div class="xl">Q3-26</div></div></div>
-<p class="note">Revenue, $ billions. Source: S-1 pp.36, 269; Q2-26 and Q3-26 releases p.3. Q1-25 and Q4-25 derived (H1 − Q2; FY − 9M).</p>
-</div></div><div><div class="chart" id="c-capex">
-<h3>Capex exceeded revenue in every 2026 quarter</h3>
-<div class="leg"><button type="button" disabled><i class="sq" style="background:#bdbdbd"></i>Revenue</button><button type="button" disabled><i class="sq" style="background:#2a78d6"></i>Capex</button></div>
-<div class="rcs"><div class="rc-row" tabindex="0" data-q="Q1-25" aria-label="Q1-25 revenue and capex"><div class="rc-q">Q1-25</div><div><div class="rc-line"><div class="rc-bar" style="width:17.59%;background:#bdbdbd"></div><span data-ref="Historicals!C5" data-fmt="bn1" class="rc-v">$4.1B</span></div><div class="rc-line"><div class="rc-bar" style="width:17.91%;background:#2a78d6"></div><span data-ref="Historicals!C80" data-fmt="bn1" class="rc-v">$4.1B</span></div></div></div><div class="rc-row" tabindex="0" data-q="Q2-25" aria-label="Q2-25 revenue and capex"><div class="rc-q">Q2-25</div><div><div class="rc-line"><div class="rc-bar" style="width:17.61%;background:#bdbdbd"></div><span data-ref="Historicals!D5" data-fmt="bn1" class="rc-v">$4.1B</span></div><div class="rc-line"><div class="rc-bar" style="width:12.22%;background:#2a78d6"></div><span data-ref="Historicals!D80" data-fmt="bn1" class="rc-v">$2.8B</span></div></div></div><div class="rc-row" tabindex="0" data-q="Q3-25" aria-label="Q3-25 revenue and capex"><div class="rc-q">Q3-25</div><div><div class="rc-line"><div class="rc-bar" style="width:24.12%;background:#bdbdbd"></div><span data-ref="Historicals!E5" data-fmt="bn1" class="rc-v">$5.6B</span></div><div class="rc-line"><div class="rc-bar" style="width:29.76%;background:#2a78d6"></div><span data-ref="Historicals!E80" data-fmt="bn1" class="rc-v">$6.9B</span></div></div></div><div class="rc-row" tabindex="0" data-q="Q4-25" aria-label="Q4-25 revenue and capex"><div class="rc-q">Q4-25</div><div><div class="rc-line"><div class="rc-bar" style="width:21.45%;background:#bdbdbd"></div><span data-ref="Historicals!F5" data-fmt="bn1" class="rc-v">$5.0B</span></div><div class="rc-line"><div class="rc-bar" style="width:29.81%;background:#2a78d6"></div><span data-ref="Historicals!F80" data-fmt="bn1" class="rc-v">$6.9B</span></div></div></div><div class="rc-row" tabindex="0" data-q="Q1-26" aria-label="Q1-26 revenue and capex"><div class="rc-q">Q1-26</div><div><div class="rc-line"><div class="rc-bar" style="width:20.30%;background:#bdbdbd"></div><span data-ref="Historicals!H5" data-fmt="bn1" class="rc-v">$4.7B</span></div><div class="rc-line"><div class="rc-bar" style="width:43.72%;background:#2a78d6"></div><span data-ref="Historicals!H80" data-fmt="bn1" class="rc-v">$10.1B</span></div></div></div><div class="rc-row" tabindex="0" data-q="Q2-26" aria-label="Q2-26 revenue and capex"><div class="rc-q">Q2-26</div><div><div class="rc-line"><div class="rc-bar" style="width:33.80%;background:#bdbdbd"></div><span data-ref="Historicals!I5" data-fmt="bn1" class="rc-v">$7.8B</span></div><div class="rc-line"><div class="rc-bar" style="width:79.45%;background:#2a78d6"></div><span data-ref="Historicals!I80" data-fmt="bn1" class="rc-v">$18.4B</span></div></div></div><div class="rc-row" tabindex="0" data-q="Q3-26" aria-label="Q3-26 revenue and capex"><div class="rc-q">Q3-26</div><div><div class="rc-line"><div class="rc-bar" style="width:63.04%;background:#bdbdbd"></div><span data-ref="Historicals!J5" data-fmt="bn1" class="rc-v">$14.6B</span></div><div class="rc-line"><div class="rc-bar" style="width:84.75%;background:#2a78d6"></div><span data-ref="Historicals!J80" data-fmt="bn1" class="rc-v">$19.6B</span></div></div></div></div>
-<p class="note">$ billions; capex = purchases of PP&amp;E. Source: S-1 pp.36–37; Q2-26 release pp.3, 8; Q3-26 release pp.3, 9.</p>
-</div></div></div>
-<div class="two"><div><div class="chart" id="c-margin">
-<h3>Operating margin turned positive in Q3-26</h3>
-<div class="mchart" style="height:192px"><div class="zero" style="top:63.7px"></div><div class="mcol" tabindex="0" data-q="Q1-25" aria-label="Q1-25 operating margin"><div class="mbar" style="top:62.3px;height:1.4px"></div><div class="mlab" style="top:47.3px"><span data-ref="Ratios!E13" data-fmt="pct0">1%</span></div><div class="mx" style="top:174px">Q1-25</div></div><div class="mcol" tabindex="0" data-q="Q2-25" aria-label="Q2-25 operating margin"><div class="mbar" style="top:63.7px;height:50.6px"></div><div class="mlab" style="top:116.4px"><span data-ref="Ratios!F13" data-fmt="pct0">−24%</span></div><div class="mx" style="top:174px">Q2-25</div></div><div class="mcol" tabindex="0" data-q="Q3-25" aria-label="Q3-25 operating margin"><div class="mbar" style="top:63.7px;height:10.4px"></div><div class="mlab" style="top:76.2px"><span data-ref="Ratios!G13" data-fmt="pct0">−5%</span></div><div class="mx" style="top:174px">Q3-25</div></div><div class="mcol" tabindex="0" data-q="Q4-25" aria-label="Q4-25 operating margin"><div class="mbar" style="top:63.7px;height:58.8px"></div><div class="mlab" style="top:124.6px"><span data-ref="Ratios!H13" data-fmt="pct0">−28%</span></div><div class="mx" style="top:174px">Q4-25</div></div><div class="mcol" tabindex="0" data-q="Q1-26" aria-label="Q1-26 operating margin"><div class="mbar" style="top:63.7px;height:88.0px"></div><div class="mlab" style="top:153.7px"><span data-ref="Ratios!I13" data-fmt="pct0">−41%</span></div><div class="mx" style="top:174px">Q1-26</div></div><div class="mcol" tabindex="0" data-q="Q2-26" aria-label="Q2-26 operating margin"><div class="mbar" style="top:63.7px;height:3.9px"></div><div class="mlab" style="top:69.6px"><span data-ref="Ratios!J13" data-fmt="pct0">−2%</span></div><div class="mx" style="top:174px">Q2-26</div></div><div class="mcol" tabindex="0" data-q="Q3-26" aria-label="Q3-26 operating margin"><div class="mbar" style="top:23.1px;height:40.7px"></div><div class="mlab" style="top:8.1px"><span data-ref="Ratios!K13" data-fmt="pct0">19%</span></div><div class="mx" style="top:174px">Q3-26</div></div></div>
-<p class="note">GAAP income from operations / revenue. Formulas on the Ratios sheet of spacex.xlsx.</p>
-</div></div><div><div class="chart" id="c-subs">
-<h3>Starlink consumer subscribers rose from <span data-ref="Historicals!C90" data-fmt="m1">5.0M</span> to <span data-ref="Historicals!J90" data-fmt="m1">13.6M</span></h3>
-<div class="vbars"><div class="col" tabindex="0" data-q="Q1-25" aria-label="Q1-25 Starlink consumer subscribers"><div class="stack" style="height:31.97%"><span class="tot"><span data-ref="Historicals!C90" data-fmt="m1">5.0M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q1-25</div></div><div class="col" tabindex="0" data-q="Q2-25" aria-label="Q2-25 Starlink consumer subscribers"><div class="stack" style="height:38.36%"><span class="tot"><span data-ref="Historicals!D90" data-fmt="m1">6.0M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q2-25</div></div><div class="col" tabindex="0" data-q="Q3-25" aria-label="Q3-25 Starlink consumer subscribers"><div class="stack" style="height:46.04%"><span class="tot"><span data-ref="Historicals!E90" data-fmt="m1">7.2M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q3-25</div></div><div class="col" tabindex="0" data-q="Q4-25" aria-label="Q4-25 Starlink consumer subscribers"><div class="stack" style="height:56.91%"><span class="tot"><span data-ref="Historicals!F90" data-fmt="m1">8.9M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q4-25</div></div><div class="col" tabindex="0" data-q="Q1-26" aria-label="Q1-26 Starlink consumer subscribers"><div class="stack" style="height:65.86%"><span class="tot"><span data-ref="Historicals!H90" data-fmt="m1">10.3M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q1-26</div></div><div class="col" tabindex="0" data-q="Q2-26" aria-label="Q2-26 Starlink consumer subscribers"><div class="stack" style="height:76.73%"><span class="tot"><span data-ref="Historicals!I90" data-fmt="m1">12.0M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q2-26</div></div><div class="col" tabindex="0" data-q="Q3-26" aria-label="Q3-26 Starlink consumer subscribers"><div class="stack" style="height:86.96%"><span class="tot"><span data-ref="Historicals!J90" data-fmt="m1">13.6M</span></span><div class="seg" style="height:100%;background:#2a78d6"></div></div><div class="xl">Q3-26</div></div></div>
-<p class="note">Millions, period end. Source: S-1 pp.37, 86; Q2-26 release p.5; Q3-26 release p.5. Q4-25 = FY25 year-end (low confidence).</p>
-</div></div></div>
-
-<h2>Segments</h2>
-<div class="tw"><table><thead><tr><th>USD</th><th>Q1-26</th><th>Q2-26</th><th>Q3-26</th><th>9M-26</th></tr></thead><tbody><tr class="b"><td>Space revenue</td><td><span data-ref="Historicals!H42" data-fmt="bn1">$0.6B</span></td><td><span data-ref="Historicals!I42" data-fmt="bn1">$1.0B</span></td><td><span data-ref="Historicals!J42" data-fmt="bn1">$1.8B</span></td><td><span data-ref="Historicals!K42" data-fmt="bn1">$3.3B</span></td></tr><tr class=""><td>Income (loss) from operations</td><td><span data-ref="Historicals!H47" data-fmt="bn1">−$0.7B</span></td><td><span data-ref="Historicals!I47" data-fmt="bn1">−$0.5B</span></td><td><span data-ref="Historicals!J47" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!K47" data-fmt="bn1">−$1.2B</span></td></tr><tr class=""><td>Segment Adj. EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!H50" data-fmt="bn1">−$0.4B</span></td><td><span data-ref="Historicals!I50" data-fmt="bn1">−$0.2B</span></td><td><span data-ref="Historicals!J50" data-fmt="bn1">$0.4B</span></td><td><span data-ref="Historicals!K50" data-fmt="bn1">−$0.2B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!H51" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!I51" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!J51" data-fmt="bn1">$1.6B</span></td><td><span data-ref="Historicals!K51" data-fmt="bn1">$3.8B</span></td></tr><tr class="b"><td>Connectivity revenue</td><td><span data-ref="Historicals!H54" data-fmt="bn1">$3.3B</span></td><td><span data-ref="Historicals!I54" data-fmt="bn1">$4.3B</span></td><td><span data-ref="Historicals!J54" data-fmt="bn1">$5.2B</span></td><td><span data-ref="Historicals!K54" data-fmt="bn1">$12.8B</span></td></tr><tr class=""><td>Income (loss) from operations</td><td><span data-ref="Historicals!H58" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!I58" data-fmt="bn1">$1.7B</span></td><td><span data-ref="Historicals!J58" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!K58" data-fmt="bn1">$5.2B</span></td></tr><tr class=""><td>Segment Adj. EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!H61" data-fmt="bn1">$2.1B</span></td><td><span data-ref="Historicals!I61" data-fmt="bn1">$2.6B</span></td><td><span data-ref="Historicals!J61" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!K61" data-fmt="bn1">$8.2B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!H62" data-fmt="bn1">$1.3B</span></td><td><span data-ref="Historicals!I62" data-fmt="bn1">$1.4B</span></td><td><span data-ref="Historicals!J62" data-fmt="bn1">$1.5B</span></td><td><span data-ref="Historicals!K62" data-fmt="bn1">$4.2B</span></td></tr><tr class="b"><td>SI revenue</td><td><span data-ref="Historicals!H65" data-fmt="bn1">$0.8B</span></td><td><span data-ref="Historicals!I65" data-fmt="bn1">$2.6B</span></td><td><span data-ref="Historicals!J65" data-fmt="bn1">$7.6B</span></td><td><span data-ref="Historicals!K65" data-fmt="bn1">$10.9B</span></td></tr><tr class=""><td>Income (loss) from operations</td><td><span data-ref="Historicals!H70" data-fmt="bn1">−$2.5B</span></td><td><span data-ref="Historicals!I70" data-fmt="bn1">−$1.3B</span></td><td><span data-ref="Historicals!J70" data-fmt="bn1">$0.4B</span></td><td><span data-ref="Historicals!K70" data-fmt="bn1">−$3.3B</span></td></tr><tr class=""><td>Segment Adj. EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!H75" data-fmt="bn1">−$0.6B</span></td><td><span data-ref="Historicals!I75" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!J75" data-fmt="bn1">$5.0B</span></td><td><span data-ref="Historicals!K75" data-fmt="bn1">$5.5B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!H76" data-fmt="bn1">$7.7B</span></td><td><span data-ref="Historicals!I76" data-fmt="bn1">$15.8B</span></td><td><span data-ref="Historicals!J76" data-fmt="bn1">$16.4B</span></td><td><span data-ref="Historicals!K76" data-fmt="bn1">$40.0B</span></td></tr></tbody></table></div>
-<p class="note">SI (Super Intelligence) was reported as "AI" until Q2-26; figures are unchanged. Segment Adj. EBITDA = segment operating income
-+ D&amp;A + share-based compensation + restructuring + impairment (+ acquisition-related SBC and costs from Q3-26).</p>
-
-<h2>Income statement and cash flow by quarter</h2>
-<div class="tw"><table><thead><tr><th>USD</th><th>Q1-25</th><th>Q2-25</th><th>Q3-25</th><th>Q4-25</th><th>Q1-26</th><th>Q2-26</th><th>Q3-26</th></tr></thead><tbody><tr class="b"><td>Revenue</td><td><span data-ref="Historicals!C5" data-fmt="bn1">$4.1B</span></td><td><span data-ref="Historicals!D5" data-fmt="bn1">$4.1B</span></td><td><span data-ref="Historicals!E5" data-fmt="bn1">$5.6B</span></td><td><span data-ref="Historicals!F5" data-fmt="bn1">$5.0B</span></td><td><span data-ref="Historicals!H5" data-fmt="bn1">$4.7B</span></td><td><span data-ref="Historicals!I5" data-fmt="bn1">$7.8B</span></td><td><span data-ref="Historicals!J5" data-fmt="bn1">$14.6B</span></td></tr><tr class=""><td>Cost of revenue</td><td><span data-ref="Historicals!C6" data-fmt="bn1">$2.0B</span></td><td><span data-ref="Historicals!D6" data-fmt="bn1">$2.3B</span></td><td><span data-ref="Historicals!E6" data-fmt="bn1">$2.7B</span></td><td><span data-ref="Historicals!F6" data-fmt="bn1">$2.5B</span></td><td><span data-ref="Historicals!H6" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!I6" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!J6" data-fmt="bn1">$5.5B</span></td></tr><tr class=""><td>Research and development</td><td><span data-ref="Historicals!C7" data-fmt="bn1">$1.6B</span></td><td><span data-ref="Historicals!D7" data-fmt="bn1">$2.0B</span></td><td><span data-ref="Historicals!E7" data-fmt="bn1">$2.3B</span></td><td><span data-ref="Historicals!F7" data-fmt="bn1">$2.8B</span></td><td><span data-ref="Historicals!H7" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!I7" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!J7" data-fmt="bn1">$4.6B</span></td></tr><tr class="b"><td>Income (loss) from operations</td><td><span data-ref="Historicals!C12" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!D12" data-fmt="bn1">−$1.0B</span></td><td><span data-ref="Historicals!E12" data-fmt="bn1">−$0.3B</span></td><td><span data-ref="Historicals!F12" data-fmt="bn1">−$1.4B</span></td><td><span data-ref="Historicals!H12" data-fmt="bn1">−$1.9B</span></td><td><span data-ref="Historicals!I12" data-fmt="bn1">−$0.1B</span></td><td><span data-ref="Historicals!J12" data-fmt="bn1">$2.8B</span></td></tr><tr class="b"><td>Net income (loss)</td><td><span data-ref="Historicals!C18" data-fmt="bn1">−$0.5B</span></td><td><span data-ref="Historicals!D18" data-fmt="bn1">−$1.0B</span></td><td><span data-ref="Historicals!E18" data-fmt="bn1">−$1.1B</span></td><td><span data-ref="Historicals!F18" data-fmt="bn1">−$2.3B</span></td><td><span data-ref="Historicals!H18" data-fmt="bn1">−$4.3B</span></td><td><span data-ref="Historicals!I18" data-fmt="bn1">−$0.5B</span></td><td><span data-ref="Historicals!J18" data-fmt="bn1">$4.4B</span></td></tr><tr class=""><td>Adjusted EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!C37" data-fmt="bn1">$1.7B</span></td><td><span data-ref="Historicals!D37" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!E37" data-fmt="bn1">$2.2B</span></td><td><span data-ref="Historicals!F37" data-fmt="bn1">$1.5B</span></td><td><span data-ref="Historicals!H37" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!I37" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!J37" data-fmt="bn1">$8.8B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!C80" data-fmt="bn1">$4.1B</span></td><td><span data-ref="Historicals!D80" data-fmt="bn1">$2.8B</span></td><td><span data-ref="Historicals!E80" data-fmt="bn1">$6.9B</span></td><td><span data-ref="Historicals!F80" data-fmt="bn1">$6.9B</span></td><td><span data-ref="Historicals!H80" data-fmt="bn1">$10.1B</span></td><td><span data-ref="Historicals!I80" data-fmt="bn1">$18.4B</span></td><td><span data-ref="Historicals!J80" data-fmt="bn1">$19.6B</span></td></tr><tr class=""><td>Cash from operations</td><td><span data-ref="Historicals!C112" data-fmt="bn1">$0.7B</span></td><td><span data-ref="Historicals!D112" data-fmt="bn1">−$0.4B</span></td><td><span data-ref="Historicals!E112" data-fmt="bn1">$3.8B</span></td><td><span data-ref="Historicals!F112" data-fmt="bn1">$2.7B</span></td><td><span data-ref="Historicals!H112" data-fmt="bn1">$1.0B</span></td><td><span data-ref="Historicals!I112" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!J112" data-fmt="bn1">$9.6B</span></td></tr></tbody></table></div>
-<p class="note">Adjusted EBITDA reconciles to net income line by line on the Historicals sheet. Q3-26 Adj. EBITDA adds back
-<span data-ref="Historicals!J29" data-fmt="bn1">$1.2B</span> of Cursor acquisition-related SBC that earlier quarters did not have.</p>
-
-<h2>Ratios</h2>
-<div class="tw"><table><thead><tr><th>Ratio</th><th>Q1-26</th><th>Q2-26</th><th>Q3-26</th></tr></thead><tbody><tr class=""><td>Revenue growth YoY</td><td><span data-ref="Ratios!I5" data-fmt="pct0">15%</span></td><td><span data-ref="Ratios!J5" data-fmt="pct0">92%</span></td><td><span data-ref="Ratios!K5" data-fmt="pct0">161%</span></td></tr><tr class=""><td>Gross margin</td><td><span data-ref="Ratios!I10" data-fmt="pct1">49.1%</span></td><td><span data-ref="Ratios!J10" data-fmt="pct1">55.3%</span></td><td><span data-ref="Ratios!K10" data-fmt="pct1">62.4%</span></td></tr><tr class=""><td>Adj. EBITDA margin <span class='basis'>non-GAAP</span></td><td><span data-ref="Ratios!I11" data-fmt="pct1">24.0%</span></td><td><span data-ref="Ratios!J11" data-fmt="pct1">45.3%</span></td><td><span data-ref="Ratios!K11" data-fmt="pct1">60.4%</span></td></tr><tr class=""><td>Operating margin</td><td><span data-ref="Ratios!I13" data-fmt="pct1">−41.4%</span></td><td><span data-ref="Ratios!J13" data-fmt="pct1">−1.8%</span></td><td><span data-ref="Ratios!K13" data-fmt="pct1">19.1%</span></td></tr><tr class=""><td>Net margin</td><td><span data-ref="Ratios!I14" data-fmt="pct1">−91.1%</span></td><td><span data-ref="Ratios!J14" data-fmt="pct1">−6.9%</span></td><td><span data-ref="Ratios!K14" data-fmt="pct1">30.2%</span></td></tr><tr class=""><td>ROIC, annualised</td><td><span data-ref="Ratios!I15" data-fmt="pct1">−14.2%</span></td><td><span data-ref="Ratios!J15" data-fmt="pct1">−0.8%</span></td><td><span data-ref="Ratios!K15" data-fmt="pct1">9.2%</span></td></tr><tr class=""><td>Free cash flow</td><td><span data-ref="Ratios!I19" data-fmt="bn1">−$9.1B</span></td><td><span data-ref="Ratios!J19" data-fmt="bn1">−$15.9B</span></td><td><span data-ref="Ratios!K19" data-fmt="bn1">−$10.0B</span></td></tr><tr class=""><td>FCF margin</td><td><span data-ref="Ratios!I20" data-fmt="pct0">−193%</span></td><td><span data-ref="Ratios!J20" data-fmt="pct0">−204%</span></td><td><span data-ref="Ratios!K20" data-fmt="pct0">−68%</span></td></tr><tr class=""><td>Capex / revenue</td><td><span data-ref="Ratios!I26" data-fmt="x1">2.2x</span></td><td><span data-ref="Ratios!J26" data-fmt="x1">2.4x</span></td><td><span data-ref="Ratios!K26" data-fmt="x1">1.3x</span></td></tr><tr class=""><td>Capex / D&A</td><td><span data-ref="Ratios!I27" data-fmt="x1">4.1x</span></td><td><span data-ref="Ratios!J27" data-fmt="x1">6.4x</span></td><td><span data-ref="Ratios!K27" data-fmt="x1">5.4x</span></td></tr><tr class=""><td>Net debt / LTM Adj. EBITDA (negative = net cash)</td><td><span data-ref="Ratios!I32" data-fmt="x1">0.9x</span></td><td><span data-ref="Ratios!J32" data-fmt="x1">−7.3x</span></td><td><span data-ref="Ratios!K32" data-fmt="x1">−3.4x</span></td></tr><tr class=""><td>EBIT / interest expense</td><td><span data-ref="Ratios!I33" data-fmt="x1">−2.9x</span></td><td><span data-ref="Ratios!J33" data-fmt="x1">−0.2x</span></td><td><span data-ref="Ratios!K33" data-fmt="x1">4.1x</span></td></tr><tr class=""><td>Current ratio</td><td><span data-ref="Ratios!I35" data-fmt="x1">1.2x</span></td><td><span data-ref="Ratios!J35" data-fmt="x1">5.1x</span></td><td><span data-ref="Ratios!K35" data-fmt="x1">3.1x</span></td></tr></tbody></table></div>
-<p class="note">Formulas on the Ratios sheet. FCF = cash from operations − purchases of PP&amp;E.
-ROIC = EBIT × (1 − <span data-ref="Ratios!E3" data-fmt="pct0">21%</span>) × 4 / average invested capital (net of cash).</p>
-
+<h1>SpaceX</h1>
+<p class="meta">Space Exploration Technologies Corp. &middot; NASDAQ: SPCX. Form S-1 filed
+<span data-static="1">20 May 2026</span>, plus the Q2-26 and Q3-26 results releases. USD, GAAP unless marked non-GAAP.
+Every figure is tied to a cell of spacex.xlsx, which carries the page citation.</p>
+</div></header>
+<main class="in">
+<section class="panel"><h2>Segments</h2>
+<p class="dek">SI revenue reached <span data-ref="Historicals!J65" data-fmt="bn1">$7.6B</span> in Q3-26, the largest of the three segments, ahead of Connectivity at <span data-ref="Historicals!J54" data-fmt="bn1">$5.2B</span> and Space at <span data-ref="Historicals!J42" data-fmt="bn1">$1.8B</span>.</p>
 <div class="two"><div>
-<h2>Operating metrics</h2>
-<div class="tw"><table><thead><tr><th>Metric</th><th>Q3-25</th><th>Q1-26</th><th>Q2-26</th><th>Q3-26</th></tr></thead><tbody><tr class=""><td>Total launches</td><td><span data-ref="Historicals!E83" data-fmt="num0">44</span></td><td><span data-ref="Historicals!H83" data-fmt="num0">40</span></td><td><span data-ref="Historicals!I83" data-fmt="num0">38</span></td><td><span data-ref="Historicals!J83" data-fmt="num0">35</span></td></tr><tr class=""><td>Customer launches</td><td><span data-ref="Historicals!E84" data-fmt="num0">15</span></td><td><span data-ref="Historicals!H84" data-fmt="num0">7</span></td><td><span data-ref="Historicals!I84" data-fmt="num0">10</span></td><td><span data-ref="Historicals!J84" data-fmt="num0">12</span></td></tr><tr class=""><td>Mass to orbit, metric tons</td><td><span data-ref="Historicals!E87" data-fmt="num0">525</span></td><td><span data-ref="Historicals!H87" data-fmt="num0">556</span></td><td><span data-ref="Historicals!I87" data-fmt="num0">485</span></td><td><span data-ref="Historicals!J87" data-fmt="num0">476</span></td></tr><tr class=""><td>Starlink consumer subscribers</td><td><span data-ref="Historicals!E90" data-fmt="m1">7.2M</span></td><td><span data-ref="Historicals!H90" data-fmt="m1">10.3M</span></td><td><span data-ref="Historicals!I90" data-fmt="m1">12.0M</span></td><td><span data-ref="Historicals!J90" data-fmt="m1">13.6M</span></td></tr><tr class=""><td>Starlink consumer ARPU, $/month</td><td><span data-ref="Historicals!E91" data-fmt="num0">83</span></td><td><span data-ref="Historicals!H91" data-fmt="num0">66</span></td><td><span data-ref="Historicals!I91" data-fmt="num0">66</span></td><td><span data-ref="Historicals!J91" data-fmt="num0">69</span></td></tr><tr class=""><td>Nameplate compute</td><td><span data-ref="Historicals!E92" data-fmt="gw1">0.6 GW</span></td><td><span data-ref="Historicals!H92" data-fmt="gw1">1.0 GW</span></td><td><span data-ref="Historicals!I92" data-fmt="gw1">1.4 GW</span></td><td><span data-ref="Historicals!J92" data-fmt="gw1">1.7 GW</span></td></tr></tbody></table></div>
-<p class="note">Source: Q2-26 and Q3-26 releases pp.4–6. "Starlink Subscribers" renamed "consumer subscribers" in Q3-26 (same series).</p>
+<h3>SI became the largest segment in Q3-26</h3>
+<div class="leg"><button type="button" data-chart="seg" data-s="0" aria-pressed="true"><i class="sq" style="background:var(--c1)"></i>Space</button><button type="button" data-chart="seg" data-s="1" aria-pressed="true"><i class="sq" style="background:var(--c2)"></i>Connectivity</button><button type="button" data-chart="seg" data-s="2" aria-pressed="true"><i class="sq" style="background:var(--c3)"></i>SI</button></div>
+<svg viewBox="0 0 320 190" data-chart="seg" tabindex="0" role="img" aria-label="Quarterly revenue by segment, USD billions">
+<line x1="8" x2="312" y1="164" y2="164" stroke="var(--axis)" stroke-width="1"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="12.8" y="149.9" width="9.3" height="14.1" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="1" x="56.2" y="151.8" width="9.3" height="12.2" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="2" x="99.6" y="136.8" width="9.3" height="27.2" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="3" x="143.1" y="150.8" width="9.3" height="13.2" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="4" x="186.5" y="153.9" width="9.3" height="10.1" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="5" x="229.9" y="148.3" width="9.3" height="15.7" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="6" x="273.3" y="135.2" width="9.3" height="28.8" rx="2" fill="var(--c1)"/>
+</g>
+<g class="s1">
+<rect class="mk" data-i="0" x="24.1" y="123.7" width="9.3" height="40.3" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="1" x="67.5" y="121.8" width="9.3" height="42.2" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="2" x="110.9" y="113.5" width="9.3" height="50.5" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="3" x="154.4" y="111.4" width="9.3" height="52.6" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="4" x="197.8" y="110.9" width="9.3" height="53.1" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="5" x="241.2" y="94.1" width="9.3" height="69.9" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="6" x="284.6" y="78.5" width="9.3" height="85.5" rx="2" fill="var(--c2)"/>
+</g>
+<g class="s2">
+<rect class="mk" data-i="0" x="35.4" y="152.1" width="9.3" height="11.9" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="1" x="78.8" y="152.0" width="9.3" height="12.0" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="2" x="122.2" y="150.7" width="9.3" height="13.3" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="3" x="165.6" y="149.0" width="9.3" height="15.0" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="4" x="209.1" y="150.7" width="9.3" height="13.3" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="5" x="252.5" y="122.3" width="9.3" height="41.7" rx="2" fill="var(--c3)"/>
+<rect class="mk" data-i="6" x="295.9" y="40.8" width="9.3" height="123.2" rx="2" fill="var(--c3)"/>
+</g>
+<text x="29.7" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-25</tspan></text>
+<text x="73.1" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-25</tspan></text>
+<text x="116.6" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="160.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q4-25</tspan></text>
+<text x="203.4" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-26</tspan></text>
+<text x="246.9" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-26</tspan></text>
+<text x="290.3" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">Revenue, $ billions. Q1-25 and Q4-25 are derived (H1 minus Q2; FY minus 9M).</p>
 </div><div>
-<h2>Balance sheet</h2>
-<div class="tw"><table><thead><tr><th>USD</th><th>Dec-25</th><th>Jun-26</th><th>Sep-26</th></tr></thead><tbody><tr class=""><td>Cash and equivalents</td><td><span data-ref="Historicals!D143" data-fmt="bn1">$24.7B</span></td><td><span data-ref="Historicals!F143" data-fmt="bn1">$93.5B</span></td><td><span data-ref="Historicals!G143" data-fmt="bn1">$51.3B</span></td></tr><tr class=""><td>Marketable securities</td><td><span data-ref="Historicals!D144" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!F144" data-fmt="bn1">$6.5B</span></td><td><span data-ref="Historicals!G144" data-fmt="bn1">$38.6B</span></td></tr><tr class=""><td>PP&amp;E, net</td><td><span data-ref="Historicals!D149" data-fmt="bn1">$42.6B</span></td><td><span data-ref="Historicals!F149" data-fmt="bn1">$65.7B</span></td><td><span data-ref="Historicals!G149" data-fmt="bn1">$89.5B</span></td></tr><tr class=""><td>Goodwill</td><td><span data-ref="Historicals!D153" data-fmt="bn1">$11.8B</span></td><td><span data-ref="Historicals!F153" data-fmt="bn1">$11.6B</span></td><td><span data-ref="Historicals!G153" data-fmt="bn1">$48.4B</span></td></tr><tr class="b"><td>Total assets</td><td><span data-ref="Historicals!D156" data-fmt="bn1">$92.1B</span></td><td><span data-ref="Historicals!F156" data-fmt="bn1">$192.8B</span></td><td><span data-ref="Historicals!G156" data-fmt="bn1">$254.0B</span></td></tr><tr class=""><td>Debt and finance leases, current</td><td><span data-ref="Historicals!D159" data-fmt="bn1">$0.9B</span></td><td><span data-ref="Historicals!F159" data-fmt="bn1">$2.5B</span></td><td><span data-ref="Historicals!G159" data-fmt="bn1">$2.7B</span></td></tr><tr class=""><td>Debt and finance leases, non-current</td><td><span data-ref="Historicals!D163" data-fmt="bn1">$22.0B</span></td><td><span data-ref="Historicals!F163" data-fmt="bn1">$36.8B</span></td><td><span data-ref="Historicals!G163" data-fmt="bn1">$36.1B</span></td></tr><tr class=""><td>Redeemable convertible preferred</td><td><span data-ref="Historicals!D166" data-fmt="bn1">$38.8B</span></td><td><span data-ref="Historicals!F166" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!G166" data-fmt="bn1">$0.0B</span></td></tr><tr class="b"><td>Total shareholders' equity</td><td><span data-ref="Historicals!D171" data-fmt="bn1">$2.6B</span></td><td><span data-ref="Historicals!F171" data-fmt="bn1">$127.2B</span></td><td><span data-ref="Historicals!G171" data-fmt="bn1">$176.8B</span></td></tr></tbody></table></div>
-<p class="note">Source: S-1 p.230; Q2-26 release p.9; Q3-26 release p.11.</p>
+<h3>What each segment earns and spends</h3>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q1-26</span></th><th><span data-static="1">Q2-26</span></th><th><span data-static="1">Q3-26</span></th><th><span data-static="1">9M-26</span></th></tr></thead><tbody><tr class="b"><td>Space revenue</td><td><span data-ref="Historicals!H42" data-fmt="bn1">$0.6B</span></td><td><span data-ref="Historicals!I42" data-fmt="bn1">$1.0B</span></td><td><span data-ref="Historicals!J42" data-fmt="bn1">$1.8B</span></td><td><span data-ref="Historicals!K42" data-fmt="bn1">$3.3B</span></td></tr><tr class=""><td>Income (loss) from operations</td><td><span data-ref="Historicals!H47" data-fmt="bn1">−$0.7B</span></td><td><span data-ref="Historicals!I47" data-fmt="bn1">−$0.5B</span></td><td><span data-ref="Historicals!J47" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!K47" data-fmt="bn1">−$1.2B</span></td></tr><tr class=""><td>Segment Adj. EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!H50" data-fmt="bn1">−$0.4B</span></td><td><span data-ref="Historicals!I50" data-fmt="bn1">−$0.2B</span></td><td><span data-ref="Historicals!J50" data-fmt="bn1">$0.4B</span></td><td><span data-ref="Historicals!K50" data-fmt="bn1">−$0.2B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!H51" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!I51" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!J51" data-fmt="bn1">$1.6B</span></td><td><span data-ref="Historicals!K51" data-fmt="bn1">$3.8B</span></td></tr><tr class="b"><td>Connectivity revenue</td><td><span data-ref="Historicals!H54" data-fmt="bn1">$3.3B</span></td><td><span data-ref="Historicals!I54" data-fmt="bn1">$4.3B</span></td><td><span data-ref="Historicals!J54" data-fmt="bn1">$5.2B</span></td><td><span data-ref="Historicals!K54" data-fmt="bn1">$12.8B</span></td></tr><tr class=""><td>Income (loss) from operations</td><td><span data-ref="Historicals!H58" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!I58" data-fmt="bn1">$1.7B</span></td><td><span data-ref="Historicals!J58" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!K58" data-fmt="bn1">$5.2B</span></td></tr><tr class=""><td>Segment Adj. EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!H61" data-fmt="bn1">$2.1B</span></td><td><span data-ref="Historicals!I61" data-fmt="bn1">$2.6B</span></td><td><span data-ref="Historicals!J61" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!K61" data-fmt="bn1">$8.2B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!H62" data-fmt="bn1">$1.3B</span></td><td><span data-ref="Historicals!I62" data-fmt="bn1">$1.4B</span></td><td><span data-ref="Historicals!J62" data-fmt="bn1">$1.5B</span></td><td><span data-ref="Historicals!K62" data-fmt="bn1">$4.2B</span></td></tr><tr class="b"><td>SI revenue</td><td><span data-ref="Historicals!H65" data-fmt="bn1">$0.8B</span></td><td><span data-ref="Historicals!I65" data-fmt="bn1">$2.6B</span></td><td><span data-ref="Historicals!J65" data-fmt="bn1">$7.6B</span></td><td><span data-ref="Historicals!K65" data-fmt="bn1">$10.9B</span></td></tr><tr class=""><td>Income (loss) from operations</td><td><span data-ref="Historicals!H70" data-fmt="bn1">−$2.5B</span></td><td><span data-ref="Historicals!I70" data-fmt="bn1">−$1.3B</span></td><td><span data-ref="Historicals!J70" data-fmt="bn1">$0.4B</span></td><td><span data-ref="Historicals!K70" data-fmt="bn1">−$3.3B</span></td></tr><tr class=""><td>Segment Adj. EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!H75" data-fmt="bn1">−$0.6B</span></td><td><span data-ref="Historicals!I75" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!J75" data-fmt="bn1">$5.0B</span></td><td><span data-ref="Historicals!K75" data-fmt="bn1">$5.5B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!H76" data-fmt="bn1">$7.7B</span></td><td><span data-ref="Historicals!I76" data-fmt="bn1">$15.8B</span></td><td><span data-ref="Historicals!J76" data-fmt="bn1">$16.4B</span></td><td><span data-ref="Historicals!K76" data-fmt="bn1">$40.0B</span></td></tr></tbody></table></div>
+<p class="note">SI (Super Intelligence) was reported as "AI" until Q2-26; the figures are unchanged.
+Segment Adj. EBITDA = segment operating income + D&amp;A + share-based compensation + restructuring
++ impairment, and from Q3-26 also acquisition-related share-based compensation and costs.</p>
 </div></div>
-
-<h2>Data gaps</h2>
-<ul><li>The S-1 copy is truncated at page F-60, so the Q1-26 interim statements are missing; Q1-26 is derived as H1 − Q2 and ties to the S-1 summary tables.</li><li>Quarterly cash-flow detail exists only as totals (operating, investing, financing cash flow and capex).</li><li>Backlog is reported only at Dec-25 and Jun-26; Starlink ARPU for Q4-25 cannot be derived from the annual figure.</li><li>The FY25 Starlink subscriber count comes from a table row clipped by a page break (low confidence).</li></ul>
-
-<footer>Sources: Form S-1 (filed 20 May 2026), Q2-26 and Q3-26 results releases. Page citations for every figure are on the Sources sheet of spacex.xlsx;
-ratios are own calculations from those figures.</footer>
+</section>
+<section class="panel"><h2>Income statement and margins</h2>
+<p class="dek">The operating margin turned positive in Q3-26 at <span data-ref="Ratios!K13" data-fmt="pct1">19.1%</span>, after <span data-ref="Ratios!I13" data-fmt="pct1">−41.4%</span> in Q1-26.</p>
+<div class="two"><div>
+<h3>The operating margin turned positive in Q3-26</h3>
+<svg viewBox="0 0 320 190" data-chart="mgn" tabindex="0" role="img" aria-label="GAAP operating margin by quarter, percent of revenue">
+<line x1="40" x2="312" y1="164.0" y2="164.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="167.5" text-anchor="end" class="ax"><tspan data-static="1">−50%</tspan></text>
+<line x1="40" x2="312" y1="145.2" y2="145.2" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="148.8" text-anchor="end" class="ax"><tspan data-static="1">−40%</tspan></text>
+<line x1="40" x2="312" y1="126.5" y2="126.5" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="130.0" text-anchor="end" class="ax"><tspan data-static="1">−30%</tspan></text>
+<line x1="40" x2="312" y1="107.8" y2="107.8" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="111.2" text-anchor="end" class="ax"><tspan data-static="1">−20%</tspan></text>
+<line x1="40" x2="312" y1="89.0" y2="89.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="92.5" text-anchor="end" class="ax"><tspan data-static="1">−10%</tspan></text>
+<line x1="40" x2="312" y1="70.2" y2="70.2" stroke="var(--axis)" stroke-width="1"/>
+<text x="35" y="73.8" text-anchor="end" class="ax"><tspan data-static="1">0%</tspan></text>
+<line x1="40" x2="312" y1="51.5" y2="51.5" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="55.0" text-anchor="end" class="ax"><tspan data-static="1">10%</tspan></text>
+<line x1="40" x2="312" y1="32.8" y2="32.8" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="36.2" text-anchor="end" class="ax"><tspan data-static="1">20%</tspan></text>
+<line x1="40" x2="312" y1="14.0" y2="14.0" stroke="var(--grid)" stroke-width="1"/>
+<text x="35" y="17.5" text-anchor="end" class="ax"><tspan data-static="1">30%</tspan></text>
+<line class="cross" x1="0" x2="0" y1="14" y2="164" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+<g class="s2">
+<rect class="mk" data-i="0" x="48.5" y="69.0" width="21.8" height="1.2" rx="2" fill="var(--c1)"/>
+<text x="59.4" y="64.0" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!E13" data-fmt="pct0">1%</tspan></text>
+<rect class="mk" data-i="1" x="87.4" y="70.2" width="21.8" height="44.7" rx="2" fill="var(--c1)"/>
+<text x="98.3" y="125.9" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!F13" data-fmt="pct0">−24%</tspan></text>
+<rect class="mk" data-i="2" x="126.3" y="70.2" width="21.8" height="9.2" rx="2" fill="var(--c1)"/>
+<text x="137.1" y="90.4" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!G13" data-fmt="pct0">−5%</tspan></text>
+<rect class="mk" data-i="3" x="165.1" y="70.2" width="21.8" height="51.9" rx="2" fill="var(--c1)"/>
+<text x="176.0" y="133.2" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!H13" data-fmt="pct0">−28%</tspan></text>
+<rect class="mk" data-i="4" x="204.0" y="70.2" width="21.8" height="77.6" rx="2" fill="var(--c1)"/>
+<text x="214.9" y="158.9" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!I13" data-fmt="pct0">−41%</tspan></text>
+<rect class="mk" data-i="5" x="242.8" y="70.2" width="21.8" height="3.4" rx="2" fill="var(--c1)"/>
+<text x="253.7" y="84.7" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!J13" data-fmt="pct0">−2%</tspan></text>
+<rect class="mk" data-i="6" x="281.7" y="34.3" width="21.8" height="35.9" rx="2" fill="var(--c1)"/>
+<text x="292.6" y="29.3" text-anchor="middle" class="lbl"><tspan data-ref="Ratios!K13" data-fmt="pct0">19%</tspan></text>
+</g>
+<text x="59.4" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-25</tspan></text>
+<text x="98.3" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-25</tspan></text>
+<text x="137.1" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="176.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q4-25</tspan></text>
+<text x="214.9" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-26</tspan></text>
+<text x="253.7" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-26</tspan></text>
+<text x="292.6" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">GAAP income from operations divided by revenue. The formulas are on the Ratios sheet.</p>
+</div><div>
+<h3>Margins, quarter by quarter</h3>
+<div class="tw"><table><thead><tr><th>Ratio</th><th><span data-static="1">Q1-26</span></th><th><span data-static="1">Q2-26</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class=""><td>Revenue growth YoY</td><td><span data-ref="Ratios!I5" data-fmt="pct0">15%</span></td><td><span data-ref="Ratios!J5" data-fmt="pct0">92%</span></td><td><span data-ref="Ratios!K5" data-fmt="pct0">161%</span></td></tr><tr class=""><td>Gross margin</td><td><span data-ref="Ratios!I10" data-fmt="pct1">49.1%</span></td><td><span data-ref="Ratios!J10" data-fmt="pct1">55.3%</span></td><td><span data-ref="Ratios!K10" data-fmt="pct1">62.4%</span></td></tr><tr class=""><td>Adj. EBITDA margin <span class='basis'>non-GAAP</span></td><td><span data-ref="Ratios!I11" data-fmt="pct1">24.0%</span></td><td><span data-ref="Ratios!J11" data-fmt="pct1">45.3%</span></td><td><span data-ref="Ratios!K11" data-fmt="pct1">60.4%</span></td></tr><tr class=""><td>Operating margin</td><td><span data-ref="Ratios!I13" data-fmt="pct1">−41.4%</span></td><td><span data-ref="Ratios!J13" data-fmt="pct1">−1.8%</span></td><td><span data-ref="Ratios!K13" data-fmt="pct1">19.1%</span></td></tr><tr class=""><td>Net margin</td><td><span data-ref="Ratios!I14" data-fmt="pct1">−91.1%</span></td><td><span data-ref="Ratios!J14" data-fmt="pct1">−6.9%</span></td><td><span data-ref="Ratios!K14" data-fmt="pct1">30.2%</span></td></tr></tbody></table></div>
+<p class="note">Adjusted EBITDA is a company measure, not a GAAP one, and its definition changed in Q3-26.</p>
+</div></div>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Q1-25</span></th><th><span data-static="1">Q2-25</span></th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q4-25</span></th><th><span data-static="1">Q1-26</span></th><th><span data-static="1">Q2-26</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class="b"><td>Revenue</td><td><span data-ref="Historicals!C5" data-fmt="bn1">$4.1B</span></td><td><span data-ref="Historicals!D5" data-fmt="bn1">$4.1B</span></td><td><span data-ref="Historicals!E5" data-fmt="bn1">$5.6B</span></td><td><span data-ref="Historicals!F5" data-fmt="bn1">$5.0B</span></td><td><span data-ref="Historicals!H5" data-fmt="bn1">$4.7B</span></td><td><span data-ref="Historicals!I5" data-fmt="bn1">$7.8B</span></td><td><span data-ref="Historicals!J5" data-fmt="bn1">$14.6B</span></td></tr><tr class=""><td>Cost of revenue</td><td><span data-ref="Historicals!C6" data-fmt="bn1">$2.0B</span></td><td><span data-ref="Historicals!D6" data-fmt="bn1">$2.3B</span></td><td><span data-ref="Historicals!E6" data-fmt="bn1">$2.7B</span></td><td><span data-ref="Historicals!F6" data-fmt="bn1">$2.5B</span></td><td><span data-ref="Historicals!H6" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!I6" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!J6" data-fmt="bn1">$5.5B</span></td></tr><tr class=""><td>Research and development</td><td><span data-ref="Historicals!C7" data-fmt="bn1">$1.6B</span></td><td><span data-ref="Historicals!D7" data-fmt="bn1">$2.0B</span></td><td><span data-ref="Historicals!E7" data-fmt="bn1">$2.3B</span></td><td><span data-ref="Historicals!F7" data-fmt="bn1">$2.8B</span></td><td><span data-ref="Historicals!H7" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!I7" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!J7" data-fmt="bn1">$4.6B</span></td></tr><tr class="b"><td>Income (loss) from operations</td><td><span data-ref="Historicals!C12" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!D12" data-fmt="bn1">−$1.0B</span></td><td><span data-ref="Historicals!E12" data-fmt="bn1">−$0.3B</span></td><td><span data-ref="Historicals!F12" data-fmt="bn1">−$1.4B</span></td><td><span data-ref="Historicals!H12" data-fmt="bn1">−$1.9B</span></td><td><span data-ref="Historicals!I12" data-fmt="bn1">−$0.1B</span></td><td><span data-ref="Historicals!J12" data-fmt="bn1">$2.8B</span></td></tr><tr class="b"><td>Net income (loss)</td><td><span data-ref="Historicals!C18" data-fmt="bn1">−$0.5B</span></td><td><span data-ref="Historicals!D18" data-fmt="bn1">−$1.0B</span></td><td><span data-ref="Historicals!E18" data-fmt="bn1">−$1.1B</span></td><td><span data-ref="Historicals!F18" data-fmt="bn1">−$2.3B</span></td><td><span data-ref="Historicals!H18" data-fmt="bn1">−$4.3B</span></td><td><span data-ref="Historicals!I18" data-fmt="bn1">−$0.5B</span></td><td><span data-ref="Historicals!J18" data-fmt="bn1">$4.4B</span></td></tr><tr class=""><td>Adjusted EBITDA <span class='basis'>non-GAAP</span></td><td><span data-ref="Historicals!C37" data-fmt="bn1">$1.7B</span></td><td><span data-ref="Historicals!D37" data-fmt="bn1">$1.2B</span></td><td><span data-ref="Historicals!E37" data-fmt="bn1">$2.2B</span></td><td><span data-ref="Historicals!F37" data-fmt="bn1">$1.5B</span></td><td><span data-ref="Historicals!H37" data-fmt="bn1">$1.1B</span></td><td><span data-ref="Historicals!I37" data-fmt="bn1">$3.5B</span></td><td><span data-ref="Historicals!J37" data-fmt="bn1">$8.8B</span></td></tr><tr class=""><td>Capex</td><td><span data-ref="Historicals!C80" data-fmt="bn1">$4.1B</span></td><td><span data-ref="Historicals!D80" data-fmt="bn1">$2.8B</span></td><td><span data-ref="Historicals!E80" data-fmt="bn1">$6.9B</span></td><td><span data-ref="Historicals!F80" data-fmt="bn1">$6.9B</span></td><td><span data-ref="Historicals!H80" data-fmt="bn1">$10.1B</span></td><td><span data-ref="Historicals!I80" data-fmt="bn1">$18.4B</span></td><td><span data-ref="Historicals!J80" data-fmt="bn1">$19.6B</span></td></tr><tr class=""><td>Cash from operations</td><td><span data-ref="Historicals!C112" data-fmt="bn1">$0.7B</span></td><td><span data-ref="Historicals!D112" data-fmt="bn1">−$0.4B</span></td><td><span data-ref="Historicals!E112" data-fmt="bn1">$3.8B</span></td><td><span data-ref="Historicals!F112" data-fmt="bn1">$2.7B</span></td><td><span data-ref="Historicals!H112" data-fmt="bn1">$1.0B</span></td><td><span data-ref="Historicals!I112" data-fmt="bn1">$2.4B</span></td><td><span data-ref="Historicals!J112" data-fmt="bn1">$9.6B</span></td></tr></tbody></table></div>
+<p class="note">Adjusted EBITDA reconciles to net income line by line on the Historicals sheet. Q3-26 adds back
+<span data-ref="Historicals!J29" data-fmt="bn1">$1.2B</span> of acquisition-related share-based compensation that the
+earlier quarters did not carry.</p>
+</section>
+<section class="panel"><h2>Balance sheet</h2>
+<p class="dek">Total assets reached <span data-ref="Historicals!G156" data-fmt="bn1">$254.0B</span> at Sep-26, of which <span data-ref="Historicals!G149" data-fmt="bn1">$89.5B</span> is property, plant and equipment — the rockets, the ground stations and the data centres themselves.</p>
+<div class="two"><div>
+<h3>The balance sheet at three dates</h3>
+<div class="tw"><table><thead><tr><th>USD</th><th><span data-static="1">Dec-25</span></th><th><span data-static="1">Jun-26</span></th><th><span data-static="1">Sep-26</span></th></tr></thead><tbody><tr class=""><td>Cash and equivalents</td><td><span data-ref="Historicals!D143" data-fmt="bn1">$24.7B</span></td><td><span data-ref="Historicals!F143" data-fmt="bn1">$93.5B</span></td><td><span data-ref="Historicals!G143" data-fmt="bn1">$51.3B</span></td></tr><tr class=""><td>Marketable securities</td><td><span data-ref="Historicals!D144" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!F144" data-fmt="bn1">$6.5B</span></td><td><span data-ref="Historicals!G144" data-fmt="bn1">$38.6B</span></td></tr><tr class=""><td>PP&amp;E, net</td><td><span data-ref="Historicals!D149" data-fmt="bn1">$42.6B</span></td><td><span data-ref="Historicals!F149" data-fmt="bn1">$65.7B</span></td><td><span data-ref="Historicals!G149" data-fmt="bn1">$89.5B</span></td></tr><tr class=""><td>Goodwill</td><td><span data-ref="Historicals!D153" data-fmt="bn1">$11.8B</span></td><td><span data-ref="Historicals!F153" data-fmt="bn1">$11.6B</span></td><td><span data-ref="Historicals!G153" data-fmt="bn1">$48.4B</span></td></tr><tr class="b"><td>Total assets</td><td><span data-ref="Historicals!D156" data-fmt="bn1">$92.1B</span></td><td><span data-ref="Historicals!F156" data-fmt="bn1">$192.8B</span></td><td><span data-ref="Historicals!G156" data-fmt="bn1">$254.0B</span></td></tr><tr class=""><td>Debt and finance leases, current</td><td><span data-ref="Historicals!D159" data-fmt="bn1">$0.9B</span></td><td><span data-ref="Historicals!F159" data-fmt="bn1">$2.5B</span></td><td><span data-ref="Historicals!G159" data-fmt="bn1">$2.7B</span></td></tr><tr class=""><td>Debt and finance leases, non-current</td><td><span data-ref="Historicals!D163" data-fmt="bn1">$22.0B</span></td><td><span data-ref="Historicals!F163" data-fmt="bn1">$36.8B</span></td><td><span data-ref="Historicals!G163" data-fmt="bn1">$36.1B</span></td></tr><tr class=""><td>Redeemable convertible preferred</td><td><span data-ref="Historicals!D166" data-fmt="bn1">$38.8B</span></td><td><span data-ref="Historicals!F166" data-fmt="bn1">$0.0B</span></td><td><span data-ref="Historicals!G166" data-fmt="bn1">$0.0B</span></td></tr><tr class="b"><td>Total shareholders' equity</td><td><span data-ref="Historicals!D171" data-fmt="bn1">$2.6B</span></td><td><span data-ref="Historicals!F171" data-fmt="bn1">$127.2B</span></td><td><span data-ref="Historicals!G171" data-fmt="bn1">$176.8B</span></td></tr></tbody></table></div>
+<p class="note">Source: S-1 p.230; Q2-26 release p.9; Q3-26 release p.11.</p>
+</div><div>
+<h3>Can it carry the debt it has taken on?</h3>
+<div class="tw"><table><thead><tr><th>Ratio</th><th><span data-static="1">Q1-26</span></th><th><span data-static="1">Q2-26</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class=""><td>Net debt / LTM Adj. EBITDA <span class='basis'>negative = net cash</span></td><td><span data-ref="Ratios!I32" data-fmt="x1">0.9x</span></td><td><span data-ref="Ratios!J32" data-fmt="x1">−7.3x</span></td><td><span data-ref="Ratios!K32" data-fmt="x1">−3.4x</span></td></tr><tr class=""><td>EBIT / interest expense</td><td><span data-ref="Ratios!I33" data-fmt="x1">−2.9x</span></td><td><span data-ref="Ratios!J33" data-fmt="x1">−0.2x</span></td><td><span data-ref="Ratios!K33" data-fmt="x1">4.1x</span></td></tr><tr class=""><td>Current ratio</td><td><span data-ref="Ratios!I35" data-fmt="x1">1.2x</span></td><td><span data-ref="Ratios!J35" data-fmt="x1">5.1x</span></td><td><span data-ref="Ratios!K35" data-fmt="x1">3.1x</span></td></tr><tr class=""><td>ROIC, annualised</td><td><span data-ref="Ratios!I15" data-fmt="pct1">−14.2%</span></td><td><span data-ref="Ratios!J15" data-fmt="pct1">−0.8%</span></td><td><span data-ref="Ratios!K15" data-fmt="pct1">9.2%</span></td></tr></tbody></table></div>
+<p class="note">ROIC = EBIT &times; (1 &minus; <span data-ref="Ratios!E3" data-fmt="pct0">21%</span>) &times; 4 / average invested capital,
+net of cash. Own calculations from the reported figures.</p>
+</div></div>
+</section>
+<section class="panel"><h2>Cash flow and capex</h2>
+<p class="dek">Capex was <span data-ref="Historicals!K80" data-fmt="bn1">$48.1B</span> over 9M-26, <span data-ref="Ratios!M26" data-fmt="x1">1.8x</span> revenue, so free cash flow was <span data-ref="Ratios!M19" data-fmt="bn1">−$35.0B</span>.</p>
+<div class="two"><div>
+<h3>Capex exceeded revenue in every quarter of 2026</h3>
+<div class="leg"><button type="button" data-chart="cap" data-s="0" aria-pressed="true"><i class="sq" style="background:var(--c2)"></i>Revenue</button><button type="button" data-chart="cap" data-s="1" aria-pressed="true"><i class="sq" style="background:var(--c1)"></i>Capex</button></div>
+<svg viewBox="0 0 320 190" data-chart="cap" tabindex="0" role="img" aria-label="Revenue and capital expenditure by quarter, USD billions">
+<line x1="8" x2="312" y1="164" y2="164" stroke="var(--axis)" stroke-width="1"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="12.8" y="138.4" width="14.9" height="25.6" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="1" x="56.2" y="138.4" width="14.9" height="25.6" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="2" x="99.6" y="128.9" width="14.9" height="35.1" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="3" x="143.1" y="132.8" width="14.9" height="31.2" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="4" x="186.5" y="134.5" width="14.9" height="29.5" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="5" x="229.9" y="114.9" width="14.9" height="49.1" rx="2" fill="var(--c2)"/>
+<rect class="mk" data-i="6" x="273.3" y="72.3" width="14.9" height="91.7" rx="2" fill="var(--c2)"/>
+</g>
+<g class="s1">
+<rect class="mk" data-i="0" x="29.7" y="138.0" width="14.9" height="26.0" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="1" x="73.1" y="146.2" width="14.9" height="17.8" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="2" x="116.6" y="120.7" width="14.9" height="43.3" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="3" x="160.0" y="120.7" width="14.9" height="43.3" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="4" x="203.4" y="100.4" width="14.9" height="63.6" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="5" x="246.9" y="48.5" width="14.9" height="115.5" rx="2" fill="var(--c1)"/>
+<rect class="mk" data-i="6" x="290.3" y="40.8" width="14.9" height="123.2" rx="2" fill="var(--c1)"/>
+</g>
+<text x="29.7" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-25</tspan></text>
+<text x="73.1" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-25</tspan></text>
+<text x="116.6" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="160.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q4-25</tspan></text>
+<text x="203.4" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-26</tspan></text>
+<text x="246.9" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-26</tspan></text>
+<text x="290.3" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">$ billions. Capex = purchases of property, plant and equipment.</p>
+</div><div>
+<h3>What is left after the spending</h3>
+<div class="tw"><table><thead><tr><th>Ratio</th><th><span data-static="1">Q1-26</span></th><th><span data-static="1">Q2-26</span></th><th><span data-static="1">Q3-26</span></th><th><span data-static="1">9M-26</span></th></tr></thead><tbody><tr class=""><td>Free cash flow</td><td><span data-ref="Ratios!I19" data-fmt="bn1">−$9.1B</span></td><td><span data-ref="Ratios!J19" data-fmt="bn1">−$15.9B</span></td><td><span data-ref="Ratios!K19" data-fmt="bn1">−$10.0B</span></td><td><span data-ref="Ratios!M19" data-fmt="bn1">−$35.0B</span></td></tr><tr class=""><td>FCF margin</td><td><span data-ref="Ratios!I20" data-fmt="pct0">−193%</span></td><td><span data-ref="Ratios!J20" data-fmt="pct0">−204%</span></td><td><span data-ref="Ratios!K20" data-fmt="pct0">−68%</span></td><td><span data-ref="Ratios!M20" data-fmt="pct0">−129%</span></td></tr><tr class=""><td>Capex / revenue</td><td><span data-ref="Ratios!I26" data-fmt="x1">2.2x</span></td><td><span data-ref="Ratios!J26" data-fmt="x1">2.4x</span></td><td><span data-ref="Ratios!K26" data-fmt="x1">1.3x</span></td><td><span data-ref="Ratios!M26" data-fmt="x1">1.8x</span></td></tr><tr class=""><td>Capex / D&amp;A</td><td><span data-ref="Ratios!I27" data-fmt="x1">4.1x</span></td><td><span data-ref="Ratios!J27" data-fmt="x1">6.4x</span></td><td><span data-ref="Ratios!K27" data-fmt="x1">5.4x</span></td><td><span data-ref="Ratios!M27" data-fmt="x1">5.4x</span></td></tr></tbody></table></div>
+<p class="note">FCF = cash from operations minus purchases of PP&amp;E. D&amp;A = depreciation and amortisation.</p>
+</div></div>
+</section>
+<section class="panel"><h2>Operating metrics</h2>
+<p class="dek">Starlink consumer subscribers rose from <span data-ref="Historicals!C90" data-fmt="m1">5.0M</span> to <span data-ref="Historicals!J90" data-fmt="m1">13.6M</span>, while total launches fell from <span data-ref="Historicals!C83" data-fmt="num0">38</span> to <span data-ref="Historicals!J83" data-fmt="num0">35</span>.</p>
+<div class="two"><div>
+<h3>Starlink subscribers kept compounding</h3>
+<svg viewBox="0 0 320 190" data-chart="sub" tabindex="0" role="img" aria-label="Starlink consumer subscribers by quarter, millions">
+<line x1="8" x2="312" y1="164" y2="164" stroke="var(--axis)" stroke-width="1"/>
+<g class="s0">
+<rect class="mk" data-i="0" x="16.7" y="118.7" width="24.0" height="45.3" rx="2" fill="var(--c1)"/>
+<text x="28.7" y="113.7" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!C90" data-fmt="m1">5.0M</tspan></text>
+<rect class="mk" data-i="1" x="60.1" y="109.6" width="24.0" height="54.4" rx="2" fill="var(--c1)"/>
+<text x="72.1" y="104.6" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!D90" data-fmt="m1">6.0M</tspan></text>
+<rect class="mk" data-i="2" x="103.6" y="98.8" width="24.0" height="65.2" rx="2" fill="var(--c1)"/>
+<text x="115.6" y="93.8" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!E90" data-fmt="m1">7.2M</tspan></text>
+<rect class="mk" data-i="3" x="147.0" y="83.4" width="24.0" height="80.6" rx="2" fill="var(--c1)"/>
+<text x="159.0" y="78.4" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!F90" data-fmt="m1">8.9M</tspan></text>
+<rect class="mk" data-i="4" x="190.4" y="70.7" width="24.0" height="93.3" rx="2" fill="var(--c1)"/>
+<text x="202.4" y="65.7" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!H90" data-fmt="m1">10.3M</tspan></text>
+<rect class="mk" data-i="5" x="233.9" y="55.3" width="24.0" height="108.7" rx="2" fill="var(--c1)"/>
+<text x="245.9" y="50.3" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!I90" data-fmt="m1">12.0M</tspan></text>
+<rect class="mk" data-i="6" x="277.3" y="40.8" width="24.0" height="123.2" rx="2" fill="var(--c1)"/>
+<text x="289.3" y="35.8" text-anchor="middle" class="lbl"><tspan data-ref="Historicals!J90" data-fmt="m1">13.6M</tspan></text>
+</g>
+<text x="29.7" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-25</tspan></text>
+<text x="73.1" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-25</tspan></text>
+<text x="116.6" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-25</tspan></text>
+<text x="160.0" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q4-25</tspan></text>
+<text x="203.4" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q1-26</tspan></text>
+<text x="246.9" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q2-26</tspan></text>
+<text x="290.3" y="182" text-anchor="middle" class="ax"><tspan data-static="1">Q3-26</tspan></text>
+</svg>
+<p class="note">Millions of consumer subscribers at the period end. Q4-25 is the year-end figure read from a
+table row clipped by a page break, so it carries low confidence.</p>
+</div><div>
+<h3>Launches, payload and subscribers</h3>
+<div class="tw"><table><thead><tr><th>Metric</th><th><span data-static="1">Q3-25</span></th><th><span data-static="1">Q1-26</span></th><th><span data-static="1">Q2-26</span></th><th><span data-static="1">Q3-26</span></th></tr></thead><tbody><tr class=""><td>Total launches</td><td><span data-ref="Historicals!E83" data-fmt="num0">44</span></td><td><span data-ref="Historicals!H83" data-fmt="num0">40</span></td><td><span data-ref="Historicals!I83" data-fmt="num0">38</span></td><td><span data-ref="Historicals!J83" data-fmt="num0">35</span></td></tr><tr class=""><td>Customer launches</td><td><span data-ref="Historicals!E84" data-fmt="num0">15</span></td><td><span data-ref="Historicals!H84" data-fmt="num0">7</span></td><td><span data-ref="Historicals!I84" data-fmt="num0">10</span></td><td><span data-ref="Historicals!J84" data-fmt="num0">12</span></td></tr><tr class=""><td>Mass to orbit, metric tons</td><td><span data-ref="Historicals!E87" data-fmt="num0">525</span></td><td><span data-ref="Historicals!H87" data-fmt="num0">556</span></td><td><span data-ref="Historicals!I87" data-fmt="num0">485</span></td><td><span data-ref="Historicals!J87" data-fmt="num0">476</span></td></tr><tr class=""><td>Starlink consumer subscribers</td><td><span data-ref="Historicals!E90" data-fmt="m1">7.2M</span></td><td><span data-ref="Historicals!H90" data-fmt="m1">10.3M</span></td><td><span data-ref="Historicals!I90" data-fmt="m1">12.0M</span></td><td><span data-ref="Historicals!J90" data-fmt="m1">13.6M</span></td></tr><tr class=""><td>Starlink consumer ARPU, $/month</td><td><span data-ref="Historicals!E91" data-fmt="num0">83</span></td><td><span data-ref="Historicals!H91" data-fmt="num0">66</span></td><td><span data-ref="Historicals!I91" data-fmt="num0">66</span></td><td><span data-ref="Historicals!J91" data-fmt="num0">69</span></td></tr><tr class=""><td>Nameplate compute</td><td><span data-ref="Historicals!E92" data-fmt="gw1">0.6 GW</span></td><td><span data-ref="Historicals!H92" data-fmt="gw1">1.0 GW</span></td><td><span data-ref="Historicals!I92" data-fmt="gw1">1.4 GW</span></td><td><span data-ref="Historicals!J92" data-fmt="gw1">1.7 GW</span></td></tr></tbody></table></div>
+<p class="note">Source: Q2-26 and Q3-26 releases pp.4, 6. "Starlink Subscribers" was renamed
+"consumer subscribers" in Q3-26; it is the same series.</p>
+</div></div>
+</section>
+<section class="panel"><h2>Data gaps</h2>
+<p class="dek">Four figures on this page are derived rather than reported, and the page says so wherever they appear.</p>
+<ul><li><span data-static="1">The S-1 copy is truncated at page F-60, so the Q1-26 interim statements are missing; Q1-26 is derived as H1 minus Q2 and ties to the S-1 summary tables.</span></li><li><span data-static="1">Quarterly cash-flow detail exists only as totals: operating, investing and financing cash flow, and capex.</span></li><li><span data-static="1">Backlog is reported only at Dec-25 and Jun-26, and Starlink ARPU for Q4-25 cannot be derived from the annual figure.</span></li><li><span data-static="1">The FY25 Starlink subscriber count comes from a table row clipped by a page break, so it carries low confidence.</span></li></ul>
+</section>
 </main>
-<script type="application/json" id="chart-data">{"Q1-25": {"seg": {"si": {"n": 728, "v": "$0.7B", "ref": "Historicals!C65", "f": "bn1"}, "conn": {"n": 2474, "v": "$2.5B", "ref": "Historicals!C54", "f": "bn1"}, "space": {"n": 865, "v": "$0.9B", "ref": "Historicals!C42", "f": "bn1"}}, "rev": {"n": 4067, "v": "$4.1B", "ref": "Historicals!C5", "f": "bn1"}, "capex": {"n": 4140, "v": "$4.1B", "ref": "Historicals!C80", "f": "bn1"}, "cxr": {"n": 1.0179493484140645, "v": "1.0x", "ref": "Ratios!E26", "f": "x1"}, "opi": {"n": 27, "v": "$0.0B", "ref": "Historicals!C12", "f": "bn1"}, "opm": {"n": 0.006638800098352594, "v": "0.7%", "ref": "Ratios!E13", "f": "pct1"}, "yoy": null, "subs": {"n": 5, "v": "5.0M", "ref": "Historicals!C90", "f": "m1"}, "arpu": {"n": 86, "v": "86", "ref": "Historicals!C91", "f": "num0"}, "cons": {"n": 1492, "v": "$1.5B", "ref": "Historicals!C52", "f": "bn1"}}, "Q2-25": {"seg": {"si": {"n": 737, "v": "$0.7B", "ref": "Historicals!D65", "f": "bn1"}, "conn": {"n": 2588, "v": "$2.6B", "ref": "Historicals!D54", "f": "bn1"}, "space": {"n": 746, "v": "$0.7B", "ref": "Historicals!D42", "f": "bn1"}}, "rev": {"n": 4071, "v": "$4.1B", "ref": "Historicals!D5", "f": "bn1"}, "capex": {"n": 2825, "v": "$2.8B", "ref": "Historicals!D80", "f": "bn1"}, "cxr": {"n": 0.6939326946696144, "v": "0.7x", "ref": "Ratios!F26", "f": "x1"}, "opi": {"n": -970, "v": "\u2212$1.0B", "ref": "Historicals!D12", "f": "bn1"}, "opm": {"n": -0.23827069516089414, "v": "\u221223.8%", "ref": "Ratios!F13", "f": "pct1"}, "yoy": null, "subs": {"n": 6, "v": "6.0M", "ref": "Historicals!D90", "f": "m1"}, "arpu": {"n": 85, "v": "85", "ref": "Historicals!D91", "f": "num0"}, "cons": {"n": 1721, "v": "$1.7B", "ref": "Historicals!D52", "f": "bn1"}}, "Q3-25": {"seg": {"si": {"n": 813, "v": "$0.8B", "ref": "Historicals!E65", "f": "bn1"}, "conn": {"n": 3097, "v": "$3.1B", "ref": "Historicals!E54", "f": "bn1"}, "space": {"n": 1666, "v": "$1.7B", "ref": "Historicals!E42", "f": "bn1"}}, "rev": {"n": 5576, "v": "$5.6B", "ref": "Historicals!E5", "f": "bn1"}, "capex": {"n": 6880, "v": "$6.9B", "ref": "Historicals!E80", "f": "bn1"}, "cxr": {"n": 1.2338593974175036, "v": "1.2x", "ref": "Ratios!G26", "f": "x1"}, "opi": {"n": -273, "v": "\u2212$0.3B", "ref": "Historicals!E12", "f": "bn1"}, "opm": {"n": -0.04895982783357245, "v": "\u22124.9%", "ref": "Ratios!G13", "f": "pct1"}, "yoy": null, "subs": {"n": 7.2, "v": "7.2M", "ref": "Historicals!E90", "f": "m1"}, "arpu": {"n": 83, "v": "83", "ref": "Historicals!E91", "f": "num0"}, "cons": {"n": 1986, "v": "$2.0B", "ref": "Historicals!E52", "f": "bn1"}}, "Q4-25": {"seg": {"si": {"n": 923, "v": "$0.9B", "ref": "Historicals!F65", "f": "bn1"}, "conn": {"n": 3228, "v": "$3.2B", "ref": "Historicals!F54", "f": "bn1"}, "space": {"n": 809, "v": "$0.8B", "ref": "Historicals!F42", "f": "bn1"}}, "rev": {"n": 4960, "v": "$5.0B", "ref": "Historicals!F5", "f": "bn1"}, "capex": {"n": 6891, "v": "$6.9B", "ref": "Historicals!F80", "f": "bn1"}, "cxr": {"n": 1.3893145161290323, "v": "1.4x", "ref": "Ratios!H26", "f": "x1"}, "opi": {"n": -1373, "v": "\u2212$1.4B", "ref": "Historicals!F12", "f": "bn1"}, "opm": {"n": -0.27681451612903224, "v": "\u221227.7%", "ref": "Ratios!H13", "f": "pct1"}, "yoy": null, "subs": {"n": 8.9, "v": "8.9M", "ref": "Historicals!F90", "f": "m1"}, "arpu": null, "cons": {"n": 2010, "v": "$2.0B", "ref": "Historicals!F52", "f": "bn1"}}, "Q1-26": {"seg": {"si": {"n": 818, "v": "$0.8B", "ref": "Historicals!H65", "f": "bn1"}, "conn": {"n": 3257, "v": "$3.3B", "ref": "Historicals!H54", "f": "bn1"}, "space": {"n": 619, "v": "$0.6B", "ref": "Historicals!H42", "f": "bn1"}}, "rev": {"n": 4694, "v": "$4.7B", "ref": "Historicals!H5", "f": "bn1"}, "capex": {"n": 10107, "v": "$10.1B", "ref": "Historicals!H80", "f": "bn1"}, "cxr": {"n": 2.153174265019173, "v": "2.2x", "ref": "Ratios!I26", "f": "x1"}, "opi": {"n": -1943, "v": "\u2212$1.9B", "ref": "Historicals!H12", "f": "bn1"}, "opm": {"n": -0.41393268001704303, "v": "\u221241.4%", "ref": "Ratios!I13", "f": "pct1"}, "yoy": {"n": 0.15416769117285467, "v": "15%", "ref": "Ratios!I5", "f": "pct0"}, "subs": {"n": 10.3, "v": "10.3M", "ref": "Historicals!H90", "f": "m1"}, "arpu": {"n": 66, "v": "66", "ref": "Historicals!H91", "f": "num0"}, "cons": {"n": 2148, "v": "$2.1B", "ref": "Historicals!H52", "f": "bn1"}}, "Q2-26": {"seg": {"si": {"n": 2561, "v": "$2.6B", "ref": "Historicals!I65", "f": "bn1"}, "conn": {"n": 4291, "v": "$4.3B", "ref": "Historicals!I54", "f": "bn1"}, "space": {"n": 962, "v": "$1.0B", "ref": "Historicals!I42", "f": "bn1"}}, "rev": {"n": 7814, "v": "$7.8B", "ref": "Historicals!I5", "f": "bn1"}, "capex": {"n": 18369, "v": "$18.4B", "ref": "Historicals!I80", "f": "bn1"}, "cxr": {"n": 2.350780650115178, "v": "2.4x", "ref": "Ratios!J26", "f": "x1"}, "opi": {"n": -143, "v": "\u2212$0.1B", "ref": "Historicals!I12", "f": "bn1"}, "opm": {"n": -0.018300486306629126, "v": "\u22121.8%", "ref": "Ratios!J13", "f": "pct1"}, "yoy": {"n": 0.9194301154507492, "v": "92%", "ref": "Ratios!J5", "f": "pct0"}, "subs": {"n": 12, "v": "12.0M", "ref": "Historicals!I90", "f": "m1"}, "arpu": {"n": 66, "v": "66", "ref": "Historicals!I91", "f": "num0"}, "cons": {"n": 2485, "v": "$2.5B", "ref": "Historicals!I52", "f": "bn1"}}, "Q3-26": {"seg": {"si": {"n": 7560, "v": "$7.6B", "ref": "Historicals!J65", "f": "bn1"}, "conn": {"n": 5248, "v": "$5.2B", "ref": "Historicals!J54", "f": "bn1"}, "space": {"n": 1767, "v": "$1.8B", "ref": "Historicals!J42", "f": "bn1"}}, "rev": {"n": 14575, "v": "$14.6B", "ref": "Historicals!J5", "f": "bn1"}, "capex": {"n": 19593, "v": "$19.6B", "ref": "Historicals!J80", "f": "bn1"}, "cxr": {"n": 1.3442881646655231, "v": "1.3x", "ref": "Ratios!K26", "f": "x1"}, "opi": {"n": 2791, "v": "$2.8B", "ref": "Historicals!J12", "f": "bn1"}, "opm": {"n": 0.19149228130360205, "v": "19.1%", "ref": "Ratios!K13", "f": "pct1"}, "yoy": {"n": 1.6138809182209468, "v": "161%", "ref": "Ratios!K5", "f": "pct0"}, "subs": {"n": 13.6, "v": "13.6M", "ref": "Historicals!J90", "f": "m1"}, "arpu": {"n": 69, "v": "69", "ref": "Historicals!J91", "f": "num0"}, "cons": {"n": 3121, "v": "$3.1B", "ref": "Historicals!J52", "f": "bn1"}}}</script>
+<aside class="refs"><span class="lbl">References</span><ul><li><span data-static="1">Space Exploration Technologies Corp., Form S-1, filed 20 May 2026 — income statement, segments, balance sheet, operating metrics</span></li><li><span data-static="1">SpaceX reports second quarter 2026 results — H1-26 statements and quarterly metrics</span></li><li><span data-static="1">SpaceX reports third quarter 2026 results — Q3-26 statements, balance sheet and metrics</span></li><li><a href="spacex.xlsx">Workbook: every figure, its formula and the page of the filing it came from</a></li><li><a href="spacex.csv">The same cells as a flat file</a></li></ul></aside>
+<footer><div class="in">Rebuilt from the Form S-1 and the Q2-26 and Q3-26 results releases. Ratios are own
+calculations from the reported figures; the page citation for every figure is on the Sources sheet of
+spacex.xlsx. Not investment advice.</div></footer>
+<script type="application/json" id="chart-data">{"seg":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[29.714285714285715,73.14285714285714,116.57142857142858,160.0,203.42857142857144,246.8571428571429,290.2857142857143],"series":[{"name":"Space","color":"var(--c1)","items":[{"n":865,"v":"$0.9B","ref":"Historicals!C42","f":"bn1"},{"n":746,"v":"$0.7B","ref":"Historicals!D42","f":"bn1"},{"n":1666,"v":"$1.7B","ref":"Historicals!E42","f":"bn1"},{"n":809,"v":"$0.8B","ref":"Historicals!F42","f":"bn1"},{"n":619,"v":"$0.6B","ref":"Historicals!H42","f":"bn1"},{"n":962,"v":"$1.0B","ref":"Historicals!I42","f":"bn1"},{"n":1767,"v":"$1.8B","ref":"Historicals!J42","f":"bn1"}]},{"name":"Connectivity","color":"var(--c2)","items":[{"n":2474,"v":"$2.5B","ref":"Historicals!C54","f":"bn1"},{"n":2588,"v":"$2.6B","ref":"Historicals!D54","f":"bn1"},{"n":3097,"v":"$3.1B","ref":"Historicals!E54","f":"bn1"},{"n":3228,"v":"$3.2B","ref":"Historicals!F54","f":"bn1"},{"n":3257,"v":"$3.3B","ref":"Historicals!H54","f":"bn1"},{"n":4291,"v":"$4.3B","ref":"Historicals!I54","f":"bn1"},{"n":5248,"v":"$5.2B","ref":"Historicals!J54","f":"bn1"}]},{"name":"SI","color":"var(--c3)","items":[{"n":728,"v":"$0.7B","ref":"Historicals!C65","f":"bn1"},{"n":737,"v":"$0.7B","ref":"Historicals!D65","f":"bn1"},{"n":813,"v":"$0.8B","ref":"Historicals!E65","f":"bn1"},{"n":923,"v":"$0.9B","ref":"Historicals!F65","f":"bn1"},{"n":818,"v":"$0.8B","ref":"Historicals!H65","f":"bn1"},{"n":2561,"v":"$2.6B","ref":"Historicals!I65","f":"bn1"},{"n":7560,"v":"$7.6B","ref":"Historicals!J65","f":"bn1"}]},{"name":"Total revenue","color":null,"items":[{"n":4067,"v":"$4.1B","ref":"Historicals!C5","f":"bn1"},{"n":4071,"v":"$4.1B","ref":"Historicals!D5","f":"bn1"},{"n":5576,"v":"$5.6B","ref":"Historicals!E5","f":"bn1"},{"n":4960,"v":"$5.0B","ref":"Historicals!F5","f":"bn1"},{"n":4694,"v":"$4.7B","ref":"Historicals!H5","f":"bn1"},{"n":7814,"v":"$7.8B","ref":"Historicals!I5","f":"bn1"},{"n":14575,"v":"$14.6B","ref":"Historicals!J5","f":"bn1"}]},{"name":"Growth year on year","color":null,"items":[{"n":"n/a","v":"n/a","ref":"Ratios!E5","f":"pct0"},{"n":"n/a","v":"n/a","ref":"Ratios!F5","f":"pct0"},{"n":"n/a","v":"n/a","ref":"Ratios!G5","f":"pct0"},{"n":"n/a","v":"n/a","ref":"Ratios!H5","f":"pct0"},{"n":0.15416769117285467,"v":"15%","ref":"Ratios!I5","f":"pct0"},{"n":0.9194301154507492,"v":"92%","ref":"Ratios!J5","f":"pct0"},{"n":1.6138809182209468,"v":"161%","ref":"Ratios!K5","f":"pct0"}]}]},"mgn":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[59.42857142857143,98.28571428571428,137.14285714285714,176.0,214.85714285714286,253.71428571428572,292.57142857142856],"series":[{"name":"Revenue","color":null,"items":[{"n":4067,"v":"$4.1B","ref":"Historicals!C5","f":"bn1"},{"n":4071,"v":"$4.1B","ref":"Historicals!D5","f":"bn1"},{"n":5576,"v":"$5.6B","ref":"Historicals!E5","f":"bn1"},{"n":4960,"v":"$5.0B","ref":"Historicals!F5","f":"bn1"},{"n":4694,"v":"$4.7B","ref":"Historicals!H5","f":"bn1"},{"n":7814,"v":"$7.8B","ref":"Historicals!I5","f":"bn1"},{"n":14575,"v":"$14.6B","ref":"Historicals!J5","f":"bn1"}]},{"name":"Income (loss) from operations","color":null,"items":[{"n":27,"v":"$0.0B","ref":"Historicals!C12","f":"bn1"},{"n":-970,"v":"\u2212$1.0B","ref":"Historicals!D12","f":"bn1"},{"n":-273,"v":"\u2212$0.3B","ref":"Historicals!E12","f":"bn1"},{"n":-1373,"v":"\u2212$1.4B","ref":"Historicals!F12","f":"bn1"},{"n":-1943,"v":"\u2212$1.9B","ref":"Historicals!H12","f":"bn1"},{"n":-143,"v":"\u2212$0.1B","ref":"Historicals!I12","f":"bn1"},{"n":2791,"v":"$2.8B","ref":"Historicals!J12","f":"bn1"}]},{"name":"Operating margin","color":"var(--c1)","items":[{"n":0.006638800098352594,"v":"0.7%","ref":"Ratios!E13","f":"pct1"},{"n":-0.23827069516089414,"v":"\u221223.8%","ref":"Ratios!F13","f":"pct1"},{"n":-0.04895982783357245,"v":"\u22124.9%","ref":"Ratios!G13","f":"pct1"},{"n":-0.27681451612903224,"v":"\u221227.7%","ref":"Ratios!H13","f":"pct1"},{"n":-0.41393268001704303,"v":"\u221241.4%","ref":"Ratios!I13","f":"pct1"},{"n":-0.018300486306629126,"v":"\u22121.8%","ref":"Ratios!J13","f":"pct1"},{"n":0.19149228130360205,"v":"19.1%","ref":"Ratios!K13","f":"pct1"}]}]},"cap":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[29.714285714285715,73.14285714285714,116.57142857142858,160.0,203.42857142857144,246.8571428571429,290.2857142857143],"series":[{"name":"Revenue","color":"var(--c2)","items":[{"n":4067,"v":"$4.1B","ref":"Historicals!C5","f":"bn1"},{"n":4071,"v":"$4.1B","ref":"Historicals!D5","f":"bn1"},{"n":5576,"v":"$5.6B","ref":"Historicals!E5","f":"bn1"},{"n":4960,"v":"$5.0B","ref":"Historicals!F5","f":"bn1"},{"n":4694,"v":"$4.7B","ref":"Historicals!H5","f":"bn1"},{"n":7814,"v":"$7.8B","ref":"Historicals!I5","f":"bn1"},{"n":14575,"v":"$14.6B","ref":"Historicals!J5","f":"bn1"}]},{"name":"Capex","color":"var(--c1)","items":[{"n":4140,"v":"$4.1B","ref":"Historicals!C80","f":"bn1"},{"n":2825,"v":"$2.8B","ref":"Historicals!D80","f":"bn1"},{"n":6880,"v":"$6.9B","ref":"Historicals!E80","f":"bn1"},{"n":6891,"v":"$6.9B","ref":"Historicals!F80","f":"bn1"},{"n":10107,"v":"$10.1B","ref":"Historicals!H80","f":"bn1"},{"n":18369,"v":"$18.4B","ref":"Historicals!I80","f":"bn1"},{"n":19593,"v":"$19.6B","ref":"Historicals!J80","f":"bn1"}]},{"name":"Capex / revenue","color":null,"items":[{"n":1.0179493484140645,"v":"1.0x","ref":"Ratios!E26","f":"x1"},{"n":0.6939326946696144,"v":"0.7x","ref":"Ratios!F26","f":"x1"},{"n":1.2338593974175036,"v":"1.2x","ref":"Ratios!G26","f":"x1"},{"n":1.3893145161290323,"v":"1.4x","ref":"Ratios!H26","f":"x1"},{"n":2.153174265019173,"v":"2.2x","ref":"Ratios!I26","f":"x1"},{"n":2.350780650115178,"v":"2.4x","ref":"Ratios!J26","f":"x1"},{"n":1.3442881646655231,"v":"1.3x","ref":"Ratios!K26","f":"x1"}]},{"name":"Cash from operations","color":null,"items":[{"n":727,"v":"$0.7B","ref":"Historicals!C112","f":"bn1"},{"n":-376,"v":"\u2212$0.4B","ref":"Historicals!D112","f":"bn1"},{"n":3769,"v":"$3.8B","ref":"Historicals!E112","f":"bn1"},{"n":2665,"v":"$2.7B","ref":"Historicals!F112","f":"bn1"},{"n":1047,"v":"$1.0B","ref":"Historicals!H112","f":"bn1"},{"n":2419,"v":"$2.4B","ref":"Historicals!I112","f":"bn1"},{"n":9631,"v":"$9.6B","ref":"Historicals!J112","f":"bn1"}]}]},"sub":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[29.714285714285715,73.14285714285714,116.57142857142858,160.0,203.42857142857144,246.8571428571429,290.2857142857143],"series":[{"name":"Subscribers, period end","color":"var(--c1)","items":[{"n":5,"v":"5.0M","ref":"Historicals!C90","f":"m1"},{"n":6,"v":"6.0M","ref":"Historicals!D90","f":"m1"},{"n":7.2,"v":"7.2M","ref":"Historicals!E90","f":"m1"},{"n":8.9,"v":"8.9M","ref":"Historicals!F90","f":"m1"},{"n":10.3,"v":"10.3M","ref":"Historicals!H90","f":"m1"},{"n":12,"v":"12.0M","ref":"Historicals!I90","f":"m1"},{"n":13.6,"v":"13.6M","ref":"Historicals!J90","f":"m1"}]},{"name":"ARPU per month","color":null,"items":[{"n":86,"v":"$86","ref":"Historicals!C91","f":"usd0"},{"n":85,"v":"$85","ref":"Historicals!D91","f":"usd0"},{"n":83,"v":"$83","ref":"Historicals!E91","f":"usd0"},{"v":"n/a"},{"n":66,"v":"$66","ref":"Historicals!H91","f":"usd0"},{"n":66,"v":"$66","ref":"Historicals!I91","f":"usd0"},{"n":69,"v":"$69","ref":"Historicals!J91","f":"usd0"}]},{"name":"Consumer revenue","color":null,"items":[{"n":1492,"v":"$1.5B","ref":"Historicals!C52","f":"bn1"},{"n":1721,"v":"$1.7B","ref":"Historicals!D52","f":"bn1"},{"n":1986,"v":"$2.0B","ref":"Historicals!E52","f":"bn1"},{"n":2010,"v":"$2.0B","ref":"Historicals!F52","f":"bn1"},{"n":2148,"v":"$2.1B","ref":"Historicals!H52","f":"bn1"},{"n":2485,"v":"$2.5B","ref":"Historicals!I52","f":"bn1"},{"n":3121,"v":"$3.1B","ref":"Historicals!J52","f":"bn1"}]}]}}</script>
 <script>/* Shared behaviour for every company page (inlined into <Company>/index.html at build time):
    one tooltip used by all charts, and row + column highlight on tables. */
 (function () {
@@ -179,7 +386,11 @@ ratios are own calculations from those figures.</footer>
     tip.style.top = top + 'px';
   }
 
+  // true when the reader uses a finger, not a mouse: charts then open the tooltip on tap
+  var touch = window.matchMedia('(pointer: coarse)').matches;
+
   window.ReportTip = {
+    touch: touch,
     show: function (html, x, y) { tip.innerHTML = html; tip.style.display = 'block'; place(x, y); },
     move: place,
     hide: function () { tip.style.display = 'none'; },
@@ -205,82 +416,78 @@ ratios are own calculations from those figures.</footer>
   });
 
   window.addEventListener('scroll', function () { tip.style.display = 'none'; }, { passive: true });
+
+  // a tap anywhere outside a chart closes the tooltip, so it never stays stuck on a phone
+  document.addEventListener('pointerdown', function (ev) {
+    if (!ev.target.closest('svg[data-chart]')) tip.style.display = 'none';
+  }, { passive: true });
+
+  // on touch screens the pages say "Tap", not "Hover"
+  if (touch) document.querySelectorAll('.hovertap').forEach(function (el) { el.textContent = 'Tap'; });
 })();
 </script>
 <script>
 (function () {
-  var D = JSON.parse(document.getElementById('chart-data').textContent), RT = window.ReportTip;
-  var COLORS = {"si": "#2a78d6", "conn": "#6b6b6b", "space": "#bdbdbd", "light": "#bdbdbd"}, NAMES = {"si": "SI", "conn": "Connectivity", "space": "Space"}, hidden = {};
-  function pct(x) { return Math.round(x * 100) + '%'; }
-  function bn(x) { return (x < 0 ? '\u2212' : '') + '$' + (Math.abs(x) / 1000).toFixed(1) + 'B'; }
-  function bind(sel, content) {
-    document.querySelectorAll(sel).forEach(function (el) {
-      var box = el.parentElement;
-      function on(ev) {
-        box.classList.add('hov');
-        box.querySelectorAll('.on').forEach(function (o) { o.classList.remove('on'); });
-        el.classList.add('on');
-        var x, y;
-        if (ev && ev.clientX !== undefined && ev.type !== 'focus') { x = ev.clientX; y = ev.clientY; }
-        else { var r = el.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height * 0.3; }
-        RT.show(content(D[el.dataset.q], el.dataset.q), x, y);
-      }
-      function off() { RT.hide(); box.classList.remove('hov'); el.classList.remove('on'); }
-      el.addEventListener('pointerenter', on);
-      el.addEventListener('pointerdown', on);
-      el.addEventListener('pointermove', function (ev) { RT.move(ev.clientX, ev.clientY); });
-      el.addEventListener('pointerleave', off);
-      el.addEventListener('focus', on);
-      el.addEventListener('blur', off);
-    });
-  }
-
-  bind('#c-seg .col', function (d, q) {
-    var keys = Object.keys(NAMES).filter(function (k) { return !hidden[k]; });
-    var shown = keys.reduce(function (a, k) { return a + d.seg[k].n; }, 0), n = Object.keys(hidden).filter(function (k) { return hidden[k]; }).length;
-    var t = RT.head(q + ' revenue');
-    keys.forEach(function (k) { t += RT.row(NAMES[k] + ' <span class="mu">' + pct(d.seg[k].n / d.rev.n) + '</span>', d.seg[k].v, COLORS[k]); });
-    t += RT.row(n ? 'Segments shown' : 'Total', n ? bn(shown) : d.rev.v, null, 'sum');
-    if (d.yoy && !n) t += RT.row('Growth year on year', d.yoy.v);
-    return t;
-  });
-  var cols = [].slice.call(document.querySelectorAll('#c-seg .col'));
-  var origTot = cols.map(function (c) { return c.querySelector('.tot').innerHTML; });
-  function redraw() {
-    var keys = Object.keys(NAMES).filter(function (k) { return !hidden[k]; });
-    var totals = cols.map(function (c) { return keys.reduce(function (a, k) { return a + D[c.dataset.q].seg[k].n; }, 0); });
-    var max = Math.max.apply(null, totals) * 1.12 || 1, n = Object.keys(NAMES).length - keys.length;
-    cols.forEach(function (c, i) {
-      c.querySelector('.stack').style.height = (totals[i] / max * 100) + '%';
-      c.querySelectorAll('.seg').forEach(function (s) {
-        var v = hidden[s.dataset.seg] ? 0 : D[c.dataset.q].seg[s.dataset.seg].n;
-        s.style.height = totals[i] ? (v / totals[i] * 100) + '%' : '0';
-        s.style.borderTopWidth = v ? '2px' : '0';
+  var cfgs = JSON.parse(document.getElementById('chart-data').textContent);  // one config per chart
+  var RT = window.ReportTip;                                                 // the shared tooltip
+  document.querySelectorAll('svg[data-chart]').forEach(function (svg) {
+    var cfg = cfgs[svg.dataset.chart], hidden = {}, cross = svg.querySelector('.cross'), cur = 0;
+    svg.__hidden = hidden;                            // the legend buttons read this back
+    function nearest(e) {                             // which quarter is the pointer closest to?
+      var r = svg.getBoundingClientRect();
+      var p = (e.clientX - r.left) / r.width * cfg.W; // pointer x, converted into viewBox units
+      var best = 0, d = 1e9;
+      cfg.xs.forEach(function (x, i) { var k = Math.abs(x - p); if (k < d) { d = k; best = i; } });
+      return best;
+    }
+    function anchor(i) {                              // where to put the tooltip when there is no pointer
+      var r = svg.getBoundingClientRect();
+      return [r.left + cfg.xs[i] / cfg.W * r.width, r.top + r.height * 0.35];
+    }
+    function render(i, x, y) {
+      cur = i;
+      svg.classList.add('hov');                       // dims every mark that is not the chosen quarter
+      svg.querySelectorAll('[data-i]').forEach(function (el) {
+        el.classList.toggle('on', +el.getAttribute('data-i') === i);
       });
-      c.querySelector('.tot').innerHTML = n ? bn(totals[i]) : origTot[i];
+      if (cross) { cross.setAttribute('x1', cfg.xs[i]); cross.setAttribute('x2', cfg.xs[i]); cross.style.display = 'block'; }
+      var rows = cfg.series.map(function (s, k) {
+        return hidden[k] ? '' : RT.row(s.name, s.items[i].v, s.color);
+      }).join('');
+      RT.show(RT.head(cfg.cats[i]) + rows, x, y);
+    }
+    function show(e) { render(nearest(e), e.clientX, e.clientY); }
+    function hide() {
+      svg.classList.remove('hov'); RT.hide();
+      if (cross) cross.style.display = 'none';
+      svg.querySelectorAll('.on').forEach(function (el) { el.classList.remove('on'); });
+    }
+    svg.addEventListener('pointerdown', show);        // a tap opens the tooltip
+    svg.addEventListener('focus', function () { var a = anchor(cur); render(cur, a[0], a[1]); });
+    svg.addEventListener('blur', hide);
+    if (RT.touch) {                                   // finger: keep it open until the reader taps elsewhere
+      svg.addEventListener('click', show);
+    } else {                                          // mouse: follow the pointer and close on the way out
+      svg.addEventListener('pointermove', show);
+      svg.addEventListener('pointerleave', hide);
+    }
+    svg.addEventListener('keydown', function (e) {    // arrow keys walk the quarters
+      var i = cur, n = cfg.cats.length;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') i = Math.min(n - 1, cur + 1);
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') i = Math.max(0, cur - 1);
+      else return;
+      e.preventDefault(); var a = anchor(i); render(i, a[0], a[1]);
     });
-  }
-  document.querySelectorAll('#c-seg .leg button').forEach(function (b) {
+  });
+  document.querySelectorAll('.leg button').forEach(function (b) {            // tap a legend entry to hide a series
     b.addEventListener('click', function () {
-      var k = b.dataset.seg, shownCount = Object.keys(NAMES).filter(function (x) { return !hidden[x]; }).length;
-      if (!hidden[k] && shownCount === 1) return;
-      hidden[k] = !hidden[k];
-      b.setAttribute('aria-pressed', hidden[k] ? 'false' : 'true');
-      redraw();
+      var svg = document.querySelector('svg[data-chart="' + b.dataset.chart + '"]'), s = b.dataset.s;
+      var off = b.getAttribute('aria-pressed') === 'true';                   // pressed = shown, so a click hides it
+      b.setAttribute('aria-pressed', off ? 'false' : 'true');
+      svg.__hidden[s] = off;                          // the tooltip drops the row too
+      var g = svg.querySelector('.s' + s);
+      if (g) g.style.display = off ? 'none' : '';
     });
-  });
-
-  bind('#c-capex .rc-row', function (d, q) {
-    return RT.head(q) + RT.row('Revenue', d.rev.v, COLORS.light) + RT.row('Capex', d.capex.v, COLORS.si) +
-      RT.row('Capex / revenue', d.cxr.v, null, 'sum');
-  });
-  bind('#c-margin .mcol', function (d, q) {
-    return RT.head(q) + RT.row('Revenue', d.rev.v) + RT.row('Income from operations', d.opi.v) +
-      RT.row('Operating margin', d.opm.v, COLORS.si, 'sum');
-  });
-  bind('#c-subs .col', function (d, q) {
-    return RT.head(q + ' Starlink consumer') + RT.row('Subscribers, period end', d.subs.v, COLORS.si) +
-      RT.row('ARPU per month', d.arpu ? '$' + d.arpu.v : 'n/a') + RT.row('Consumer revenue', d.cons.v, null, 'sum');
   });
 })();
 </script>

@@ -1,0 +1,7 @@
+# Only the deliverables are pushed; everything else stays local and can be rebuilt
+# with scripts/run_all.py.
+/*
+!/.gitignore
+!/index.html
+!/alphabet.xlsx
+!/alphabet.csv

@@ -1,71 +1,141 @@
-/* Shared style for every company page (inlined into <Company>/index.html at build time). */
-:root { --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --accent:#2a78d6; --dark:#6b6b6b; --light:#bdbdbd; --hl:#f2f5fa; }
-* { box-sizing:border-box; }
-body { margin:0; background:#fff; color:var(--ink); font:14px/1.45 Helvetica, Arial, sans-serif; }
-main { max-width:860px; margin:0 auto; padding:18px 16px 32px; }
-a { color:var(--accent); }
-.back { display:inline-block; font-size:12px; color:var(--ink2); text-decoration:none; margin-bottom:6px; }
-.back:hover, .back:focus-visible { color:var(--accent); }
-h1 { font-size:21px; margin:0 0 4px; letter-spacing:-.01em; }
-h2 { font-size:15px; margin:26px 0 8px; padding-top:10px; border-top:1px solid var(--grid); }
-h3 { font-size:13px; margin:12px 0 6px; font-weight:600; }
-.meta, .note { font-size:12px; color:var(--ink2); }
-.note { margin:4px 0 0; }
-.hint { font-size:11px; color:var(--muted); margin:12px 0 0; }
+/* ---------------------------------------------------------------------------
+   Shared style for every company page (inlined into <Company>/index.html at build time).
 
-/* key figures */
-.tiles { display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:12px; margin:14px 0 4px; }
-.tile { border-top:3px solid var(--accent); padding-top:6px; }
-.tile .k { font-size:11px; color:var(--ink2); }
-.tile .v { font-size:20px; font-weight:700; line-height:1.3; }
-.tile .s { font-size:11px; color:var(--ink2); }
+   The original data report, in the colours of the lab: the company name, the filing line,
+   then one section per topic separated by a hairline, each a heading, one factual line and
+   the chart or table. No colour band, no cards, no boxes, no commentary. Each company page
+   overrides --accent after this file; that accent is the only colour on the page.
+--------------------------------------------------------------------------- */
 
-/* layout */
-.two { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-.two > div { min-width:0; }
+:root{
+  color-scheme: dark;                      /* black page: tell the browser so scrollbars and form bits match */
+  --accent:#6cc2d8;                        /* every page overrides this one token after this stylesheet */
+  --page:#0b0c0e;                          /* the page black */
+  --surface:#0b0c0e;                       /* same black, kept as a name for the pinned table column */
+  --ink:#e8e9ec; --ink2:#a0a4ac; --muted:#777b84;
+  --grid:#23252a;                          /* hairlines between table rows and between sections */
+  --axis:#3a3d44;                          /* chart axes, a step brighter than the hairlines */
+  --hl:rgba(255,255,255,.055);             /* the row and column highlight on a table */
+  /* series colours for charts, chosen to read on black */
+  --c1:#6b9ef0; --c2:#45b894; --c3:#dba05a; --c4:#ab8ae0; --c5:#e0788f;
+  --dark:#9a9a9a; --light:#5c5c5c;
+}
 
-/* legends (click to hide a series) */
-.leg { display:flex; flex-wrap:wrap; gap:6px; margin:2px 0 6px; }
-.leg button { display:inline-flex; align-items:center; gap:6px; font:11px Helvetica, Arial, sans-serif; color:var(--ink);
-  background:#fff; border:1px solid var(--grid); border-radius:12px; padding:2px 9px; cursor:pointer; }
-.leg button:hover, .leg button:focus-visible { border-color:var(--ink); outline:none; }
-.leg button[aria-pressed="false"] { color:var(--muted); text-decoration:line-through; }
-.leg button[aria-pressed="false"] i { opacity:.3; }
-.leg i { width:10px; height:3px; border-radius:2px; display:inline-block; }
-.leg i.sq { height:10px; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);
+  font:15px/1.55 "DM Sans",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+h1,h2,.kpi .v{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+a{color:inherit}
+.in{max-width:980px;margin:0 auto;
+  padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
 
-/* tooltip */
-.tip { position:fixed; z-index:10; display:none; pointer-events:none; background:#fff; border:1px solid var(--muted); border-radius:6px;
-  padding:6px 9px; font:12px/1.5 Helvetica, Arial, sans-serif; color:var(--ink); min-width:170px; }
-.tip .th { font-weight:700; margin-bottom:2px; }
-.tip div i { display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:6px; }
-.tip b { float:right; margin-left:14px; font-variant-numeric:tabular-nums; }
-.tip .sum { border-top:1px solid var(--grid); margin-top:3px; padding-top:3px; font-weight:700; }
-.tip .mu { color:var(--muted); font-weight:400; }
+/* ---- header: a thin accent rule, the back link, the company, the filing line ---- */
+/* the accent shows as a 4px line across the top of the page and nowhere else up here */
+.band{border-top:4px solid var(--accent);padding:6px 0 4px}
+.back{display:inline-flex;align-items:center;min-height:44px;color:var(--ink2);
+  text-decoration:none;font-size:13px}
+.back:hover,.back:focus-visible{color:var(--accent)}
+h1{margin:6px 0 0;color:#fff;font-size:26px;line-height:1.15}
+.meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
 
-/* charts: SVG and HTML charts share the hover behaviour (fade the others, bold the active label) */
-svg { width:100%; height:auto; display:block; }
-svg text { font-family:Helvetica, Arial, sans-serif; paint-order:stroke; stroke:#fff; stroke-width:3px; stroke-linejoin:round; }
-.lbl { font-size:11px; fill:var(--ink); } .ax { font-size:10.5px; fill:var(--muted); } .ax2 { font-size:10.5px; fill:var(--ink2); }
-svg[data-chart] { cursor:crosshair; touch-action:pan-y; outline:none; }
-svg[data-chart]:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
-svg.hov .mk { opacity:.35; } svg.hov .mk.on { opacity:1; }
-.mk { transition:opacity .12s; }
-.dot { transition:r .12s; } .dot.on { r:5.2; }
-.cross { display:none; pointer-events:none; }
+/* ---- one flat section per topic, separated by a hairline ---- */
+.panel{border-top:1px solid var(--grid);padding-top:14px;margin-top:28px}
+h2{margin:0 0 6px;font-size:19px;line-height:1.2;color:#fff;border:0;padding:0}
+/* the one factual line under the heading: the same job the old <h3> headline did */
+.dek{margin:0 0 12px;font-size:13.5px;font-weight:700;color:var(--ink)}
+h3{font-size:13px;margin:16px 0 6px;font-weight:700}
+.note{font-size:12.5px;color:var(--ink2);margin:4px 0 0}
+.hint{font-size:12px;color:var(--muted);margin:10px 0 0}
 
-/* tables: hover highlights the row and the column */
-.tw { overflow-x:auto; }
-table { width:100%; border-collapse:collapse; font-size:12.5px; font-variant-numeric:tabular-nums; }
-th { text-align:right; font-weight:600; color:var(--ink2); border-bottom:1px solid var(--muted); padding:4px 6px; white-space:nowrap; }
-td { text-align:right; padding:4px 6px; border-bottom:1px solid var(--grid); white-space:nowrap; }
-th:first-child, td:first-child { text-align:left; }
-td:first-child { white-space:normal; min-width:150px; }
-tr.b td { font-weight:700; }
-tr.sub td { font-weight:600; color:var(--ink2); padding-top:9px; border-bottom:none; }
-tbody tr:not(.sub):hover td, td.xcol { background:var(--hl); }
-.basis { color:var(--muted); font-size:11px; font-weight:400; }
+/* ---- references: quiet and small, never a section of their own ---- */
+.refs{max-width:980px;margin:34px auto 0;border-top:1px solid var(--grid);
+  padding:14px max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
+.refs .lbl{display:block;margin:0 0 2px;font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.refs ul{list-style:none;margin:0;padding:0}
+.refs li{font-size:12.5px;color:var(--muted)}
+/* block, not flex: a reference line may hold several spans and must stay one sentence */
+.refs a{display:block;min-height:40px;padding:10px 0;color:var(--ink2);text-decoration:none}
+.refs a:hover,.refs a:focus-visible{color:var(--accent);text-decoration:underline}
 
-ul { margin:4px 0; padding-left:18px; } li { margin-bottom:3px; }
-footer { margin-top:22px; padding-top:10px; border-top:1px solid var(--grid); font-size:11px; color:var(--ink2); }
-@media (max-width:640px) { .two { grid-template-columns:1fr; } h1 { font-size:19px; } .tile .v { font-size:18px; } }
+/* ---- layout helpers ---- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.two>div{min-width:0}
+
+/* ---- legends (tap or click an entry to hide that series) ---- */
+.leg{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px}
+.leg button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;
+  font:12.5px/1 "DM Sans",system-ui,Helvetica,Arial,sans-serif;color:var(--ink);
+  background:transparent;border:1px solid var(--grid);border-radius:999px;cursor:pointer}
+.leg button:hover,.leg button:focus-visible{border-color:var(--accent);outline:none}
+.leg button[aria-pressed="false"]{color:var(--muted);text-decoration:line-through}
+.leg button[aria-pressed="false"] i{opacity:.3}
+.leg i{width:10px;height:3px;border-radius:2px;display:inline-block}
+.leg i.sq{height:10px}
+
+/* ---- tooltip: the page colours, never a white box on a black page ---- */
+.tip{position:fixed;z-index:10;display:none;pointer-events:none;
+  background:#14161b;border:1px solid var(--axis);border-radius:8px;
+  box-shadow:0 8px 26px rgba(0,0,0,.6);padding:8px 11px;
+  font:12.5px/1.5 "DM Sans",system-ui,Helvetica,Arial,sans-serif;color:var(--ink);min-width:170px}
+.tip .th{font-weight:700;margin-bottom:2px}
+.tip div i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+.tip b{float:right;margin-left:14px;font-variant-numeric:tabular-nums}
+.tip .sum{border-top:1px solid var(--axis);margin-top:3px;padding-top:3px;font-weight:700}
+.tip .mu{color:var(--muted);font-weight:400}
+
+/* ---- charts: SVG drawn by the build script; colours come from the tokens above ---- */
+svg{width:100%;height:auto;display:block}
+/* A chart is drawn once at a fixed viewBox, so its labels grow with the box it is stretched into.
+   Inside .two a chart lands near 460px and its 11.5-unit text reads at about 16px. A chart that
+   fills the whole column would be stretched to ~940px and the same text would come out at 30px,
+   which is why the full-width charts are capped at the width their neighbours are drawn at. */
+.panel>svg[data-chart]{max-width:520px}
+/* the halo behind a chart label is the page black, so a label crossing a bar stays readable */
+svg text{font-family:"DM Sans",system-ui,Helvetica,Arial,sans-serif;paint-order:stroke;
+  stroke:var(--page);stroke-width:3px;stroke-linejoin:round}
+.lbl{font-size:11.5px;fill:var(--ink)}
+.ax{font-size:11px;fill:var(--muted)}
+.ax2{font-size:11px;fill:var(--ink2)}
+svg[data-chart]{cursor:crosshair;touch-action:pan-y;outline:none}   /* pan-y: a finger still scrolls the page */
+svg[data-chart]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+svg.hov .mk{opacity:.35}
+svg.hov .mk.on{opacity:1}
+.mk{transition:opacity .12s}
+.dot{transition:r .12s}
+.dot.on{r:5.2}
+.cross{display:none;pointer-events:none}
+
+/* ---- tables: hovering a cell highlights its row and its column ---- */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+th{text-align:right;font-weight:600;color:var(--muted);font-size:11.5px;text-transform:uppercase;
+  letter-spacing:.04em;border-bottom:1px solid var(--axis);padding:8px;white-space:nowrap}
+td{text-align:right;padding:7px 8px;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--page);padding-left:0}
+td:first-child{white-space:normal;min-width:150px}
+tr.b td{font-weight:700;color:#fff}
+tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
+tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+.basis{color:var(--muted);font-size:11.5px;font-weight:400}
+
+ul{margin:4px 0;padding-left:18px}
+li{margin-bottom:3px}
+
+footer{margin-top:34px;border-top:1px solid var(--grid);color:var(--muted);font-size:12.5px}
+footer .in{padding-top:16px;padding-bottom:22px}
+/* padding + negative margin: a finger-sized tap target that still looks like inline text */
+footer a{color:var(--ink2);display:inline-block;padding:12px 4px;margin:-12px -4px}
+footer a:hover{color:var(--accent)}
+
+@media (max-width:720px){
+  .kpis{grid-template-columns:1fr 1fr;gap:12px 14px}
+  h2{font-size:21px}
+}
+@media (max-width:640px){
+  .two,.gloss{grid-template-columns:1fr;gap:18px}
+  th,td{padding:7px 6px;font-size:12.5px}
+  th{white-space:normal}
+  td:first-child{min-width:120px}
+}

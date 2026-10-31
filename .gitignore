@@ -2,6 +2,9 @@
 # The pattern covers every company folder that follows the <Company>/filings/ convention.
 */filings/*transcript*
 
+# Screenshots from tools/check_phone.py: proof that a page renders, not part of the deliverable
+tools/shots/
+
 # Python and Excel leftovers
 __pycache__/
 *.pyc

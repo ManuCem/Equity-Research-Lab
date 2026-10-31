@@ -16,7 +16,11 @@
     tip.style.top = top + 'px';
   }
 
+  // true when the reader uses a finger, not a mouse: charts then open the tooltip on tap
+  var touch = window.matchMedia('(pointer: coarse)').matches;
+
   window.ReportTip = {
+    touch: touch,
     show: function (html, x, y) { tip.innerHTML = html; tip.style.display = 'block'; place(x, y); },
     move: place,
     hide: function () { tip.style.display = 'none'; },
@@ -42,4 +46,12 @@
   });
 
   window.addEventListener('scroll', function () { tip.style.display = 'none'; }, { passive: true });
+
+  // a tap anywhere outside a chart closes the tooltip, so it never stays stuck on a phone
+  document.addEventListener('pointerdown', function (ev) {
+    if (!ev.target.closest('svg[data-chart]')) tip.style.display = 'none';
+  }, { passive: true });
+
+  // on touch screens the pages say "Tap", not "Hover"
+  if (touch) document.querySelectorAll('.hovertap').forEach(function (el) { el.textContent = 'Tap'; });
 })();
