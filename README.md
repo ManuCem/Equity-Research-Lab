@@ -7,30 +7,31 @@ every figure traced back to the page it came from.
 
 ### [Anthropic](https://manucem.github.io/Equity-Research-Lab/Anthropic/)
 
-FY2023 to FY2025, the first halves of 2025 and 2026, and quarterly figures to Q2 2026, from the
-Form S-1 filed 26 October 2026.
+FY2023 to FY2025, the first nine months of 2025 and 2026, and quarterly figures to Q3 2026, from the
+Form S-1/A (Amendment No. 1) filed 2 November 2026.
 
-| | FY2025 | First half 2025 | First half 2026 |
+| | FY2025 | First nine months 2025 | First nine months 2026 |
 |---|---|---|---|
-| Revenue | $4,585m | $1,163m | $16,286m |
-| Gross margin | 40% | 12% | **85%** |
-| Operating margin | −176% | −184% | **−4%** |
-| Adjusted operating margin (non-GAAP) | −106% | −159% | **10%** |
-| Compute and infrastructure / revenue | 160% | 201% | **55%** |
-| Free cash flow | −$2,768m | −$1,531m | **+$3,447m** |
+| Revenue | $4,585m | $2,545m | $33,242m |
+| Gross margin | 40% | 29% | **86%** |
+| Operating margin | −176% | −205% | **−4%** |
+| Adjusted operating margin (non-GAAP) | −106% | −123% | **12%** |
+| Compute and infrastructure / revenue | 160% | 172% | **57%** |
+| Free cash flow | −$2,768m | −$2,135m | **+$5,644m** |
 
-- Quarterly revenue went from **$376m** in Q1 2025 to **$11,555m** in Q2 2026, and revenue for the
-  last twelve months to June 2026 was **$19,708m**.
+- Quarterly revenue went from **$376m** in Q1 2025 to **$16,956m** in Q3 2026, and revenue for the
+  last twelve months to September 2026 was **$35,282m**.
 - Compute and infrastructure cost fell from **251%** of revenue in Q1 2025 to **48%** in Q2 2026,
-  which is what turns the gross margin from 12% to 85%.
-- Operating income turned positive in Q2 2026, at an 8% margin.
-- The first-half 2026 net loss of **$80.7B** comes mostly from a **$72.4B** fair-value change on
+  then rose to **58%** in Q3 2026, which included $5.0B of compute bought under short-term commitments.
+- The quarterly operating margin was 8% in Q2 2026 and −3% in Q3 2026.
+- The nine-month 2026 net loss of **$104.0B** comes mostly from a **$94.3B** fair-value change on
   convertible notes, not from operations.
-- Purchase commitments at June 2026 were **$265.6B**, and signed leases not yet started a further
-  **$321.4B**, against cash and short-term investments of **$131.7B**.
+- Committed compute spend, as of and after September 2026, is about **$895.4B**, 25.4 times the
+  last twelve months' revenue; **$69.8B** of it is due in the next twelve months, against cash and
+  short-term investments of **$131.8B**.
 
-**Conclusion:** the business reached operating breakeven in Q2 2026, but the commitments it has
-signed are several times the cash it holds, and the S-1 gives no IPO price range.
+**Conclusion:** the nine-month operating margin is close to breakeven, but committed compute spend
+is about 25 times a year's revenue, and the amendment still gives no IPO price range.
 
 ### [Alphabet](https://manucem.github.io/Equity-Research-Lab/Alphabet/)
 
