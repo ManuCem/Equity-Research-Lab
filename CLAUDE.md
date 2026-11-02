@@ -83,6 +83,10 @@ A new company gets a tone of its own, close to its brand colour, bright enough t
 1. **Header:** the accent rule, back link "← All companies", **the company name on its own** as the
    title ("Anthropic", "SpaceX") — not a question and not a sentence — then one small line giving
    the filing, its date, the units and the workbook. Three lines in all.
+   **"Last update · 2 Nov 2026"** sits small (11px, muted) in the top right corner, on the back link's
+   line (`.updated` in `report.css`). The date is fixed text in a `<span data-static="1">`, set by me
+   for each company (the day its data was last updated), not the push date. Change it only when the
+   company's data is updated, or when I give a new date.
 2. **Straight into the data.** No key figures, no introduction.
 3. **One flat section per topic**, separated by a hairline, each with:
    1. **A plain section name as the heading** — "Revenue", "Balance sheet", "Operating metrics".
@@ -112,6 +116,31 @@ half the last label.
 **Keep what already works:** the data-cell tagging (`data-cell`, `data-static`) that lets
 `compare_report.py` / `verify_report.py` check every figure against the workbook, the clickable
 legends, the row-and-column table highlight, and the page citations.
+
+## Workbooks: the finance-course layout (Anthropic since 2 Nov 2026)
+
+The workbook is laid out like my finance course files (`finances-examples/`, local only, git-ignored):
+**no Sources sheet, no Checks sheet, no page-citation column** — I do not want to see data sources or
+checks, in the workbook or on the page.
+
+- First sheet `Case`: what the company is, the periods, the colour code, and what each sheet holds.
+- Then one sheet per part of the finances, numbered: `1 Income statement`, `2 Quarters`,
+  `3 Balance sheet`, `4 Working capital`, `5 Cash flow`, `6 Solvency`, `7 Customers`,
+  `8 Commitments`, `9 Share capital`.
+- Each sheet: title in bold orange (`FF5A00`) in A1, a grey note in A2, an orange header row
+  (white bold) "Concept | periods | (empty) | Formula" in row 4, panes frozen at B5, Arial 10.
+- Blocks open with a beige (`F3E6DA`) **"STEP n - …"** row. Green numbers = reported by the company,
+  black = calculated with a live formula, **bold on yellow** = the key result of the step.
+- Costs are negatives in brackets (`#,##0;\(#,##0\);\-`), so each result is the sum of the lines above.
+- The **Formula** column says in words how each calculated line is made ("EBIT / Revenue").
+  Reported lines leave it empty. The Spanish term goes in brackets where the course uses one.
+- `anthropic.csv` is the same content in one long table: sheet, step, concept, period, value,
+  unit, formula.
+
+The company page follows the workbook: one section per sheet in the same order, each sheet's
+blocks as a table (STEP rows on `--step`, key rows on `--key`, a grey italic Formula column), with
+the charts at the top of their section. Under the last section there are only two quiet links,
+the `.xlsx` and the `.csv`. SpaceX and Alphabet still use the older layout until I ask.
 
 ## Homepage (`index.html`, always keep this structure)
 
@@ -158,6 +187,13 @@ page" links, or a yellow `<mark>` highlighter.
 - `.env` files or API keys
 - Real account data, trade logs, or balances
 - Any credentials or secrets
+- Any code: build scripts, tools and helpers stay on this machine. Each company pushes only its
+  `index.html`, workbook (`.xlsx`) and flat table (`.csv`), allow-listed in its own `.gitignore`.
+
+## Git: never push or pull
+**Do not run `git push` or `git pull`** (nor `git fetch`, `git merge` from the remote, or a forced
+push). I sync with GitHub myself. Change files, check them, and at most commit locally when I ask;
+then stop and tell me it is ready to push.
 
 ## Philosophy
 Expect to try things that don't work, refactor, and document what you learn. Clarity over brevity.

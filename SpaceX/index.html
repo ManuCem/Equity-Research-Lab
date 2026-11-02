@@ -25,6 +25,9 @@
   /* series colours for charts, chosen to read on black */
   --c1:#6b9ef0; --c2:#45b894; --c3:#dba05a; --c4:#ab8ae0; --c5:#e0788f;
   --dark:#9a9a9a; --light:#5c5c5c;
+  /* tables laid out like the finance course workbooks: beige STEP rows and yellow key results,
+     dimmed for a black page; solid colours so the pinned first column stays opaque */
+  --step:#1d1b1a; --key:#22200c;
 }
 
 *{box-sizing:border-box}
@@ -42,6 +45,10 @@ a{color:inherit}
 .back{display:inline-flex;align-items:center;min-height:44px;color:var(--ink2);
   text-decoration:none;font-size:13px}
 .back:hover,.back:focus-visible{color:var(--accent)}
+/* "Last update": small and quiet in the top right corner, on the back link's line */
+.band .in{position:relative}
+.updated{position:absolute;top:0;right:max(18px,env(safe-area-inset-right));min-height:44px;
+  display:flex;align-items:center;font-size:11px;color:var(--muted);white-space:nowrap}
 h1{margin:6px 0 2px;color:#fff;font-size:clamp(32px,4.4vw,42px);line-height:1.1}   /* the company name carries the page, and it is what the homepage card preview shows */
 .meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
 
@@ -124,6 +131,12 @@ td:first-child{white-space:normal;min-width:150px}
 tr.b td{font-weight:700;color:#fff}
 tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
 tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+/* course layout: a STEP row opens each block, the key result of the step is bold on dim yellow,
+   and the last column says in words how each calculated line is made */
+tr.step td{color:var(--ink);background:var(--step);padding-top:9px;padding-bottom:9px}
+tr.k td{font-weight:700;color:#fff;background:var(--key)}
+th.fx,td.fx{text-align:left;color:var(--muted);font-size:12px;white-space:normal;min-width:160px}
+td.fx,tr.k td.fx,tr.b td.fx{font-style:italic;font-weight:400;color:var(--muted)}   /* the formula stays quiet, even on a key row */
 .basis{color:var(--muted);font-size:11.5px;font-weight:400}
 
 ul{margin:4px 0;padding-left:18px}
@@ -145,11 +158,11 @@ footer a:hover{color:var(--accent)}
   th{white-space:normal}
   td:first-child{min-width:120px}
 }
-
 :root{--accent:#82b6f8}</style>
 </head><body>
 <header class="band"><div class="in">
 <a class="back" href="../index.html">&larr; All companies</a>
+<span class="updated">Last update &middot;&nbsp;<span data-static="1">28 Oct 2026</span></span>
 <h1>SpaceX</h1>
 <p class="meta">Space Exploration Technologies Corp. &middot; NASDAQ: SPCX. Form S-1 filed
 <span data-static="1">20 May 2026</span>, plus the Q2-26 and Q3-26 results releases. USD, GAAP unless marked non-GAAP.
@@ -357,10 +370,6 @@ table row clipped by a page break, so it carries low confidence.</p>
 <p class="note">Source: Q2-26 and Q3-26 releases pp.4, 6. "Starlink Subscribers" was renamed
 "consumer subscribers" in Q3-26; it is the same series.</p>
 </div></div>
-</section>
-<section class="panel"><h2>Data gaps</h2>
-<p class="dek">Four figures on this page are derived rather than reported, and the page says so wherever they appear.</p>
-<ul><li><span data-static="1">The S-1 copy is truncated at page F-60, so the Q1-26 interim statements are missing; Q1-26 is derived as H1 minus Q2 and ties to the S-1 summary tables.</span></li><li><span data-static="1">Quarterly cash-flow detail exists only as totals: operating, investing and financing cash flow, and capex.</span></li><li><span data-static="1">Backlog is reported only at Dec-25 and Jun-26, and Starlink ARPU for Q4-25 cannot be derived from the annual figure.</span></li><li><span data-static="1">The FY25 Starlink subscriber count comes from a table row clipped by a page break, so it carries low confidence.</span></li></ul>
 </section>
 </main>
 <aside class="refs"><span class="lbl">References</span><ul><li><span data-static="1">Space Exploration Technologies Corp., Form S-1, filed 20 May 2026 — income statement, segments, balance sheet, operating metrics</span></li><li><span data-static="1">SpaceX reports second quarter 2026 results — H1-26 statements and quarterly metrics</span></li><li><span data-static="1">SpaceX reports third quarter 2026 results — Q3-26 statements, balance sheet and metrics</span></li><li><a href="spacex.xlsx">Workbook: every figure, its formula and the page of the filing it came from</a></li><li><a href="spacex.csv">The same cells as a flat file</a></li></ul></aside>

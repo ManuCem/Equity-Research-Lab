@@ -31,7 +31,7 @@ Form S-1/A (Amendment No. 1) filed 2 November 2026.
   short-term investments of **$131.8B**.
 
 **Conclusion:** the nine-month operating margin is close to breakeven, but committed compute spend
-is about 25 times a year's revenue, and the amendment still gives no IPO price range.
+is about 25 times a year's revenue.
 
 ### [Alphabet](https://manucem.github.io/Equity-Research-Lab/Alphabet/)
 

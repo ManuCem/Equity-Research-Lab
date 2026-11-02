@@ -25,6 +25,9 @@
   /* series colours for charts, chosen to read on black */
   --c1:#6b9ef0; --c2:#45b894; --c3:#dba05a; --c4:#ab8ae0; --c5:#e0788f;
   --dark:#9a9a9a; --light:#5c5c5c;
+  /* tables laid out like the finance course workbooks: beige STEP rows and yellow key results,
+     dimmed for a black page; solid colours so the pinned first column stays opaque */
+  --step:#1d1b1a; --key:#22200c;
 }
 
 *{box-sizing:border-box}
@@ -42,6 +45,10 @@ a{color:inherit}
 .back{display:inline-flex;align-items:center;min-height:44px;color:var(--ink2);
   text-decoration:none;font-size:13px}
 .back:hover,.back:focus-visible{color:var(--accent)}
+/* "Last update": small and quiet in the top right corner, on the back link's line */
+.band .in{position:relative}
+.updated{position:absolute;top:0;right:max(18px,env(safe-area-inset-right));min-height:44px;
+  display:flex;align-items:center;font-size:11px;color:var(--muted);white-space:nowrap}
 h1{margin:6px 0 2px;color:#fff;font-size:clamp(32px,4.4vw,42px);line-height:1.1}   /* the company name carries the page, and it is what the homepage card preview shows */
 .meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
 
@@ -124,6 +131,12 @@ td:first-child{white-space:normal;min-width:150px}
 tr.b td{font-weight:700;color:#fff}
 tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
 tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+/* course layout: a STEP row opens each block, the key result of the step is bold on dim yellow,
+   and the last column says in words how each calculated line is made */
+tr.step td{color:var(--ink);background:var(--step);padding-top:9px;padding-bottom:9px}
+tr.k td{font-weight:700;color:#fff;background:var(--key)}
+th.fx,td.fx{text-align:left;color:var(--muted);font-size:12px;white-space:normal;min-width:160px}
+td.fx,tr.k td.fx,tr.b td.fx{font-style:italic;font-weight:400;color:var(--muted)}   /* the formula stays quiet, even on a key row */
 .basis{color:var(--muted);font-size:11.5px;font-weight:400}
 
 ul{margin:4px 0;padding-left:18px}
@@ -145,11 +158,11 @@ footer a:hover{color:var(--accent)}
   th{white-space:normal}
   td:first-child{min-width:120px}
 }
-
 :root{--accent:#f2c14e}</style>
 </head><body>
 <header class="band"><div class="in">
 <a class="back" href="../index.html">&larr; All companies</a>
+<span class="updated">Last update &middot;&nbsp;<span data-static="1">31 Oct 2026</span></span>
 <h1>Alphabet</h1>
 <p class="meta">Alphabet Inc. &middot; NASDAQ: GOOGL, GOOG. Third quarter 2026 results, released
 <span data-static="1">28 October 2026</span>, with the Q3 2025 release and the Q3 2025 Form 10-Q for the comparatives.
@@ -382,10 +395,6 @@ day after the release. <span class="hovertap">Hover</span> the line for any day'
 Finance daily price series fetched by <code>scripts/fetch_prices.py</code>, not from any Alphabet
 filing, and they are kept on their own sheet of the workbook for that reason.</p>
 </div></div>
-</section>
-<section class="panel"><h2>Data gaps</h2>
-<p class="dek">Two quarterly revenue figures on this page are derived rather than reported, and two 2025 figures are shown as the 2026 release restated them.</p>
-<ul><li><span data-static="1">The Form 10-Q for the September 2026 quarter was not yet filed when this page was built, so the 2026 column has no segment expense split, no revenue backlog, no paid-click or cost-per-click metrics and no TAC breakdown; those lines stop at Q3-25.</span></li><li><span data-static="1">The releases print the nine months and two of its three quarters, so Q1-25 and Q1-26 revenue are derived by subtraction. Both rebuild the reported nine-month totals exactly.</span></li><li><span data-static="1">The December quarters are not derivable: no full-year revenue figure appears in any of the three documents, so Q4-24 and Q4-25 are shown only where the free cash flow reconciliation reports them.</span></li><li><span data-static="1">The 2026 release restates two 2025 figures: nine-month buybacks move from $40.2B to $39.8B, and performance fees are folded into "other" within other income. This page uses the restated figures and says so where they appear.</span></li><li><span data-static="1">Capital expenditure guidance beyond the quarter is given only as commentary, not as a filed number, so no forward capex figure appears on this page.</span></li></ul>
 </section>
 </main>
 <aside class="refs"><span class="lbl">References</span><ul><li><span data-static="1">Alphabet Inc., Alphabet Announces Third Quarter 2026 Results, 28 October 2026 — income statement, balance sheet, cash flow, segments, other income, free cash flow reconciliation</span></li><li><span data-static="1">Alphabet Inc., Alphabet Announces Third Quarter 2025 Results, 29 October 2025 — the comparative quarter and the four quarters to Q3-25</span></li><li><span data-static="1">Alphabet Inc., Form 10-Q for the quarter ended 30 September 2025 — segment detail, property and equipment, TAC, monetization metrics, revenue backlog</span></li><li><span data-static="1">Alphabet Inc., Q3 2026 earnings call, prepared remarks — product and business commentary</span></li><li><span data-static="1">Yahoo Finance daily price series for GOOGL — the share price figures, which are market data and appear in no filing</span></li><li><a href="alphabet.xlsx">Workbook: every figure, the ratio formulas, and the page of the filing each figure came from</a></li><li><a href="alphabet.csv">The same figures as a flat file, one row per figure with its citation</a></li></ul></aside>

@@ -9,3 +9,6 @@ tools/shots/
 __pycache__/
 *.pyc
 ~$*.xlsx
+
+# Course workbooks used as a style reference: local only, never published
+finances-examples/
