@@ -140,7 +140,23 @@ checks, in the workbook or on the page.
 The company page follows the workbook: one section per sheet in the same order, each sheet's
 blocks as a table (STEP rows on `--step`, key rows on `--key`, a grey italic Formula column), with
 the charts at the top of their section. Under the last section there are only two quiet links,
-the `.xlsx` and the `.csv`. SpaceX and Alphabet still use the older layout until I ask.
+the `.xlsx` and the `.csv`. All three companies use this layout (SpaceX and Alphabet since 3 Nov 2026).
+
+For SpaceX and Alphabet, `build_model.py` writes the model to `data/historicals.xlsx` and
+`data/historicals_map.json`; `build_course.py` lays it out, unchanged, as `<company>.xlsx` and `.csv`, with
+the shared local tool `tools/course_layout.py` (git-ignored), and stops if any figure differs from the model.
+Their reported signs are kept as filed (costs positive), since the data must not change.
+
+**I take my own notes inside the workbooks — never delete them.** The `.xlsx` files are not only build
+output: I write notes in them (extra cells, comments, text beside the tables, extra sheets). When I ask
+for a change to a workbook:
+- **Before** rebuilding or overwriting it, open the current file and find everything I added that the
+  build does not write (any cell outside the generated layout, cell comments, sheets the build does not make).
+- Keep all of it: carry my notes over into the new file in the same place (same sheet, same cells), or, if
+  the layout moved, next to the same line, and tell me exactly where each note ended up.
+- If a note cannot be kept where it was, stop and ask me before going on. Never drop a note silently.
+- Before any rebuild, keep a dated backup copy of the workbook in the company's `data/` folder
+  (git-ignored), e.g. `data/backup/spacex_2026-11-03.xlsx`.
 
 ## Homepage (`index.html`, always keep this structure)
 

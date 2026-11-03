@@ -15,7 +15,8 @@
   --ink:#e8e9ec; --ink2:#a0a4ac; --muted:#777b84;
   --grid:#23252a;                          /* hairlines between table rows and between sections */
   --axis:#3a3d44;                          /* chart axes, a step brighter than the hairlines */
-  --hl:rgba(255,255,255,.055);             /* the row and column highlight on a table */
+  --hl:#18191c;                            /* the row and column highlight on a table: solid, so the pinned
+                                              first column never lets the scrolled numbers show through it */
   /* series colours for charts, chosen to read on black */
   --c1:#6b9ef0; --c2:#45b894; --c3:#dba05a; --c4:#ab8ae0; --c5:#e0788f;
   --dark:#9a9a9a; --light:#5c5c5c;
@@ -128,6 +129,10 @@ tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
 /* course layout: a STEP row opens each block, the key result of the step is bold on dim yellow,
    and the last column says in words how each calculated line is made */
 tr.step td{color:var(--ink);background:var(--step);padding-top:9px;padding-bottom:9px}
+/* a STEP row is one cell across the whole table: pinning that cell cut its title when the table scrolled,
+   so the cell scrolls and only its title stays pinned at the left edge */
+tr.step td{position:static}
+tr.step td>span{position:sticky;left:0;display:inline-block;background:var(--step);padding-right:8px}
 tr.k td{font-weight:700;color:#fff;background:var(--key)}
 th.fx,td.fx{text-align:left;color:var(--muted);font-size:12px;white-space:normal;min-width:160px}
 td.fx,tr.k td.fx,tr.b td.fx{font-style:italic;font-weight:400;color:var(--muted)}   /* the formula stays quiet, even on a key row */

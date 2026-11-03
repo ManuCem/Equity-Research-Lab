@@ -48,7 +48,7 @@ function measure(doc, win) {
   var scrollers = [];
   doc.querySelectorAll('.tw').forEach(function (t) {
     var tbl = t.querySelector('table');
-    var first = tbl ? tbl.querySelector('tbody td') : null;
+    var first = tbl ? tbl.querySelector('tbody tr:not(.step) td') : null;   // a STEP row pins its title, not its cell
     scrollers.push({
       scrolls: t.scrollWidth > t.clientWidth,
       sticky: first ? win.getComputedStyle(first).position : 'none'

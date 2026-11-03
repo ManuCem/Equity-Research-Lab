@@ -12,3 +12,6 @@ __pycache__/
 
 # Course workbooks used as a style reference: local only, never published
 finances-examples/
+
+# Local build helper shared by the company scripts: code stays on this machine
+tools/course_layout.py
