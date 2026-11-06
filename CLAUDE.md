@@ -87,6 +87,14 @@ A new company gets a tone of its own, close to its brand colour, bright enough t
    line (`.updated` in `report.css`). The date is fixed text in a `<span data-static="1">`, set by me
    for each company (the day its data was last updated), not the push date. Change it only when the
    company's data is updated, or when I give a new date.
+   After the date, in the same corner, **two icons** (`.ic`): the **Excel logo** is a direct `download` link
+   to the `.xlsx` (neither browsers nor GitHub preview Excel files), and the **GitHub logo** opens the repo.
+   Each logo has its name written beside it ("Excel", "GitHub"), 44px tall. On a phone (≤640px) the whole
+   corner (date, Excel, GitHub) moves to its own line under the back link, so nothing overlaps.
+   On the homepage the featured card's image box is 4:3, the preview's own shape, so the chart is never cropped.
+   **Tables read like Excel:** labels and formulas stay on one line (`white-space: nowrap`), so each column
+   takes the width of its longest entry and every row is the same height; cells have room around them
+   (`9px 16px`) and a faint line between columns. Only on a phone may the pinned label column wrap.
 2. **Straight into the data.** No key figures, no introduction.
 3. **One flat section per topic**, separated by a hairline, each with:
    1. **A plain section name as the heading** — "Revenue", "Balance sheet", "Operating metrics".
@@ -177,8 +185,8 @@ Written by hand (no script). It follows all the Phone-friendly rules above.
   slightly and the title turns that colour. Keep it inside `@media (hover: hover)` so a tap on a
   phone does not leave a card stuck highlighted.
 - **Preview images** are made with `python tools/make_previews.py`, never by hand: a readable
-  close-up of the top of the page (the company name, the filing line and the start of the first
-  section), 4:3 (1120x840), shown in a 4:3
+  close-up of **the company name and the first chart only** (the screenshot hides the filing line, the
+  corner, the headline and the tables), 4:3 (1120x840), shown in a 4:3
   box with `object-fit: cover; object-position: top center`. The box's background is the company
   pages' black (`#0b0c0e`), so no light edge shows around the image. A shrunk
   screenshot of a whole page is unreadable in a card. Add a new company to `PAGES` in that script.

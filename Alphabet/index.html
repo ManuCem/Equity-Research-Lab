@@ -49,7 +49,16 @@ a{color:inherit}
 /* "Last update": small and quiet in the top right corner, on the back link's line */
 .band .in{position:relative}
 .updated{position:absolute;top:0;right:max(18px,env(safe-area-inset-right));min-height:44px;
-  display:flex;align-items:center;font-size:11px;color:var(--muted);white-space:nowrap}
+  display:flex;align-items:center;gap:4px;font-size:11px;color:var(--muted);white-space:nowrap}
+/* the two icons after the date: Excel downloads the workbook, GitHub opens the code */
+.ic{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 8px;border-radius:8px;
+  color:var(--ink2);text-decoration:none;font-size:12px;font-weight:700}
+.ic:first-of-type{margin-left:8px}
+.ic svg{width:20px;height:20px;display:block;flex:none}
+.ic.gh svg{fill:var(--ink2)}
+.ic:hover,.ic:focus-visible{background:var(--hl)}
+.ic:hover,.ic:focus-visible{color:var(--accent)}
+.ic.gh:hover svg,.ic.gh:focus-visible svg{fill:var(--accent)}
 h1{margin:6px 0 2px;color:#fff;font-size:clamp(32px,4.4vw,42px);line-height:1.1}   /* the company name carries the page, and it is what the homepage card preview shows */
 .meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
 
@@ -125,10 +134,12 @@ svg.hov .mk.on{opacity:1}
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
 th{text-align:right;font-weight:600;color:var(--muted);font-size:11.5px;text-transform:uppercase;
-  letter-spacing:.04em;border-bottom:1px solid var(--axis);padding:8px;white-space:nowrap}
-td{text-align:right;padding:7px 8px;border-bottom:1px solid var(--grid);white-space:nowrap}
+  letter-spacing:.04em;border-bottom:1px solid var(--axis);padding:9px 16px;white-space:nowrap}
+td{text-align:right;padding:9px 16px;border-bottom:1px solid var(--grid);white-space:nowrap}
+/* a faint line between columns, so each cell reads as its own, as in a spreadsheet */
+td+td,th+th{border-left:1px solid var(--grid)}
 th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--page);padding-left:0}
-td:first-child{white-space:normal;min-width:150px}
+td:first-child{white-space:nowrap;min-width:150px}   /* as in Excel: the column takes its longest label, every row one line */
 tr.b td{font-weight:700;color:#fff}
 tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
 tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
@@ -140,7 +151,7 @@ tr.step td{color:var(--ink);background:var(--step);padding-top:9px;padding-botto
 tr.step td{position:static}
 tr.step td>span{position:sticky;left:0;display:inline-block;background:var(--step);padding-right:8px}
 tr.k td{font-weight:700;color:#fff;background:var(--key)}
-th.fx,td.fx{text-align:left;color:var(--muted);font-size:12px;white-space:normal;min-width:160px}
+th.fx,td.fx{text-align:left;color:var(--muted);font-size:12px;white-space:nowrap;min-width:160px}
 td.fx,tr.k td.fx,tr.b td.fx{font-style:italic;font-weight:400;color:var(--muted)}   /* the formula stays quiet, even on a key row */
 .basis{color:var(--muted);font-size:11.5px;font-weight:400}
 
@@ -159,16 +170,20 @@ footer a:hover{color:var(--accent)}
 }
 @media (max-width:640px){
   .two,.gloss{grid-template-columns:1fr;gap:18px}
-  th,td{padding:7px 6px;font-size:12.5px}
+  th,td{padding:8px 10px;font-size:12.5px}
+  /* on a phone the corner (date, Excel, GitHub) takes its own line under the back link, so nothing overlaps */
+  .updated{position:static;margin:-6px 0 0 -8px}
+  .updated .lu{display:inline}
   th{white-space:normal}
-  td:first-child{min-width:120px}
+  /* on a phone the pinned label column may wrap: one-line labels would cover most of a 360px screen */
+  td:first-child{min-width:120px;white-space:normal;max-width:170px}
 }
 
 :root{--accent:#f2c14e}</style>
 </head><body>
 <header class="band"><div class="in">
 <a class="back" href="../index.html">&larr; All companies</a>
-<span class="updated">Last update &middot;&nbsp;<span data-static="1">31 Oct 2026</span></span>
+<span class="updated"><span class="lu">Last update &middot;&nbsp;</span><span data-static="1">31 Oct 2026</span><a class="ic xl" href="alphabet.xlsx" download aria-label="Download the Excel workbook" title="Download the Excel workbook"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="#107c41"/><path d="M7.6 7h2.7l1.7 3.1L13.7 7h2.7l-3 5 3.1 5h-2.7l-1.8-3.2-1.8 3.2H7.5l3.1-5z" fill="#fff"/></svg><span>Excel</span></a><a class="ic gh" href="https://github.com/ManuCem/Equity-Research-Lab" aria-label="View the code on GitHub" title="View the code on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a></span>
 <h1>Alphabet</h1>
 <p class="meta">Alphabet Inc. &middot; NASDAQ: GOOGL, GOOG. Third quarter 2026 results, released <span data-static="1">28 October 2026</span>,
 with the Q3 2025 release and the Q3 2025 Form 10-Q for the comparatives. USD millions, GAAP unless marked otherwise.

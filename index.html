@@ -44,8 +44,8 @@
   .feature { margin-top: -84px; display: grid; grid-template-columns: 1.3fr 1fr; background: var(--surface);
              border: 1px solid var(--line); border-radius: 14px; overflow: hidden; color: inherit; text-decoration: none;
              box-shadow: 0 20px 48px rgba(0,0,0,.12); }
-  .feature .img { position: relative; background: #0b0c0e; min-height: 340px; overflow: hidden; }
-  /* image fills the left half without dictating its height */
+  .feature .img { position: relative; background: #0b0c0e; aspect-ratio: 4 / 3; overflow: hidden; }
+  /* the box has the preview's own 4:3 shape, so the whole chart shows and nothing is cropped */
   .feature .img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .feature .txt { padding: 36px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
   .badge { align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
@@ -98,7 +98,7 @@
   @media (max-width: 760px) {
     header { padding: 40px 0 96px; }
     .feature { grid-template-columns: 1fr; margin-top: -64px; }
-    .feature .img { min-height: 0; aspect-ratio: 16 / 9; }
+    .feature .img { min-height: 0; aspect-ratio: 4 / 3; }
     .feature .txt { padding: 24px 20px; }
     .feature h2 { font-size: 30px; }
     .card h4 { font-size: 24px; }

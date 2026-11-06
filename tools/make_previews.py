@@ -31,8 +31,8 @@ from PIL import Image                     # crops the screenshot
 
 ROOT = Path(__file__).resolve().parent.parent                  # the repo root (this file is in tools/)
 CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")   # Chrome on this machine
-FRAME_W, FRAME_H = 1000, 750              # the frame the page is shown in: 4:3 like the homepage card,
-                                          # wide enough that the first section and its charts fit in it
+FRAME_W, FRAME_H = 720, 540               # the frame the page is shown in: 4:3 like the homepage card,
+                                          # narrow enough that the title and the first chart fill it
 SCALE = 2                                 # shoot at double resolution so the text stays sharp
 OUT_W, OUT_H = 1120, 840                  # the saved image size, the same 4:3 as the frame
 
@@ -80,14 +80,15 @@ def main():
 # ===========================================================================
 
 def wrapper_html(page_uri):
-    """A blank page holding the project page in a 560 x 420 frame, hiding only the back link once it loads."""
+    """A blank page holding the project page in a 720 x 540 frame, showing only the title and the first chart."""
     # returns a str of HTML, e.g. '<!doctype html><html><body style="margin:0;background:#0b0c0e"><iframe src="file:///C:/.../Anthropic/index.html" ...'
     return f"""<!doctype html><html><body style="margin:0;background:#0b0c0e">
 <iframe id="f" src="{page_uri}" style="width:{FRAME_W}px;height:{FRAME_H}px;border:0;display:block"></iframe>
 <script>
 document.getElementById("f").onload = e => {{
   const s = e.target.contentDocument.createElement("style");   // only inside the screenshot: the page file is untouched
-  s.textContent = "a.back{{display:none}} h1{{margin-top:18px}}";
+  // the preview is the title and the first chart: everything else in the header and the first section is hidden
+  s.textContent = "a.back,.updated,.meta,.dl,.hint,.dek,.tw,.panel>h2,.note{{display:none}} h1{{margin-top:18px}} .panel{{border-top:0}}";
   e.target.contentDocument.head.appendChild(s);
 }};
 </script></body></html>"""
