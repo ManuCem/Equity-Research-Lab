@@ -31,8 +31,8 @@ from PIL import Image                     # crops the screenshot
 
 ROOT = Path(__file__).resolve().parent.parent                  # the repo root (this file is in tools/)
 CHROME = Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")   # Chrome on this machine
-FRAME_W, FRAME_H = 720, 540               # the frame the page is shown in: 4:3 like the homepage card,
-                                          # narrow enough that the title and the first chart fill it
+FRAME_W, FRAME_H = 1200, 900              # the frame the page is shown in: 4:3 like the homepage card,
+                                          # wide enough for the header, the first chart and its table side by side
 SCALE = 2                                 # shoot at double resolution so the text stays sharp
 OUT_W, OUT_H = 1120, 840                  # the saved image size, the same 4:3 as the frame
 
@@ -80,16 +80,41 @@ def main():
 # ===========================================================================
 
 def wrapper_html(page_uri):
-    """A blank page holding the project page in a 720 x 540 frame, showing only the title and the first chart."""
+    """A blank page holding the project page in a 1200 x 900 frame: header, first chart and the start of its table."""
     # returns a str of HTML, e.g. '<!doctype html><html><body style="margin:0;background:#0b0c0e"><iframe src="file:///C:/.../Anthropic/index.html" ...'
     return f"""<!doctype html><html><body style="margin:0;background:#0b0c0e">
 <iframe id="f" src="{page_uri}" style="width:{FRAME_W}px;height:{FRAME_H}px;border:0;display:block"></iframe>
 <script>
 document.getElementById("f").onload = e => {{
   const s = e.target.contentDocument.createElement("style");   // only inside the screenshot: the page file is untouched
-  // the preview is the title and the first chart: everything else in the header and the first section is hidden
-  s.textContent = "a.back,.updated,.meta,.dl,.hint,.dek,.tw,.panel>h2,.note{{display:none}} h1{{margin-top:18px}} .panel{{border-top:0}}";
+  // the preview is the top of the report as a reader meets it: the header, the first headline, and the first chart
+  // with the start of its table beside it, so the card shows how much the page holds. Only the hints are hidden.
+  s.textContent = ".hint,.note{{display:none}}"
+    // the corner (last update, Excel, GitHub) is drawn larger in the preview, so it reads in a small card
+    + " .updated{{font-size:17px}} .ic{{font-size:17px}} .ic svg{{width:26px;height:26px}}"
+    // the company name is drawn larger too, so it is the first thing the card shows
+    + " h1{{font-size:64px;margin:10px 0 6px}}"
+    + " main>.panel:first-of-type{{display:grid;grid-template-columns:440px minmax(0,1fr);column-gap:28px;grid-auto-flow:row dense;align-items:start}}"
+    + " main>.panel:first-of-type>*{{grid-column:1}}"
+    + " main>.panel:first-of-type>h2, main>.panel:first-of-type>.dek{{grid-column:1/-1}}"
+    + " main>.panel:first-of-type .two{{grid-column:1}}"
+    // a very long label would push every number out of the frame: cap the label column, end long ones in "…"
+    + " main>.panel:first-of-type .tw td:first-child{{max-width:240px;overflow:hidden;text-overflow:ellipsis}}"
+    + " main>.panel:first-of-type svg[data-chart]{{max-width:440px}}";
   e.target.contentDocument.head.appendChild(s);
+  // the first table of the first section goes in the right-hand column, beside the chart (picked by script:
+  // a legend box comes before it on some pages, so a CSS :first-of-type would pick the legend instead)
+  const tw = e.target.contentDocument.querySelector("main>.panel>.tw");
+  if (tw) {{ tw.style.gridColumn = "2"; tw.style.gridRow = "3 / span 40"; tw.style.overflow = "hidden"; }}
+  // the space under the first chart takes the page's next chart, with its title, so the card shows two of them
+  const d = e.target.contentDocument, first = d.querySelector("main>.panel");
+  const next = [...d.querySelectorAll("svg[data-chart]")].find(c => !first.contains(c));
+  if (next) {{
+    let t = next.previousElementSibling;                       // the chart's own title: the nearest <h3> above it
+    while (t && t.tagName !== "H3") t = t.previousElementSibling;
+    if (t) {{ const h = t.cloneNode(true); h.style.marginTop = "26px"; first.appendChild(h); }}
+    first.appendChild(next.cloneNode(true));
+  }}
 }};
 </script></body></html>"""
 

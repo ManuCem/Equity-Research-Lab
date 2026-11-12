@@ -185,11 +185,14 @@ Written by hand (no script). It follows all the Phone-friendly rules above.
   slightly and the title turns that colour. Keep it inside `@media (hover: hover)` so a tap on a
   phone does not leave a card stuck highlighted.
 - **Preview images** are made with `python tools/make_previews.py`, never by hand: a readable
-  close-up of **the company name and the first chart only** (the screenshot hides the filing line, the
-  corner, the headline and the tables), 4:3 (1120x840), shown in a 4:3
+  view of the top of the report that shows **how much the page holds**, so a non-technical reader sees a
+  serious piece of work: the header with its corner, the first headline, the first chart with the start
+  of its table beside it (label column capped, long labels end in "…"), and the page's next chart under
+  the first. Only the hints are hidden; the page files are never changed. Frame 1200x900, saved
+  4:3 (1120x840), shown in a 4:3
   box with `object-fit: cover; object-position: top center`. The box's background is the company
-  pages' black (`#0b0c0e`), so no light edge shows around the image. A shrunk
-  screenshot of a whole page is unreadable in a card. Add a new company to `PAGES` in that script.
+  pages' black (`#0b0c0e`), so no light edge shows around the image. Add a new company to `PAGES` in
+  that script.
 
 ## README (`README.md`, always keep this structure)
 
