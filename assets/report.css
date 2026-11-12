@@ -136,7 +136,13 @@ th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:
 td:first-child{white-space:nowrap;min-width:150px}   /* as in Excel: the column takes its longest label, every row one line */
 tr.b td{font-weight:700;color:#fff}
 tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
-tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+/* the hover cross; it switches off while a cell is selected (body.has-sel), so only one thing is lit */
+body:not(.has-sel) tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+/* Excel-style selection (report.js): the clicked cell gets a solid outline in the page accent, its row
+   and column keep the highlight, and the arrow keys move it */
+.tw td{cursor:cell}
+td.scol,td.srow{background:var(--hl)}
+td.sel{outline:2px solid var(--accent);outline-offset:-2px;background:var(--hl);color:#fff}
 /* course layout: a STEP row opens each block, the key result of the step is bold on dim yellow,
    and the last column says in words how each calculated line is made */
 tr.step td{color:var(--ink);background:var(--step);padding-top:9px;padding-bottom:9px}

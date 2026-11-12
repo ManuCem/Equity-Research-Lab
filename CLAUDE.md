@@ -125,6 +125,13 @@ half the last label.
 `compare_report.py` / `verify_report.py` check every figure against the workbook, the clickable
 legends, the row-and-column table highlight, and the page citations.
 
+**Tables select like Excel** (`report.js`, all three pages): a click on a cell outlines it in the page
+accent and keeps its row and column highlighted; the arrow keys move the selection, and the table and
+the page scroll themselves so the cell stays in view (no dragging the bottom scrollbar on a desktop);
+Esc or a click outside a table clears it. While a cell is selected the hover
+highlight is off (`body.has-sel`), so only one thing is ever lit. STEP rows are not selectable; a click on a label picks its
+first figure.
+
 ## Workbooks: the finance-course layout (Anthropic since 2 Nov 2026)
 
 The workbook is laid out like my finance course files (`finances-examples/`, local only, git-ignored):

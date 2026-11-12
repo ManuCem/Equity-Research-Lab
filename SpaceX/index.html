@@ -142,7 +142,13 @@ th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:
 td:first-child{white-space:nowrap;min-width:150px}   /* as in Excel: the column takes its longest label, every row one line */
 tr.b td{font-weight:700;color:#fff}
 tr.sub td{font-weight:700;color:var(--ink2);padding-top:14px;border-bottom:none;background:var(--page)}
-tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+/* the hover cross; it switches off while a cell is selected (body.has-sel), so only one thing is lit */
+body:not(.has-sel) tbody tr:not(.sub):hover td,td.xcol{background:var(--hl)}
+/* Excel-style selection (report.js): the clicked cell gets a solid outline in the page accent, its row
+   and column keep the highlight, and the arrow keys move it */
+.tw td{cursor:cell}
+td.scol,td.srow{background:var(--hl)}
+td.sel{outline:2px solid var(--accent);outline-offset:-2px;background:var(--hl);color:#fff}
 /* course layout: a STEP row opens each block, the key result of the step is bold on dim yellow,
    and the last column says in words how each calculated line is made */
 tr.step td{color:var(--ink);background:var(--step);padding-top:9px;padding-bottom:9px}
@@ -619,8 +625,9 @@ per sheet, a STEP row per block, the key result highlighted.</p>
 <footer><div class="in">Equity Research Lab · Student work, not investment advice · <a class="back" href="https://github.com/ManuCem/Equity-Research-Lab">Code on GitHub</a></div></footer>
 <script type="application/json" id="chart-data">{"mgn":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[59.42857142857143,98.28571428571428,137.14285714285714,176.0,214.85714285714286,253.71428571428572,292.57142857142856],"series":[{"name":"Revenue","color":null,"items":[{"n":4067,"v":"$4.1B","ref":"1 Income statement!B6","f":"bn1"},{"n":4071,"v":"$4.1B","ref":"1 Income statement!C6","f":"bn1"},{"n":5576,"v":"$5.6B","ref":"1 Income statement!D6","f":"bn1"},{"n":4960,"v":"$5.0B","ref":"1 Income statement!E6","f":"bn1"},{"n":4694,"v":"$4.7B","ref":"1 Income statement!G6","f":"bn1"},{"n":7814,"v":"$7.8B","ref":"1 Income statement!H6","f":"bn1"},{"n":14575,"v":"$14.6B","ref":"1 Income statement!I6","f":"bn1"}]},{"name":"Income (loss) from operations","color":null,"items":[{"n":27,"v":"$0.0B","ref":"1 Income statement!B18","f":"bn1"},{"n":-970,"v":"\u2212$1.0B","ref":"1 Income statement!C18","f":"bn1"},{"n":-273,"v":"\u2212$0.3B","ref":"1 Income statement!D18","f":"bn1"},{"n":-1373,"v":"\u2212$1.4B","ref":"1 Income statement!E18","f":"bn1"},{"n":-1943,"v":"\u2212$1.9B","ref":"1 Income statement!G18","f":"bn1"},{"n":-143,"v":"\u2212$0.1B","ref":"1 Income statement!H18","f":"bn1"},{"n":2791,"v":"$2.8B","ref":"1 Income statement!I18","f":"bn1"}]},{"name":"Operating margin","color":"var(--c1)","items":[{"n":0.006638800098352594,"v":"0.7%","ref":"1 Income statement!B19","f":"pct1"},{"n":-0.23827069516089414,"v":"\u221223.8%","ref":"1 Income statement!C19","f":"pct1"},{"n":-0.04895982783357245,"v":"\u22124.9%","ref":"1 Income statement!D19","f":"pct1"},{"n":-0.27681451612903224,"v":"\u221227.7%","ref":"1 Income statement!E19","f":"pct1"},{"n":-0.41393268001704303,"v":"\u221241.4%","ref":"1 Income statement!G19","f":"pct1"},{"n":-0.018300486306629126,"v":"\u22121.8%","ref":"1 Income statement!H19","f":"pct1"},{"n":0.19149228130360205,"v":"19.1%","ref":"1 Income statement!I19","f":"pct1"}]}]},"seg":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[29.714285714285715,73.14285714285714,116.57142857142858,160.0,203.42857142857144,246.8571428571429,290.2857142857143],"series":[{"name":"Space","color":"var(--c1)","items":[{"n":865,"v":"$0.9B","ref":"3 Segments!B8","f":"bn1"},{"n":746,"v":"$0.7B","ref":"3 Segments!C8","f":"bn1"},{"n":1666,"v":"$1.7B","ref":"3 Segments!D8","f":"bn1"},{"n":809,"v":"$0.8B","ref":"3 Segments!E8","f":"bn1"},{"n":619,"v":"$0.6B","ref":"3 Segments!G8","f":"bn1"},{"n":962,"v":"$1.0B","ref":"3 Segments!H8","f":"bn1"},{"n":1767,"v":"$1.8B","ref":"3 Segments!I8","f":"bn1"}]},{"name":"Connectivity","color":"var(--c2)","items":[{"n":2474,"v":"$2.5B","ref":"3 Segments!B21","f":"bn1"},{"n":2588,"v":"$2.6B","ref":"3 Segments!C21","f":"bn1"},{"n":3097,"v":"$3.1B","ref":"3 Segments!D21","f":"bn1"},{"n":3228,"v":"$3.2B","ref":"3 Segments!E21","f":"bn1"},{"n":3257,"v":"$3.3B","ref":"3 Segments!G21","f":"bn1"},{"n":4291,"v":"$4.3B","ref":"3 Segments!H21","f":"bn1"},{"n":5248,"v":"$5.2B","ref":"3 Segments!I21","f":"bn1"}]},{"name":"SI","color":"var(--c3)","items":[{"n":728,"v":"$0.7B","ref":"3 Segments!B33","f":"bn1"},{"n":737,"v":"$0.7B","ref":"3 Segments!C33","f":"bn1"},{"n":813,"v":"$0.8B","ref":"3 Segments!D33","f":"bn1"},{"n":923,"v":"$0.9B","ref":"3 Segments!E33","f":"bn1"},{"n":818,"v":"$0.8B","ref":"3 Segments!G33","f":"bn1"},{"n":2561,"v":"$2.6B","ref":"3 Segments!H33","f":"bn1"},{"n":7560,"v":"$7.6B","ref":"3 Segments!I33","f":"bn1"}]},{"name":"Total revenue","color":null,"items":[{"n":4067,"v":"$4.1B","ref":"1 Income statement!B6","f":"bn1"},{"n":4071,"v":"$4.1B","ref":"1 Income statement!C6","f":"bn1"},{"n":5576,"v":"$5.6B","ref":"1 Income statement!D6","f":"bn1"},{"n":4960,"v":"$5.0B","ref":"1 Income statement!E6","f":"bn1"},{"n":4694,"v":"$4.7B","ref":"1 Income statement!G6","f":"bn1"},{"n":7814,"v":"$7.8B","ref":"1 Income statement!H6","f":"bn1"},{"n":14575,"v":"$14.6B","ref":"1 Income statement!I6","f":"bn1"}]},{"name":"Growth year on year","color":null,"items":[{"v":"n/a"},{"v":"n/a"},{"v":"n/a"},{"v":"n/a"},{"n":0.15416769117285467,"v":"15%","ref":"1 Income statement!G7","f":"pct0"},{"n":0.9194301154507492,"v":"92%","ref":"1 Income statement!H7","f":"pct0"},{"n":1.6138809182209468,"v":"161%","ref":"1 Income statement!I7","f":"pct0"}]}]},"cap":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[29.714285714285715,73.14285714285714,116.57142857142858,160.0,203.42857142857144,246.8571428571429,290.2857142857143],"series":[{"name":"Revenue","color":"var(--c2)","items":[{"n":4067,"v":"$4.1B","ref":"1 Income statement!B6","f":"bn1"},{"n":4071,"v":"$4.1B","ref":"1 Income statement!C6","f":"bn1"},{"n":5576,"v":"$5.6B","ref":"1 Income statement!D6","f":"bn1"},{"n":4960,"v":"$5.0B","ref":"1 Income statement!E6","f":"bn1"},{"n":4694,"v":"$4.7B","ref":"1 Income statement!G6","f":"bn1"},{"n":7814,"v":"$7.8B","ref":"1 Income statement!H6","f":"bn1"},{"n":14575,"v":"$14.6B","ref":"1 Income statement!I6","f":"bn1"}]},{"name":"Capex","color":"var(--c1)","items":[{"n":4140,"v":"$4.1B","ref":"3 Segments!B49","f":"bn1"},{"n":2825,"v":"$2.8B","ref":"3 Segments!C49","f":"bn1"},{"n":6880,"v":"$6.9B","ref":"3 Segments!D49","f":"bn1"},{"n":6891,"v":"$6.9B","ref":"3 Segments!E49","f":"bn1"},{"n":10107,"v":"$10.1B","ref":"3 Segments!G49","f":"bn1"},{"n":18369,"v":"$18.4B","ref":"3 Segments!H49","f":"bn1"},{"n":19593,"v":"$19.6B","ref":"3 Segments!I49","f":"bn1"}]},{"name":"Capex / revenue","color":null,"items":[{"n":1.0179493484140645,"v":"1.0x","ref":"5 Cash flow!B59","f":"x1"},{"n":0.6939326946696144,"v":"0.7x","ref":"5 Cash flow!C59","f":"x1"},{"n":1.2338593974175036,"v":"1.2x","ref":"5 Cash flow!D59","f":"x1"},{"n":1.3893145161290323,"v":"1.4x","ref":"5 Cash flow!E59","f":"x1"},{"n":2.153174265019173,"v":"2.2x","ref":"5 Cash flow!G59","f":"x1"},{"n":2.350780650115178,"v":"2.4x","ref":"5 Cash flow!H59","f":"x1"},{"n":1.3442881646655231,"v":"1.3x","ref":"5 Cash flow!I59","f":"x1"}]},{"name":"Cash from operations","color":null,"items":[{"n":727,"v":"$0.7B","ref":"5 Cash flow!B23","f":"bn1"},{"n":-376,"v":"\u2212$0.4B","ref":"5 Cash flow!C23","f":"bn1"},{"n":3769,"v":"$3.8B","ref":"5 Cash flow!D23","f":"bn1"},{"n":2665,"v":"$2.7B","ref":"5 Cash flow!E23","f":"bn1"},{"n":1047,"v":"$1.0B","ref":"5 Cash flow!G23","f":"bn1"},{"n":2419,"v":"$2.4B","ref":"5 Cash flow!H23","f":"bn1"},{"n":9631,"v":"$9.6B","ref":"5 Cash flow!I23","f":"bn1"}]}]},"sub":{"cats":["Q1-25","Q2-25","Q3-25","Q4-25","Q1-26","Q2-26","Q3-26"],"axis":"x","W":320,"H":190,"xs":[29.714285714285715,73.14285714285714,116.57142857142858,160.0,203.42857142857144,246.8571428571429,290.2857142857143],"series":[{"name":"Subscribers, period end","color":"var(--c1)","items":[{"n":5,"v":"5.0M","ref":"7 Operating metrics!B14","f":"m1"},{"n":6,"v":"6.0M","ref":"7 Operating metrics!C14","f":"m1"},{"n":7.2,"v":"7.2M","ref":"7 Operating metrics!D14","f":"m1"},{"n":8.9,"v":"8.9M","ref":"7 Operating metrics!E14","f":"m1"},{"n":10.3,"v":"10.3M","ref":"7 Operating metrics!G14","f":"m1"},{"n":12,"v":"12.0M","ref":"7 Operating metrics!H14","f":"m1"},{"n":13.6,"v":"13.6M","ref":"7 Operating metrics!I14","f":"m1"}]},{"name":"ARPU per month","color":null,"items":[{"n":86,"v":"$86","ref":"7 Operating metrics!B15","f":"usd0"},{"n":85,"v":"$85","ref":"7 Operating metrics!C15","f":"usd0"},{"n":83,"v":"$83","ref":"7 Operating metrics!D15","f":"usd0"},{"v":"n/a"},{"n":66,"v":"$66","ref":"7 Operating metrics!G15","f":"usd0"},{"n":66,"v":"$66","ref":"7 Operating metrics!H15","f":"usd0"},{"n":69,"v":"$69","ref":"7 Operating metrics!I15","f":"usd0"}]},{"name":"Consumer revenue","color":null,"items":[{"n":1492,"v":"$1.5B","ref":"3 Segments!B19","f":"bn1"},{"n":1721,"v":"$1.7B","ref":"3 Segments!C19","f":"bn1"},{"n":1986,"v":"$2.0B","ref":"3 Segments!D19","f":"bn1"},{"n":2010,"v":"$2.0B","ref":"3 Segments!E19","f":"bn1"},{"n":2148,"v":"$2.1B","ref":"3 Segments!G19","f":"bn1"},{"n":2485,"v":"$2.5B","ref":"3 Segments!H19","f":"bn1"},{"n":3121,"v":"$3.1B","ref":"3 Segments!I19","f":"bn1"}]}]}}</script>
 <script>/* Shared behaviour for every company page (inlined into <Company>/index.html at build time):
-   one tooltip used by all charts, and row + column highlight on tables. */
+   one tooltip used by all charts, row + column highlight on tables, and Excel-style cell selection. */
 (function () {
+  var sel = null;                                      // the selected table cell, or null when nothing is selected
   var tip = document.createElement('div');
   tip.className = 'tip';
   tip.setAttribute('role', 'tooltip');
@@ -655,6 +662,7 @@ per sheet, a STEP row per block, the key result highlighted.</p>
     t.addEventListener('mouseover', function (ev) {
       var td = ev.target.closest('td');
       t.querySelectorAll('td.xcol').forEach(function (c) { c.classList.remove('xcol'); });
+      if (sel) return;                                 // a selected cell is the only highlight, as in Excel
       if (!td || td.cellIndex === 0 || td.parentElement.classList.contains('sub')) return;
       t.querySelectorAll('tbody tr:not(.sub)').forEach(function (tr) {
         if (tr.cells[td.cellIndex]) tr.cells[td.cellIndex].classList.add('xcol');
@@ -664,6 +672,73 @@ per sheet, a STEP row per block, the key result highlighted.</p>
       t.querySelectorAll('td.xcol').forEach(function (c) { c.classList.remove('xcol'); });
     });
   });
+
+  // ---- Excel-style selection: click a cell, then move with the arrow keys ----
+  // The selected cell gets a solid outline, its row and column stay highlighted (the cross), and the
+  // table scrolls itself so the cell stays in view: no dragging the scrollbar at the bottom of a long table.
+
+  function dataRows(t) {                               // the rows that hold figures (STEP rows are skipped)
+    return Array.prototype.filter.call(t.tBodies[0].rows, function (r) { return !r.classList.contains('sub'); });
+  }
+
+  function clearSel() {                                // remove the outline and the cross
+    if (!sel) return;
+    sel.closest('table').querySelectorAll('td.scol,td.srow,td.sel').forEach(function (c) {
+      c.classList.remove('scol', 'srow', 'sel');
+    });
+    sel = null;
+    document.body.classList.remove('has-sel');        // hovering highlights rows again
+  }
+
+  function reveal(td) {                                // scroll the table box, then the page, so the cell shows
+    var box = td.closest('.tw');
+    var pin = td.parentElement.cells[0].offsetWidth;   // the pinned label column covers the left edge
+    var left = td.offsetLeft, right = left + td.offsetWidth;
+    if (left - pin < box.scrollLeft) box.scrollLeft = left - pin;
+    else if (right > box.scrollLeft + box.clientWidth) box.scrollLeft = right - box.clientWidth;
+    var r = td.getBoundingClientRect();
+    if (r.top < 70) window.scrollBy(0, r.top - 70);
+    else if (r.bottom > window.innerHeight - 30) window.scrollBy(0, r.bottom - window.innerHeight + 30);
+  }
+
+  function select(td) {                                // outline one cell, highlight its row and column
+    clearSel();
+    sel = td;
+    document.body.classList.add('has-sel');           // hovering stops highlighting while a cell is selected
+    document.querySelectorAll('td.xcol').forEach(function (c) { c.classList.remove('xcol'); });
+    var i = td.cellIndex;
+    dataRows(td.closest('table')).forEach(function (tr) { if (tr.cells[i]) tr.cells[i].classList.add('scol'); });
+    Array.prototype.forEach.call(td.parentElement.cells, function (c) { c.classList.add('srow'); });
+    td.classList.add('sel');
+    reveal(td);
+  }
+
+  document.querySelectorAll('.tw table').forEach(function (t) {
+    t.addEventListener('click', function (ev) {
+      var td = ev.target.closest('td');
+      if (!td || td.parentElement.classList.contains('sub')) return;   // STEP rows are titles, not cells
+      if (td.cellIndex === 0) td = td.parentElement.cells[1];         // a click on a label picks its first figure
+      if (td) select(td);
+    });
+  });
+
+  document.addEventListener('keydown', function (ev) {
+    if (!sel) return;
+    if (ev.key === 'Escape') { clearSel(); return; }
+    var tr = sel.parentElement, i = sel.cellIndex, next = null;
+    var rows = dataRows(sel.closest('table')), r = rows.indexOf(tr);
+    if (ev.key === 'ArrowLeft' && i > 1) next = tr.cells[i - 1];
+    else if (ev.key === 'ArrowRight' && i < tr.cells.length - 1) next = tr.cells[i + 1];
+    else if (ev.key === 'ArrowUp' && r > 0) next = rows[r - 1].cells[i];
+    else if (ev.key === 'ArrowDown' && r < rows.length - 1) next = rows[r + 1].cells[i];
+    if (ev.key.indexOf('Arrow') === 0) ev.preventDefault();             // the arrows move the cell, not the page
+    if (next) select(next);
+  });
+
+  // a click or tap outside every table lets the selection go
+  document.addEventListener('pointerdown', function (ev) {
+    if (sel && !ev.target.closest('.tw table')) clearSel();
+  }, { passive: true });
 
   window.addEventListener('scroll', function () { tip.style.display = 'none'; }, { passive: true });
 
