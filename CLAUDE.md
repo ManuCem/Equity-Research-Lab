@@ -143,7 +143,8 @@ checks, in the workbook or on the page.
   `3 Balance sheet`, `4 Working capital`, `5 Cash flow`, `6 Solvency`, `7 Customers`,
   `8 Commitments`, `9 Share capital`.
 - Each sheet: title in bold orange (`FF5A00`) in A1, a grey note in A2, an orange header row
-  (white bold) "Concept | periods | (empty) | Formula" in row 4, panes frozen at B5, Arial 10.
+  (white bold) "Concept | periods | (empty) | Formula" in row 4 (Anthropic: "… | (empty) | Explanation |
+  Formula", the explanation first because it matters more), panes frozen at B5, Arial 10.
 - Blocks open with a beige (`F3E6DA`) **"STEP n - …"** row. Green numbers = reported by the company,
   black = calculated with a live formula, **bold on yellow** = the key result of the step.
 - Costs are negatives in brackets (`#,##0;\(#,##0\);\-`), so each result is the sum of the lines above.
@@ -151,10 +152,22 @@ checks, in the workbook or on the page.
   Reported lines leave it empty. The Spanish term goes in brackets where the course uses one.
 - `anthropic.csv` is the same content in one long table: sheet, step, concept, period, value,
   unit, formula.
+- **Explanations, in the workbook only** (Anthropic since 14 Nov 2026): every line's name ends with a short
+  plain-English note in brackets ("Compute and infrastructure (cloud servers, AI chips, leased data centres,
+  power)"), an **Explanation** column right after the numbers (before Formula) holds the longer ones, each ending
+  with an **"Example: …"** built from the sheet's own figures ("Broadcom leases chips and equipment to Anthropic:
+  about $161.2bn of rent…"), and each beige STEP row says what its block is about. They are added on top of the workbook, in place, by
+  `Anthropic/scripts/annotate_workbook.py` (local): it backs up first, never writes over a filled cell, leaves
+  any label I have edited as I wrote it, refreshes only the "Example: …" part it wrote (so examples follow the
+  latest figures), and puts back the formulas' stored values. **The web page stays clean**:
+  it prints the plain labels from `data/course_layout.json`, numbers only, no explanations.
 
 The company page follows the workbook: one section per sheet in the same order, each sheet's
-blocks as a table (STEP rows on `--step`, key rows on `--key`, a grey italic Formula column), with
-the charts at the top of their section. Under the last section there are only two quiet links,
+blocks as a table (STEP rows on `--step`, key rows on `--key`), with the charts at the top of their
+section. **The page shows only the labels and the numbers**: the Formula column stays in the workbook and
+is hidden on every page by the shared CSS (`th.fx,td.fx{display:none}`), and the arrow keys never step
+into it. The table hint reads "Swipe the table sideways for every period." (the SpaceX and Alphabet
+build scripts on the other PC still say "…and the formula.": change that line there before rebuilding). Under the last section there are only two quiet links,
 the `.xlsx` and the `.csv`. All three companies use this layout (SpaceX and Alphabet since 3 Nov 2026).
 
 For SpaceX and Alphabet, `build_model.py` writes the model to `data/historicals.xlsx` and

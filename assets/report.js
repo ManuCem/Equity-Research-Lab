@@ -102,7 +102,8 @@
     var tr = sel.parentElement, i = sel.cellIndex, next = null;
     var rows = dataRows(sel.closest('table')), r = rows.indexOf(tr);
     if (ev.key === 'ArrowLeft' && i > 1) next = tr.cells[i - 1];
-    else if (ev.key === 'ArrowRight' && i < tr.cells.length - 1) next = tr.cells[i + 1];
+    else if (ev.key === 'ArrowRight' && tr.cells[i + 1] && !tr.cells[i + 1].classList.contains('fx'))
+      next = tr.cells[i + 1];                          // the hidden Formula column is never selected
     else if (ev.key === 'ArrowUp' && r > 0) next = rows[r - 1].cells[i];
     else if (ev.key === 'ArrowDown' && r < rows.length - 1) next = rows[r + 1].cells[i];
     if (ev.key.indexOf('Arrow') === 0) ev.preventDefault();             // the arrows move the cell, not the page
