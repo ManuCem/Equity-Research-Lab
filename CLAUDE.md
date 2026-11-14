@@ -148,6 +148,17 @@ checks, in the workbook or on the page.
 - Blocks open with a beige (`F3E6DA`) **"STEP n - …"** row. Green numbers = reported by the company,
   black = calculated with a live formula, **bold on yellow** = the key result of the step.
 - Costs are negatives in brackets (`#,##0;\(#,##0\);\-`), so each result is the sum of the lines above.
+- **Every line starts with its sign in brackets** (Anthropic since 14 Nov 2026): **(+)** added, **(−)** subtracted,
+  **(±)** either way (a gain in some periods, a loss in others), **(=)** the result, **(R)** a ratio or a calculation,
+  **(i)** information that is not added into anything. Each (=) is the (=) above it plus the lines in between.
+- **Each STEP reads on its own:** a figure the step needs from elsewhere is brought in as its first lines
+  ("(±) Operating income (EBIT) — From STEP 4"), so nobody has to scroll up. Example, adjusted operating income:
+  (±) Operating income, (+) Stock-based compensation, (+) Donation matching, (+) Bartz settlement added back,
+  (=) Adjusted operating income, (R) Adjusted operating margin. These repeated lines are marked `link` in
+  `data/course_layout.json`: they stay in the workbook but not on the web page or in the CSV, which show each
+  number once. The signs are printed in the workbook only; the page keeps the plain labels.
+- Before any rebuild of the Anthropic workbook, run `Anthropic/scripts/capture_notes.py <first build>` to record
+  my notes in `data/user_notes.json`; `annotate_workbook.py` puts them back on the same lines afterwards.
 - The **Formula** column says in words how each calculated line is made ("EBIT / Revenue").
   Reported lines leave it empty. The Spanish term goes in brackets where the course uses one.
 - `anthropic.csv` is the same content in one long table: sheet, step, concept, period, value,
@@ -155,8 +166,11 @@ checks, in the workbook or on the page.
 - **Explanations, in the workbook only** (Anthropic since 14 Nov 2026): every line's name ends with a short
   plain-English note in brackets ("Compute and infrastructure (cloud servers, AI chips, leased data centres,
   power)"), an **Explanation** column right after the numbers (before Formula) holds the longer ones, each ending
-  with an **"Example: …"** built from the sheet's own figures ("Broadcom leases chips and equipment to Anthropic:
-  about $161.2bn of rent…"), and each beige STEP row says what its block is about. They are added on top of the workbook, in place, by
+  with an **"Example: …"** that says what is behind the line, taken from the S-1/A with its page (what a
+  cost includes, the contract and the counterparty: "Five-year leases of Google's TPU AI chips, made by Broadcom…").
+  **A number appears only when it is compared with another one** (9M2025 against 9M2026, a share of revenue
+  before and after); never just the line's own figure, which the reader already sees. Web sources may add
+  background, but the filing wins where they disagree, and each beige STEP row says what its block is about. They are added on top of the workbook, in place, by
   `Anthropic/scripts/annotate_workbook.py` (local): it backs up first, never writes over a filled cell, leaves
   any label I have edited as I wrote it, refreshes only the "Example: …" part it wrote (so examples follow the
   latest figures), and puts back the formulas' stored values. **The web page stays clean**:
