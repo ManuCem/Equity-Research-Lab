@@ -20,7 +20,8 @@ tools/course_layout.py
 # report.css / report.js are inlined into each page at build time, so the live site never loads them.
 tools/
 assets/*
-# The homepage cards load these three previews, so they stay published.
+# The homepage cards load these previews, so they stay published (one per company).
 !assets/alphabet.png
 !assets/anthropic.png
 !assets/spacex.png
+!assets/nvidia.png

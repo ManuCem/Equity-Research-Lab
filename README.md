@@ -5,6 +5,38 @@ every figure traced back to the page it came from.
 
 ## Companies
 
+### [NVIDIA](https://manucem.github.io/Equity-Research-Lab/Nvidia/)
+
+FY2024 to FY2026, the first nine months of FY2026 and FY2027, and quarterly figures to Q3 FY2027
+(October 2026), from the FY2026 Form 10-K, the Q2 FY2027 Form 10-Q and the Q1 and Q3 FY2027 results
+releases (Form 8-K, 20 May and 17 November 2026).
+
+| | FY2026 | First nine months FY2026 | First nine months FY2027 |
+|---|---|---|---|
+| Revenue | $215.9B | $147.8B | **$293.7B** |
+| Data Center share of revenue | 89.7% | 88.9% | **92.6%** |
+| Gross margin | 71.1% | 69.3% | **74.9%** |
+| Operating margin | 60.4% | 58.2% | **66.3%** |
+| Net income | $120.1B | $77.1B | **$183.3B** |
+| Free cash flow | $96.6B | $61.7B | **$113.7B** |
+| Buybacks and dividends | $41.1B | $37.0B | **$73.5B** |
+
+- Quarterly revenue went from **$44.1B** in Q1 FY2026 to **$115.8B** in Q3 FY2027, of which Data
+  Center was **$107.6B**.
+- The gross margin went from **60.5%** in Q1 FY2026, the quarter with a **$4.5B** H20 charge, to
+  **74.8%** in Q3 FY2027.
+- Nine-month FY2027 net income includes **$25.5B** of gains on stakes in other companies, which grew
+  from **$35.1B** at January 2026 to **$109.7B** at October 2026; the company's adjusted net income,
+  which leaves those gains out, was **$164.4B**.
+- Four direct customers accounted for **48%** of nine-month FY2027 revenue, and receivables took
+  **64 days** to collect at October 2026.
+- Commitments reached **$518B** at October 2026, **1.4 times** the last twelve months' revenue, with
+  supply and capacity up from **$95.2B** in January 2026 to **$390B**; guarantees add up to
+  **$118B**, of which **$105B** is credit support for OpenAI's data centres in Ohio.
+
+**Conclusion:** revenue nearly doubled and the operating margin rose to 66%, while commitments grew
+to $518B, 1.4 times a year's revenue, with up to $118B of guarantees on top.
+
 ### [Anthropic](https://manucem.github.io/Equity-Research-Lab/Anthropic/)
 
 FY2023 to FY2025, the first nine months of 2025 and 2026, and quarterly figures to Q3 2026, from the

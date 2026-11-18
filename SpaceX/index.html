@@ -60,6 +60,8 @@ a{color:inherit}
 .ic:hover,.ic:focus-visible{color:var(--accent)}
 .ic.gh:hover svg,.ic.gh:focus-visible svg{fill:var(--accent)}
 h1{margin:6px 0 2px;color:#fff;font-size:clamp(32px,4.4vw,42px);line-height:1.1}   /* the company name carries the page, and it is what the homepage card preview shows */
+h1 .logo{display:inline-block;width:.86em;height:.86em;margin-right:.3em;vertical-align:-.1em}   /* the logo of the company's main business, before its ticker */
+h1 .logo svg{display:block;width:100%;height:100%}
 .meta{margin:8px 0 0;font-size:12.5px;color:var(--muted);max-width:78ch}
 
 /* ---- one flat section per topic, separated by a hairline ---- */
@@ -192,7 +194,7 @@ footer a:hover{color:var(--accent)}
 <header class="band"><div class="in">
 <a class="back" href="../index.html">&larr; All companies</a>
 <span class="updated"><span class="lu">Last update &middot;&nbsp;</span><span data-static="1">28 Oct 2026</span><a class="ic xl" href="spacex.xlsx" download aria-label="Download the Excel workbook" title="Download the Excel workbook"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="#107c41"/><path d="M7.6 7h2.7l1.7 3.1L13.7 7h2.7l-3 5 3.1 5h-2.7l-1.8-3.2-1.8 3.2H7.5l3.1-5z" fill="#fff"/></svg><span>Excel</span></a><a class="ic gh" href="https://github.com/ManuCem/Equity-Research-Lab" aria-label="View the code on GitHub" title="View the code on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a></span>
-<h1>SpaceX</h1>
+<h1 aria-label="Space Exploration Technologies Corp. (SPCX)"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 7.417C8.882 8.287 1.89 14.75.321 16.28L0 16.583h2.797C10.356 9.005 21.222 7.663 24 7.417zm-17.046 6.35c-.472.321-.945.68-1.398 1.02l2.457 1.796h2.778zM2.948 10.8H.189l3.25 2.381c.473-.321 1.02-.661 1.512-.945Z"/></svg></span>SPCX</h1>
 <p class="meta">Space Exploration Technologies Corp. &middot; NASDAQ: SPCX. Form S-1 filed <span data-static="1">20 May 2026</span>, plus the
 Q2-26 and Q3-26 results releases. USD millions, GAAP unless marked non-GAAP. Laid out like the workbook: one section
 per sheet, a STEP row per block, the key result highlighted.</p>

@@ -1,0 +1,908 @@
+sheet,step,concept,period,value,unit,formula
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center,FY2024,47525,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center,FY2025,115186,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center,FY2026,193737,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center,9M FY2026,131423,USD m,FY: reported. 9M: the three quarters of sheet 2 added up
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center,9M FY2027,271869,USD m,FY: reported. 9M: the three quarters of sheet 2 added up
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center,LTM Oct-26,334183,USD m,FY: reported. 9M: the three quarters of sheet 2 added up
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Edge Computing,FY2024,13397,USD m,FY: Gaming + Professional Visualization + Automotive + OEM and Other. 9M: reported revenue - Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Edge Computing,FY2025,15311,USD m,FY: Gaming + Professional Visualization + Automotive + OEM and Other. 9M: reported revenue - Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Edge Computing,FY2026,22201,USD m,FY: Gaming + Professional Visualization + Automotive + OEM and Other. 9M: reported revenue - Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Edge Computing,9M FY2026,16388,USD m,FY: Gaming + Professional Visualization + Automotive + OEM and Other. 9M: reported revenue - Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Edge Computing,9M FY2027,21812,USD m,FY: Gaming + Professional Visualization + Automotive + OEM and Other. 9M: reported revenue - Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Edge Computing,LTM Oct-26,27625,USD m,FY: Gaming + Professional Visualization + Automotive + OEM and Other. 9M: reported revenue - Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue (ventas),FY2024,60922,USD m,Data Center + Edge Computing
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue (ventas),FY2025,130497,USD m,Data Center + Edge Computing
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue (ventas),FY2026,215938,USD m,Data Center + Edge Computing
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue (ventas),9M FY2026,147811,USD m,Data Center + Edge Computing
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue (ventas),9M FY2027,293681,USD m,Data Center + Edge Computing
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue (ventas),LTM Oct-26,361808,USD m,Data Center + Edge Computing
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue growth (crecimiento),FY2025,1.142034,%,Revenue / Revenue of the same period a year earlier - 1
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue growth (crecimiento),FY2026,0.654735,%,Revenue / Revenue of the same period a year earlier - 1
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Revenue growth (crecimiento),9M FY2027,0.986868,%,Revenue / Revenue of the same period a year earlier - 1
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center share of revenue,FY2024,0.780096,%,Data Center / Revenue
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center share of revenue,FY2025,0.882672,%,Data Center / Revenue
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center share of revenue,FY2026,0.897188,%,Data Center / Revenue
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center share of revenue,9M FY2026,0.889129,%,Data Center / Revenue
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center share of revenue,9M FY2027,0.925729,%,Data Center / Revenue
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center share of revenue,LTM Oct-26,0.923647,%,Data Center / Revenue
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),"Data Center compute (GPUs, CPUs and systems)",FY2024,38950,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),"Data Center compute (GPUs, CPUs and systems)",FY2025,102196,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),"Data Center compute (GPUs, CPUs and systems)",FY2026,162361,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center networking,FY2024,8575,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center networking,FY2025,12990,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Data Center networking,FY2026,31376,USD m,
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Networking share of Data Center,FY2024,0.180431,%,Data Center networking / Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Networking share of Data Center,FY2025,0.112774,%,Data Center networking / Data Center
+1 Income statement,STEP 1 - Revenue by market platform (ingresos),Networking share of Data Center,FY2026,0.161952,%,Data Center networking / Data Center
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, United States",FY2024,31533,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, United States",FY2025,77482,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, United States",FY2026,149617,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, United States",9M FY2026,97759,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, United States",9M FY2027,196742,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, United States",LTM Oct-26,248600,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, Taiwan",FY2024,14912,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, Taiwan",FY2025,23600,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, Taiwan",FY2026,42345,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, Taiwan",9M FY2026,30301,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, Taiwan",9M FY2027,69286,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, Taiwan",LTM Oct-26,81330,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, China (including Hong Kong)",FY2024,12330,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, China (including Hong Kong)",FY2025,25048,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, China (including Hong Kong)",FY2026,19677,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, China (including Hong Kong)",9M FY2026,16617,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, China (including Hong Kong)",9M FY2027,23480,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, China (including Hong Kong)",LTM Oct-26,26540,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, other countries",FY2024,2147,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, other countries",FY2025,4367,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, other countries",FY2026,4299,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, other countries",9M FY2026,3134,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, other countries",9M FY2027,4173,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),"Revenue, other countries",LTM Oct-26,5338,USD m,
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),United States share of revenue,FY2024,0.517596,%,"Revenue, United States / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),United States share of revenue,FY2025,0.593745,%,"Revenue, United States / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),United States share of revenue,FY2026,0.69287,%,"Revenue, United States / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),United States share of revenue,9M FY2026,0.661378,%,"Revenue, United States / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),United States share of revenue,9M FY2027,0.669917,%,"Revenue, United States / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),United States share of revenue,LTM Oct-26,0.687105,%,"Revenue, United States / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),China share of revenue,FY2024,0.20239,%,"Revenue, China / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),China share of revenue,FY2025,0.191943,%,"Revenue, China / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),China share of revenue,FY2026,0.091123,%,"Revenue, China / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),China share of revenue,9M FY2026,0.112421,%,"Revenue, China / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),China share of revenue,9M FY2027,0.079951,%,"Revenue, China / Revenue"
+1 Income statement,STEP 2 - Revenue by region (where the buying customer has its headquarters),China share of revenue,LTM Oct-26,0.073354,%,"Revenue, China / Revenue"
+1 Income statement,STEP 3 - Gross profit (margen bruto),Cost of revenue (coste de ventas),FY2024,-16621,USD m,
+1 Income statement,STEP 3 - Gross profit (margen bruto),Cost of revenue (coste de ventas),FY2025,-32639,USD m,
+1 Income statement,STEP 3 - Gross profit (margen bruto),Cost of revenue (coste de ventas),FY2026,-62475,USD m,
+1 Income statement,STEP 3 - Gross profit (margen bruto),Cost of revenue (coste de ventas),9M FY2026,-45441,USD m,
+1 Income statement,STEP 3 - Gross profit (margen bruto),Cost of revenue (coste de ventas),9M FY2027,-73705,USD m,
+1 Income statement,STEP 3 - Gross profit (margen bruto),Cost of revenue (coste de ventas),LTM Oct-26,-90739,USD m,
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross profit (margen bruto),FY2024,44301,USD m,Revenue + Cost of revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross profit (margen bruto),FY2025,97858,USD m,Revenue + Cost of revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross profit (margen bruto),FY2026,153463,USD m,Revenue + Cost of revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross profit (margen bruto),9M FY2026,102370,USD m,Revenue + Cost of revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross profit (margen bruto),9M FY2027,219976,USD m,Revenue + Cost of revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross profit (margen bruto),LTM Oct-26,271069,USD m,Revenue + Cost of revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross margin,FY2024,0.727176,%,Gross profit / Revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross margin,FY2025,0.749887,%,Gross profit / Revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross margin,FY2026,0.710681,%,Gross profit / Revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross margin,9M FY2026,0.692574,%,Gross profit / Revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross margin,9M FY2027,0.74903,%,Gross profit / Revenue
+1 Income statement,STEP 3 - Gross profit (margen bruto),Gross margin,LTM Oct-26,0.749207,%,Gross profit / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development (I+D),FY2024,-8675,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development (I+D),FY2025,-12914,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development (I+D),FY2026,-18497,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development (I+D),9M FY2026,-12985,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development (I+D),9M FY2027,-20829,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development (I+D),LTM Oct-26,-26341,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Sales, general and administrative",FY2024,-2654,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Sales, general and administrative",FY2025,-3491,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Sales, general and administrative",FY2026,-4579,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Sales, general and administrative",9M FY2026,-3297,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Sales, general and administrative",9M FY2027,-4356,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Sales, general and administrative",LTM Oct-26,-5638,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Operating income (EBIT, BAIT)",FY2024,32972,USD m,"Gross profit + Research and development + Sales, general and administrative"
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Operating income (EBIT, BAIT)",FY2025,81453,USD m,"Gross profit + Research and development + Sales, general and administrative"
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Operating income (EBIT, BAIT)",FY2026,130387,USD m,"Gross profit + Research and development + Sales, general and administrative"
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Operating income (EBIT, BAIT)",9M FY2026,86088,USD m,"Gross profit + Research and development + Sales, general and administrative"
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Operating income (EBIT, BAIT)",9M FY2027,194791,USD m,"Gross profit + Research and development + Sales, general and administrative"
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),"Operating income (EBIT, BAIT)",LTM Oct-26,239090,USD m,"Gross profit + Research and development + Sales, general and administrative"
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Operating margin,FY2024,0.541217,%,EBIT / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Operating margin,FY2025,0.624175,%,EBIT / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Operating margin,FY2026,0.603817,%,EBIT / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Operating margin,9M FY2026,0.582419,%,EBIT / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Operating margin,9M FY2027,0.663274,%,EBIT / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Operating margin,LTM Oct-26,0.66082,%,EBIT / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development / revenue,FY2024,0.142395,%,-Research and development / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development / revenue,FY2025,0.09896,%,-Research and development / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development / revenue,FY2026,0.085659,%,-Research and development / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development / revenue,9M FY2026,0.087849,%,-Research and development / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development / revenue,9M FY2027,0.070924,%,-Research and development / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Research and development / revenue,LTM Oct-26,0.072804,%,-Research and development / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Depreciation and amortization (amortización),FY2024,1508,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Depreciation and amortization (amortización),FY2025,1864,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Depreciation and amortization (amortización),FY2026,2843,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Depreciation and amortization (amortización),9M FY2026,2031,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Depreciation and amortization (amortización),9M FY2027,3378,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),Depreciation and amortization (amortización),LTM Oct-26,4190,USD m,
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA,FY2024,34480,USD m,EBIT + Depreciation and amortization
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA,FY2025,83317,USD m,EBIT + Depreciation and amortization
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA,FY2026,133230,USD m,EBIT + Depreciation and amortization
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA,9M FY2026,88119,USD m,EBIT + Depreciation and amortization
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA,9M FY2027,198169,USD m,EBIT + Depreciation and amortization
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA,LTM Oct-26,243280,USD m,EBIT + Depreciation and amortization
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA margin,FY2024,0.56597,%,EBITDA / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA margin,FY2025,0.638459,%,EBITDA / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA margin,FY2026,0.616983,%,EBITDA / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA margin,9M FY2026,0.59616,%,EBITDA / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA margin,9M FY2027,0.674776,%,EBITDA / Revenue
+1 Income statement,STEP 4 - Operating expenses and operating income (gastos de explotación),EBITDA margin,LTM Oct-26,0.672401,%,EBITDA / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Other income, net (interest and gains on investments)",FY2024,846,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Other income, net (interest and gains on investments)",FY2025,2573,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Other income, net (interest and gains on investments)",FY2026,11063,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Other income, net (interest and gains on investments)",9M FY2026,4964,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Other income, net (interest and gains on investments)",9M FY2027,25636,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Other income, net (interest and gains on investments)",LTM Oct-26,31735,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Income before income tax (EBT, BAI)",FY2024,33818,USD m,"EBIT + Other income, net"
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Income before income tax (EBT, BAI)",FY2025,84026,USD m,"EBIT + Other income, net"
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Income before income tax (EBT, BAI)",FY2026,141450,USD m,"EBIT + Other income, net"
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Income before income tax (EBT, BAI)",9M FY2026,91052,USD m,"EBIT + Other income, net"
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Income before income tax (EBT, BAI)",9M FY2027,220427,USD m,"EBIT + Other income, net"
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Income before income tax (EBT, BAI)",LTM Oct-26,270825,USD m,"EBIT + Other income, net"
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Income tax (impuesto),FY2024,-4058,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Income tax (impuesto),FY2025,-11146,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Income tax (impuesto),FY2026,-21383,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Income tax (impuesto),9M FY2026,-13945,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Income tax (impuesto),9M FY2027,-37130,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Income tax (impuesto),LTM Oct-26,-44568,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net income (beneficio neto),FY2024,29760,USD m,EBT + Income tax
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net income (beneficio neto),FY2025,72880,USD m,EBT + Income tax
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net income (beneficio neto),FY2026,120067,USD m,EBT + Income tax
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net income (beneficio neto),9M FY2026,77107,USD m,EBT + Income tax
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net income (beneficio neto),9M FY2027,183297,USD m,EBT + Income tax
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net income (beneficio neto),LTM Oct-26,226257,USD m,EBT + Income tax
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net margin,FY2024,0.488493,%,Net income / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net margin,FY2025,0.55848,%,Net income / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net margin,FY2026,0.556025,%,Net income / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net margin,9M FY2026,0.521659,%,Net income / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net margin,9M FY2027,0.624136,%,Net income / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Net margin,LTM Oct-26,0.625351,%,Net income / Revenue
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Effective tax rate,FY2024,0.119995,%,-Income tax / EBT
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Effective tax rate,FY2025,0.132649,%,-Income tax / EBT
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Effective tax rate,FY2026,0.15117,%,-Income tax / EBT
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Effective tax rate,9M FY2026,0.153154,%,-Income tax / EBT
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Effective tax rate,9M FY2027,0.168446,%,-Income tax / EBT
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),Effective tax rate,LTM Oct-26,0.164564,%,-Income tax / EBT
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),of which gains on equity securities (stakes in other companies),FY2024,238,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),of which gains on equity securities (stakes in other companies),FY2025,1030,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),of which gains on equity securities (stakes in other companies),FY2026,8918,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),of which gains on equity securities (stakes in other companies),9M FY2026,3426,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),of which gains on equity securities (stakes in other companies),9M FY2027,25474,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),of which gains on equity securities (stakes in other companies),LTM Oct-26,30966,USD m,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted shares, weighted average (millions)",FY2024,24940,count,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted shares, weighted average (millions)",FY2025,24804,count,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted shares, weighted average (millions)",FY2026,24514,count,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted shares, weighted average (millions)",9M FY2026,24542,count,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted shares, weighted average (millions)",9M FY2027,24287,count,
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted earnings per share, USD",FY2024,1.193264,USD,Net income / Diluted shares (both in millions)
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted earnings per share, USD",FY2025,2.938236,USD,Net income / Diluted shares (both in millions)
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted earnings per share, USD",FY2026,4.897895,USD,Net income / Diluted shares (both in millions)
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted earnings per share, USD",9M FY2026,3.141838,USD,Net income / Diluted shares (both in millions)
+1 Income statement,STEP 5 - From operating income to net income (beneficio neto),"Diluted earnings per share, USD",9M FY2027,7.547124,USD,Net income / Diluted shares (both in millions)
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),"Acquisition-related, legal and other costs, added back",FY2024,613,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),"Acquisition-related, legal and other costs, added back",FY2025,599,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),"Acquisition-related, legal and other costs, added back",FY2026,527,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),"Acquisition-related, legal and other costs, added back",9M FY2026,351,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),"Acquisition-related, legal and other costs, added back",9M FY2027,832,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),"Acquisition-related, legal and other costs, added back",LTM Oct-26,1008,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating income (non-GAAP),FY2024,33585,USD m,"EBIT + Acquisition-related, legal and other costs"
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating income (non-GAAP),FY2025,82052,USD m,"EBIT + Acquisition-related, legal and other costs"
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating income (non-GAAP),FY2026,130914,USD m,"EBIT + Acquisition-related, legal and other costs"
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating income (non-GAAP),9M FY2026,86439,USD m,"EBIT + Acquisition-related, legal and other costs"
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating income (non-GAAP),9M FY2027,195623,USD m,"EBIT + Acquisition-related, legal and other costs"
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating income (non-GAAP),LTM Oct-26,240098,USD m,"EBIT + Acquisition-related, legal and other costs"
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating margin,FY2024,0.551279,%,Adjusted operating income / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating margin,FY2025,0.628765,%,Adjusted operating income / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating margin,FY2026,0.606257,%,Adjusted operating income / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating margin,9M FY2026,0.584794,%,Adjusted operating income / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating margin,9M FY2027,0.666107,%,Adjusted operating income / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Adjusted operating margin,LTM Oct-26,0.663606,%,Adjusted operating income / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation (no longer added back since FY2027),FY2024,3549,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation (no longer added back since FY2027),FY2025,4737,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation (no longer added back since FY2027),FY2026,6386,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation (no longer added back since FY2027),9M FY2026,4753,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation (no longer added back since FY2027),9M FY2027,6042,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation (no longer added back since FY2027),LTM Oct-26,7675,USD m,
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation / revenue,FY2024,0.058255,%,Stock-based compensation / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation / revenue,FY2025,0.0363,%,Stock-based compensation / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation / revenue,FY2026,0.029573,%,Stock-based compensation / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation / revenue,9M FY2026,0.032156,%,Stock-based compensation / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation / revenue,9M FY2027,0.020573,%,Stock-based compensation / Revenue
+1 Income statement,STEP 6 - The company's adjusted operating income (non-GAAP),Stock-based compensation / revenue,LTM Oct-26,0.021213,%,Stock-based compensation / Revenue
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),"Adjustments before tax (mostly the gains on equity securities, taken out)",9M FY2026,-3072,USD m,
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),"Adjustments before tax (mostly the gains on equity securities, taken out)",9M FY2027,-23794,USD m,
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),Tax effect of the adjustments,9M FY2026,753,USD m,
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),Tax effect of the adjustments,9M FY2027,4871,USD m,
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),"One Big Beautiful Bill Act tax charge, added back",9M FY2026,48,USD m,
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),"One Big Beautiful Bill Act tax charge, added back",9M FY2027,0,USD m,
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),Adjusted net income (non-GAAP),9M FY2026,74836,USD m,Net income + the three adjustments above
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),Adjusted net income (non-GAAP),9M FY2027,164374,USD m,Net income + the three adjustments above
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),Adjusted net income / net income,9M FY2026,0.970547,%,Adjusted net income / Net income
+1 Income statement,STEP 7 - The company's adjusted net income (non-GAAP; given for the nine months only),Adjusted net income / net income,9M FY2027,0.896763,%,Adjusted net income / Net income
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q1 FY26,44062,USD m,
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q2 FY26,46743,USD m,
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q3 FY26,57006,USD m,
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q4 FY26,68127,USD m,
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q1 FY27,81615,USD m,
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q2 FY27,96221,USD m,
+2 Quarters,STEP 1 - Revenue,Revenue (ventas),Q3 FY27,115844,USD m,
+2 Quarters,STEP 1 - Revenue,Growth on the previous quarter,Q2 FY26,0.060846,%,Revenue / Revenue of the previous quarter - 1
+2 Quarters,STEP 1 - Revenue,Growth on the previous quarter,Q3 FY26,0.219562,%,Revenue / Revenue of the previous quarter - 1
+2 Quarters,STEP 1 - Revenue,Growth on the previous quarter,Q4 FY26,0.195085,%,Revenue / Revenue of the previous quarter - 1
+2 Quarters,STEP 1 - Revenue,Growth on the previous quarter,Q1 FY27,0.197983,%,Revenue / Revenue of the previous quarter - 1
+2 Quarters,STEP 1 - Revenue,Growth on the previous quarter,Q2 FY27,0.178962,%,Revenue / Revenue of the previous quarter - 1
+2 Quarters,STEP 1 - Revenue,Growth on the previous quarter,Q3 FY27,0.203937,%,Revenue / Revenue of the previous quarter - 1
+2 Quarters,STEP 1 - Revenue,Growth on the same quarter a year earlier,Q1 FY27,0.852276,%,Revenue / Revenue four quarters earlier - 1
+2 Quarters,STEP 1 - Revenue,Growth on the same quarter a year earlier,Q2 FY27,1.058511,%,Revenue / Revenue four quarters earlier - 1
+2 Quarters,STEP 1 - Revenue,Growth on the same quarter a year earlier,Q3 FY27,1.032137,%,Revenue / Revenue four quarters earlier - 1
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q1 FY26,39112,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q2 FY26,41096,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q3 FY26,51215,USD m,Q3 FY26: FY2026 - Q4 - Q1 - Q2. Q3 FY27: $107.6bn as rounded by the company
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q4 FY26,62314,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q1 FY27,75246,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q2 FY27,89023,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Data Center,Q3 FY27,107600,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q1 FY26,4950,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q2 FY26,5647,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q3 FY26,5791,USD m,Where not reported: Revenue - Data Center
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q4 FY26,5813,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q1 FY27,6369,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q2 FY27,7198,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Edge Computing,Q3 FY27,8244,USD m,Where not reported: Revenue - Data Center
+2 Quarters,STEP 2 - Revenue by market platform,of which Hyperscale (public clouds and the largest internet companies),Q1 FY26,22260,USD m,Q1 FY26: first half (10-Q) - Q2. Q3: rounded $bn. Q4 FY26: not given after the Q2 FY27 recast
+2 Quarters,STEP 2 - Revenue by market platform,of which Hyperscale (public clouds and the largest internet companies),Q2 FY26,24168,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,of which Hyperscale (public clouds and the largest internet companies),Q3 FY26,35100,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,of which Hyperscale (public clouds and the largest internet companies),Q1 FY27,43050,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,of which Hyperscale (public clouds and the largest internet companies),Q2 FY27,48710,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,of which Hyperscale (public clouds and the largest internet companies),Q3 FY27,60100,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,"of which AI Clouds, Industrial & Enterprise",Q1 FY26,16852,USD m,Q1 FY26: first half (10-Q) - Q2. Q3: rounded $bn. Q4 FY26: not given after the Q2 FY27 recast
+2 Quarters,STEP 2 - Revenue by market platform,"of which AI Clouds, Industrial & Enterprise",Q2 FY26,16928,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,"of which AI Clouds, Industrial & Enterprise",Q3 FY26,16100,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,"of which AI Clouds, Industrial & Enterprise",Q1 FY27,32196,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,"of which AI Clouds, Industrial & Enterprise",Q2 FY27,40313,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,"of which AI Clouds, Industrial & Enterprise",Q3 FY27,47500,USD m,
+2 Quarters,STEP 2 - Revenue by market platform,Hyperscale share of Data Center,Q1 FY26,0.569135,%,Hyperscale / Data Center
+2 Quarters,STEP 2 - Revenue by market platform,Hyperscale share of Data Center,Q2 FY26,0.588086,%,Hyperscale / Data Center
+2 Quarters,STEP 2 - Revenue by market platform,Hyperscale share of Data Center,Q3 FY26,0.685346,%,Hyperscale / Data Center
+2 Quarters,STEP 2 - Revenue by market platform,Hyperscale share of Data Center,Q1 FY27,0.572123,%,Hyperscale / Data Center
+2 Quarters,STEP 2 - Revenue by market platform,Hyperscale share of Data Center,Q2 FY27,0.547162,%,Hyperscale / Data Center
+2 Quarters,STEP 2 - Revenue by market platform,Hyperscale share of Data Center,Q3 FY27,0.55855,%,Hyperscale / Data Center
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q1 FY26,-17394,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q2 FY26,-12890,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q3 FY26,-15157,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q4 FY26,-17034,USD m,Q4 FY26: FY2026 - 9M FY2026
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q1 FY27,-20458,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q2 FY27,-24079,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Cost of revenue,Q3 FY27,-29168,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q1 FY26,26668,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q2 FY26,33853,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q3 FY26,41849,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q4 FY26,51093,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q1 FY27,61157,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q2 FY27,72142,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross profit (margen bruto),Q3 FY27,86676,USD m,Revenue + Cost of revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q1 FY26,0.605238,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q2 FY26,0.724237,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q3 FY26,0.734116,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q4 FY26,0.749967,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q1 FY27,0.749335,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q2 FY27,0.749753,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Gross margin,Q3 FY27,0.748213,%,Gross profit / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q1 FY26,-3989,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q2 FY26,-4291,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q3 FY26,-4705,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q4 FY26,-5512,USD m,Q4 FY26: FY2026 - 9M FY2026
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q1 FY27,-6321,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q2 FY27,-7054,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Research and development,Q3 FY27,-7454,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q1 FY26,-1041,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q2 FY26,-1122,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q3 FY26,-1134,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q4 FY26,-1282,USD m,Q4 FY26: FY2026 - 9M FY2026
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q1 FY27,-1300,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q2 FY27,-1354,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,"Sales, general and administrative",Q3 FY27,-1702,USD m,
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q1 FY26,21638,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q2 FY26,28440,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q3 FY26,36010,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q4 FY26,44299,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q1 FY27,53536,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q2 FY27,63734,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating income (EBIT),Q3 FY27,77520,USD m,"Gross profit + Research and development + Sales, general and administrative"
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q1 FY26,0.491081,%,EBIT / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q2 FY26,0.608433,%,EBIT / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q3 FY26,0.631688,%,EBIT / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q4 FY26,0.650241,%,EBIT / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q1 FY27,0.655958,%,EBIT / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q2 FY27,0.662371,%,EBIT / Revenue
+2 Quarters,STEP 3 - Gross profit and operating income,Operating margin,Q3 FY27,0.669176,%,EBIT / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q1 FY26,163,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q2 FY26,101,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q3 FY26,87,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q4 FY26,175,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q1 FY27,247,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q2 FY27,222,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,"Acquisition-related, legal and other costs, added back",Q3 FY27,363,USD m,
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q1 FY26,21801,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q2 FY26,28541,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q3 FY26,36097,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q4 FY26,44474,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q1 FY27,53783,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q2 FY27,63956,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating income (non-GAAP),Q3 FY27,77883,USD m,"EBIT + Acquisition-related, legal and other costs"
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q1 FY26,0.49478,%,Adjusted operating income / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q2 FY26,0.610594,%,Adjusted operating income / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q3 FY26,0.633214,%,Adjusted operating income / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q4 FY26,0.65281,%,Adjusted operating income / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q1 FY27,0.658984,%,Adjusted operating income / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q2 FY27,0.664678,%,Adjusted operating income / Revenue
+2 Quarters,STEP 4 - The company's adjusted operating income,Adjusted operating margin,Q3 FY27,0.672309,%,Adjusted operating income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q1 FY26,272,USD m,
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q2 FY26,2766,USD m,
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q3 FY26,1926,USD m,
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q4 FY26,6099,USD m,Q4 FY26: FY2026 - 9M FY2026
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q1 FY27,16367,USD m,
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q2 FY27,7773,USD m,
+2 Quarters,STEP 5 - From operating income to net income,"Other income, net (interest and gains on investments)",Q3 FY27,1497,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q1 FY26,21910,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q2 FY26,31206,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q3 FY26,37936,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q4 FY26,50398,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q1 FY27,69903,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q2 FY27,71507,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income before income tax (EBT),Q3 FY27,79017,USD m,"EBIT + Other income, net"
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q1 FY26,-3135,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q2 FY26,-4784,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q3 FY26,-6026,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q4 FY26,-7438,USD m,Q4 FY26: FY2026 - 9M FY2026
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q1 FY27,-11582,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q2 FY27,-11819,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Income tax,Q3 FY27,-13730,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q1 FY26,18775,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q2 FY26,26422,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q3 FY26,31910,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q4 FY26,42960,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q1 FY27,58321,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q2 FY27,59688,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net income (beneficio neto),Q3 FY27,65287,USD m,EBT + Income tax
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q1 FY26,0.426104,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q2 FY26,0.565261,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q3 FY26,0.559766,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q4 FY26,0.630587,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q1 FY27,0.714587,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q2 FY27,0.620322,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Net margin,Q3 FY27,0.563577,%,Net income / Revenue
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q1 FY26,26135,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q2 FY26,13451,USD m,Q2 FY26: 9M FY2026 (sheet 5) - Q1 - Q3
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q3 FY26,22089,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q4 FY26,34902,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q1 FY27,48554,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q2 FY27,21341,USD m,
+2 Quarters,STEP 5 - From operating income to net income,Free cash flow (as the company reports it),Q3 FY27,43777,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Cash and cash equivalents (tesorería),Jan-2025,8589,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Cash and cash equivalents (tesorería),Jan-2026,10605,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Cash and cash equivalents (tesorería),Oct-2026,29089,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Marketable debt securities (bonds),Jan-2025,34240,USD m,Jan-2025: marketable securities - the listed shares inside them (Note 7)
+3 Balance sheet,STEP 1 - Assets (activo),Marketable debt securities (bonds),Jan-2026,39065,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Marketable debt securities (bonds),Oct-2026,24423,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Marketable equity securities (listed shares),Jan-2025,381,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Marketable equity securities (listed shares),Jan-2026,12886,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Marketable equity securities (listed shares),Oct-2026,44219,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Accounts receivable (clientes),Jan-2025,23065,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Accounts receivable (clientes),Jan-2026,38466,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Accounts receivable (clientes),Oct-2026,81033,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Inventories (existencias),Jan-2025,10080,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Inventories (existencias),Jan-2026,21403,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Inventories (existencias),Oct-2026,39724,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Prepaid expenses and other current assets,Jan-2025,3771,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Prepaid expenses and other current assets,Jan-2026,3180,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Prepaid expenses and other current assets,Oct-2026,3506,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Current assets (activo corriente),Jan-2025,80126,USD m,Sum of the six lines above
+3 Balance sheet,STEP 1 - Assets (activo),Current assets (activo corriente),Jan-2026,125605,USD m,Sum of the six lines above
+3 Balance sheet,STEP 1 - Assets (activo),Current assets (activo corriente),Oct-2026,221994,USD m,Sum of the six lines above
+3 Balance sheet,STEP 1 - Assets (activo),Property and equipment (inmovilizado material),Jan-2025,6283,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Property and equipment (inmovilizado material),Jan-2026,10383,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Property and equipment (inmovilizado material),Oct-2026,19227,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Operating lease assets (right to use rented buildings),Jan-2025,1793,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Operating lease assets (right to use rented buildings),Jan-2026,2867,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Operating lease assets (right to use rented buildings),Oct-2026,6383,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Goodwill (fondo de comercio),Jan-2025,5188,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Goodwill (fondo de comercio),Jan-2026,20832,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Goodwill (fondo de comercio),Oct-2026,26451,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Intangible assets (bought technology),Jan-2025,807,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Intangible assets (bought technology),Jan-2026,3306,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Intangible assets (bought technology),Oct-2026,4056,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Deferred income tax assets,Jan-2025,10979,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Deferred income tax assets,Jan-2026,13258,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Deferred income tax assets,Oct-2026,11383,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Non-marketable securities (stakes in private companies),Jan-2025,3387,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Non-marketable securities (stakes in private companies),Jan-2026,22251,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Non-marketable securities (stakes in private companies),Oct-2026,65528,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Other assets,Jan-2025,3038,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Other assets,Jan-2026,8301,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Other assets,Oct-2026,17166,USD m,
+3 Balance sheet,STEP 1 - Assets (activo),Total assets (activo total),Jan-2025,111601,USD m,Current assets + the seven non-current lines
+3 Balance sheet,STEP 1 - Assets (activo),Total assets (activo total),Jan-2026,206803,USD m,Current assets + the seven non-current lines
+3 Balance sheet,STEP 1 - Assets (activo),Total assets (activo total),Oct-2026,372188,USD m,Current assets + the seven non-current lines
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Accounts payable (proveedores),Jan-2025,6310,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Accounts payable (proveedores),Jan-2026,9812,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Accounts payable (proveedores),Oct-2026,21074,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Accrued and other current liabilities,Jan-2025,11737,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Accrued and other current liabilities,Jan-2026,21352,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Accrued and other current liabilities,Oct-2026,33287,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Short-term debt,Jan-2025,0,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Short-term debt,Jan-2026,999,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Short-term debt,Oct-2026,0,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Current liabilities (pasivo corriente),Jan-2025,18047,USD m,Sum of the three lines above
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Current liabilities (pasivo corriente),Jan-2026,32163,USD m,Sum of the three lines above
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Current liabilities (pasivo corriente),Oct-2026,54361,USD m,Sum of the three lines above
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Long-term debt,Jan-2025,8463,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Long-term debt,Jan-2026,7469,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Long-term debt,Oct-2026,32371,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Long-term operating lease liabilities,Jan-2025,1519,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Long-term operating lease liabilities,Jan-2026,2572,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Long-term operating lease liabilities,Oct-2026,5777,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Other long-term liabilities,Jan-2025,4245,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Other long-term liabilities,Jan-2026,7306,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Other long-term liabilities,Oct-2026,13013,USD m,
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Total liabilities (pasivo total),Jan-2025,32274,USD m,Current liabilities + the three long-term lines
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Total liabilities (pasivo total),Jan-2026,49510,USD m,Current liabilities + the three long-term lines
+3 Balance sheet,STEP 2 - Liabilities (pasivo),Total liabilities (pasivo total),Oct-2026,105522,USD m,Current liabilities + the three long-term lines
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Common stock (at par value),Jan-2025,24,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Common stock (at par value),Jan-2026,24,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Additional paid-in capital (prima de emisión),Jan-2025,11237,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Additional paid-in capital (prima de emisión),Jan-2026,10118,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Accumulated other comprehensive income,Jan-2025,28,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Accumulated other comprehensive income,Jan-2026,178,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Retained earnings (reservas),Jan-2025,68038,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Retained earnings (reservas),Jan-2026,146973,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Shareholders' equity (patrimonio neto),Jan-2025,79327,USD m,Common stock + Paid-in capital + Other comprehensive income + Retained earnings (Oct-2026: total only)
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Shareholders' equity (patrimonio neto),Jan-2026,157293,USD m,Common stock + Paid-in capital + Other comprehensive income + Retained earnings (Oct-2026: total only)
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Shareholders' equity (patrimonio neto),Oct-2026,266666,USD m,
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Total liabilities and shareholders' equity (must equal total assets),Jan-2025,111601,USD m,Shareholders' equity + Total liabilities (equals total assets)
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Total liabilities and shareholders' equity (must equal total assets),Jan-2026,206803,USD m,Shareholders' equity + Total liabilities (equals total assets)
+3 Balance sheet,"STEP 3 - Shareholders' equity, then everything that funds the assets (patrimonio neto)",Total liabilities and shareholders' equity (must equal total assets),Oct-2026,372188,USD m,Shareholders' equity + Total liabilities (equals total assets)
+3 Balance sheet,STEP 4 - Cash and marketable debt securities,Cash and marketable debt securities,Jan-2025,42829,USD m,Cash + Marketable debt securities
+3 Balance sheet,STEP 4 - Cash and marketable debt securities,Cash and marketable debt securities,Jan-2026,49670,USD m,Cash + Marketable debt securities
+3 Balance sheet,STEP 4 - Cash and marketable debt securities,Cash and marketable debt securities,Oct-2026,53512,USD m,Cash + Marketable debt securities
+3 Balance sheet,STEP 5 - Stakes in other companies,Stakes in other companies,Jan-2025,3768,USD m,Listed + Private stakes (Oct-2026 leaves out $4.7bn of locked-up listed shares held in Other assets)
+3 Balance sheet,STEP 5 - Stakes in other companies,Stakes in other companies,Jan-2026,35137,USD m,Listed + Private stakes (Oct-2026 leaves out $4.7bn of locked-up listed shares held in Other assets)
+3 Balance sheet,STEP 5 - Stakes in other companies,Stakes in other companies,Oct-2026,109747,USD m,Listed + Private stakes (Oct-2026 leaves out $4.7bn of locked-up listed shares held in Other assets)
+3 Balance sheet,STEP 5 - Stakes in other companies,Stakes / total assets,Jan-2025,0.033763,%,Stakes in other companies / Total assets
+3 Balance sheet,STEP 5 - Stakes in other companies,Stakes / total assets,Jan-2026,0.169906,%,Stakes in other companies / Total assets
+3 Balance sheet,STEP 5 - Stakes in other companies,Stakes / total assets,Oct-2026,0.29487,%,Stakes in other companies / Total assets
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current assets (activo corriente),Jan-2025,80126,USD m,"From the balance sheet, STEP 1"
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current assets (activo corriente),Jan-2026,125605,USD m,"From the balance sheet, STEP 1"
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current assets (activo corriente),Oct-2026,221994,USD m,"From the balance sheet, STEP 1"
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current liabilities (pasivo corriente),Jan-2025,-18047,USD m,"From the balance sheet, STEP 2, as a negative"
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current liabilities (pasivo corriente),Jan-2026,-32163,USD m,"From the balance sheet, STEP 2, as a negative"
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current liabilities (pasivo corriente),Oct-2026,-54361,USD m,"From the balance sheet, STEP 2, as a negative"
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Working capital (fondo de maniobra),Jan-2025,62079,USD m,Current assets - Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Working capital (fondo de maniobra),Jan-2026,93442,USD m,Current assets - Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Working capital (fondo de maniobra),Oct-2026,167633,USD m,Current assets - Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current ratio (liquidez),Jan-2025,4.439851,x,Current assets / Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current ratio (liquidez),Jan-2026,3.905264,x,Current assets / Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Current ratio (liquidez),Oct-2026,4.0837,x,Current assets / Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Cash ratio (cash and debt securities / current liabilities),Jan-2025,2.373192,x,Cash and marketable debt securities / Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Cash ratio (cash and debt securities / current liabilities),Jan-2026,1.544321,x,Cash and marketable debt securities / Current liabilities
+4 Working capital,STEP 1 - Working capital (fondo de maniobra),Cash ratio (cash and debt securities / current liabilities),Oct-2026,0.984382,x,Cash and marketable debt securities / Current liabilities
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accounts receivable (clientes),Jan-2025,23065,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accounts receivable (clientes),Jan-2026,38466,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accounts receivable (clientes),Oct-2026,81033,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Inventories (existencias),Jan-2025,10080,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Inventories (existencias),Jan-2026,21403,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Inventories (existencias),Oct-2026,39724,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Prepaid expenses and other current assets,Jan-2025,3771,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Prepaid expenses and other current assets,Jan-2026,3180,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Prepaid expenses and other current assets,Oct-2026,3506,USD m,From the balance sheet
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accounts payable (proveedores),Jan-2025,-6310,USD m,"From the balance sheet, as a negative"
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accounts payable (proveedores),Jan-2026,-9812,USD m,"From the balance sheet, as a negative"
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accounts payable (proveedores),Oct-2026,-21074,USD m,"From the balance sheet, as a negative"
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accrued and other current liabilities,Jan-2025,-11737,USD m,"From the balance sheet, as a negative"
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accrued and other current liabilities,Jan-2026,-21352,USD m,"From the balance sheet, as a negative"
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Accrued and other current liabilities,Oct-2026,-33287,USD m,"From the balance sheet, as a negative"
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Operating working capital (ACN),Jan-2025,18869,USD m,Receivables + Inventories + Prepaid - Payables - Accrued
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Operating working capital (ACN),Jan-2026,31885,USD m,Receivables + Inventories + Prepaid - Payables - Accrued
+4 Working capital,"STEP 2 - Operating working capital (ACN, without cash)",Operating working capital (ACN),Oct-2026,69902,USD m,Receivables + Inventories + Prepaid - Payables - Accrued
+4 Working capital,STEP 3 - Days (periodos medios),Revenue of the quarter that ends on the date,Jan-2026,68127,USD m,"Q4 FY26 for Jan-2026, Q3 FY27 for Oct-2026 (Q4 FY25 is not in these filings)"
+4 Working capital,STEP 3 - Days (periodos medios),Revenue of the quarter that ends on the date,Oct-2026,115844,USD m,"Q4 FY26 for Jan-2026, Q3 FY27 for Oct-2026 (Q4 FY25 is not in these filings)"
+4 Working capital,STEP 3 - Days (periodos medios),Cost of revenue of the same quarter,Jan-2026,17034,USD m,"Same quarters, as a positive amount"
+4 Working capital,STEP 3 - Days (periodos medios),Cost of revenue of the same quarter,Oct-2026,29168,USD m,"Same quarters, as a positive amount"
+4 Working capital,STEP 3 - Days (periodos medios),Days in the quarter,Jan-2026,91,count,13 weeks
+4 Working capital,STEP 3 - Days (periodos medios),Days in the quarter,Oct-2026,91,count,13 weeks
+4 Working capital,STEP 3 - Days (periodos medios),"Receivable days (PMc, periodo medio de cobro)",Jan-2026,51.380598,days,Receivables / Revenue of the quarter x 91
+4 Working capital,STEP 3 - Days (periodos medios),"Receivable days (PMc, periodo medio de cobro)",Oct-2026,63.654596,days,Receivables / Revenue of the quarter x 91
+4 Working capital,STEP 3 - Days (periodos medios),"Inventory days (PMa, periodo medio de almacén)",Jan-2026,114.340319,days,Inventories / Cost of revenue of the quarter x 91
+4 Working capital,STEP 3 - Days (periodos medios),"Inventory days (PMa, periodo medio de almacén)",Oct-2026,123.933214,days,Inventories / Cost of revenue of the quarter x 91
+4 Working capital,STEP 3 - Days (periodos medios),"Payable days (PMp, periodo medio de pago)",Jan-2026,52.418222,days,Payables / Cost of revenue of the quarter x 91
+4 Working capital,STEP 3 - Days (periodos medios),"Payable days (PMp, periodo medio de pago)",Oct-2026,65.747874,days,Payables / Cost of revenue of the quarter x 91
+4 Working capital,STEP 3 - Days (periodos medios),Cash conversion cycle (ciclo de caja),Jan-2026,113.302695,days,Receivable days + Inventory days - Payable days
+4 Working capital,STEP 3 - Days (periodos medios),Cash conversion cycle (ciclo de caja),Oct-2026,121.839936,days,Receivable days + Inventory days - Payable days
+5 Cash flow,STEP 1 - Operating activities (explotación),Net income (beneficio neto),FY2024,29760,USD m,"From the income statement, STEP 5"
+5 Cash flow,STEP 1 - Operating activities (explotación),Net income (beneficio neto),FY2025,72880,USD m,"From the income statement, STEP 5"
+5 Cash flow,STEP 1 - Operating activities (explotación),Net income (beneficio neto),FY2026,120067,USD m,"From the income statement, STEP 5"
+5 Cash flow,STEP 1 - Operating activities (explotación),Net income (beneficio neto),9M FY2026,77107,USD m,"From the income statement, STEP 5"
+5 Cash flow,STEP 1 - Operating activities (explotación),Net income (beneficio neto),9M FY2027,183297,USD m,"From the income statement, STEP 5"
+5 Cash flow,STEP 1 - Operating activities (explotación),Net income (beneficio neto),LTM Oct-26,226257,USD m,"From the income statement, STEP 5"
+5 Cash flow,STEP 1 - Operating activities (explotación),Stock-based compensation (added back: not cash),FY2024,3549,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Stock-based compensation (added back: not cash),FY2025,4737,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Stock-based compensation (added back: not cash),FY2026,6386,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Stock-based compensation (added back: not cash),9M FY2026,4753,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Stock-based compensation (added back: not cash),9M FY2027,6042,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Stock-based compensation (added back: not cash),LTM Oct-26,7675,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Depreciation and amortization (added back: not cash),FY2024,1508,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Depreciation and amortization (added back: not cash),FY2025,1864,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Depreciation and amortization (added back: not cash),FY2026,2843,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Depreciation and amortization (added back: not cash),9M FY2026,2031,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Depreciation and amortization (added back: not cash),9M FY2027,3378,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Depreciation and amortization (added back: not cash),LTM Oct-26,4190,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Deferred income taxes,FY2024,-2489,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Deferred income taxes,FY2025,-4477,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Deferred income taxes,FY2026,-1424,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Deferred income taxes,9M FY2026,-2035,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Deferred income taxes,9M FY2027,1658,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Deferred income taxes,LTM Oct-26,2269,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Gains on equity securities (taken out: not cash yet),FY2024,-238,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Gains on equity securities (taken out: not cash yet),FY2025,-1030,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Gains on equity securities (taken out: not cash yet),FY2026,-8918,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Gains on equity securities (taken out: not cash yet),9M FY2026,-3426,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Gains on equity securities (taken out: not cash yet),9M FY2027,-25474,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Gains on equity securities (taken out: not cash yet),LTM Oct-26,-30966,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Losses from derivatives,9M FY2027,829,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Losses from derivatives,LTM Oct-26,829,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Other non-cash items,FY2024,-278,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Other non-cash items,FY2025,-502,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Other non-cash items,FY2026,-287,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Other non-cash items,9M FY2026,-276,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Other non-cash items,9M FY2027,-298,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Other non-cash items,LTM Oct-26,-309,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts receivable,FY2024,-6172,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts receivable,FY2025,-13063,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts receivable,FY2026,-15399,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts receivable,9M FY2026,-10325,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts receivable,9M FY2027,-42642,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts receivable,LTM Oct-26,-47716,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in inventories,FY2024,-98,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in inventories,FY2025,-4781,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in inventories,FY2026,-11324,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in inventories,9M FY2026,-9703,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in inventories,9M FY2027,-18352,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in inventories,LTM Oct-26,-19973,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in prepaid expenses and other assets,FY2024,-1522,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in prepaid expenses and other assets,FY2025,-395,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in prepaid expenses and other assets,FY2026,577,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in prepaid expenses and other assets,9M FY2026,857,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in prepaid expenses and other assets,9M FY2027,-7846,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in prepaid expenses and other assets,LTM Oct-26,-8126,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts payable,FY2024,1531,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts payable,FY2025,3357,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts payable,FY2026,3096,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts payable,9M FY2026,2032,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts payable,9M FY2027,8550,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accounts payable,LTM Oct-26,9614,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accrued and other current liabilities,FY2024,2025,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accrued and other current liabilities,FY2025,4278,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accrued and other current liabilities,FY2026,5257,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accrued and other current liabilities,9M FY2026,4204,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accrued and other current liabilities,9M FY2027,9666,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in accrued and other current liabilities,LTM Oct-26,10719,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in other long-term liabilities,FY2024,514,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in other long-term liabilities,FY2025,1221,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in other long-term liabilities,FY2026,1844,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in other long-term liabilities,9M FY2026,1311,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in other long-term liabilities,9M FY2027,3867,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Change in other long-term liabilities,LTM Oct-26,4400,USD m,
+5 Cash flow,STEP 1 - Operating activities (explotación),Operating cash flow,FY2024,28090,USD m,Sum of the thirteen lines above
+5 Cash flow,STEP 1 - Operating activities (explotación),Operating cash flow,FY2025,64089,USD m,Sum of the thirteen lines above
+5 Cash flow,STEP 1 - Operating activities (explotación),Operating cash flow,FY2026,102718,USD m,Sum of the thirteen lines above
+5 Cash flow,STEP 1 - Operating activities (explotación),Operating cash flow,9M FY2026,66530,USD m,Sum of the thirteen lines above
+5 Cash flow,STEP 1 - Operating activities (explotación),Operating cash flow,9M FY2027,122675,USD m,Sum of the thirteen lines above
+5 Cash flow,STEP 1 - Operating activities (explotación),Operating cash flow,LTM Oct-26,158863,USD m,Sum of the thirteen lines above
+5 Cash flow,STEP 2 - Investing activities (inversión),Sales and maturities of investments,FY2024,9783,USD m,FY: sales + maturities of marketable + sales of non-marketable securities. 9M: debt + equity securities sold
+5 Cash flow,STEP 2 - Investing activities (inversión),Sales and maturities of investments,FY2025,11861,USD m,FY: sales + maturities of marketable + sales of non-marketable securities. 9M: debt + equity securities sold
+5 Cash flow,STEP 2 - Investing activities (inversión),Sales and maturities of investments,FY2026,26467,USD m,FY: sales + maturities of marketable + sales of non-marketable securities. 9M: debt + equity securities sold
+5 Cash flow,STEP 2 - Investing activities (inversión),Sales and maturities of investments,9M FY2026,9539,USD m,FY: sales + maturities of marketable + sales of non-marketable securities. 9M: debt + equity securities sold
+5 Cash flow,STEP 2 - Investing activities (inversión),Sales and maturities of investments,9M FY2027,57314,USD m,FY: sales + maturities of marketable + sales of non-marketable securities. 9M: debt + equity securities sold
+5 Cash flow,STEP 2 - Investing activities (inversión),Sales and maturities of investments,LTM Oct-26,74242,USD m,FY: sales + maturities of marketable + sales of non-marketable securities. 9M: debt + equity securities sold
+5 Cash flow,STEP 2 - Investing activities (inversión),Purchases of investments (bonds and stakes in companies),FY2024,-19073,USD m,FY: marketable + non-marketable securities bought. 9M: debt + equity securities bought
+5 Cash flow,STEP 2 - Investing activities (inversión),Purchases of investments (bonds and stakes in companies),FY2025,-28061,USD m,FY: marketable + non-marketable securities bought. 9M: debt + equity securities bought
+5 Cash flow,STEP 2 - Investing activities (inversión),Purchases of investments (bonds and stakes in companies),FY2026,-58118,USD m,FY: marketable + non-marketable securities bought. 9M: debt + equity securities bought
+5 Cash flow,STEP 2 - Investing activities (inversión),Purchases of investments (bonds and stakes in companies),9M FY2026,-24778,USD m,FY: marketable + non-marketable securities bought. 9M: debt + equity securities bought
+5 Cash flow,STEP 2 - Investing activities (inversión),Purchases of investments (bonds and stakes in companies),9M FY2027,-91291,USD m,FY: marketable + non-marketable securities bought. 9M: debt + equity securities bought
+5 Cash flow,STEP 2 - Investing activities (inversión),Purchases of investments (bonds and stakes in companies),LTM Oct-26,-124631,USD m,FY: marketable + non-marketable securities bought. 9M: debt + equity securities bought
+5 Cash flow,STEP 2 - Investing activities (inversión),Groq licence and hires (paid at closing),FY2026,-13000,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),Groq licence and hires (paid at closing),LTM Oct-26,-13000,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),"Capex: purchases of property, equipment and intangible assets",FY2024,-1069,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),"Capex: purchases of property, equipment and intangible assets",FY2025,-3236,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),"Capex: purchases of property, equipment and intangible assets",FY2026,-6042,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),"Capex: purchases of property, equipment and intangible assets",9M FY2026,-4758,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),"Capex: purchases of property, equipment and intangible assets",9M FY2027,-8856,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),"Capex: purchases of property, equipment and intangible assets",LTM Oct-26,-10140,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),Acquisitions and other,FY2024,-207,USD m,FY2024-25: acquisitions + other investing
+5 Cash flow,STEP 2 - Investing activities (inversión),Acquisitions and other,FY2025,-985,USD m,FY2024-25: acquisitions + other investing
+5 Cash flow,STEP 2 - Investing activities (inversión),Acquisitions and other,FY2026,-1535,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),Acquisitions and other,9M FY2026,-1370,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),Acquisitions and other,9M FY2027,-3031,USD m,
+5 Cash flow,STEP 2 - Investing activities (inversión),Acquisitions and other,LTM Oct-26,-3196,USD m,FY2024-25: acquisitions + other investing
+5 Cash flow,STEP 2 - Investing activities (inversión),Investing cash flow,FY2024,-10566,USD m,Sum of the five lines above
+5 Cash flow,STEP 2 - Investing activities (inversión),Investing cash flow,FY2025,-20421,USD m,Sum of the five lines above
+5 Cash flow,STEP 2 - Investing activities (inversión),Investing cash flow,FY2026,-52228,USD m,Sum of the five lines above
+5 Cash flow,STEP 2 - Investing activities (inversión),Investing cash flow,9M FY2026,-21367,USD m,Sum of the five lines above
+5 Cash flow,STEP 2 - Investing activities (inversión),Investing cash flow,9M FY2027,-45864,USD m,Sum of the five lines above
+5 Cash flow,STEP 2 - Investing activities (inversión),Investing cash flow,LTM Oct-26,-76725,USD m,Sum of the five lines above
+5 Cash flow,STEP 3 - Financing activities (financiación),Debt issued (bonds),9M FY2027,24896,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Debt issued (bonds),LTM Oct-26,24896,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Debt repaid,FY2024,-1250,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Debt repaid,FY2025,-1250,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Debt repaid,9M FY2027,-1000,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Debt repaid,LTM Oct-26,-1000,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Proceeds from employee stock plans,FY2024,403,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Proceeds from employee stock plans,FY2025,490,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Proceeds from employee stock plans,FY2026,644,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Proceeds from employee stock plans,9M FY2026,643,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Proceeds from employee stock plans,9M FY2027,795,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Proceeds from employee stock plans,LTM Oct-26,796,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Share buybacks (recompra de acciones),FY2024,-9533,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Share buybacks (recompra de acciones),FY2025,-33706,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Share buybacks (recompra de acciones),FY2026,-40086,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Share buybacks (recompra de acciones),9M FY2026,-36271,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Share buybacks (recompra de acciones),9M FY2027,-61166,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Share buybacks (recompra de acciones),LTM Oct-26,-64981,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Dividends paid (dividendos),FY2024,-395,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Dividends paid (dividendos),FY2025,-834,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Dividends paid (dividendos),FY2026,-974,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Dividends paid (dividendos),9M FY2026,-732,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Dividends paid (dividendos),9M FY2027,-12316,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Dividends paid (dividendos),LTM Oct-26,-12558,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Taxes paid on employees' vested shares,FY2024,-2783,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Taxes paid on employees' vested shares,FY2025,-6930,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Taxes paid on employees' vested shares,FY2026,-7948,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Taxes paid on employees' vested shares,9M FY2026,-5809,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Taxes paid on employees' vested shares,9M FY2027,-6238,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Taxes paid on employees' vested shares,LTM Oct-26,-8377,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),"Groq, deferred payment",9M FY2027,-2944,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),"Groq, deferred payment",LTM Oct-26,-2944,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Principal payments on property and equipment,FY2024,-74,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Principal payments on property and equipment,FY2025,-129,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Principal payments on property and equipment,FY2026,-101,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Principal payments on property and equipment,9M FY2026,-97,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Principal payments on property and equipment,9M FY2027,-147,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Principal payments on property and equipment,LTM Oct-26,-151,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Other financing,FY2024,-1,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Other financing,FY2026,-9,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Other financing,9M FY2027,-207,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Other financing,LTM Oct-26,-216,USD m,
+5 Cash flow,STEP 3 - Financing activities (financiación),Financing cash flow,FY2024,-13633,USD m,Sum of the nine lines above
+5 Cash flow,STEP 3 - Financing activities (financiación),Financing cash flow,FY2025,-42359,USD m,Sum of the nine lines above
+5 Cash flow,STEP 3 - Financing activities (financiación),Financing cash flow,FY2026,-48474,USD m,Sum of the nine lines above
+5 Cash flow,STEP 3 - Financing activities (financiación),Financing cash flow,9M FY2026,-42266,USD m,Sum of the nine lines above
+5 Cash flow,STEP 3 - Financing activities (financiación),Financing cash flow,9M FY2027,-58327,USD m,Sum of the nine lines above
+5 Cash flow,STEP 3 - Financing activities (financiación),Financing cash flow,LTM Oct-26,-64535,USD m,Sum of the nine lines above
+5 Cash flow,STEP 4 - Change in cash,Change in cash and cash equivalents,FY2024,3891,USD m,Operating + Investing + Financing
+5 Cash flow,STEP 4 - Change in cash,Change in cash and cash equivalents,FY2025,1309,USD m,Operating + Investing + Financing
+5 Cash flow,STEP 4 - Change in cash,Change in cash and cash equivalents,FY2026,2016,USD m,Operating + Investing + Financing
+5 Cash flow,STEP 4 - Change in cash,Change in cash and cash equivalents,9M FY2026,2897,USD m,Operating + Investing + Financing
+5 Cash flow,STEP 4 - Change in cash,Change in cash and cash equivalents,9M FY2027,18484,USD m,Operating + Investing + Financing
+5 Cash flow,STEP 4 - Change in cash,Change in cash and cash equivalents,LTM Oct-26,17603,USD m,Operating + Investing + Financing
+5 Cash flow,STEP 4 - Change in cash,Cash at the start of the period,FY2024,3389,USD m,
+5 Cash flow,STEP 4 - Change in cash,Cash at the start of the period,FY2025,7280,USD m,
+5 Cash flow,STEP 4 - Change in cash,Cash at the start of the period,FY2026,8589,USD m,
+5 Cash flow,STEP 4 - Change in cash,Cash at the start of the period,9M FY2026,8589,USD m,
+5 Cash flow,STEP 4 - Change in cash,Cash at the start of the period,9M FY2027,10605,USD m,
+5 Cash flow,STEP 4 - Change in cash,Cash at the end of the period,FY2024,7280,USD m,Change + Start
+5 Cash flow,STEP 4 - Change in cash,Cash at the end of the period,FY2025,8589,USD m,Change + Start
+5 Cash flow,STEP 4 - Change in cash,Cash at the end of the period,FY2026,10605,USD m,Change + Start
+5 Cash flow,STEP 4 - Change in cash,Cash at the end of the period,9M FY2026,11486,USD m,Change + Start
+5 Cash flow,STEP 4 - Change in cash,Cash at the end of the period,9M FY2027,29089,USD m,Change + Start
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow (FCL),FY2024,26947,USD m,Operating cash flow + Capex + Principal payments
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow (FCL),FY2025,60724,USD m,Operating cash flow + Capex + Principal payments
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow (FCL),FY2026,96575,USD m,Operating cash flow + Capex + Principal payments
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow (FCL),9M FY2026,61675,USD m,Operating cash flow + Capex + Principal payments
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow (FCL),9M FY2027,113672,USD m,Operating cash flow + Capex + Principal payments
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow (FCL),LTM Oct-26,148572,USD m,Operating cash flow + Capex + Principal payments
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow margin,FY2024,0.44232,%,Free cash flow / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow margin,FY2025,0.465329,%,Free cash flow / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow margin,FY2026,0.447235,%,Free cash flow / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow margin,9M FY2026,0.417256,%,Free cash flow / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow margin,9M FY2027,0.387059,%,Free cash flow / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Free cash flow margin,LTM Oct-26,0.410638,%,Free cash flow / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Capex / revenue,FY2024,0.017547,%,-Capex / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Capex / revenue,FY2025,0.024798,%,-Capex / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Capex / revenue,FY2026,0.02798,%,-Capex / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Capex / revenue,9M FY2026,0.03219,%,-Capex / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Capex / revenue,9M FY2027,0.030155,%,-Capex / Revenue
+5 Cash flow,STEP 5 - Free cash flow (FCL),Capex / revenue,LTM Oct-26,0.028026,%,-Capex / Revenue
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned to shareholders,FY2024,-9928,USD m,Buybacks + Dividends
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned to shareholders,FY2025,-34540,USD m,Buybacks + Dividends
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned to shareholders,FY2026,-41060,USD m,Buybacks + Dividends
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned to shareholders,9M FY2026,-37003,USD m,Buybacks + Dividends
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned to shareholders,9M FY2027,-73482,USD m,Buybacks + Dividends
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned to shareholders,LTM Oct-26,-77539,USD m,Buybacks + Dividends
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned / free cash flow,FY2024,0.368427,%,-Cash returned / Free cash flow
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned / free cash flow,FY2025,0.568803,%,-Cash returned / Free cash flow
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned / free cash flow,FY2026,0.425162,%,-Cash returned / Free cash flow
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned / free cash flow,9M FY2026,0.599968,%,-Cash returned / Free cash flow
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned / free cash flow,9M FY2027,0.646439,%,-Cash returned / Free cash flow
+5 Cash flow,STEP 6 - Cash returned to shareholders,Cash returned / free cash flow,LTM Oct-26,0.521895,%,-Cash returned / Free cash flow
+6 Solvency,STEP 1 - How the assets are funded,Total assets,Jan-2025,111601,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Total assets,Jan-2026,206803,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Total assets,Oct-2026,372188,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Total liabilities,Jan-2025,32274,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Total liabilities,Jan-2026,49510,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Total liabilities,Oct-2026,105522,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Shareholders' equity,Jan-2025,79327,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Shareholders' equity,Jan-2026,157293,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Shareholders' equity,Oct-2026,266666,USD m,From the balance sheet
+6 Solvency,STEP 1 - How the assets are funded,Total liabilities / total assets (endeudamiento),Jan-2025,0.289191,%,Total liabilities / Total assets
+6 Solvency,STEP 1 - How the assets are funded,Total liabilities / total assets (endeudamiento),Jan-2026,0.239407,%,Total liabilities / Total assets
+6 Solvency,STEP 1 - How the assets are funded,Total liabilities / total assets (endeudamiento),Oct-2026,0.283518,%,Total liabilities / Total assets
+6 Solvency,STEP 1 - How the assets are funded,Equity / total assets (autonomía financiera),Jan-2025,0.710809,%,Shareholders' equity / Total assets
+6 Solvency,STEP 1 - How the assets are funded,Equity / total assets (autonomía financiera),Jan-2026,0.760593,%,Shareholders' equity / Total assets
+6 Solvency,STEP 1 - How the assets are funded,Equity / total assets (autonomía financiera),Oct-2026,0.716482,%,Shareholders' equity / Total assets
+6 Solvency,STEP 2 - Debt (deuda financiera),Short-term debt,Jan-2025,0,USD m,From the balance sheet
+6 Solvency,STEP 2 - Debt (deuda financiera),Short-term debt,Jan-2026,999,USD m,From the balance sheet
+6 Solvency,STEP 2 - Debt (deuda financiera),Short-term debt,Oct-2026,0,USD m,From the balance sheet
+6 Solvency,STEP 2 - Debt (deuda financiera),Long-term debt,Jan-2025,8463,USD m,From the balance sheet
+6 Solvency,STEP 2 - Debt (deuda financiera),Long-term debt,Jan-2026,7469,USD m,From the balance sheet
+6 Solvency,STEP 2 - Debt (deuda financiera),Long-term debt,Oct-2026,32371,USD m,From the balance sheet
+6 Solvency,STEP 2 - Debt (deuda financiera),Total debt,Jan-2025,8463,USD m,Short-term + Long-term debt
+6 Solvency,STEP 2 - Debt (deuda financiera),Total debt,Jan-2026,8468,USD m,Short-term + Long-term debt
+6 Solvency,STEP 2 - Debt (deuda financiera),Total debt,Oct-2026,32371,USD m,Short-term + Long-term debt
+6 Solvency,STEP 2 - Debt (deuda financiera),Debt / equity,Jan-2025,0.106685,%,Total debt / Shareholders' equity
+6 Solvency,STEP 2 - Debt (deuda financiera),Debt / equity,Jan-2026,0.053836,%,Total debt / Shareholders' equity
+6 Solvency,STEP 2 - Debt (deuda financiera),Debt / equity,Oct-2026,0.121392,%,Total debt / Shareholders' equity
+6 Solvency,STEP 3 - Net cash (caja neta),Cash and marketable debt securities,Jan-2025,42829,USD m,"From the balance sheet, STEP 4"
+6 Solvency,STEP 3 - Net cash (caja neta),Cash and marketable debt securities,Jan-2026,49670,USD m,"From the balance sheet, STEP 4"
+6 Solvency,STEP 3 - Net cash (caja neta),Cash and marketable debt securities,Oct-2026,53512,USD m,"From the balance sheet, STEP 4"
+6 Solvency,STEP 3 - Net cash (caja neta),Net cash (caja neta),Jan-2025,34366,USD m,Cash and debt securities - Total debt
+6 Solvency,STEP 3 - Net cash (caja neta),Net cash (caja neta),Jan-2026,41202,USD m,Cash and debt securities - Total debt
+6 Solvency,STEP 3 - Net cash (caja neta),Net cash (caja neta),Oct-2026,21141,USD m,Cash and debt securities - Total debt
+6 Solvency,STEP 4 - Funding facts,"Senior notes issued in June 2026, seven tranches (USD bn)",Value,25.0,USD bn,
+6 Solvency,STEP 4 - Funding facts,"Commercial paper programme, none used (USD bn)",Value,25.0,USD bn,
+6 Solvency,STEP 4 - Funding facts,"Interest expense, FY2026",Value,259,USD m,
+6 Solvency,STEP 4 - Funding facts,"Interest cover, FY2026 (EBIT / interest expense)",Value,503.42471,x,EBIT FY2026 / Interest expense FY2026
+6 Solvency,STEP 4 - Funding facts,"Interest income, FY2026",Value,2300,USD m,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Largest direct customer, share of revenue",FY2024,0.13,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Largest direct customer, share of revenue",FY2025,0.12,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Largest direct customer, share of revenue",FY2026,0.22,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Largest direct customer, share of revenue",9M FY2027,0.13,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Largest direct customer, share of revenue",Q3 FY27,0.14,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Second direct customer,FY2025,0.11,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Second direct customer,FY2026,0.14,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Second direct customer,9M FY2027,0.12,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Second direct customer,Q3 FY27,0.11,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Third direct customer,FY2025,0.11,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Third direct customer,9M FY2027,0.12,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Third direct customer,Q3 FY27,0.11,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),Fourth direct customer,9M FY2027,0.11,%,
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Customers above 10%, together",FY2024,0.13,%,Sum of the four lines above
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Customers above 10%, together",FY2025,0.34,%,Sum of the four lines above
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Customers above 10%, together",FY2026,0.36,%,Sum of the four lines above
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Customers above 10%, together",9M FY2027,0.48,%,Sum of the four lines above
+7 Customers,STEP 1 - Customers above 10% of revenue (names are not given),"Customers above 10%, together",Q3 FY27,0.36,%,Sum of the four lines above
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)","Largest customer, share of receivables",FY2025,0.17,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)","Largest customer, share of receivables",FY2026,0.25,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)","Largest customer, share of receivables",Q3 FY27,0.18,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)",Second customer,FY2025,0.16,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)",Second customer,FY2026,0.18,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)",Second customer,Q3 FY27,0.17,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)",Third customer,FY2026,0.13,%,
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)","Customers above 10% of receivables, together",FY2025,0.33,%,Sum of the three lines above
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)","Customers above 10% of receivables, together",FY2026,0.56,%,Sum of the three lines above
+7 Customers,"STEP 2 - Who owes the money (FY2025 = Jan-2025, FY2026 = Jan-2026, Q3 FY27 = Oct-2026)","Customers above 10% of receivables, together",Q3 FY27,0.35,%,Sum of the three lines above
+7 Customers,STEP 3 - People and other operating figures,Employees (approx.),FY2026,42000,count,
+7 Customers,STEP 3 - People and other operating figures,of whom in research and development,FY2026,31000,count,
+7 Customers,STEP 3 - People and other operating figures,Revenue per employee (USD m),FY2026,5.141381,USD m,Revenue / Employees
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions charged to cost of revenue,FY2025,1600,USD m,
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions charged to cost of revenue,FY2026,4000,USD m,
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions charged to cost of revenue,9M FY2026,3600,USD m,
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions charged to cost of revenue,9M FY2027,2300,USD m,
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions / revenue,FY2025,0.012261,%,Inventory provisions / Revenue
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions / revenue,FY2026,0.018524,%,Inventory provisions / Revenue
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions / revenue,9M FY2026,0.024355,%,Inventory provisions / Revenue
+7 Customers,STEP 3 - People and other operating figures,Inventory provisions / revenue,9M FY2027,0.007832,%,Inventory provisions / Revenue
+7 Customers,STEP 3 - People and other operating figures,"Product warranty liability, end of year",FY2024,306,USD m,
+7 Customers,STEP 3 - People and other operating figures,"Product warranty liability, end of year",FY2025,1290,USD m,
+7 Customers,STEP 3 - People and other operating figures,"Product warranty liability, end of year",FY2026,2807,USD m,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",Total,390,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",Rest of FY27,69,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",FY2028,203,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",FY2029,92,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",FY2030,10,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",FY2031,8,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)","Supply and capacity (wafers, memory, manufacturing)",FY2032+,8,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,Total,28,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,Rest of FY27,2,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,FY2028,7,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,FY2029,7,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,FY2030,6,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,FY2031,4,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Cloud service agreements,FY2032+,2,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,Total,74,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,Rest of FY27,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,FY2028,1,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,FY2029,2,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,FY2030,4,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,FY2031,4,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Data center leases not yet started,FY2032+,63,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,Total,20,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,Rest of FY27,5,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,FY2028,11,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,FY2029,2,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,FY2030,2,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,FY2031,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Equity investments promised,FY2032+,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,Total,6,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,Rest of FY27,6,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,FY2028,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,FY2029,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,FY2030,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,FY2031,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Capital expenditures,FY2032+,0,USD bn,
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,Total,518,USD bn,Sum of the five lines above
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,Rest of FY27,82,USD bn,Sum of the five lines above
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,FY2028,222,USD bn,Sum of the five lines above
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,FY2029,103,USD bn,Sum of the five lines above
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,FY2030,22,USD bn,Sum of the five lines above
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,FY2031,16,USD bn,Sum of the five lines above
+8 Commitments,"STEP 1 - Commitments at Oct-2026, by fiscal year (USD bn)",Total commitments,FY2032+,73,USD bn,Sum of the five lines above
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,Total,32,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,Rest of FY27,0,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,FY2028,6,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,FY2029,7,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,FY2030,6,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,FY2031,5,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Neocloud agreements,FY2032+,8,USD bn,
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,Total,550,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,Rest of FY27,82,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,FY2028,228,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,FY2029,110,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,FY2030,28,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,FY2031,21,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 2 - Additional commitments (they take effect only if the partner gets its financing),Commitments including neocloud agreements,FY2032+,81,USD bn,Neocloud agreements + Total commitments
+8 Commitments,STEP 3 - Guarantees: the most NVIDIA could have to pay if partners default (USD bn),"Land, power and shell guarantees for neoclouds",Value,3.5,USD bn,
+8 Commitments,STEP 3 - Guarantees: the most NVIDIA could have to pay if partners default (USD bn),SB Energy credit support (OpenAI data centres in Ohio),Value,105.0,USD bn,
+8 Commitments,STEP 3 - Guarantees: the most NVIDIA could have to pay if partners default (USD bn),Power and systems credit support,Value,9.5,USD bn,
+8 Commitments,STEP 3 - Guarantees: the most NVIDIA could have to pay if partners default (USD bn),Total guarantees,Value,118.0,USD bn,Sum of the three lines above
+8 Commitments,STEP 4 - Against the size of the business,"Revenue, last twelve months (USD bn)",Value,361.808,USD bn,"From the income statement (LTM Oct-26), in billions"
+8 Commitments,STEP 4 - Against the size of the business,Total commitments / revenue,Value,1.431699,x,Total commitments / Revenue (LTM)
+8 Commitments,STEP 4 - Against the size of the business,Due in the rest of FY2027 / cash and marketable debt securities,Value,1.532367,x,Commitments due in the rest of FY2027 / Cash and debt securities (Oct-2026)
+8 Commitments,STEP 4 - Against the size of the business,Guarantees / shareholders' equity,Value,0.442501,%,Total guarantees / Shareholders' equity (Oct-2026)
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Supply and capacity,Jan-2026,95.2,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Supply and capacity,Apr-2026,119.0,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Supply and capacity,Jul-2026,279,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Supply and capacity,Oct-2026,390,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Cloud service agreements,Jan-2026,27,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Cloud service agreements,Apr-2026,30.0,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Cloud service agreements,Jul-2026,29,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),Cloud service agreements,Oct-2026,28,USD bn,
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),"Supply and capacity, growth on the previous quarter",Apr-2026,0.25,%,Supply and capacity / the previous date - 1
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),"Supply and capacity, growth on the previous quarter",Jul-2026,1.344538,%,Supply and capacity / the previous date - 1
+8 Commitments,STEP 5 - How fast the commitments grew (USD bn),"Supply and capacity, growth on the previous quarter",Oct-2026,0.397849,%,Supply and capacity / the previous date - 1
+9 Share capital,STEP 1 - Shares,"Shares outstanding, Jan-2025 (millions)",Value,24477,count,
+9 Share capital,STEP 1 - Shares,"Shares outstanding, Jan-2026 (millions)",Value,24304,count,
+9 Share capital,STEP 1 - Shares,Change in shares outstanding over FY2026,Value,-0.007068,%,Shares Jan-2026 / Shares Jan-2025 - 1
+9 Share capital,STEP 2 - Buybacks and dividends,"Shares bought back, first half of FY2027 (millions)",Value,203,count,
+9 Share capital,STEP 2 - Buybacks and dividends,Paid for them (USD bn),Value,39.8,USD bn,
+9 Share capital,STEP 2 - Buybacks and dividends,Average price paid per share (USD),Value,196.059113,USD,"Paid x 1,000 / Shares bought back"
+9 Share capital,STEP 2 - Buybacks and dividends,Buyback authorisation added in May 2026 (USD bn),Value,80.0,USD bn,
+9 Share capital,STEP 2 - Buybacks and dividends,Buyback authorisation added in September 2026 (USD bn),Value,150,USD bn,
+9 Share capital,STEP 2 - Buybacks and dividends,Buyback authorisation left at Oct-2026 (USD bn),Value,227.3,USD bn,
+9 Share capital,STEP 2 - Buybacks and dividends,Returned to shareholders in Q1 FY27 (USD bn),Value,20.0,USD bn,
+9 Share capital,STEP 2 - Buybacks and dividends,Returned to shareholders in Q3 FY27 (USD bn),Value,28.1,USD bn,
+9 Share capital,STEP 2 - Buybacks and dividends,Quarterly dividend per share until May 2026 (USD),Value,0.01,USD,
+9 Share capital,STEP 2 - Buybacks and dividends,Quarterly dividend per share since June 2026 (USD),Value,0.25,USD,
+9 Share capital,STEP 2 - Buybacks and dividends,New dividend / old dividend,Value,25.0,x,New dividend / Old dividend
+9 Share capital,STEP 3 - Shares promised to staff (Jul-2026),RSUs and PSUs outstanding (millions),Value,168,count,
+9 Share capital,STEP 3 - Shares promised to staff (Jul-2026),Their average value when granted (USD per share),Value,120.41,USD,
+9 Share capital,STEP 3 - Shares promised to staff (Jul-2026),Stock-based pay still to be expensed (USD bn),Value,19.4,USD bn,

@@ -76,13 +76,20 @@ token**, read on black, and the page overrides nothing else:
 | Homepage (`index.html`) | slate band `#1d2733` / `#12181f`, steel cyan `#2f8fa8` / `#6cc2d8` (the homepage keeps its band and its light mode) |
 | SpaceX | blue `#82b6f8` |
 | Anthropic | clay `#e59873` |
+| NVIDIA | green `#76b900` |
 
 A new company gets a tone of its own, close to its brand colour, bright enough to read on black.
 
 **Page structure, in this order:**
-1. **Header:** the accent rule, back link "← All companies", **the company name on its own** as the
-   title ("Anthropic", "SpaceX") — not a question and not a sentence — then one small line giving
+1. **Header:** the accent rule, back link "← All companies", then as the title **the logo of the company's
+   main business followed by its ticker in plain text** (since 18 Nov 2026): Claude logo + "ANT", SpaceX +
+   "SPCX", Google's four-colour G + "GOOGL", NVIDIA's eye + "NVDA" — the full company name goes in the h1's
+   `aria-label` and the `<title>` — not a question and not a sentence — then one small line giving
    the filing, its date, the units and the workbook. Three lines in all.
+   The logo is inline SVG inside the h1 (`<span class="logo">`, sized by `h1 .logo` in `report.css`): the
+   Simple Icons mark (public domain) in the brand colour, or Google's four-colour G. **The Anthropic, SpaceX
+   and Alphabet pages were patched by hand on 18 Nov 2026 (the h1 line and the `h1 .logo` CSS only): their
+   build scripts on the other PC must write the same h1 before the next rebuild, or the rebuild undoes it.**
    **"Last update · 2 Nov 2026"** sits small (11px, muted) in the top right corner, on the back link's
    line (`.updated` in `report.css`). The date is fixed text in a `<span data-static="1">`, set by me
    for each company (the day its data was last updated), not the push date. Change it only when the
@@ -182,7 +189,7 @@ section. **The page shows only the labels and the numbers**: the Formula column 
 is hidden on every page by the shared CSS (`th.fx,td.fx{display:none}`), and the arrow keys never step
 into it. The table hint reads "Swipe the table sideways for every period." (the SpaceX and Alphabet
 build scripts on the other PC still say "…and the formula.": change that line there before rebuilding). Under the last section there are only two quiet links,
-the `.xlsx` and the `.csv`. All three companies use this layout (SpaceX and Alphabet since 3 Nov 2026).
+the `.xlsx` and the `.csv`. All four companies use this layout (SpaceX and Alphabet since 3 Nov 2026, NVIDIA since 18 Nov 2026).
 
 For SpaceX and Alphabet, `build_model.py` writes the model to `data/historicals.xlsx` and
 `data/historicals_map.json`; `build_course.py` lays it out, unchanged, as `<company>.xlsx` and `.csv`, with
@@ -208,9 +215,11 @@ Written by hand (no script). It follows all the Phone-friendly rules above.
   filings", the title "Equity Research Lab", the description, then a "View the code on GitHub"
   button with the **GitHub logo** (inline SVG).
 - **Featured company:** one large card overlapping the band with a "Featured" badge. Chosen by me,
-  not automatically the newest. Only change it when I ask.
-- **"All companies" grid:** one card per other company — preview image, small accent label, serif
-  title, one or two sentences. **Two cards to a row**, each half the width, whatever the number of
+  not automatically the newest. Only change it when I ask. Currently NVIDIA (since 18 Nov 2026).
+- **"All companies" grid:** one card per other company — preview image, a ticker row (the logo of the
+  company's main business drawn inline, the ticker in bold plain text, then the sector as the small accent
+  label: AI, Big tech, Aerospace, Semiconductors — no exchange name), serif title, one or two sentences.
+  The featured card has the same ticker row under its badge. **Two cards to a row**, each half the width, whatever the number of
   companies (`repeat(2, minmax(0, 1fr))`, one per row below 760px). Not `auto-fill`: with a single
   company that shrank the card to its minimum width and left it looking lost beside the featured one.
 - **No "Open the page →" text.** The whole card is the link.
