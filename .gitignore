@@ -15,3 +15,12 @@ finances-examples/
 
 # Local build helper shared by the company scripts: code stays on this machine
 tools/course_layout.py
+
+# Build machinery stays on this machine (CLAUDE.md: no code is published).
+# report.css / report.js are inlined into each page at build time, so the live site never loads them.
+tools/
+assets/*
+# The homepage cards load these three previews, so they stay published.
+!assets/alphabet.png
+!assets/anthropic.png
+!assets/spacex.png

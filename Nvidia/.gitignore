@@ -1,0 +1,6 @@
+# Only the deliverables are pushed; everything else stays local.
+/*
+!/.gitignore
+!/index.html
+!/nvidia.xlsx
+!/nvidia.csv
